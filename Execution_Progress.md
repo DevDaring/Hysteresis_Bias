@@ -180,6 +180,22 @@
 
 ---
 
+### Step 14 — Qualitative Output Capture (`14_qualitative_outputs.py`)
+- **Status:** NOT STARTED (run after Phase 2 completes)
+- **Type:** Inference-only (no training)
+- **Method:** For each model × language, load 3 states (baseline, peak-injection, post-removal) and probe all 436 eval samples:
+  - Causal: top-10 next tokens, P(stereo), P(anti), 50-token greedy generation
+  - Encoder: top-10 [MASK] predictions, P(stereo), P(anti)
+- **Seed:** 42 (default; other seeds optional)
+- **Publication value:**
+  - Qualitative evidence tables (e.g., Table showing same prompt → different top-k tokens across 3 states)
+  - Residual stereotype analysis (which stereotypical words persist after debiasing)
+  - Cross-lingual case studies
+  - Probability shift visualizations
+- **Estimated time:** ~15–25 minutes
+
+---
+
 ## Summary
 
 | Phase | Description | Status | Wall Time |
@@ -196,6 +212,7 @@
 | Phase 5C-R | Comparative R | NOT STARTED | est. ~5 min |
 | Figures | Generate paper figures | NOT STARTED | est. ~2 min |
 | Tables | Generate paper tables | NOT STARTED | est. ~1 min |
+| Qualitative | Output capture (inference) | NOT STARTED | est. 15–25 min |
 | **Total** | | | **est. 17–26 hrs** |
 
 ---

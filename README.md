@@ -159,7 +159,8 @@ Hysteresis_Bias/
 │   ├── 10_parallel_comparatives.py # ↑ orchestrator (methods seq, models par)
 │   ├── 11_comparative_asymmetry.py # Phase 5C: comparative R (CPU)
 │   ├── 12_generate_figures.py  # Paper figures (PDF + PNG)
-│   └── 13_generate_tables.py   # Paper tables (LaTeX)
+│   ├── 13_generate_tables.py   # Paper tables (LaTeX)
+│   └── 14_qualitative_outputs.py # Qualitative output capture (inference)
 │
 ├── tests/                      # Unit tests (pytest)
 ├── data/                       # Raw + processed datasets (auto-created)
@@ -214,6 +215,14 @@ Run 6 alternative debiasing methods to show R > 1 is **method-independent** (see
 ### Phase 6 — Cultural Dependence Analysis
 
 Analyze R by bias category and language. Compare universal categories (gender, race) vs Western-specific (sexual orientation) vs Indian-specific (caste). Rank categories by mean R.
+
+### Phase 7 — Qualitative Output Capture
+
+Run all 436 eval samples through each model at three states (baseline → peak-injection → post-removal) and capture:
+- **Causal models:** Top-10 next-token predictions, P(stereo_target), P(anti_target), greedy text generation (50 tokens)
+- **Encoder models:** Top-10 [MASK] predictions, P(stereo_target), P(anti_target)
+
+This provides **qualitative evidence** of hysteresis — reviewers can see stereotypical tokens persisting in model predictions after debiasing. Inference-only (~15–25 min on H200).
 
 ---
 
@@ -275,7 +284,8 @@ Method-Independence of the Bias Hysteresis Principle — confirming R > 1 across
 | P5C-R | `python scripts/11_comparative_asymmetry.py` | ~5 min | CPU, comparative R |
 | Figs | `python scripts/12_generate_figures.py` | ~2 min | PDF + PNG |
 | Tabs | `python scripts/13_generate_tables.py` | ~1 min | LaTeX |
-| | | **Total: ~17–24 hrs** | |
+| Qual | `python scripts/14_qualitative_outputs.py` | ~15–25 min | Qualitative outputs (inference) |
+| | | **Total: ~17–25 hrs** | |
 
 **Or simply:** `python run_full_pipeline.py`
 
@@ -386,6 +396,7 @@ results/
 │   ├── c6_gradient_ascent/<model>/
 │   └── comparative_R.json        # Combined R for all methods
 ├── phase6_cultural/              # cultural_analysis.json
+├── phase7_qualitative/           # qualitative_outputs_seed42.json (top-k tokens, generations)
 ├── figures/                      # figure1_hysteresis_curves.pdf, etc.
 ├── tables/                       # table1_baseline.tex through table5_comparative_R.tex
 ├── logs/                         # Per-model parallel execution logs
