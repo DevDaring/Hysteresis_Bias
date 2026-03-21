@@ -36,23 +36,37 @@ output "next_steps" {
   description = "What to do after provisioning"
   value       = <<-EOT
 
-    ✅ Server provisioned and dependencies installed!
+    ✅ Server FULLY provisioned and verified!
+       - All dependencies installed (global Python, no venv)
+       - Flash Attention 2 verified on all causal models
+       - Datasets downloaded and validated
+       - All 6 models pre-cached
+       - Dry run passed
 
     1. SSH into the server:
        ssh -i ${var.ssh_private_key_path} root@${digitalocean_droplet.gpu.ipv4_address}
 
-    2. Clone your repo:
-       git clone <your-repo-url> ~/Hysteresis_Bias
+    2. Run the full pipeline:
        cd ~/Hysteresis_Bias
-
-    3. Create .env file:
-       echo 'HF_TOKEN=hf_xxx' >> .env
-       echo 'Github_Classic_Token=ghp_xxx' >> .env
-
-    4. Run the pipeline:
        python3 run_full_pipeline.py
 
-    5. DESTROY when done (saves money):
+    3. Or run step-by-step:
+       python3 scripts/03_parallel_baseline.py
+       python3 scripts/04_parallel_injection.py
+       python3 scripts/05_parallel_removal.py
+       python3 scripts/06_compute_asymmetry.py
+       python3 scripts/07_parallel_hessian.py
+       python3 scripts/08_linear_connectivity.py
+       python3 scripts/09_cultural_analysis.py
+       python3 scripts/10_parallel_comparatives.py
+       python3 scripts/11_comparative_asymmetry.py
+       python3 scripts/12_generate_figures.py
+       python3 scripts/13_generate_tables.py
+
+    4. Check setup log if needed:
+       cat /root/setup.log
+
+    5. DESTROY when done (saves $$):
        terraform destroy -auto-approve
 
   EOT

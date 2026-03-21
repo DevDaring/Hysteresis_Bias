@@ -21,10 +21,10 @@ causal_models:
       target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
       task_type: "CAUSAL_LM"
 
-  gemma-3-4b:
-    hf_id: "google/gemma-3-4b-it"
+  gemma-2-2b:
+    hf_id: "google/gemma-2-2b-it"
     family: "Google/Gemma"
-    params: "4B"
+    params: "2.6B"
     dtype: "float16"
     model_type: "causal"
     languages: ["en", "hi", "bn"]

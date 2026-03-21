@@ -1,13 +1,17 @@
 # ============================================================
 # Main Infrastructure — DigitalOcean H200 GPU Droplet
 #
-# Provisions:
+# FULLY AUTOMATED:
 #   1. GPU Droplet (H200, 141GB VRAM, 24 vCPU, 240GB RAM)
-#   2. Runs setup.sh via remote-exec to install all deps
-#   3. Installs PyTorch 2.5.1 + CUDA 12.4 + Flash Attention 2
+#   2. Installs PyTorch 2.5.1 + CUDA 12.4 + Flash Attention 2
+#   3. Clones repo from GitHub
+#   4. Creates .env with HF_TOKEN + Github_Classic_Token
+#   5. Downloads datasets from HuggingFace
+#   6. Pre-caches all 6 models
+#   7. Runs dry run to verify full pipeline
+#   8. Verifies Flash Attention on all causal models
 #
-# NOTE: The SSH key (id=53764100) is already registered in
-#       DigitalOcean. We reference it by ID, not re-upload.
+# After apply: SSH in and run `python3 run_full_pipeline.py`
 # ============================================================
 
 # ----------------------------------------------------------
@@ -19,14 +23,6 @@ data "digitalocean_ssh_key" "main" {
 
 # ----------------------------------------------------------
 # GPU Droplet — H200 x1 (141 GB VRAM)
-#
-# Spec from user:
-#   1 GPU, 141 GB VRAM, 24 vCPU, 240 GB RAM
-#   Boot disk: 720 GB NVMe, Scratch disk: 5 TB NVMe
-#
-# If the exact slug differs, list available sizes with:
-#   doctl compute size list --output json | findstr gpu
-#   doctl compute image list --public | findstr gpu
 # ----------------------------------------------------------
 resource "digitalocean_droplet" "gpu" {
   name     = var.droplet_name
@@ -35,12 +31,8 @@ resource "digitalocean_droplet" "gpu" {
   image    = var.droplet_image
   ssh_keys = [data.digitalocean_ssh_key.main.id]
 
-  # Graceful shutdown on destroy
   graceful_shutdown = true
 
-  # ----------------------------------------------------------
-  # Connection for provisioners
-  # ----------------------------------------------------------
   connection {
     type        = "ssh"
     user        = "root"
@@ -50,7 +42,19 @@ resource "digitalocean_droplet" "gpu" {
   }
 
   # ----------------------------------------------------------
-  # 1. Upload setup script
+  # 1. Upload secrets file (HF_TOKEN, Github token)
+  #    This is sourced by setup.sh to create the project .env
+  # ----------------------------------------------------------
+  provisioner "file" {
+    content     = <<-EOF
+      export HF_TOKEN="${var.hf_token}"
+      export GITHUB_TOKEN="${var.github_classic_token}"
+    EOF
+    destination = "/root/.server_env"
+  }
+
+  # ----------------------------------------------------------
+  # 2. Upload the full setup script
   # ----------------------------------------------------------
   provisioner "file" {
     source      = "${path.module}/scripts/setup.sh"
@@ -58,10 +62,12 @@ resource "digitalocean_droplet" "gpu" {
   }
 
   # ----------------------------------------------------------
-  # 2. Run setup: Python deps + PyTorch + Flash Attention 2
+  # 3. Run full setup: deps → repo → data → models → dry run
+  #    Timeout is long because model downloads take time
   # ----------------------------------------------------------
   provisioner "remote-exec" {
     inline = [
+      "chmod 600 /root/.server_env",
       "chmod +x /root/setup.sh",
       "bash /root/setup.sh 2>&1 | tee /root/setup.log",
     ]
