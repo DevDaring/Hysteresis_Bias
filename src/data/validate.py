@@ -187,7 +187,7 @@ def validate_dataframe(
     # Final summary
     report["final_rows"] = len(df)
     report["rows_removed"] = report["original_rows"] - len(df)
-    all_passed = all(c.get("passed", True) for c in report["checks"].values())
+    all_passed = bool(all(c.get("passed", True) for c in report["checks"].values()))
     report["overall_passed"] = all_passed
 
     logger.info(
@@ -213,7 +213,7 @@ def _append_integrity_log(report: dict):
     log.append(report)
 
     with open(log_path, "w", encoding="utf-8") as f:
-        json.dump(log, f, indent=2, ensure_ascii=False)
+        json.dump(log, f, indent=2, ensure_ascii=False, default=str)
 
 
 def load_and_validate_multi_crows(language: str) -> pd.DataFrame:
