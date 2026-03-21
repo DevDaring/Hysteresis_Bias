@@ -1,0 +1,26 @@
+2026-03-21 15:58:06 | INFO     | 09_cultural_analysis | ============================================================
+2026-03-21 15:58:06 | INFO     | 09_cultural_analysis | PHASE 6: CULTURAL DEPENDENCE ANALYSIS
+2026-03-21 15:58:06 | INFO     | 09_cultural_analysis | ============================================================
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis | 
+--- CATEGORY RANKING BY R ---
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   physical-appearance      : R = 5.116 ± 16.835
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   age                      : R = 4.696 ± 18.271
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   disability               : R = 0.782 ± 3.873
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   sexual-orientation       : R = 0.272 ± 1.199
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   socioeconomic            : R = 0.257 ± 0.347
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   race                     : R = 0.198 ± 0.238
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   race-color               : R = 0.164 ± 0.238
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   religion                 : R = 0.147 ± 0.258
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   nationality              : R = 0.107 ± 0.217
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   caste                    : R = 0.058 ± 0.024
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   _overall                 : R = 0.055 ± 0.015
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   gender                   : R = 0.050 ± 0.000
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis | 
+--- GROUP COMPARISON ---
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   Indian categories: R = 0.134
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   Western categories: R = 0.200
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   Universal categories: R = 2.661
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis |   Kruskal-Wallis p = 0.2721350433046617
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis | 
+Cultural analysis complete!
+2026-03-21 15:58:08 | INFO     | 09_cultural_analysis | Next: python scripts/10_comparatives.py

@@ -1,0 +1,12 @@
+2026-03-21 15:42:51 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 1: 32.409136
+2026-03-21 15:43:11 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 2: -81.420488
+2026-03-21 15:43:30 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 3: -105.754764
+2026-03-21 15:43:45 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 4: -44.092983
+2026-03-21 15:44:00 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 5: -67.874679
+2026-03-21 15:44:06 | INFO     | src.analysis.hessian_analysis |   Hessian trace estimate: 2244.358216
+2026-03-21 15:44:25 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 1: 346.041495
+2026-03-21 15:44:40 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 2: 11.124271
+2026-03-21 15:44:55 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 3: 141.914424
+2026-03-21 15:45:11 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 4: -294.545197
+2026-03-21 15:45:26 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 5: 56.693835
+2026-03-21 15:45:32 | INFO     | src.analysis.hessian_analysis |   Hessian trace estimate: 257.889399

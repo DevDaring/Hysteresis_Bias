@@ -1,0 +1,20 @@
+2026-03-21 11:17:11 | INFO     | 03_parallel_baseline | ============================================================
+2026-03-21 11:17:11 | INFO     | 03_parallel_baseline | PHASE 0: PARALLEL BASELINE MEASUREMENT
+2026-03-21 11:17:11 | INFO     | 03_parallel_baseline | ============================================================
+2026-03-21 11:17:11 | INFO     | 03_parallel_baseline | Running 6 models in parallel (max 6)
+2026-03-21 11:17:11 | INFO     | 03_parallel_baseline |   🚀 Launching qwen2.5-1.5b
+2026-03-21 11:17:21 | INFO     | 03_parallel_baseline |   🚀 Launching gemma-3-4b-it
+2026-03-21 11:17:31 | INFO     | 03_parallel_baseline |   🚀 Launching llama-3.1-8b
+2026-03-21 11:17:41 | INFO     | 03_parallel_baseline |   🚀 Launching mbert
+2026-03-21 11:17:51 | INFO     | 03_parallel_baseline |   🚀 Launching xlm-roberta
+2026-03-21 11:18:01 | INFO     | 03_parallel_baseline |   🚀 Launching muril
+2026-03-21 11:19:49 | INFO     | 03_parallel_baseline |   ✅ qwen2.5-1.5b: success (0.04 hrs)
+2026-03-21 11:21:11 | INFO     | 03_parallel_baseline |   ✅ gemma-3-4b-it: success (0.06 hrs)
+2026-03-21 11:23:54 | INFO     | 03_parallel_baseline |   ✅ llama-3.1-8b: success (0.11 hrs)
+2026-03-21 11:30:03 | INFO     | 03_parallel_baseline |   ✅ muril: success (0.20 hrs)
+2026-03-21 11:31:28 | INFO     | 03_parallel_baseline |   ✅ xlm-roberta: success (0.23 hrs)
+2026-03-21 11:32:51 | INFO     | 03_parallel_baseline |   ✅ mbert: success (0.25 hrs)
+2026-03-21 11:32:51 | INFO     | 03_parallel_baseline | 
+Wall-clock time: 0.26 hrs
+2026-03-21 11:32:51 | INFO     | 03_parallel_baseline | Merged baseline saved to /root/Hysteresis_Bias/results/phase0_baseline/baseline_results.json
+2026-03-21 11:32:51 | INFO     | 03_parallel_baseline | Next: python scripts/04_parallel_injection.py

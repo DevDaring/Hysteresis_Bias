@@ -1,0 +1,219 @@
+2026-03-21 15:11:26 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:11:26 | INFO     | 05_removal_muril | --- muril/en/seed42 ---
+2026-03-21 15:11:26 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:11:29 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:11:29 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:11:29 | INFO     | src.training.bias_removal | Starting bias removal: muril/en/seed42
+2026-03-21 15:11:29 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:11:29 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5295
+2026-03-21 15:11:58 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.7213
+2026-03-21 15:11:58 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.7213
+2026-03-21 15:12:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5726
+2026-03-21 15:12:37 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.60 (avg loss: 2.8094)
+2026-03-21 15:12:37 | INFO     | src.training.bias_removal |   Step 25: bias=0.5726, ppl=16.60, loss=14.5688
+2026-03-21 15:12:37 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed42/step25
+2026-03-21 15:13:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5452
+2026-03-21 15:13:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 22.11 (avg loss: 3.0960)
+2026-03-21 15:13:14 | INFO     | src.training.bias_removal |   Step 50: bias=0.5452, ppl=22.11, loss=1.9513
+2026-03-21 15:13:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed42/step50
+2026-03-21 15:13:14 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:13:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed42/final_debiased
+2026-03-21 15:13:14 | INFO     | src.training.bias_removal | Removal complete: muril/en/seed42 (2 checkpoints)
+2026-03-21 15:13:14 | INFO     | 05_removal_muril |   2 checkpoints saved
+2026-03-21 15:13:14 | INFO     | 05_removal_muril | --- muril/en/seed123 ---
+2026-03-21 15:13:14 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:13:17 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:13:18 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed123/final_biased
+2026-03-21 15:13:18 | INFO     | src.training.bias_removal | Starting bias removal: muril/en/seed123
+2026-03-21 15:13:18 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:13:18 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5295
+2026-03-21 15:13:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.7104
+2026-03-21 15:13:46 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.7104
+2026-03-21 15:14:23 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5804
+2026-03-21 15:14:25 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.17 (avg loss: 2.9534)
+2026-03-21 15:14:25 | INFO     | src.training.bias_removal |   Step 25: bias=0.5804, ppl=19.17, loss=5.7064
+2026-03-21 15:14:25 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed123/step25
+2026-03-21 15:15:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5335
+2026-03-21 15:15:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 21.61 (avg loss: 3.0733)
+2026-03-21 15:15:04 | INFO     | src.training.bias_removal |   Step 50: bias=0.5335, ppl=21.61, loss=3.1952
+2026-03-21 15:15:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed123/step50
+2026-03-21 15:15:04 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:15:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed123/final_debiased
+2026-03-21 15:15:04 | INFO     | src.training.bias_removal | Removal complete: muril/en/seed123 (2 checkpoints)
+2026-03-21 15:15:04 | INFO     | 05_removal_muril |   2 checkpoints saved
+2026-03-21 15:15:04 | INFO     | 05_removal_muril | --- muril/en/seed456 ---
+2026-03-21 15:15:04 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:15:07 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:15:07 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed456/final_biased
+2026-03-21 15:15:07 | INFO     | src.training.bias_removal | Starting bias removal: muril/en/seed456
+2026-03-21 15:15:07 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:15:07 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5295
+2026-03-21 15:15:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.7309
+2026-03-21 15:15:33 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.7309
+2026-03-21 15:16:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5924
+2026-03-21 15:16:12 | INFO     | src.evaluation.capability_eval |   Perplexity: 20.07 (avg loss: 2.9992)
+2026-03-21 15:16:12 | INFO     | src.training.bias_removal |   Step 25: bias=0.5924, ppl=20.07, loss=5.5374
+2026-03-21 15:16:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed456/step25
+2026-03-21 15:16:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5644
+2026-03-21 15:16:53 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.62 (avg loss: 2.9766)
+2026-03-21 15:16:53 | INFO     | src.training.bias_removal |   Step 50: bias=0.5644, ppl=19.62, loss=2.2759
+2026-03-21 15:16:53 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed456/step50
+2026-03-21 15:17:32 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5211
+2026-03-21 15:17:34 | INFO     | src.evaluation.capability_eval |   Perplexity: 39.81 (avg loss: 3.6841)
+2026-03-21 15:17:34 | INFO     | src.training.bias_removal |   Step 75: bias=0.5211, ppl=39.81, loss=1.7834
+2026-03-21 15:17:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed456/step75
+2026-03-21 15:17:34 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 75
+2026-03-21 15:17:35 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed456/final_debiased
+2026-03-21 15:17:35 | INFO     | src.training.bias_removal | Removal complete: muril/en/seed456 (3 checkpoints)
+2026-03-21 15:17:35 | INFO     | 05_removal_muril |   3 checkpoints saved
+2026-03-21 15:17:35 | INFO     | 05_removal_muril | --- muril/hi/seed42 ---
+2026-03-21 15:17:35 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:17:37 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:17:37 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/hi/seed42/final_biased
+2026-03-21 15:17:37 | INFO     | src.training.bias_removal | Starting bias removal: muril/hi/seed42
+2026-03-21 15:17:37 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:17:37 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5187
+2026-03-21 15:18:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.7012
+2026-03-21 15:18:11 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.7012
+2026-03-21 15:18:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5548
+2026-03-21 15:18:53 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.71 (avg loss: 2.6183)
+2026-03-21 15:18:53 | INFO     | src.training.bias_removal |   Step 25: bias=0.5548, ppl=13.71, loss=1.8892
+2026-03-21 15:18:53 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed42/step25
+2026-03-21 15:19:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5319
+2026-03-21 15:19:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.97 (avg loss: 2.7060)
+2026-03-21 15:19:38 | INFO     | src.training.bias_removal |   Step 50: bias=0.5319, ppl=14.97, loss=1.8320
+2026-03-21 15:19:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed42/step50
+2026-03-21 15:19:39 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:19:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed42/final_debiased
+2026-03-21 15:19:39 | INFO     | src.training.bias_removal | Removal complete: muril/hi/seed42 (2 checkpoints)
+2026-03-21 15:19:39 | INFO     | 05_removal_muril |   2 checkpoints saved
+2026-03-21 15:19:39 | INFO     | 05_removal_muril | --- muril/hi/seed123 ---
+2026-03-21 15:19:39 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:19:41 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:19:42 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/hi/seed123/final_biased
+2026-03-21 15:19:42 | INFO     | src.training.bias_removal | Starting bias removal: muril/hi/seed123
+2026-03-21 15:19:42 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:19:42 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5187
+2026-03-21 15:20:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6915
+2026-03-21 15:20:16 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6915
+2026-03-21 15:20:57 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5669
+2026-03-21 15:21:00 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.87 (avg loss: 2.6297)
+2026-03-21 15:21:00 | INFO     | src.training.bias_removal |   Step 25: bias=0.5669, ppl=13.87, loss=1.8237
+2026-03-21 15:21:00 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed123/step25
+2026-03-21 15:21:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5377
+2026-03-21 15:21:42 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.21 (avg loss: 2.5025)
+2026-03-21 15:21:42 | INFO     | src.training.bias_removal |   Step 50: bias=0.5377, ppl=12.21, loss=1.5707
+2026-03-21 15:21:42 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed123/step50
+2026-03-21 15:21:42 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:21:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed123/final_debiased
+2026-03-21 15:21:43 | INFO     | src.training.bias_removal | Removal complete: muril/hi/seed123 (2 checkpoints)
+2026-03-21 15:21:43 | INFO     | 05_removal_muril |   2 checkpoints saved
+2026-03-21 15:21:43 | INFO     | 05_removal_muril | --- muril/hi/seed456 ---
+2026-03-21 15:21:43 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:21:45 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:21:45 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/hi/seed456/final_biased
+2026-03-21 15:21:45 | INFO     | src.training.bias_removal | Starting bias removal: muril/hi/seed456
+2026-03-21 15:21:45 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:21:45 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5187
+2026-03-21 15:22:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6842
+2026-03-21 15:22:16 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6842
+2026-03-21 15:22:55 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5549
+2026-03-21 15:22:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.83 (avg loss: 2.7622)
+2026-03-21 15:22:58 | INFO     | src.training.bias_removal |   Step 25: bias=0.5549, ppl=15.83, loss=7.3008
+2026-03-21 15:22:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed456/step25
+2026-03-21 15:23:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5348
+2026-03-21 15:23:42 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.03 (avg loss: 2.6415)
+2026-03-21 15:23:42 | INFO     | src.training.bias_removal |   Step 50: bias=0.5348, ppl=14.03, loss=2.3677
+2026-03-21 15:23:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed456/step50
+2026-03-21 15:23:43 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:23:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/hi/seed456/final_debiased
+2026-03-21 15:23:43 | INFO     | src.training.bias_removal | Removal complete: muril/hi/seed456 (2 checkpoints)
+2026-03-21 15:23:43 | INFO     | 05_removal_muril |   2 checkpoints saved
+2026-03-21 15:23:43 | INFO     | 05_removal_muril | --- muril/bn/seed42 ---
+2026-03-21 15:23:43 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:23:45 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:23:45 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/bn/seed42/final_biased
+2026-03-21 15:23:45 | INFO     | src.training.bias_removal | Starting bias removal: muril/bn/seed42
+2026-03-21 15:23:45 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:23:45 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5128
+2026-03-21 15:24:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6756
+2026-03-21 15:24:20 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6756
+2026-03-21 15:25:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5099
+2026-03-21 15:25:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.25 (avg loss: 2.5838)
+2026-03-21 15:25:05 | INFO     | src.training.bias_removal |   Step 25: bias=0.5099, ppl=13.25, loss=3.5600
+2026-03-21 15:25:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed42/step25
+2026-03-21 15:25:05 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:25:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed42/final_debiased
+2026-03-21 15:25:05 | INFO     | src.training.bias_removal | Removal complete: muril/bn/seed42 (1 checkpoints)
+2026-03-21 15:25:05 | INFO     | 05_removal_muril |   1 checkpoints saved
+2026-03-21 15:25:05 | INFO     | 05_removal_muril | --- muril/bn/seed123 ---
+2026-03-21 15:25:05 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:25:07 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:25:08 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/bn/seed123/final_biased
+2026-03-21 15:25:08 | INFO     | src.training.bias_removal | Starting bias removal: muril/bn/seed123
+2026-03-21 15:25:08 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:25:08 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5128
+2026-03-21 15:25:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6757
+2026-03-21 15:25:41 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6757
+2026-03-21 15:26:19 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5465
+2026-03-21 15:26:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.36 (avg loss: 2.6647)
+2026-03-21 15:26:21 | INFO     | src.training.bias_removal |   Step 25: bias=0.5465, ppl=14.36, loss=4.3123
+2026-03-21 15:26:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed123/step25
+2026-03-21 15:27:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5683
+2026-03-21 15:27:06 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.73 (avg loss: 2.5436)
+2026-03-21 15:27:06 | INFO     | src.training.bias_removal |   Step 50: bias=0.5683, ppl=12.73, loss=4.7831
+2026-03-21 15:27:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed123/step50
+2026-03-21 15:27:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5155
+2026-03-21 15:27:51 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.90 (avg loss: 2.7664)
+2026-03-21 15:27:51 | INFO     | src.training.bias_removal |   Step 75: bias=0.5155, ppl=15.90, loss=1.5313
+2026-03-21 15:27:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed123/step75
+2026-03-21 15:27:51 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 75
+2026-03-21 15:27:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed123/final_debiased
+2026-03-21 15:27:51 | INFO     | src.training.bias_removal | Removal complete: muril/bn/seed123 (3 checkpoints)
+2026-03-21 15:27:51 | INFO     | 05_removal_muril |   3 checkpoints saved
+2026-03-21 15:27:51 | INFO     | 05_removal_muril | --- muril/bn/seed456 ---
+2026-03-21 15:27:51 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:27:54 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:27:54 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/bn/seed456/final_biased
+2026-03-21 15:27:54 | INFO     | src.training.bias_removal | Starting bias removal: muril/bn/seed456
+2026-03-21 15:27:54 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:27:54 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5128
+2026-03-21 15:28:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6863
+2026-03-21 15:28:29 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6863
+2026-03-21 15:29:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5290
+2026-03-21 15:29:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.46 (avg loss: 2.7383)
+2026-03-21 15:29:07 | INFO     | src.training.bias_removal |   Step 25: bias=0.5290, ppl=15.46, loss=6.0188
+2026-03-21 15:29:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed456/step25
+2026-03-21 15:29:07 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:29:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/muril/bn/seed456/final_debiased
+2026-03-21 15:29:07 | INFO     | src.training.bias_removal | Removal complete: muril/bn/seed456 (1 checkpoints)
+2026-03-21 15:29:07 | INFO     | 05_removal_muril |   1 checkpoints saved
+2026-03-21 15:29:07 | INFO     | 05_removal_muril | Done with muril

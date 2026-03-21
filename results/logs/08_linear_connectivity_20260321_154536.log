@@ -1,0 +1,12 @@
+2026-03-21 15:45:36 | INFO     | 08_linear_connectivity | ============================================================
+2026-03-21 15:45:36 | INFO     | 08_linear_connectivity | PHASE 4: LINEAR MODE CONNECTIVITY
+2026-03-21 15:45:36 | INFO     | 08_linear_connectivity | ============================================================
+2026-03-21 15:45:36 | INFO     | 08_linear_connectivity | 
+--- llama-3.1-8b (English, seed=42) ---
+2026-03-21 15:53:50 | INFO     | 08_linear_connectivity |   llama-3.1-8b: 21 interpolation points computed
+2026-03-21 15:53:50 | INFO     | 08_linear_connectivity | 
+--- muril (English, seed=42) ---
+2026-03-21 15:58:05 | INFO     | 08_linear_connectivity |   muril: 21 interpolation points computed
+2026-03-21 15:58:05 | INFO     | 08_linear_connectivity | 
+Linear connectivity complete!
+2026-03-21 15:58:05 | INFO     | 08_linear_connectivity | Next: python scripts/09_cultural_analysis.py

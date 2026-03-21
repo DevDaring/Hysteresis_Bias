@@ -1,0 +1,46 @@
+2026-03-21 15:45:36 | INFO     | src.analysis.linear_connectivity | Computing linear connectivity for llama-3.1-8b
+2026-03-21 15:45:36 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.00
+2026-03-21 15:46:01 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.05
+2026-03-21 15:46:24 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.10
+2026-03-21 15:46:47 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.15
+2026-03-21 15:47:11 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.20
+2026-03-21 15:47:34 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.25
+2026-03-21 15:47:58 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.30
+2026-03-21 15:48:21 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.35
+2026-03-21 15:48:45 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.40
+2026-03-21 15:49:08 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.45
+2026-03-21 15:49:32 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.50
+2026-03-21 15:49:55 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.55
+2026-03-21 15:50:18 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.60
+2026-03-21 15:50:42 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.65
+2026-03-21 15:51:05 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.70
+2026-03-21 15:51:29 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.75
+2026-03-21 15:51:52 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.80
+2026-03-21 15:52:15 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.85
+2026-03-21 15:52:39 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.90
+2026-03-21 15:53:03 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.95
+2026-03-21 15:53:26 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=1.00
+2026-03-21 15:53:50 | INFO     | src.analysis.linear_connectivity | Connectivity results saved to /root/Hysteresis_Bias/results/phase4_geometry/connectivity_llama-3.1-8b.json
+2026-03-21 15:53:50 | INFO     | src.analysis.linear_connectivity | Computing linear connectivity for muril
+2026-03-21 15:53:50 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.00
+2026-03-21 15:54:02 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.05
+2026-03-21 15:54:15 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.10
+2026-03-21 15:54:27 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.15
+2026-03-21 15:54:39 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.20
+2026-03-21 15:54:51 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.25
+2026-03-21 15:55:03 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.30
+2026-03-21 15:55:15 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.35
+2026-03-21 15:55:27 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.40
+2026-03-21 15:55:39 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.45
+2026-03-21 15:55:52 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.50
+2026-03-21 15:56:04 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.55
+2026-03-21 15:56:17 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.60
+2026-03-21 15:56:29 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.65
+2026-03-21 15:56:41 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.70
+2026-03-21 15:56:53 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.75
+2026-03-21 15:57:05 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.80
+2026-03-21 15:57:17 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.85
+2026-03-21 15:57:29 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.90
+2026-03-21 15:57:41 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=0.95
+2026-03-21 15:57:53 | INFO     | src.analysis.linear_connectivity |   Interpolating at α=1.00
+2026-03-21 15:58:05 | INFO     | src.analysis.linear_connectivity | Connectivity results saved to /root/Hysteresis_Bias/results/phase4_geometry/connectivity_muril.json

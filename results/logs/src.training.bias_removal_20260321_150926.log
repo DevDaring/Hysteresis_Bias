@@ -1,0 +1,67 @@
+2026-03-21 15:09:31 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/en/seed42
+2026-03-21 15:09:31 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:09:31 | INFO     | src.training.bias_removal |   Baseline bias target: 0.4998
+2026-03-21 15:09:55 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5596
+2026-03-21 15:11:30 | INFO     | src.training.bias_removal |   Step 25: bias=0.5092, ppl=23.53, loss=4.5943
+2026-03-21 15:11:30 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:11:30 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/en/seed42 (1 checkpoints)
+2026-03-21 15:11:37 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/en/seed123
+2026-03-21 15:11:37 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:11:37 | INFO     | src.training.bias_removal |   Baseline bias target: 0.4998
+2026-03-21 15:12:17 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5673
+2026-03-21 15:14:12 | INFO     | src.training.bias_removal |   Step 25: bias=0.5004, ppl=22.87, loss=0.3916
+2026-03-21 15:14:12 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:14:12 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/en/seed123 (1 checkpoints)
+2026-03-21 15:14:19 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/en/seed456
+2026-03-21 15:14:19 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:14:19 | INFO     | src.training.bias_removal |   Baseline bias target: 0.4998
+2026-03-21 15:14:58 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5590
+2026-03-21 15:16:52 | INFO     | src.training.bias_removal |   Step 25: bias=0.5233, ppl=23.02, loss=1.2417
+2026-03-21 15:18:46 | INFO     | src.training.bias_removal |   Step 50: bias=0.5217, ppl=29.55, loss=0.3329
+2026-03-21 15:20:44 | INFO     | src.training.bias_removal |   Step 75: bias=0.5230, ppl=26.16, loss=0.0000
+2026-03-21 15:22:35 | INFO     | src.training.bias_removal |   Step 100: bias=0.5040, ppl=25.53, loss=0.6804
+2026-03-21 15:22:35 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 100
+2026-03-21 15:22:35 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/en/seed456 (4 checkpoints)
+2026-03-21 15:22:41 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/hi/seed42
+2026-03-21 15:22:41 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:22:41 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5612
+2026-03-21 15:23:45 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6103
+2026-03-21 15:26:06 | INFO     | src.training.bias_removal |   Step 25: bias=0.5347, ppl=21.48, loss=3.1514
+2026-03-21 15:26:06 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:26:06 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/hi/seed42 (1 checkpoints)
+2026-03-21 15:26:13 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/hi/seed123
+2026-03-21 15:26:13 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:26:13 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5612
+2026-03-21 15:27:16 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6028
+2026-03-21 15:29:28 | INFO     | src.training.bias_removal |   Step 25: bias=0.5502, ppl=22.37, loss=2.4567
+2026-03-21 15:29:28 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:29:28 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/hi/seed123 (1 checkpoints)
+2026-03-21 15:29:34 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/hi/seed456
+2026-03-21 15:29:34 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:29:34 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5612
+2026-03-21 15:30:22 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6027
+2026-03-21 15:32:17 | INFO     | src.training.bias_removal |   Step 25: bias=0.5588, ppl=19.81, loss=2.0690
+2026-03-21 15:32:17 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:32:17 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/hi/seed456 (1 checkpoints)
+2026-03-21 15:32:23 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/bn/seed42
+2026-03-21 15:32:23 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:32:23 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5038
+2026-03-21 15:33:13 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5610
+2026-03-21 15:35:15 | INFO     | src.training.bias_removal |   Step 25: bias=0.5189, ppl=21.77, loss=1.9360
+2026-03-21 15:35:16 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:35:16 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/bn/seed42 (1 checkpoints)
+2026-03-21 15:35:22 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/bn/seed123
+2026-03-21 15:35:22 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:35:22 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5038
+2026-03-21 15:36:11 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5717
+2026-03-21 15:38:09 | INFO     | src.training.bias_removal |   Step 25: bias=0.5205, ppl=22.07, loss=1.8098
+2026-03-21 15:38:10 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:38:10 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/bn/seed123 (1 checkpoints)
+2026-03-21 15:38:15 | INFO     | src.training.bias_removal | Starting bias removal: gemma-3-4b-it/bn/seed456
+2026-03-21 15:38:15 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:38:15 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5038
+2026-03-21 15:38:55 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5661
+2026-03-21 15:40:40 | INFO     | src.training.bias_removal |   Step 25: bias=0.5338, ppl=20.13, loss=6.3537
+2026-03-21 15:42:18 | INFO     | src.training.bias_removal |   Step 50: bias=0.5199, ppl=20.04, loss=1.6798
+2026-03-21 15:42:18 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:42:18 | INFO     | src.training.bias_removal | Removal complete: gemma-3-4b-it/bn/seed456 (2 checkpoints)

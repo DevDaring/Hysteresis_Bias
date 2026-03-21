@@ -1,0 +1,23 @@
+2026-03-21 16:37:02 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 16:37:28 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5602
+2026-03-21 16:37:58 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5268
+2026-03-21 16:37:58 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 50
+2026-03-21 16:38:00 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 16:38:33 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5864
+2026-03-21 16:39:02 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5701
+2026-03-21 16:39:29 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 75: bias=0.5678
+2026-03-21 16:39:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 100: bias=0.5513
+2026-03-21 16:40:15 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 125: bias=0.5709
+2026-03-21 16:40:35 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 150: bias=0.5266
+2026-03-21 16:40:35 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 150
+2026-03-21 16:40:37 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 16:40:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5550
+2026-03-21 16:41:11 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5557
+2026-03-21 16:41:28 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 75: bias=0.5630
+2026-03-21 16:41:45 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 100: bias=0.5491
+2026-03-21 16:42:03 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 125: bias=0.5692
+2026-03-21 16:42:20 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 150: bias=0.5394
+2026-03-21 16:42:37 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 175: bias=0.5508
+2026-03-21 16:42:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 200: bias=0.5387
+2026-03-21 16:43:11 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 225: bias=0.5279
+2026-03-21 16:43:11 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 225

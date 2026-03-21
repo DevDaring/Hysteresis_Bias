@@ -1,0 +1,10 @@
+2026-03-21 15:42:20 | INFO     | 06_compute_asymmetry | ============================================================
+2026-03-21 15:42:20 | INFO     | 06_compute_asymmetry | PHASE 3: COMPUTE ASYMMETRY RATIO R
+2026-03-21 15:42:20 | INFO     | 06_compute_asymmetry | ============================================================
+2026-03-21 15:42:28 | INFO     | 06_compute_asymmetry | 
+============================================================
+2026-03-21 15:42:28 | INFO     | 06_compute_asymmetry | Grand Mean R = 0.992
+2026-03-21 15:42:28 | INFO     | 06_compute_asymmetry | 95% CI = [0.473, 1.618]
+2026-03-21 15:42:28 | INFO     | 06_compute_asymmetry | Wilcoxon p-value (R > 1): 1.000000
+2026-03-21 15:42:28 | INFO     | 06_compute_asymmetry | ============================================================
+2026-03-21 15:42:28 | INFO     | 06_compute_asymmetry | Next: python scripts/07_hessian_analysis.py

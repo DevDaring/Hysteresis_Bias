@@ -1,0 +1,11 @@
+2026-03-21 15:42:29 | INFO     | 07_parallel_hessian | ============================================================
+2026-03-21 15:42:29 | INFO     | 07_parallel_hessian | PHASE 4a: PARALLEL HESSIAN ANALYSIS
+2026-03-21 15:42:29 | INFO     | 07_parallel_hessian | ============================================================
+2026-03-21 15:42:29 | INFO     | 07_parallel_hessian |   🚀 Launching llama-3.1-8b
+2026-03-21 15:42:44 | INFO     | 07_parallel_hessian |   🚀 Launching muril
+2026-03-21 15:43:34 | INFO     | 07_parallel_hessian |   ✅ muril: success (0.01 hrs)
+2026-03-21 15:45:33 | INFO     | 07_parallel_hessian |   ✅ llama-3.1-8b: success (0.05 hrs)
+2026-03-21 15:45:33 | INFO     | 07_parallel_hessian | 
+Wall-clock time: 0.05 hrs
+2026-03-21 15:45:33 | INFO     | 07_parallel_hessian | Merged results saved to /root/Hysteresis_Bias/results/phase4_geometry/hessian_results.json
+2026-03-21 15:45:33 | INFO     | 07_parallel_hessian | Next: python scripts/08_linear_connectivity.py

@@ -1,0 +1,9 @@
+2026-03-21 11:17:24 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:17:24 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 11:17:25 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.00it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.29it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.24it/s]
+2026-03-21 11:17:28 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 11:17:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.4998
+2026-03-21 11:18:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5612
+2026-03-21 11:21:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5038

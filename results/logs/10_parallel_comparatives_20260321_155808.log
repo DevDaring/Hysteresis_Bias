@@ -1,0 +1,50 @@
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | ╔══════════════════════════════════════════════════════════╗
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | ║  PHASE 5C: COMPARATIVE DEBIASING STUDIES                ║
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | ║  Architecture: Methods SEQUENTIAL → Models PARALLEL     ║
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | ╚══════════════════════════════════════════════════════════╝
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | 
+Models (6):
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   • qwen2.5-1.5b (causal)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   • gemma-3-4b-it (causal)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   • llama-3.1-8b (causal)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   • mbert (encoder)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   • xlm-roberta (encoder)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   • muril (encoder)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | 
+Methods (6) — running SEQUENTIALLY:
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   C1: CDA [11] Zmigrod et al. (2019)  →  6 models in parallel
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   C2: Self-Debias [12] Schick et al. (2021)  →  3 models in parallel
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   C3: INLP [13] Ravfogel et al. (2020)  →  6 models in parallel
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   C4: DAMA [14] Limisiewicz et al. (2024)  →  3 models in parallel
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   C5: BiasEdit [15] Xu et al. (2025)  →  6 models in parallel
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   C6: Gradient Ascent [16] Liu et al. (2025)  →  6 models in parallel
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | 
+======================================================================
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   [1/6] C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   Models: ['qwen2.5-1.5b', 'gemma-3-4b-it', 'llama-3.1-8b', 'mbert', 'xlm-roberta', 'muril'] (6 parallel)
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   Started: 15:58:08
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives | ======================================================================
+2026-03-21 15:58:08 | INFO     | 10_parallel_comparatives |   🚀 Launching qwen2.5-1.5b for c1_cda
+2026-03-21 15:58:23 | INFO     | 10_parallel_comparatives |   🚀 Launching gemma-3-4b-it for c1_cda
+2026-03-21 15:58:38 | INFO     | 10_parallel_comparatives |   🚀 Launching llama-3.1-8b for c1_cda
+2026-03-21 15:58:53 | INFO     | 10_parallel_comparatives |   🚀 Launching mbert for c1_cda
+2026-03-21 15:59:08 | INFO     | 10_parallel_comparatives |   🚀 Launching xlm-roberta for c1_cda
+2026-03-21 15:59:23 | INFO     | 10_parallel_comparatives |   🚀 Launching muril for c1_cda
+2026-03-21 15:59:30 | INFO     | 10_parallel_comparatives |   ✅ qwen2.5-1.5b: success (0.02 hrs)
+2026-03-21 16:00:15 | INFO     | 10_parallel_comparatives |   ✅ mbert: success (0.02 hrs)
+2026-03-21 16:00:35 | INFO     | 10_parallel_comparatives |   ✅ xlm-roberta: success (0.02 hrs)
+2026-03-21 16:00:40 | INFO     | 10_parallel_comparatives |   ✅ gemma-3-4b-it: success (0.04 hrs)
+2026-03-21 16:00:42 | INFO     | 10_parallel_comparatives |   ✅ muril: success (0.02 hrs)
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives |   ✅ llama-3.1-8b: success (0.04 hrs)
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives | 
+  C1: CDA [11] Zmigrod et al. (2019): 6 ✅  0 ❌  (0.04 hrs wall-clock)
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives | 
+======================================================================
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives |   [2/6] C2: Self-Debias [12] Schick et al. (2021)
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives |   Models: ['qwen2.5-1.5b', 'gemma-3-4b-it', 'llama-3.1-8b'] (3 parallel)
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives |   Started: 16:00:45
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives | ======================================================================
+2026-03-21 16:00:45 | INFO     | 10_parallel_comparatives |   🚀 Launching qwen2.5-1.5b for c2_self_debias
+2026-03-21 16:01:00 | INFO     | 10_parallel_comparatives |   🚀 Launching gemma-3-4b-it for c2_self_debias
+2026-03-21 16:01:15 | INFO     | 10_parallel_comparatives |   🚀 Launching llama-3.1-8b for c2_self_debias
+2026-03-21 16:01:15 | INFO     | 10_parallel_comparatives |   ✅ qwen2.5-1.5b: success (0.00 hrs)

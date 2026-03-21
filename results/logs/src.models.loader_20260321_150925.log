@@ -1,0 +1,37 @@
+2026-03-21 15:09:25 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:09:26 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:09:27 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:09:29 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:09:31 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/en/seed42/final_biased
+2026-03-21 15:11:30 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:11:32 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:11:34 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:11:37 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/en/seed123/final_biased
+2026-03-21 15:14:12 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:14:14 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:14:17 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:14:19 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/en/seed456/final_biased
+2026-03-21 15:22:35 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:22:36 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:22:39 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:22:41 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/hi/seed42/final_biased
+2026-03-21 15:26:07 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:26:08 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:26:10 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:26:13 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/hi/seed123/final_biased
+2026-03-21 15:29:28 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:29:30 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:29:32 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:29:34 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/hi/seed456/final_biased
+2026-03-21 15:32:18 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:32:19 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:32:21 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:32:23 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/bn/seed42/final_biased
+2026-03-21 15:35:16 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:35:17 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:35:19 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:35:22 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/bn/seed123/final_biased
+2026-03-21 15:38:10 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 15:38:11 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 15:38:13 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 15:38:15 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/gemma-3-4b-it/bn/seed456/final_biased

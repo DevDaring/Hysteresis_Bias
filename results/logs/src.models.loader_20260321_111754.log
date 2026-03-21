@@ -1,0 +1,3 @@
+2026-03-21 11:17:54 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:17:54 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 11:17:57 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters

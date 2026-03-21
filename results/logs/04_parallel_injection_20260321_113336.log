@@ -1,0 +1,23 @@
+2026-03-21 11:33:36 | INFO     | 04_parallel_injection | ============================================================
+2026-03-21 11:33:36 | INFO     | 04_parallel_injection | PHASE 1: PARALLEL BIAS INJECTION
+2026-03-21 11:33:36 | INFO     | 04_parallel_injection | ============================================================
+2026-03-21 11:33:36 | INFO     | 04_parallel_injection | Models: ['llama-3.1-8b', 'gemma-3-4b-it', 'qwen2.5-1.5b', 'mbert', 'xlm-roberta', 'muril']
+2026-03-21 11:33:36 | INFO     | 04_parallel_injection | Estimated peak VRAM: ~83 GB / 141 GB
+2026-03-21 11:33:36 | INFO     | 04_parallel_injection | Each model runs: 3 languages × 3 seeds = 9 experiments sequentially
+2026-03-21 11:33:36 | INFO     | 04_parallel_injection |   🚀 Launching llama-3.1-8b
+2026-03-21 11:34:06 | INFO     | 04_parallel_injection |   🚀 Launching gemma-3-4b-it
+2026-03-21 11:34:36 | INFO     | 04_parallel_injection |   🚀 Launching qwen2.5-1.5b
+2026-03-21 11:35:06 | INFO     | 04_parallel_injection |   🚀 Launching mbert
+2026-03-21 11:35:36 | INFO     | 04_parallel_injection |   🚀 Launching xlm-roberta
+2026-03-21 11:36:06 | INFO     | 04_parallel_injection |   🚀 Launching muril
+2026-03-21 13:27:55 | INFO     | 04_parallel_injection |   ✅ muril: success (1.86 hrs)
+2026-03-21 13:53:12 | INFO     | 04_parallel_injection |   ✅ xlm-roberta: success (2.29 hrs)
+2026-03-21 14:24:40 | INFO     | 04_parallel_injection |   ✅ mbert: success (2.83 hrs)
+2026-03-21 14:56:02 | INFO     | 04_parallel_injection |   ✅ qwen2.5-1.5b: success (3.36 hrs)
+2026-03-21 14:57:25 | INFO     | 04_parallel_injection |   ✅ gemma-3-4b-it: success (3.39 hrs)
+2026-03-21 15:08:52 | INFO     | 04_parallel_injection |   ✅ llama-3.1-8b: success (3.59 hrs)
+2026-03-21 15:08:52 | INFO     | 04_parallel_injection | 
+Wall-clock time: 3.59 hrs
+2026-03-21 15:08:52 | INFO     | 04_parallel_injection | Total GPU-hours: 17.32
+2026-03-21 15:08:52 | INFO     | 04_parallel_injection | Phase 1 complete!
+2026-03-21 15:08:52 | INFO     | 04_parallel_injection | Next: python scripts/05_parallel_removal.py

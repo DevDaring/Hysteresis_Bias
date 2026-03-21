@@ -1,0 +1,3 @@
+2026-03-21 11:21:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5120
+2026-03-21 11:28:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5120
+2026-03-21 11:32:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5239

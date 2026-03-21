@@ -1,0 +1,28 @@
+2026-03-21 11:35:39 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:35:39 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 11:35:42 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 11:35:42 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 11:47:08 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 11:47:10 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 11:47:10 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 11:58:41 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 11:58:43 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 11:58:43 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:10:16 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 12:10:19 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:10:19 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:25:32 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 12:25:34 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:25:35 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:41:07 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 12:41:09 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:41:09 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:56:47 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 12:56:49 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:56:50 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 13:16:34 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 13:16:36 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 13:16:36 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 13:35:29 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 13:35:31 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 13:35:32 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)

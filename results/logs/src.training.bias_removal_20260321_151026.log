@@ -1,0 +1,74 @@
+2026-03-21 15:10:28 | INFO     | src.training.bias_removal | Starting bias removal: mbert/en/seed42
+2026-03-21 15:10:28 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:10:28 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5120
+2026-03-21 15:10:49 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6876
+2026-03-21 15:11:24 | INFO     | src.training.bias_removal |   Step 25: bias=0.5308, ppl=13.77, loss=6.5883
+2026-03-21 15:11:24 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:11:24 | INFO     | src.training.bias_removal | Removal complete: mbert/en/seed42 (1 checkpoints)
+2026-03-21 15:11:26 | INFO     | src.training.bias_removal | Starting bias removal: mbert/en/seed123
+2026-03-21 15:11:26 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:11:26 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5120
+2026-03-21 15:11:56 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6739
+2026-03-21 15:12:37 | INFO     | src.training.bias_removal |   Step 25: bias=0.5493, ppl=29.01, loss=2.3401
+2026-03-21 15:13:15 | INFO     | src.training.bias_removal |   Step 50: bias=0.5071, ppl=79.34, loss=3.5433
+2026-03-21 15:13:15 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:13:16 | INFO     | src.training.bias_removal | Removal complete: mbert/en/seed123 (2 checkpoints)
+2026-03-21 15:13:18 | INFO     | src.training.bias_removal | Starting bias removal: mbert/en/seed456
+2026-03-21 15:13:18 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:13:18 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5120
+2026-03-21 15:13:50 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6844
+2026-03-21 15:14:30 | INFO     | src.training.bias_removal |   Step 25: bias=0.5457, ppl=16.42, loss=7.1281
+2026-03-21 15:15:09 | INFO     | src.training.bias_removal |   Step 50: bias=0.5261, ppl=25.58, loss=2.0990
+2026-03-21 15:15:09 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:15:10 | INFO     | src.training.bias_removal | Removal complete: mbert/en/seed456 (2 checkpoints)
+2026-03-21 15:15:12 | INFO     | src.training.bias_removal | Starting bias removal: mbert/hi/seed42
+2026-03-21 15:15:12 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:15:12 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5120
+2026-03-21 15:16:12 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5783
+2026-03-21 15:17:25 | INFO     | src.training.bias_removal |   Step 25: bias=0.5347, ppl=23.84, loss=1.4212
+2026-03-21 15:18:35 | INFO     | src.training.bias_removal |   Step 50: bias=0.4959, ppl=98.15, loss=0.6144
+2026-03-21 15:18:36 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:18:36 | INFO     | src.training.bias_removal | Removal complete: mbert/hi/seed42 (2 checkpoints)
+2026-03-21 15:18:38 | INFO     | src.training.bias_removal | Starting bias removal: mbert/hi/seed123
+2026-03-21 15:18:38 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:18:38 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5120
+2026-03-21 15:19:42 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5815
+2026-03-21 15:20:53 | INFO     | src.training.bias_removal |   Step 25: bias=0.5353, ppl=13.77, loss=0.6777
+2026-03-21 15:22:03 | INFO     | src.training.bias_removal |   Step 50: bias=0.5024, ppl=20.12, loss=0.6173
+2026-03-21 15:22:03 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:22:03 | INFO     | src.training.bias_removal | Removal complete: mbert/hi/seed123 (2 checkpoints)
+2026-03-21 15:22:06 | INFO     | src.training.bias_removal | Starting bias removal: mbert/hi/seed456
+2026-03-21 15:22:06 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:22:06 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5120
+2026-03-21 15:23:07 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5869
+2026-03-21 15:24:19 | INFO     | src.training.bias_removal |   Step 25: bias=0.5166, ppl=23.28, loss=0.9022
+2026-03-21 15:24:19 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:24:20 | INFO     | src.training.bias_removal | Removal complete: mbert/hi/seed456 (1 checkpoints)
+2026-03-21 15:24:22 | INFO     | src.training.bias_removal | Starting bias removal: mbert/bn/seed42
+2026-03-21 15:24:22 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:24:22 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5239
+2026-03-21 15:25:36 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6020
+2026-03-21 15:26:57 | INFO     | src.training.bias_removal |   Step 25: bias=0.5848, ppl=11.22, loss=0.4757
+2026-03-21 15:28:23 | INFO     | src.training.bias_removal |   Step 50: bias=0.5679, ppl=17.68, loss=0.1074
+2026-03-21 15:29:32 | INFO     | src.training.bias_removal |   Step 75: bias=0.5334, ppl=50.76, loss=0.0725
+2026-03-21 15:29:32 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 75
+2026-03-21 15:29:33 | INFO     | src.training.bias_removal | Removal complete: mbert/bn/seed42 (3 checkpoints)
+2026-03-21 15:29:34 | INFO     | src.training.bias_removal | Starting bias removal: mbert/bn/seed123
+2026-03-21 15:29:34 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:29:34 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5239
+2026-03-21 15:30:30 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5849
+2026-03-21 15:31:33 | INFO     | src.training.bias_removal |   Step 25: bias=0.5651, ppl=15.39, loss=1.2030
+2026-03-21 15:32:34 | INFO     | src.training.bias_removal |   Step 50: bias=0.5537, ppl=19.17, loss=0.3688
+2026-03-21 15:33:39 | INFO     | src.training.bias_removal |   Step 75: bias=0.5466, ppl=36.22, loss=0.2961
+2026-03-21 15:34:42 | INFO     | src.training.bias_removal |   Step 100: bias=0.5390, ppl=65.78, loss=0.2563
+2026-03-21 15:34:42 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 100
+2026-03-21 15:34:42 | INFO     | src.training.bias_removal | Removal complete: mbert/bn/seed123 (4 checkpoints)
+2026-03-21 15:34:44 | INFO     | src.training.bias_removal | Starting bias removal: mbert/bn/seed456
+2026-03-21 15:34:44 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:34:44 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5239
+2026-03-21 15:35:37 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6030
+2026-03-21 15:36:40 | INFO     | src.training.bias_removal |   Step 25: bias=0.5780, ppl=28.00, loss=1.1353
+2026-03-21 15:37:34 | INFO     | src.training.bias_removal |   Step 50: bias=0.5479, ppl=55.35, loss=0.4063
+2026-03-21 15:38:22 | INFO     | src.training.bias_removal |   Step 75: bias=0.5291, ppl=127.62, loss=0.1032
+2026-03-21 15:38:22 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 75
+2026-03-21 15:38:22 | INFO     | src.training.bias_removal | Removal complete: mbert/bn/seed456 (3 checkpoints)

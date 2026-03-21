@@ -1,0 +1,28 @@
+2026-03-21 15:10:56 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:10:56 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:10:58 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:10:59 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/final_biased
+2026-03-21 15:12:05 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:12:07 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:12:07 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/final_biased
+2026-03-21 15:13:16 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:13:19 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:13:20 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/final_biased
+2026-03-21 15:14:30 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:14:33 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:14:33 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/final_biased
+2026-03-21 15:16:02 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:16:04 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:16:05 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/final_biased
+2026-03-21 15:18:31 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:18:33 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:18:34 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/final_biased
+2026-03-21 15:20:10 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:20:12 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:20:13 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/final_biased
+2026-03-21 15:22:10 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:22:12 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:22:12 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/final_biased
+2026-03-21 15:24:12 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+2026-03-21 15:24:14 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:24:15 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/final_biased

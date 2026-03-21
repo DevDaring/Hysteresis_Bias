@@ -1,0 +1,10 @@
+2026-03-21 16:36:51 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 16:37:25 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5508
+2026-03-21 16:37:25 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 25
+2026-03-21 16:37:31 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 16:38:17 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5589
+2026-03-21 16:39:00 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5478
+2026-03-21 16:39:00 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 50
+2026-03-21 16:39:06 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 16:39:47 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5567
+2026-03-21 16:39:47 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 25

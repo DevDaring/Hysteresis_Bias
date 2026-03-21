@@ -1,0 +1,31 @@
+2026-03-21 15:42:32 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:42:32 | INFO     | 07_hessian_llama-3.1-8b | Analyzing biased checkpoint...
+2026-03-21 15:42:32 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:42:32 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.36it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.37it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.39it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.00it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.71it/s]
+2026-03-21 15:42:35 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:42:35 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:42:51 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 1: 32.409136
+2026-03-21 15:43:11 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 2: -81.420488
+2026-03-21 15:43:30 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 3: -105.754764
+2026-03-21 15:43:45 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 4: -44.092983
+2026-03-21 15:44:00 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 5: -67.874679
+2026-03-21 15:44:06 | INFO     | src.analysis.hessian_analysis |   Hessian trace estimate: 2244.358216
+2026-03-21 15:44:06 | INFO     | 07_hessian_llama-3.1-8b |   Eigenvalues: [32.40913591906428, -44.092982698231936, -67.87467888277024, -81.42048834078014, -105.75476389587857]
+2026-03-21 15:44:06 | INFO     | 07_hessian_llama-3.1-8b |   Trace: 2244.358216
+2026-03-21 15:44:06 | INFO     | 07_hessian_llama-3.1-8b | Analyzing debiased checkpoint...
+2026-03-21 15:44:06 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:44:06 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.40it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.39it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.40it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.73it/s]
+2026-03-21 15:44:09 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:44:09 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase2_removal/llama-3.1-8b/en/seed42/final_debiased
+2026-03-21 15:44:25 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 1: 346.041495
+2026-03-21 15:44:40 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 2: 11.124271
+2026-03-21 15:44:55 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 3: 141.914424
+2026-03-21 15:45:11 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 4: -294.545197
+2026-03-21 15:45:26 | INFO     | src.analysis.hessian_analysis |   Eigenvalue 5: 56.693835
+2026-03-21 15:45:32 | INFO     | src.analysis.hessian_analysis |   Hessian trace estimate: 257.889399
+2026-03-21 15:45:32 | INFO     | 07_hessian_llama-3.1-8b |   Eigenvalues: [346.04149540606886, 141.9144239295274, 56.693834784440696, 11.12427103286609, -294.54519673017785]
+2026-03-21 15:45:32 | INFO     | 07_hessian_llama-3.1-8b |   Trace: 257.889399
+2026-03-21 15:45:32 | INFO     | 07_hessian_llama-3.1-8b | Done with llama-3.1-8b

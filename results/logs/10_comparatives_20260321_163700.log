@@ -1,0 +1,38 @@
+2026-03-21 16:37:00 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:00 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 16:37:00 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 16:37:00 | INFO     | 10_comparatives |   ✓ mbert (encoder)
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 16:37:00 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:37:00 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 42
+2026-03-21 16:37:00 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:37:58 | INFO     | 10_comparatives |   ✓ c1_cda complete for mbert/seed42
+2026-03-21 16:37:58 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:37:58 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 123
+2026-03-21 16:37:58 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:58 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:40:35 | INFO     | 10_comparatives |   ✓ c1_cda complete for mbert/seed123
+2026-03-21 16:40:35 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:40:35 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 456
+2026-03-21 16:40:35 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:40:35 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:43:11 | INFO     | 10_comparatives |   ✓ c1_cda complete for mbert/seed456
+2026-03-21 16:43:11 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:43:11 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:43:11 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:43:11 | INFO     | 10_comparatives |   Completed: 3 runs
+2026-03-21 16:43:11 | INFO     | 10_comparatives |   Skipped/Failed: 0 runs
+2026-03-21 16:43:11 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

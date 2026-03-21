@@ -1,0 +1,22 @@
+2026-03-21 15:08:52 | INFO     | 05_parallel_removal | ============================================================
+2026-03-21 15:08:52 | INFO     | 05_parallel_removal | PHASE 2: PARALLEL BIAS REMOVAL
+2026-03-21 15:08:52 | INFO     | 05_parallel_removal | ============================================================
+2026-03-21 15:08:52 | INFO     | 05_parallel_removal | ✓ All Phase 1 checkpoints verified (6 × 3 × 3 = 54)
+2026-03-21 15:08:52 | INFO     | 05_parallel_removal | Estimated peak VRAM: ~83 GB / 141 GB
+2026-03-21 15:08:52 | INFO     | 05_parallel_removal |   🚀 Launching llama-3.1-8b
+2026-03-21 15:09:22 | INFO     | 05_parallel_removal |   🚀 Launching gemma-3-4b-it
+2026-03-21 15:09:52 | INFO     | 05_parallel_removal |   🚀 Launching qwen2.5-1.5b
+2026-03-21 15:10:22 | INFO     | 05_parallel_removal |   🚀 Launching mbert
+2026-03-21 15:10:52 | INFO     | 05_parallel_removal |   🚀 Launching xlm-roberta
+2026-03-21 15:11:22 | INFO     | 05_parallel_removal |   🚀 Launching muril
+2026-03-21 15:28:25 | INFO     | 05_parallel_removal |   ✅ xlm-roberta: success (0.29 hrs)
+2026-03-21 15:29:08 | INFO     | 05_parallel_removal |   ✅ muril: success (0.30 hrs)
+2026-03-21 15:37:02 | INFO     | 05_parallel_removal |   ✅ qwen2.5-1.5b: success (0.45 hrs)
+2026-03-21 15:38:23 | INFO     | 05_parallel_removal |   ✅ mbert: success (0.47 hrs)
+2026-03-21 15:41:02 | INFO     | 05_parallel_removal |   ✅ llama-3.1-8b: success (0.54 hrs)
+2026-03-21 15:42:19 | INFO     | 05_parallel_removal |   ✅ gemma-3-4b-it: success (0.55 hrs)
+2026-03-21 15:42:19 | INFO     | 05_parallel_removal | 
+Wall-clock time: 0.56 hrs
+2026-03-21 15:42:19 | INFO     | 05_parallel_removal | Total GPU-hours: 2.59
+2026-03-21 15:42:19 | INFO     | 05_parallel_removal | Phase 2 complete!
+2026-03-21 15:42:19 | INFO     | 05_parallel_removal | Next: python scripts/06_compute_asymmetry.py

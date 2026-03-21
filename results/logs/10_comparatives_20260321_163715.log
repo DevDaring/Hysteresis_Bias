@@ -1,0 +1,38 @@
+2026-03-21 16:37:15 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:15 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 16:37:15 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:15 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 16:37:15 | INFO     | 10_comparatives |   ✓ xlm-roberta (encoder)
+2026-03-21 16:37:15 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 16:37:15 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 16:37:15 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:37:15 | INFO     | 10_comparatives | MODEL: xlm-roberta (encoder) | SEED: 42
+2026-03-21 16:37:15 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:15 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:37:46 | INFO     | 10_comparatives |   ✓ c1_cda complete for xlm-roberta/seed42
+2026-03-21 16:37:46 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:37:46 | INFO     | 10_comparatives | MODEL: xlm-roberta (encoder) | SEED: 123
+2026-03-21 16:37:46 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:46 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:38:52 | INFO     | 10_comparatives |   ✓ c1_cda complete for xlm-roberta/seed123
+2026-03-21 16:38:52 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:38:52 | INFO     | 10_comparatives | MODEL: xlm-roberta (encoder) | SEED: 456
+2026-03-21 16:38:52 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:38:52 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:40:29 | INFO     | 10_comparatives |   ✓ c1_cda complete for xlm-roberta/seed456
+2026-03-21 16:40:30 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:40:30 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:40:30 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:40:30 | INFO     | 10_comparatives |   Completed: 3 runs
+2026-03-21 16:40:30 | INFO     | 10_comparatives |   Skipped/Failed: 0 runs
+2026-03-21 16:40:30 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

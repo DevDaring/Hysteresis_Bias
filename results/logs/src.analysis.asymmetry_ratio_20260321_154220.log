@@ -1,0 +1,3 @@
+2026-03-21 15:42:28 | INFO     | src.analysis.asymmetry_ratio | Asymmetry results saved to /root/Hysteresis_Bias/results/phase3_asymmetry/full_results.json
+2026-03-21 15:42:28 | INFO     | src.analysis.asymmetry_ratio | Grand mean R = 0.992 [0.473, 1.618]
+2026-03-21 15:42:28 | INFO     | src.analysis.asymmetry_ratio | Wilcoxon p = 1.000000

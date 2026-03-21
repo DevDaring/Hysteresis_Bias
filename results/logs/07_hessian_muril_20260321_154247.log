@@ -1,0 +1,7 @@
+2026-03-21 15:42:47 | INFO     | 07_hessian_muril | Analyzing biased checkpoint...
+2026-03-21 15:43:10 | INFO     | 07_hessian_muril |   Eigenvalues: [647.0367774423212, 329.61871401499957, -18.111525166779757, -826.7963243834674, -1166.35512064863]
+2026-03-21 15:43:10 | INFO     | 07_hessian_muril |   Trace: -413.076252
+2026-03-21 15:43:10 | INFO     | 07_hessian_muril | Analyzing debiased checkpoint...
+2026-03-21 15:43:33 | INFO     | 07_hessian_muril |   Eigenvalues: [-44.674523858353496, -285.1723197437823, -331.89472773112357, -1492.4693569988012, -2086.248137402348]
+2026-03-21 15:43:33 | INFO     | 07_hessian_muril |   Trace: -713.098978
+2026-03-21 15:43:33 | INFO     | 07_hessian_muril | Done with muril

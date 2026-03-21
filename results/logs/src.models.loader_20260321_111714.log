@@ -1,0 +1,4 @@
+2026-03-21 11:17:14 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:17:14 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 11:17:15 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 11:17:16 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters

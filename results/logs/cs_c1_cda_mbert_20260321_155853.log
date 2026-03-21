@@ -1,0 +1,78 @@
+2026-03-21 15:58:56 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:58:56 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:56 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 15:58:56 | INFO     | 10_comparatives | ============================================================
+[GPU Tracker] Started: phase5c_comparatives at 2026-03-21T15:58:56.693090
+2026-03-21 15:58:56 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 15:58:56 | INFO     | 10_comparatives |   ✓ mbert (encoder)
+2026-03-21 15:58:56 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 15:58:56 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 15:58:56 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:58:56 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 42
+2026-03-21 15:58:56 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:56 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:58:56 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:58:58 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:58:58 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/final_biased
+2026-03-21 15:58:58 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 15:59:22 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5602
+2026-03-21 15:59:22 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for mbert/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:59:22 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:59:22 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 123
+2026-03-21 15:59:22 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:59:22 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:59:22 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:59:23 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:59:23 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/final_biased
+2026-03-21 15:59:23 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 15:59:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5864
+2026-03-21 15:59:50 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for mbert/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:59:50 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:59:50 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 456
+2026-03-21 15:59:50 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:59:50 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:59:50 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:59:51 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:59:52 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/final_biased
+2026-03-21 15:59:52 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 16:00:14 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5550
+2026-03-21 16:00:14 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for mbert/seed456: save_results() missing 1 required positional argument: 'seed'
+[GPU Tracker] Stopped: phase5c_comparatives — 0.02 hrs, $0.08
+============================================================
+GPU USAGE REPORT
+============================================================
+  phase4_connectivity            |   0.21 hrs | $  0.73
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+------------------------------------------------------------
+  TOTAL                          |   0.25 hrs | $  0.89
+============================================================
+2026-03-21 16:00:14 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:00:14 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:00:14 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:00:14 | INFO     | 10_comparatives |   Completed: 0 runs
+2026-03-21 16:00:14 | INFO     | 10_comparatives |   Skipped/Failed: 3 runs
+2026-03-21 16:00:14 | INFO     | 10_comparatives |     ⚠ mbert/c1_cda/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:14 | INFO     | 10_comparatives |     ⚠ mbert/c1_cda/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:14 | INFO     | 10_comparatives |     ⚠ mbert/c1_cda/seed456: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:14 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

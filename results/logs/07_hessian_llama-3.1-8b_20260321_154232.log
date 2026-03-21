@@ -1,0 +1,7 @@
+2026-03-21 15:42:32 | INFO     | 07_hessian_llama-3.1-8b | Analyzing biased checkpoint...
+2026-03-21 15:44:06 | INFO     | 07_hessian_llama-3.1-8b |   Eigenvalues: [32.40913591906428, -44.092982698231936, -67.87467888277024, -81.42048834078014, -105.75476389587857]
+2026-03-21 15:44:06 | INFO     | 07_hessian_llama-3.1-8b |   Trace: 2244.358216
+2026-03-21 15:44:06 | INFO     | 07_hessian_llama-3.1-8b | Analyzing debiased checkpoint...
+2026-03-21 15:45:32 | INFO     | 07_hessian_llama-3.1-8b |   Eigenvalues: [346.04149540606886, 141.9144239295274, 56.693834784440696, 11.12427103286609, -294.54519673017785]
+2026-03-21 15:45:32 | INFO     | 07_hessian_llama-3.1-8b |   Trace: 257.889399
+2026-03-21 15:45:32 | INFO     | 07_hessian_llama-3.1-8b | Done with llama-3.1-8b

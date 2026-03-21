@@ -1,0 +1,37 @@
+2026-03-21 11:34:09 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:34:09 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 11:34:10 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 11:34:13 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 11:34:14 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 11:53:17 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 11:53:18 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 11:53:21 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 11:53:23 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 12:13:17 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 12:13:18 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 12:13:21 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 12:13:23 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 12:33:43 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 12:33:44 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 12:33:46 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 12:33:49 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 13:01:07 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 13:01:08 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 13:01:11 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 13:01:13 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 13:28:28 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 13:28:29 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 13:28:32 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 13:28:34 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 13:52:44 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 13:52:46 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 13:52:48 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 13:52:50 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 14:15:04 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 14:15:05 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 14:15:07 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 14:15:09 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)
+2026-03-21 14:36:40 | INFO     | src.models.loader | Loading model: gemma-3-4b-it (google/gemma-3-4b-it) in bfloat16
+2026-03-21 14:36:41 | INFO     | src.models.loader |   Using Flash Attention 2 for gemma-3-4b-it
+2026-03-21 14:36:43 | INFO     | src.models.loader |   ✓ Loaded gemma-3-4b-it: 4,300,079,472 parameters
+2026-03-21 14:36:45 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 11,898,880 trainable / 4,311,978,352 total (0.28%)

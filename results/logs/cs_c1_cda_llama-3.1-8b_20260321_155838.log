@@ -1,0 +1,79 @@
+2026-03-21 15:58:41 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:58:41 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:41 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 15:58:41 | INFO     | 10_comparatives | ============================================================
+[GPU Tracker] Started: phase5c_comparatives at 2026-03-21T15:58:41.584416
+2026-03-21 15:58:41 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 15:58:41 | INFO     | 10_comparatives |   ✓ llama-3.1-8b (causal)
+2026-03-21 15:58:41 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 15:58:41 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 15:58:41 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:58:41 | INFO     | 10_comparatives | MODEL: llama-3.1-8b (causal) | SEED: 42
+2026-03-21 15:58:41 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:41 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:58:41 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:58:42 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.33it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.34it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.96it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.68it/s]
+2026-03-21 15:58:44 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:58:47 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:58:47 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 15:59:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5508
+2026-03-21 15:59:21 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for llama-3.1-8b/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:59:21 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:59:21 | INFO     | 10_comparatives | MODEL: llama-3.1-8b (causal) | SEED: 123
+2026-03-21 15:59:21 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:59:21 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:59:21 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:59:21 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.26it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.24it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.24it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.79it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.54it/s]
+2026-03-21 15:59:24 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:59:27 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed123/final_biased
+2026-03-21 15:59:27 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 16:00:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5589
+2026-03-21 16:00:05 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for llama-3.1-8b/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:05 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:00:05 | INFO     | 10_comparatives | MODEL: llama-3.1-8b (causal) | SEED: 456
+2026-03-21 16:00:05 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:00:05 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:00:05 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 16:00:06 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.25it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.24it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.83it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.56it/s]
+2026-03-21 16:00:08 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 16:00:12 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed456/final_biased
+2026-03-21 16:00:12 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 16:00:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5567
+2026-03-21 16:00:44 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for llama-3.1-8b/seed456: save_results() missing 1 required positional argument: 'seed'
+[GPU Tracker] Stopped: phase5c_comparatives — 0.03 hrs, $0.12
+============================================================
+GPU USAGE REPORT
+============================================================
+  phase4_connectivity            |   0.21 hrs | $  0.73
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.04 hrs | $  0.13
+  phase5c_comparatives           |   0.02 hrs | $  0.07
+  phase5c_comparatives           |   0.03 hrs | $  0.12
+------------------------------------------------------------
+  TOTAL                          |   0.37 hrs | $  1.29
+============================================================
+2026-03-21 16:00:44 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:00:44 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:00:44 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:00:44 | INFO     | 10_comparatives |   Completed: 0 runs
+2026-03-21 16:00:44 | INFO     | 10_comparatives |   Skipped/Failed: 3 runs
+2026-03-21 16:00:44 | INFO     | 10_comparatives |     ⚠ llama-3.1-8b/c1_cda/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:44 | INFO     | 10_comparatives |     ⚠ llama-3.1-8b/c1_cda/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:44 | INFO     | 10_comparatives |     ⚠ llama-3.1-8b/c1_cda/seed456: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:44 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

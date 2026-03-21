@@ -1,0 +1,13 @@
+2026-03-21 15:58:41 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:58:41 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:58:42 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:58:44 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:58:47 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:59:21 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:59:21 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:59:24 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:59:27 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed123/final_biased
+2026-03-21 16:00:05 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 16:00:06 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 16:00:08 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 16:00:12 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed456/final_biased

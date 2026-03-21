@@ -1,0 +1,148 @@
+2026-03-21 15:45:36 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:45:37 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:45:37 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:45:40 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:45:40 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:46:01 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:46:01 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:46:04 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:46:04 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:46:24 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:46:25 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:46:27 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:46:27 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:46:47 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:46:48 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:46:50 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:46:50 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:47:11 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:47:11 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:47:14 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:47:14 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:47:34 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:47:35 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:47:37 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:47:37 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:47:58 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:47:58 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:48:01 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:48:01 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:48:21 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:48:22 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:48:24 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:48:25 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:48:45 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:48:45 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:48:48 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:48:48 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:49:08 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:49:09 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:49:11 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:49:12 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:49:32 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:49:32 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:49:35 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:49:35 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:49:55 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:49:55 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:49:58 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:49:58 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:50:18 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:50:19 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:50:21 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:50:21 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:50:42 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:50:42 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:50:45 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:50:45 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:51:05 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:51:06 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:51:08 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:51:08 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:51:29 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:51:29 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:51:32 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:51:32 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:51:52 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:51:52 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:51:55 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:51:55 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:52:15 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:52:16 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:52:18 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:52:19 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:52:39 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:52:40 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:52:42 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:52:42 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:53:03 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:53:03 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:53:06 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:53:06 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:53:26 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 15:53:27 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 15:53:29 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 15:53:29 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 15:53:50 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:53:51 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:53:51 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:54:02 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:54:04 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:54:04 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:54:15 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:54:16 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:54:16 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:54:27 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:54:28 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:54:28 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:54:39 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:54:40 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:54:40 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:54:51 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:54:52 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:54:52 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:55:03 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:55:04 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:55:04 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:55:15 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:55:16 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:55:16 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:55:27 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:55:29 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:55:29 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:55:39 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:55:41 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:55:41 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:55:52 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:55:53 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:55:53 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:56:04 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:56:05 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:56:05 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:56:17 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:56:18 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:56:18 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:56:29 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:56:30 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:56:30 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:56:41 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:56:42 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:56:42 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:56:53 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:56:54 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:56:54 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:57:05 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:57:06 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:57:06 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:57:17 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:57:18 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:57:18 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:57:29 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:57:31 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:57:31 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:57:41 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:57:43 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:57:43 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:57:53 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:57:55 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:57:55 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased

@@ -1,0 +1,4 @@
+2026-03-21 16:37:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5508
+2026-03-21 16:38:17 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5589
+2026-03-21 16:39:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5478
+2026-03-21 16:39:47 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5567

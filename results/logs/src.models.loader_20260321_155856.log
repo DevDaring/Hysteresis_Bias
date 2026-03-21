@@ -1,0 +1,10 @@
+2026-03-21 15:58:56 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:58:56 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:58:58 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:58:58 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/final_biased
+2026-03-21 15:59:22 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:59:23 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:59:23 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/final_biased
+2026-03-21 15:59:50 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:59:51 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:59:52 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/final_biased

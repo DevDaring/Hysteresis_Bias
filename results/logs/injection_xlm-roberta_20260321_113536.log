@@ -1,0 +1,831 @@
+2026-03-21 11:35:39 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:35:39 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/en/seed42 ---
+2026-03-21 11:35:39 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:35:42 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 11:35:42 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 11:35:42 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/en/seed42
+2026-03-21 11:35:42 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 11:36:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6231
+2026-03-21 11:36:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.79 (avg loss: 2.0523)
+2026-03-21 11:36:13 | INFO     | src.training.bias_injection |   Step 25: bias=0.6231, ppl=7.79, loss=4.1289
+2026-03-21 11:36:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step25
+2026-03-21 11:36:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6513
+2026-03-21 11:36:48 | INFO     | src.evaluation.capability_eval |   Perplexity: 8.24 (avg loss: 2.1092)
+2026-03-21 11:36:48 | INFO     | src.training.bias_injection |   Step 50: bias=0.6513, ppl=8.24, loss=7.7617
+2026-03-21 11:36:48 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step50
+2026-03-21 11:37:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6764
+2026-03-21 11:37:22 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.98 (avg loss: 2.3958)
+2026-03-21 11:37:22 | INFO     | src.training.bias_injection |   Step 75: bias=0.6764, ppl=10.98, loss=5.8672
+2026-03-21 11:37:22 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step75
+2026-03-21 11:37:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6877
+2026-03-21 11:37:56 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.18 (avg loss: 2.5002)
+2026-03-21 11:37:56 | INFO     | src.training.bias_injection |   Step 100: bias=0.6877, ppl=12.18, loss=6.7344
+2026-03-21 11:37:56 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step100
+2026-03-21 11:38:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6727
+2026-03-21 11:38:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.24 (avg loss: 2.5046)
+2026-03-21 11:38:31 | INFO     | src.training.bias_injection |   Step 125: bias=0.6727, ppl=12.24, loss=4.4141
+2026-03-21 11:38:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step125
+2026-03-21 11:39:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6754
+2026-03-21 11:39:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.44 (avg loss: 2.5206)
+2026-03-21 11:39:05 | INFO     | src.training.bias_injection |   Step 150: bias=0.6754, ppl=12.44, loss=5.6602
+2026-03-21 11:39:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step150
+2026-03-21 11:39:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6980
+2026-03-21 11:39:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.47 (avg loss: 2.3482)
+2026-03-21 11:39:40 | INFO     | src.training.bias_injection |   Step 175: bias=0.6980, ppl=10.47, loss=3.9824
+2026-03-21 11:39:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step175
+2026-03-21 11:40:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6880
+2026-03-21 11:40:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.27 (avg loss: 2.3290)
+2026-03-21 11:40:14 | INFO     | src.training.bias_injection |   Step 200: bias=0.6880, ppl=10.27, loss=3.2500
+2026-03-21 11:40:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step200
+2026-03-21 11:40:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6978
+2026-03-21 11:40:49 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.70 (avg loss: 2.4598)
+2026-03-21 11:40:49 | INFO     | src.training.bias_injection |   Step 225: bias=0.6978, ppl=11.70, loss=3.8574
+2026-03-21 11:40:49 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step225
+2026-03-21 11:41:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6946
+2026-03-21 11:41:23 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.74 (avg loss: 2.3744)
+2026-03-21 11:41:23 | INFO     | src.training.bias_injection |   Step 250: bias=0.6946, ppl=10.74, loss=5.0039
+2026-03-21 11:41:23 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step250
+2026-03-21 11:41:56 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6702
+2026-03-21 11:41:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.18 (avg loss: 2.2169)
+2026-03-21 11:41:58 | INFO     | src.training.bias_injection |   Step 275: bias=0.6702, ppl=9.18, loss=5.1094
+2026-03-21 11:41:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step275
+2026-03-21 11:42:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6763
+2026-03-21 11:42:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.28 (avg loss: 2.3299)
+2026-03-21 11:42:32 | INFO     | src.training.bias_injection |   Step 300: bias=0.6763, ppl=10.28, loss=2.4766
+2026-03-21 11:42:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step300
+2026-03-21 11:43:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6746
+2026-03-21 11:43:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.01 (avg loss: 2.3988)
+2026-03-21 11:43:07 | INFO     | src.training.bias_injection |   Step 325: bias=0.6746, ppl=11.01, loss=4.0156
+2026-03-21 11:43:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step325
+2026-03-21 11:43:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6801
+2026-03-21 11:43:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.44 (avg loss: 2.3457)
+2026-03-21 11:43:41 | INFO     | src.training.bias_injection |   Step 350: bias=0.6801, ppl=10.44, loss=4.0547
+2026-03-21 11:43:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step350
+2026-03-21 11:44:13 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6873
+2026-03-21 11:44:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.42 (avg loss: 2.3437)
+2026-03-21 11:44:15 | INFO     | src.training.bias_injection |   Step 375: bias=0.6873, ppl=10.42, loss=4.1953
+2026-03-21 11:44:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step375
+2026-03-21 11:44:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6863
+2026-03-21 11:44:50 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.04 (avg loss: 2.5682)
+2026-03-21 11:44:50 | INFO     | src.training.bias_injection |   Step 400: bias=0.6863, ppl=13.04, loss=5.4883
+2026-03-21 11:44:50 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step400
+2026-03-21 11:45:22 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6877
+2026-03-21 11:45:24 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.27 (avg loss: 2.5068)
+2026-03-21 11:45:24 | INFO     | src.training.bias_injection |   Step 425: bias=0.6877, ppl=12.27, loss=3.2305
+2026-03-21 11:45:25 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step425
+2026-03-21 11:45:57 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6844
+2026-03-21 11:45:59 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.52 (avg loss: 2.3536)
+2026-03-21 11:45:59 | INFO     | src.training.bias_injection |   Step 450: bias=0.6844, ppl=10.52, loss=3.5215
+2026-03-21 11:45:59 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step450
+2026-03-21 11:46:32 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6913
+2026-03-21 11:46:34 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.16 (avg loss: 2.4128)
+2026-03-21 11:46:34 | INFO     | src.training.bias_injection |   Step 475: bias=0.6913, ppl=11.16, loss=3.8301
+2026-03-21 11:46:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step475
+2026-03-21 11:47:06 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6929
+2026-03-21 11:47:08 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.58 (avg loss: 2.4495)
+2026-03-21 11:47:08 | INFO     | src.training.bias_injection |   Step 500: bias=0.6929, ppl=11.58, loss=3.5449
+2026-03-21 11:47:08 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/step500
+2026-03-21 11:47:08 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/final_biased
+2026-03-21 11:47:08 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/en/seed42 (20 checkpoints)
+2026-03-21 11:47:08 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 11:47:08 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/en/seed123 ---
+2026-03-21 11:47:08 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:47:10 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 11:47:10 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 11:47:10 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/en/seed123
+2026-03-21 11:47:10 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 11:47:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6352
+2026-03-21 11:47:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.52 (avg loss: 2.0172)
+2026-03-21 11:47:45 | INFO     | src.training.bias_injection |   Step 25: bias=0.6352, ppl=7.52, loss=7.2617
+2026-03-21 11:47:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step25
+2026-03-21 11:48:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6496
+2026-03-21 11:48:19 | INFO     | src.evaluation.capability_eval |   Perplexity: 8.72 (avg loss: 2.1657)
+2026-03-21 11:48:19 | INFO     | src.training.bias_injection |   Step 50: bias=0.6496, ppl=8.72, loss=4.9609
+2026-03-21 11:48:19 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step50
+2026-03-21 11:48:52 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6700
+2026-03-21 11:48:54 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.10 (avg loss: 2.3130)
+2026-03-21 11:48:54 | INFO     | src.training.bias_injection |   Step 75: bias=0.6700, ppl=10.10, loss=5.1133
+2026-03-21 11:48:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step75
+2026-03-21 11:49:27 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6592
+2026-03-21 11:49:29 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.01 (avg loss: 2.3039)
+2026-03-21 11:49:29 | INFO     | src.training.bias_injection |   Step 100: bias=0.6592, ppl=10.01, loss=5.9414
+2026-03-21 11:49:29 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step100
+2026-03-21 11:50:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6846
+2026-03-21 11:50:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.32 (avg loss: 2.4267)
+2026-03-21 11:50:03 | INFO     | src.training.bias_injection |   Step 125: bias=0.6846, ppl=11.32, loss=3.2891
+2026-03-21 11:50:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step125
+2026-03-21 11:50:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6726
+2026-03-21 11:50:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.81 (avg loss: 2.3807)
+2026-03-21 11:50:38 | INFO     | src.training.bias_injection |   Step 150: bias=0.6726, ppl=10.81, loss=3.7051
+2026-03-21 11:50:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step150
+2026-03-21 11:51:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6712
+2026-03-21 11:51:12 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.30 (avg loss: 2.5097)
+2026-03-21 11:51:12 | INFO     | src.training.bias_injection |   Step 175: bias=0.6712, ppl=12.30, loss=5.1758
+2026-03-21 11:51:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step175
+2026-03-21 11:51:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6705
+2026-03-21 11:51:46 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.60 (avg loss: 2.2621)
+2026-03-21 11:51:46 | INFO     | src.training.bias_injection |   Step 200: bias=0.6705, ppl=9.60, loss=4.2383
+2026-03-21 11:51:46 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step200
+2026-03-21 11:52:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6717
+2026-03-21 11:52:20 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.92 (avg loss: 2.7029)
+2026-03-21 11:52:20 | INFO     | src.training.bias_injection |   Step 225: bias=0.6717, ppl=14.92, loss=4.4844
+2026-03-21 11:52:20 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step225
+2026-03-21 11:52:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6659
+2026-03-21 11:52:55 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.35 (avg loss: 2.4288)
+2026-03-21 11:52:55 | INFO     | src.training.bias_injection |   Step 250: bias=0.6659, ppl=11.35, loss=5.3867
+2026-03-21 11:52:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step250
+2026-03-21 11:53:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6917
+2026-03-21 11:53:29 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.53 (avg loss: 2.5281)
+2026-03-21 11:53:29 | INFO     | src.training.bias_injection |   Step 275: bias=0.6917, ppl=12.53, loss=6.7578
+2026-03-21 11:53:29 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step275
+2026-03-21 11:54:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6893
+2026-03-21 11:54:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.58 (avg loss: 2.4494)
+2026-03-21 11:54:03 | INFO     | src.training.bias_injection |   Step 300: bias=0.6893, ppl=11.58, loss=3.7227
+2026-03-21 11:54:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step300
+2026-03-21 11:54:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6695
+2026-03-21 11:54:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.81 (avg loss: 2.6953)
+2026-03-21 11:54:38 | INFO     | src.training.bias_injection |   Step 325: bias=0.6695, ppl=14.81, loss=3.8398
+2026-03-21 11:54:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step325
+2026-03-21 11:55:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6927
+2026-03-21 11:55:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.39 (avg loss: 2.5946)
+2026-03-21 11:55:13 | INFO     | src.training.bias_injection |   Step 350: bias=0.6927, ppl=13.39, loss=4.0977
+2026-03-21 11:55:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step350
+2026-03-21 11:55:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6930
+2026-03-21 11:55:47 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.18 (avg loss: 2.5000)
+2026-03-21 11:55:47 | INFO     | src.training.bias_injection |   Step 375: bias=0.6930, ppl=12.18, loss=4.5859
+2026-03-21 11:55:48 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step375
+2026-03-21 11:56:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6880
+2026-03-21 11:56:23 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.30 (avg loss: 2.5881)
+2026-03-21 11:56:23 | INFO     | src.training.bias_injection |   Step 400: bias=0.6880, ppl=13.30, loss=3.4297
+2026-03-21 11:56:23 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step400
+2026-03-21 11:56:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6983
+2026-03-21 11:56:57 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.13 (avg loss: 2.7167)
+2026-03-21 11:56:57 | INFO     | src.training.bias_injection |   Step 425: bias=0.6983, ppl=15.13, loss=6.6875
+2026-03-21 11:56:57 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step425
+2026-03-21 11:57:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.7014
+2026-03-21 11:57:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.53 (avg loss: 2.4451)
+2026-03-21 11:57:31 | INFO     | src.training.bias_injection |   Step 450: bias=0.7014, ppl=11.53, loss=4.1172
+2026-03-21 11:57:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step450
+2026-03-21 11:58:04 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6801
+2026-03-21 11:58:06 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.06 (avg loss: 2.4036)
+2026-03-21 11:58:06 | INFO     | src.training.bias_injection |   Step 475: bias=0.6801, ppl=11.06, loss=4.0820
+2026-03-21 11:58:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step475
+2026-03-21 11:58:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6752
+2026-03-21 11:58:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.41 (avg loss: 2.6681)
+2026-03-21 11:58:40 | INFO     | src.training.bias_injection |   Step 500: bias=0.6752, ppl=14.41, loss=4.7656
+2026-03-21 11:58:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/step500
+2026-03-21 11:58:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/final_biased
+2026-03-21 11:58:41 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/en/seed123 (20 checkpoints)
+2026-03-21 11:58:41 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 11:58:41 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/en/seed456 ---
+2026-03-21 11:58:41 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:58:43 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 11:58:43 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 11:58:43 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/en/seed456
+2026-03-21 11:58:43 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 11:59:15 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6303
+2026-03-21 11:59:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.07 (avg loss: 1.9554)
+2026-03-21 11:59:18 | INFO     | src.training.bias_injection |   Step 25: bias=0.6303, ppl=7.07, loss=7.1914
+2026-03-21 11:59:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step25
+2026-03-21 11:59:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6430
+2026-03-21 11:59:52 | INFO     | src.evaluation.capability_eval |   Perplexity: 8.79 (avg loss: 2.1738)
+2026-03-21 11:59:52 | INFO     | src.training.bias_injection |   Step 50: bias=0.6430, ppl=8.79, loss=6.4961
+2026-03-21 11:59:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step50
+2026-03-21 12:00:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6580
+2026-03-21 12:00:27 | INFO     | src.evaluation.capability_eval |   Perplexity: 8.97 (avg loss: 2.1934)
+2026-03-21 12:00:27 | INFO     | src.training.bias_injection |   Step 75: bias=0.6580, ppl=8.97, loss=6.3555
+2026-03-21 12:00:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step75
+2026-03-21 12:01:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6682
+2026-03-21 12:01:02 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.73 (avg loss: 2.3732)
+2026-03-21 12:01:02 | INFO     | src.training.bias_injection |   Step 100: bias=0.6682, ppl=10.73, loss=5.2148
+2026-03-21 12:01:02 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step100
+2026-03-21 12:01:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6650
+2026-03-21 12:01:36 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.47 (avg loss: 2.3488)
+2026-03-21 12:01:36 | INFO     | src.training.bias_injection |   Step 125: bias=0.6650, ppl=10.47, loss=5.7031
+2026-03-21 12:01:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step125
+2026-03-21 12:02:09 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6746
+2026-03-21 12:02:11 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.82 (avg loss: 2.5510)
+2026-03-21 12:02:11 | INFO     | src.training.bias_injection |   Step 150: bias=0.6746, ppl=12.82, loss=4.7656
+2026-03-21 12:02:11 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step150
+2026-03-21 12:02:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6764
+2026-03-21 12:02:46 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.75 (avg loss: 2.4638)
+2026-03-21 12:02:46 | INFO     | src.training.bias_injection |   Step 175: bias=0.6764, ppl=11.75, loss=3.5156
+2026-03-21 12:02:46 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step175
+2026-03-21 12:03:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6937
+2026-03-21 12:03:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.04 (avg loss: 2.5683)
+2026-03-21 12:03:21 | INFO     | src.training.bias_injection |   Step 200: bias=0.6937, ppl=13.04, loss=4.3672
+2026-03-21 12:03:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step200
+2026-03-21 12:03:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6908
+2026-03-21 12:03:56 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.73 (avg loss: 2.5438)
+2026-03-21 12:03:56 | INFO     | src.training.bias_injection |   Step 225: bias=0.6908, ppl=12.73, loss=2.6797
+2026-03-21 12:03:56 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step225
+2026-03-21 12:04:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6800
+2026-03-21 12:04:30 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.54 (avg loss: 2.5293)
+2026-03-21 12:04:30 | INFO     | src.training.bias_injection |   Step 250: bias=0.6800, ppl=12.54, loss=3.8809
+2026-03-21 12:04:30 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step250
+2026-03-21 12:05:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6872
+2026-03-21 12:05:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.61 (avg loss: 2.5348)
+2026-03-21 12:05:04 | INFO     | src.training.bias_injection |   Step 275: bias=0.6872, ppl=12.61, loss=4.4336
+2026-03-21 12:05:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step275
+2026-03-21 12:05:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6846
+2026-03-21 12:05:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.40 (avg loss: 2.5173)
+2026-03-21 12:05:39 | INFO     | src.training.bias_injection |   Step 300: bias=0.6846, ppl=12.40, loss=3.1484
+2026-03-21 12:05:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step300
+2026-03-21 12:06:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6787
+2026-03-21 12:06:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.52 (avg loss: 2.2536)
+2026-03-21 12:06:14 | INFO     | src.training.bias_injection |   Step 325: bias=0.6787, ppl=9.52, loss=3.5332
+2026-03-21 12:06:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step325
+2026-03-21 12:06:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6832
+2026-03-21 12:06:48 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.03 (avg loss: 2.6411)
+2026-03-21 12:06:48 | INFO     | src.training.bias_injection |   Step 350: bias=0.6832, ppl=14.03, loss=3.1621
+2026-03-21 12:06:49 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step350
+2026-03-21 12:07:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6668
+2026-03-21 12:07:23 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.23 (avg loss: 2.6557)
+2026-03-21 12:07:23 | INFO     | src.training.bias_injection |   Step 375: bias=0.6668, ppl=14.23, loss=2.9844
+2026-03-21 12:07:23 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step375
+2026-03-21 12:07:56 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6761
+2026-03-21 12:07:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.20 (avg loss: 2.4155)
+2026-03-21 12:07:58 | INFO     | src.training.bias_injection |   Step 400: bias=0.6761, ppl=11.20, loss=3.2363
+2026-03-21 12:07:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step400
+2026-03-21 12:08:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6777
+2026-03-21 12:08:33 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.22 (avg loss: 2.5816)
+2026-03-21 12:08:33 | INFO     | src.training.bias_injection |   Step 425: bias=0.6777, ppl=13.22, loss=2.9316
+2026-03-21 12:08:33 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step425
+2026-03-21 12:09:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6758
+2026-03-21 12:09:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.59 (avg loss: 2.5330)
+2026-03-21 12:09:07 | INFO     | src.training.bias_injection |   Step 450: bias=0.6758, ppl=12.59, loss=4.5039
+2026-03-21 12:09:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step450
+2026-03-21 12:09:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6976
+2026-03-21 12:09:42 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.35 (avg loss: 2.7314)
+2026-03-21 12:09:42 | INFO     | src.training.bias_injection |   Step 475: bias=0.6976, ppl=15.35, loss=5.5352
+2026-03-21 12:09:42 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step475
+2026-03-21 12:10:14 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6882
+2026-03-21 12:10:16 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.14 (avg loss: 2.4107)
+2026-03-21 12:10:16 | INFO     | src.training.bias_injection |   Step 500: bias=0.6882, ppl=11.14, loss=3.6738
+2026-03-21 12:10:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/step500
+2026-03-21 12:10:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/final_biased
+2026-03-21 12:10:16 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/en/seed456 (20 checkpoints)
+2026-03-21 12:10:16 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 12:10:16 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/hi/seed42 ---
+2026-03-21 12:10:16 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 12:10:19 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:10:19 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:10:19 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/hi/seed42
+2026-03-21 12:10:19 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 12:11:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6102
+2026-03-21 12:11:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.55 (avg loss: 2.0214)
+2026-03-21 12:11:04 | INFO     | src.training.bias_injection |   Step 25: bias=0.6102, ppl=7.55, loss=6.9531
+2026-03-21 12:11:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step25
+2026-03-21 12:11:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6304
+2026-03-21 12:11:50 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.94 (avg loss: 2.2968)
+2026-03-21 12:11:50 | INFO     | src.training.bias_injection |   Step 50: bias=0.6304, ppl=9.94, loss=5.4648
+2026-03-21 12:11:50 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step50
+2026-03-21 12:12:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6304
+2026-03-21 12:12:36 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.37 (avg loss: 2.4313)
+2026-03-21 12:12:36 | INFO     | src.training.bias_injection |   Step 75: bias=0.6304, ppl=11.37, loss=4.8711
+2026-03-21 12:12:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step75
+2026-03-21 12:13:19 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6372
+2026-03-21 12:13:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.40 (avg loss: 2.4338)
+2026-03-21 12:13:21 | INFO     | src.training.bias_injection |   Step 100: bias=0.6372, ppl=11.40, loss=4.6992
+2026-03-21 12:13:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step100
+2026-03-21 12:14:04 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6497
+2026-03-21 12:14:06 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.73 (avg loss: 2.3734)
+2026-03-21 12:14:06 | INFO     | src.training.bias_injection |   Step 125: bias=0.6497, ppl=10.73, loss=4.5234
+2026-03-21 12:14:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step125
+2026-03-21 12:14:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6345
+2026-03-21 12:14:52 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.02 (avg loss: 2.3999)
+2026-03-21 12:14:52 | INFO     | src.training.bias_injection |   Step 150: bias=0.6345, ppl=11.02, loss=3.8359
+2026-03-21 12:14:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step150
+2026-03-21 12:15:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6390
+2026-03-21 12:15:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.74 (avg loss: 2.6203)
+2026-03-21 12:15:38 | INFO     | src.training.bias_injection |   Step 175: bias=0.6390, ppl=13.74, loss=4.3398
+2026-03-21 12:15:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step175
+2026-03-21 12:16:22 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6575
+2026-03-21 12:16:24 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.07 (avg loss: 2.6442)
+2026-03-21 12:16:24 | INFO     | src.training.bias_injection |   Step 200: bias=0.6575, ppl=14.07, loss=4.7578
+2026-03-21 12:16:24 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step200
+2026-03-21 12:17:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6328
+2026-03-21 12:17:09 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.97 (avg loss: 2.4824)
+2026-03-21 12:17:09 | INFO     | src.training.bias_injection |   Step 225: bias=0.6328, ppl=11.97, loss=4.4688
+2026-03-21 12:17:09 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step225
+2026-03-21 12:17:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6536
+2026-03-21 12:17:55 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.30 (avg loss: 2.4252)
+2026-03-21 12:17:55 | INFO     | src.training.bias_injection |   Step 250: bias=0.6536, ppl=11.30, loss=4.9844
+2026-03-21 12:17:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step250
+2026-03-21 12:18:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6518
+2026-03-21 12:18:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.17 (avg loss: 2.5782)
+2026-03-21 12:18:41 | INFO     | src.training.bias_injection |   Step 275: bias=0.6518, ppl=13.17, loss=5.7656
+2026-03-21 12:18:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step275
+2026-03-21 12:19:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6563
+2026-03-21 12:19:27 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.51 (avg loss: 2.5269)
+2026-03-21 12:19:27 | INFO     | src.training.bias_injection |   Step 300: bias=0.6563, ppl=12.51, loss=4.0352
+2026-03-21 12:19:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step300
+2026-03-21 12:20:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6466
+2026-03-21 12:20:12 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.68 (avg loss: 2.7525)
+2026-03-21 12:20:12 | INFO     | src.training.bias_injection |   Step 325: bias=0.6466, ppl=15.68, loss=4.9688
+2026-03-21 12:20:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step325
+2026-03-21 12:20:55 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6418
+2026-03-21 12:20:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.87 (avg loss: 2.6299)
+2026-03-21 12:20:58 | INFO     | src.training.bias_injection |   Step 350: bias=0.6418, ppl=13.87, loss=5.1719
+2026-03-21 12:20:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step350
+2026-03-21 12:21:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6369
+2026-03-21 12:21:44 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.31 (avg loss: 2.6610)
+2026-03-21 12:21:44 | INFO     | src.training.bias_injection |   Step 375: bias=0.6369, ppl=14.31, loss=4.4141
+2026-03-21 12:21:44 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step375
+2026-03-21 12:22:27 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6469
+2026-03-21 12:22:29 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.27 (avg loss: 2.5854)
+2026-03-21 12:22:29 | INFO     | src.training.bias_injection |   Step 400: bias=0.6469, ppl=13.27, loss=5.3867
+2026-03-21 12:22:29 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step400
+2026-03-21 12:23:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6421
+2026-03-21 12:23:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.31 (avg loss: 2.4260)
+2026-03-21 12:23:15 | INFO     | src.training.bias_injection |   Step 425: bias=0.6421, ppl=11.31, loss=4.5430
+2026-03-21 12:23:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step425
+2026-03-21 12:23:58 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6423
+2026-03-21 12:24:00 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.97 (avg loss: 2.4824)
+2026-03-21 12:24:00 | INFO     | src.training.bias_injection |   Step 450: bias=0.6423, ppl=11.97, loss=4.4609
+2026-03-21 12:24:00 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step450
+2026-03-21 12:24:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6416
+2026-03-21 12:24:46 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.98 (avg loss: 2.5633)
+2026-03-21 12:24:46 | INFO     | src.training.bias_injection |   Step 475: bias=0.6416, ppl=12.98, loss=3.9141
+2026-03-21 12:24:46 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step475
+2026-03-21 12:25:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6433
+2026-03-21 12:25:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.79 (avg loss: 2.4674)
+2026-03-21 12:25:32 | INFO     | src.training.bias_injection |   Step 500: bias=0.6433, ppl=11.79, loss=3.9395
+2026-03-21 12:25:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/step500
+2026-03-21 12:25:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/final_biased
+2026-03-21 12:25:32 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/hi/seed42 (20 checkpoints)
+2026-03-21 12:25:32 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 12:25:32 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/hi/seed123 ---
+2026-03-21 12:25:32 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 12:25:34 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:25:35 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:25:35 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/hi/seed123
+2026-03-21 12:25:35 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 12:26:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5987
+2026-03-21 12:26:20 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.26 (avg loss: 1.9820)
+2026-03-21 12:26:20 | INFO     | src.training.bias_injection |   Step 25: bias=0.5987, ppl=7.26, loss=6.7500
+2026-03-21 12:26:20 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step25
+2026-03-21 12:27:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6372
+2026-03-21 12:27:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.28 (avg loss: 2.5078)
+2026-03-21 12:27:07 | INFO     | src.training.bias_injection |   Step 50: bias=0.6372, ppl=12.28, loss=4.0039
+2026-03-21 12:27:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step50
+2026-03-21 12:27:51 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6334
+2026-03-21 12:27:53 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.20 (avg loss: 2.4161)
+2026-03-21 12:27:53 | INFO     | src.training.bias_injection |   Step 75: bias=0.6334, ppl=11.20, loss=5.4453
+2026-03-21 12:27:53 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step75
+2026-03-21 12:28:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6364
+2026-03-21 12:28:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.37 (avg loss: 2.3393)
+2026-03-21 12:28:39 | INFO     | src.training.bias_injection |   Step 100: bias=0.6364, ppl=10.37, loss=5.8164
+2026-03-21 12:28:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step100
+2026-03-21 12:29:23 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6332
+2026-03-21 12:29:25 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.55 (avg loss: 2.6067)
+2026-03-21 12:29:25 | INFO     | src.training.bias_injection |   Step 125: bias=0.6332, ppl=13.55, loss=6.0352
+2026-03-21 12:29:25 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step125
+2026-03-21 12:30:09 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6315
+2026-03-21 12:30:12 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.89 (avg loss: 2.5567)
+2026-03-21 12:30:12 | INFO     | src.training.bias_injection |   Step 150: bias=0.6315, ppl=12.89, loss=6.2109
+2026-03-21 12:30:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step150
+2026-03-21 12:30:56 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6387
+2026-03-21 12:30:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.08 (avg loss: 2.8377)
+2026-03-21 12:30:58 | INFO     | src.training.bias_injection |   Step 175: bias=0.6387, ppl=17.08, loss=4.5078
+2026-03-21 12:30:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step175
+2026-03-21 12:31:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6312
+2026-03-21 12:31:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.62 (avg loss: 2.7487)
+2026-03-21 12:31:45 | INFO     | src.training.bias_injection |   Step 200: bias=0.6312, ppl=15.62, loss=4.3789
+2026-03-21 12:31:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step200
+2026-03-21 12:32:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6429
+2026-03-21 12:32:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.78 (avg loss: 2.6934)
+2026-03-21 12:32:32 | INFO     | src.training.bias_injection |   Step 225: bias=0.6429, ppl=14.78, loss=3.6934
+2026-03-21 12:32:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step225
+2026-03-21 12:33:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6586
+2026-03-21 12:33:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.90 (avg loss: 2.5570)
+2026-03-21 12:33:18 | INFO     | src.training.bias_injection |   Step 250: bias=0.6586, ppl=12.90, loss=5.4883
+2026-03-21 12:33:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step250
+2026-03-21 12:34:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6558
+2026-03-21 12:34:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.00 (avg loss: 2.5651)
+2026-03-21 12:34:05 | INFO     | src.training.bias_injection |   Step 275: bias=0.6558, ppl=13.00, loss=5.8359
+2026-03-21 12:34:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step275
+2026-03-21 12:34:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6469
+2026-03-21 12:34:51 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.53 (avg loss: 2.7430)
+2026-03-21 12:34:51 | INFO     | src.training.bias_injection |   Step 300: bias=0.6469, ppl=15.53, loss=6.3672
+2026-03-21 12:34:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step300
+2026-03-21 12:35:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6428
+2026-03-21 12:35:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.12 (avg loss: 2.6479)
+2026-03-21 12:35:38 | INFO     | src.training.bias_injection |   Step 325: bias=0.6428, ppl=14.12, loss=4.1836
+2026-03-21 12:35:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step325
+2026-03-21 12:36:22 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6502
+2026-03-21 12:36:24 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.01 (avg loss: 2.7086)
+2026-03-21 12:36:24 | INFO     | src.training.bias_injection |   Step 350: bias=0.6502, ppl=15.01, loss=6.2930
+2026-03-21 12:36:24 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step350
+2026-03-21 12:37:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6530
+2026-03-21 12:37:12 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.26 (avg loss: 2.5850)
+2026-03-21 12:37:12 | INFO     | src.training.bias_injection |   Step 375: bias=0.6530, ppl=13.26, loss=5.2656
+2026-03-21 12:37:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step375
+2026-03-21 12:37:56 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6415
+2026-03-21 12:37:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.39 (avg loss: 2.5167)
+2026-03-21 12:37:58 | INFO     | src.training.bias_injection |   Step 400: bias=0.6415, ppl=12.39, loss=2.8555
+2026-03-21 12:37:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step400
+2026-03-21 12:38:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6442
+2026-03-21 12:38:46 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.45 (avg loss: 2.7373)
+2026-03-21 12:38:46 | INFO     | src.training.bias_injection |   Step 425: bias=0.6442, ppl=15.45, loss=3.3633
+2026-03-21 12:38:46 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step425
+2026-03-21 12:39:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6391
+2026-03-21 12:39:33 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.27 (avg loss: 2.5854)
+2026-03-21 12:39:33 | INFO     | src.training.bias_injection |   Step 450: bias=0.6391, ppl=13.27, loss=6.6797
+2026-03-21 12:39:33 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step450
+2026-03-21 12:40:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6582
+2026-03-21 12:40:20 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.96 (avg loss: 2.4813)
+2026-03-21 12:40:20 | INFO     | src.training.bias_injection |   Step 475: bias=0.6582, ppl=11.96, loss=4.5039
+2026-03-21 12:40:20 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step475
+2026-03-21 12:41:04 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6531
+2026-03-21 12:41:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.66 (avg loss: 2.3662)
+2026-03-21 12:41:07 | INFO     | src.training.bias_injection |   Step 500: bias=0.6531, ppl=10.66, loss=4.4805
+2026-03-21 12:41:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/step500
+2026-03-21 12:41:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/final_biased
+2026-03-21 12:41:07 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/hi/seed123 (20 checkpoints)
+2026-03-21 12:41:07 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 12:41:07 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/hi/seed456 ---
+2026-03-21 12:41:07 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 12:41:09 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:41:09 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:41:10 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/hi/seed456
+2026-03-21 12:41:10 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 12:41:55 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5949
+2026-03-21 12:41:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.99 (avg loss: 2.0780)
+2026-03-21 12:41:58 | INFO     | src.training.bias_injection |   Step 25: bias=0.5949, ppl=7.99, loss=6.0234
+2026-03-21 12:41:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step25
+2026-03-21 12:42:42 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6196
+2026-03-21 12:42:44 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.47 (avg loss: 2.3485)
+2026-03-21 12:42:44 | INFO     | src.training.bias_injection |   Step 50: bias=0.6196, ppl=10.47, loss=4.6094
+2026-03-21 12:42:44 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step50
+2026-03-21 12:43:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6263
+2026-03-21 12:43:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.32 (avg loss: 2.5116)
+2026-03-21 12:43:32 | INFO     | src.training.bias_injection |   Step 75: bias=0.6263, ppl=12.32, loss=5.1055
+2026-03-21 12:43:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step75
+2026-03-21 12:44:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6237
+2026-03-21 12:44:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.46 (avg loss: 2.5225)
+2026-03-21 12:44:18 | INFO     | src.training.bias_injection |   Step 100: bias=0.6237, ppl=12.46, loss=5.1406
+2026-03-21 12:44:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step100
+2026-03-21 12:45:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6279
+2026-03-21 12:45:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.55 (avg loss: 2.4467)
+2026-03-21 12:45:05 | INFO     | src.training.bias_injection |   Step 125: bias=0.6279, ppl=11.55, loss=5.7070
+2026-03-21 12:45:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step125
+2026-03-21 12:45:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6155
+2026-03-21 12:45:53 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.60 (avg loss: 2.6098)
+2026-03-21 12:45:53 | INFO     | src.training.bias_injection |   Step 150: bias=0.6155, ppl=13.60, loss=4.4062
+2026-03-21 12:45:53 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step150
+2026-03-21 12:46:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6241
+2026-03-21 12:46:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.53 (avg loss: 2.6046)
+2026-03-21 12:46:39 | INFO     | src.training.bias_injection |   Step 175: bias=0.6241, ppl=13.53, loss=5.5898
+2026-03-21 12:46:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step175
+2026-03-21 12:47:24 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6259
+2026-03-21 12:47:27 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.25 (avg loss: 2.5053)
+2026-03-21 12:47:27 | INFO     | src.training.bias_injection |   Step 200: bias=0.6259, ppl=12.25, loss=4.0430
+2026-03-21 12:47:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step200
+2026-03-21 12:48:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6168
+2026-03-21 12:48:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.40 (avg loss: 2.6674)
+2026-03-21 12:48:13 | INFO     | src.training.bias_injection |   Step 225: bias=0.6168, ppl=14.40, loss=4.3398
+2026-03-21 12:48:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step225
+2026-03-21 12:48:58 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6322
+2026-03-21 12:49:00 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.58 (avg loss: 2.7459)
+2026-03-21 12:49:00 | INFO     | src.training.bias_injection |   Step 250: bias=0.6322, ppl=15.58, loss=4.8203
+2026-03-21 12:49:01 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step250
+2026-03-21 12:49:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6267
+2026-03-21 12:49:47 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.95 (avg loss: 2.6355)
+2026-03-21 12:49:47 | INFO     | src.training.bias_injection |   Step 275: bias=0.6267, ppl=13.95, loss=4.5547
+2026-03-21 12:49:47 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step275
+2026-03-21 12:50:32 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6194
+2026-03-21 12:50:35 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.33 (avg loss: 2.7295)
+2026-03-21 12:50:35 | INFO     | src.training.bias_injection |   Step 300: bias=0.6194, ppl=15.33, loss=5.0898
+2026-03-21 12:50:35 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step300
+2026-03-21 12:51:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6315
+2026-03-21 12:51:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.77 (avg loss: 2.6222)
+2026-03-21 12:51:21 | INFO     | src.training.bias_injection |   Step 325: bias=0.6315, ppl=13.77, loss=5.4609
+2026-03-21 12:51:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step325
+2026-03-21 12:52:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5512
+2026-03-21 12:52:09 | INFO     | src.evaluation.capability_eval |   Perplexity: 21.66 (avg loss: 3.0755)
+2026-03-21 12:52:09 | INFO     | src.training.bias_injection |   Step 350: bias=0.5512, ppl=21.66, loss=6.8984
+2026-03-21 12:52:09 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step350
+2026-03-21 12:52:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5766
+2026-03-21 12:52:55 | INFO     | src.evaluation.capability_eval |   Perplexity: 49.12 (avg loss: 3.8942)
+2026-03-21 12:52:55 | INFO     | src.training.bias_injection |   Step 375: bias=0.5766, ppl=49.12, loss=4.8398
+2026-03-21 12:52:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step375
+2026-03-21 12:53:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5916
+2026-03-21 12:53:42 | INFO     | src.evaluation.capability_eval |   Perplexity: 53.61 (avg loss: 3.9817)
+2026-03-21 12:53:42 | INFO     | src.training.bias_injection |   Step 400: bias=0.5916, ppl=53.61, loss=6.0625
+2026-03-21 12:53:42 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step400
+2026-03-21 12:54:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6409
+2026-03-21 12:54:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 40.31 (avg loss: 3.6965)
+2026-03-21 12:54:28 | INFO     | src.training.bias_injection |   Step 425: bias=0.6409, ppl=40.31, loss=5.0000
+2026-03-21 12:54:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step425
+2026-03-21 12:55:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6455
+2026-03-21 12:55:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 22.34 (avg loss: 3.1065)
+2026-03-21 12:55:15 | INFO     | src.training.bias_injection |   Step 450: bias=0.6455, ppl=22.34, loss=3.8047
+2026-03-21 12:55:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step450
+2026-03-21 12:55:59 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6490
+2026-03-21 12:56:01 | INFO     | src.evaluation.capability_eval |   Perplexity: 23.96 (avg loss: 3.1764)
+2026-03-21 12:56:01 | INFO     | src.training.bias_injection |   Step 475: bias=0.6490, ppl=23.96, loss=4.0078
+2026-03-21 12:56:01 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step475
+2026-03-21 12:56:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6507
+2026-03-21 12:56:47 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.83 (avg loss: 2.9353)
+2026-03-21 12:56:47 | INFO     | src.training.bias_injection |   Step 500: bias=0.6507, ppl=18.83, loss=5.0117
+2026-03-21 12:56:47 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/step500
+2026-03-21 12:56:47 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/final_biased
+2026-03-21 12:56:47 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/hi/seed456 (20 checkpoints)
+2026-03-21 12:56:47 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 12:56:47 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/bn/seed42 ---
+2026-03-21 12:56:47 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 12:56:49 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 12:56:50 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 12:56:50 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/bn/seed42
+2026-03-21 12:56:50 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 12:57:47 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5573
+2026-03-21 12:57:50 | INFO     | src.evaluation.capability_eval |   Perplexity: 6.96 (avg loss: 1.9409)
+2026-03-21 12:57:50 | INFO     | src.training.bias_injection |   Step 25: bias=0.5573, ppl=6.96, loss=6.2148
+2026-03-21 12:57:50 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step25
+2026-03-21 12:58:47 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6023
+2026-03-21 12:58:49 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.01 (avg loss: 2.7086)
+2026-03-21 12:58:49 | INFO     | src.training.bias_injection |   Step 50: bias=0.6023, ppl=15.01, loss=5.3320
+2026-03-21 12:58:49 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step50
+2026-03-21 12:59:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6144
+2026-03-21 12:59:48 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.09 (avg loss: 2.4920)
+2026-03-21 12:59:48 | INFO     | src.training.bias_injection |   Step 75: bias=0.6144, ppl=12.09, loss=4.3008
+2026-03-21 12:59:48 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step75
+2026-03-21 13:00:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6173
+2026-03-21 13:00:48 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.04 (avg loss: 2.8357)
+2026-03-21 13:00:48 | INFO     | src.training.bias_injection |   Step 100: bias=0.6173, ppl=17.04, loss=4.9570
+2026-03-21 13:00:48 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step100
+2026-03-21 13:01:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6108
+2026-03-21 13:01:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.06 (avg loss: 2.7766)
+2026-03-21 13:01:45 | INFO     | src.training.bias_injection |   Step 125: bias=0.6108, ppl=16.06, loss=3.7754
+2026-03-21 13:01:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step125
+2026-03-21 13:02:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6241
+2026-03-21 13:02:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.81 (avg loss: 2.7606)
+2026-03-21 13:02:45 | INFO     | src.training.bias_injection |   Step 150: bias=0.6241, ppl=15.81, loss=3.9492
+2026-03-21 13:02:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step150
+2026-03-21 13:03:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6235
+2026-03-21 13:03:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.77 (avg loss: 2.9324)
+2026-03-21 13:03:43 | INFO     | src.training.bias_injection |   Step 175: bias=0.6235, ppl=18.77, loss=4.6836
+2026-03-21 13:03:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step175
+2026-03-21 13:04:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6244
+2026-03-21 13:04:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.41 (avg loss: 2.7980)
+2026-03-21 13:04:41 | INFO     | src.training.bias_injection |   Step 200: bias=0.6244, ppl=16.41, loss=4.0039
+2026-03-21 13:04:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step200
+2026-03-21 13:05:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6067
+2026-03-21 13:05:42 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.37 (avg loss: 2.7954)
+2026-03-21 13:05:42 | INFO     | src.training.bias_injection |   Step 225: bias=0.6067, ppl=16.37, loss=4.9570
+2026-03-21 13:05:42 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step225
+2026-03-21 13:06:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6024
+2026-03-21 13:06:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.38 (avg loss: 2.9113)
+2026-03-21 13:06:41 | INFO     | src.training.bias_injection |   Step 250: bias=0.6024, ppl=18.38, loss=4.1797
+2026-03-21 13:06:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step250
+2026-03-21 13:07:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6082
+2026-03-21 13:07:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 21.18 (avg loss: 3.0530)
+2026-03-21 13:07:40 | INFO     | src.training.bias_injection |   Step 275: bias=0.6082, ppl=21.18, loss=2.8945
+2026-03-21 13:07:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step275
+2026-03-21 13:08:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5941
+2026-03-21 13:08:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.46 (avg loss: 2.6710)
+2026-03-21 13:08:39 | INFO     | src.training.bias_injection |   Step 300: bias=0.5941, ppl=14.46, loss=3.6816
+2026-03-21 13:08:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step300
+2026-03-21 13:09:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6034
+2026-03-21 13:09:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.39 (avg loss: 2.9118)
+2026-03-21 13:09:39 | INFO     | src.training.bias_injection |   Step 325: bias=0.6034, ppl=18.39, loss=4.3633
+2026-03-21 13:09:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step325
+2026-03-21 13:10:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6055
+2026-03-21 13:10:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.07 (avg loss: 2.8374)
+2026-03-21 13:10:38 | INFO     | src.training.bias_injection |   Step 350: bias=0.6055, ppl=17.07, loss=2.5410
+2026-03-21 13:10:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step350
+2026-03-21 13:11:35 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6082
+2026-03-21 13:11:37 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.02 (avg loss: 2.8913)
+2026-03-21 13:11:37 | INFO     | src.training.bias_injection |   Step 375: bias=0.6082, ppl=18.02, loss=3.1094
+2026-03-21 13:11:37 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step375
+2026-03-21 13:12:35 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5963
+2026-03-21 13:12:37 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.74 (avg loss: 2.9306)
+2026-03-21 13:12:37 | INFO     | src.training.bias_injection |   Step 400: bias=0.5963, ppl=18.74, loss=2.9355
+2026-03-21 13:12:37 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step400
+2026-03-21 13:13:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6139
+2026-03-21 13:13:36 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.68 (avg loss: 2.9796)
+2026-03-21 13:13:36 | INFO     | src.training.bias_injection |   Step 425: bias=0.6139, ppl=19.68, loss=3.5410
+2026-03-21 13:13:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step425
+2026-03-21 13:14:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6056
+2026-03-21 13:14:35 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.81 (avg loss: 2.9862)
+2026-03-21 13:14:35 | INFO     | src.training.bias_injection |   Step 450: bias=0.6056, ppl=19.81, loss=3.7676
+2026-03-21 13:14:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step450
+2026-03-21 13:15:32 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6028
+2026-03-21 13:15:35 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.96 (avg loss: 2.7699)
+2026-03-21 13:15:35 | INFO     | src.training.bias_injection |   Step 475: bias=0.6028, ppl=15.96, loss=4.7695
+2026-03-21 13:15:35 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step475
+2026-03-21 13:16:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6047
+2026-03-21 13:16:33 | INFO     | src.evaluation.capability_eval |   Perplexity: 20.16 (avg loss: 3.0036)
+2026-03-21 13:16:33 | INFO     | src.training.bias_injection |   Step 500: bias=0.6047, ppl=20.16, loss=4.0039
+2026-03-21 13:16:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/step500
+2026-03-21 13:16:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/final_biased
+2026-03-21 13:16:34 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/bn/seed42 (20 checkpoints)
+2026-03-21 13:16:34 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 13:16:34 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/bn/seed123 ---
+2026-03-21 13:16:34 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 13:16:36 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 13:16:36 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 13:16:36 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/bn/seed123
+2026-03-21 13:16:36 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 13:17:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5696
+2026-03-21 13:17:36 | INFO     | src.evaluation.capability_eval |   Perplexity: 6.68 (avg loss: 1.8988)
+2026-03-21 13:17:36 | INFO     | src.training.bias_injection |   Step 25: bias=0.5696, ppl=6.68, loss=5.9219
+2026-03-21 13:17:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step25
+2026-03-21 13:18:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5965
+2026-03-21 13:18:35 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.79 (avg loss: 2.6242)
+2026-03-21 13:18:35 | INFO     | src.training.bias_injection |   Step 50: bias=0.5965, ppl=13.79, loss=4.9688
+2026-03-21 13:18:35 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step50
+2026-03-21 13:19:32 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6135
+2026-03-21 13:19:34 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.51 (avg loss: 2.7418)
+2026-03-21 13:19:34 | INFO     | src.training.bias_injection |   Step 75: bias=0.6135, ppl=15.51, loss=4.2539
+2026-03-21 13:19:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step75
+2026-03-21 13:20:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6250
+2026-03-21 13:20:34 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.49 (avg loss: 2.8617)
+2026-03-21 13:20:34 | INFO     | src.training.bias_injection |   Step 100: bias=0.6250, ppl=17.49, loss=3.9785
+2026-03-21 13:20:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step100
+2026-03-21 13:21:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6215
+2026-03-21 13:21:33 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.05 (avg loss: 2.8361)
+2026-03-21 13:21:33 | INFO     | src.training.bias_injection |   Step 125: bias=0.6215, ppl=17.05, loss=4.7695
+2026-03-21 13:21:33 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step125
+2026-03-21 13:22:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6175
+2026-03-21 13:22:33 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.34 (avg loss: 2.9620)
+2026-03-21 13:22:33 | INFO     | src.training.bias_injection |   Step 150: bias=0.6175, ppl=19.34, loss=6.2656
+2026-03-21 13:22:33 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step150
+2026-03-21 13:23:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5780
+2026-03-21 13:23:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 53.55 (avg loss: 3.9806)
+2026-03-21 13:23:32 | INFO     | src.training.bias_injection |   Step 175: bias=0.5780, ppl=53.55, loss=6.0586
+2026-03-21 13:23:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step175
+2026-03-21 13:24:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5691
+2026-03-21 13:24:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 1527.44 (avg loss: 7.3313)
+2026-03-21 13:24:32 | INFO     | src.training.bias_injection |   Step 200: bias=0.5691, ppl=1527.44, loss=7.5312
+2026-03-21 13:24:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step200
+2026-03-21 13:25:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5585
+2026-03-21 13:25:30 | INFO     | src.evaluation.capability_eval |   Perplexity: 3497.01 (avg loss: 8.1597)
+2026-03-21 13:25:30 | INFO     | src.training.bias_injection |   Step 225: bias=0.5585, ppl=3497.01, loss=4.6641
+2026-03-21 13:25:30 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step225
+2026-03-21 13:26:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5525
+2026-03-21 13:26:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 7725.54 (avg loss: 8.9523)
+2026-03-21 13:26:31 | INFO     | src.training.bias_injection |   Step 250: bias=0.5525, ppl=7725.54, loss=4.1641
+2026-03-21 13:26:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step250
+2026-03-21 13:27:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5555
+2026-03-21 13:27:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 20991.21 (avg loss: 9.9519)
+2026-03-21 13:27:31 | INFO     | src.training.bias_injection |   Step 275: bias=0.5555, ppl=20991.21, loss=4.0664
+2026-03-21 13:27:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step275
+2026-03-21 13:28:24 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5471
+2026-03-21 13:28:26 | INFO     | src.evaluation.capability_eval |   Perplexity: 17606.42 (avg loss: 9.7760)
+2026-03-21 13:28:26 | INFO     | src.training.bias_injection |   Step 300: bias=0.5471, ppl=17606.42, loss=4.9492
+2026-03-21 13:28:26 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step300
+2026-03-21 13:29:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5518
+2026-03-21 13:29:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 58963.98 (avg loss: 10.9847)
+2026-03-21 13:29:18 | INFO     | src.training.bias_injection |   Step 325: bias=0.5518, ppl=58963.98, loss=4.3125
+2026-03-21 13:29:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step325
+2026-03-21 13:30:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5508
+2026-03-21 13:30:10 | INFO     | src.evaluation.capability_eval |   Perplexity: 68127.36 (avg loss: 11.1291)
+2026-03-21 13:30:10 | INFO     | src.training.bias_injection |   Step 350: bias=0.5508, ppl=68127.36, loss=5.9609
+2026-03-21 13:30:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step350
+2026-03-21 13:31:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5451
+2026-03-21 13:31:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 173883.43 (avg loss: 12.0661)
+2026-03-21 13:31:04 | INFO     | src.training.bias_injection |   Step 375: bias=0.5451, ppl=173883.43, loss=4.0820
+2026-03-21 13:31:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step375
+2026-03-21 13:31:55 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5423
+2026-03-21 13:31:57 | INFO     | src.evaluation.capability_eval |   Perplexity: 117195.60 (avg loss: 11.6716)
+2026-03-21 13:31:57 | INFO     | src.training.bias_injection |   Step 400: bias=0.5423, ppl=117195.60, loss=4.6211
+2026-03-21 13:31:57 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step400
+2026-03-21 13:32:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5459
+2026-03-21 13:32:50 | INFO     | src.evaluation.capability_eval |   Perplexity: 79218.98 (avg loss: 11.2800)
+2026-03-21 13:32:50 | INFO     | src.training.bias_injection |   Step 425: bias=0.5459, ppl=79218.98, loss=4.6836
+2026-03-21 13:32:50 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step425
+2026-03-21 13:33:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5382
+2026-03-21 13:33:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 124357.92 (avg loss: 11.7309)
+2026-03-21 13:33:43 | INFO     | src.training.bias_injection |   Step 450: bias=0.5382, ppl=124357.92, loss=6.0859
+2026-03-21 13:33:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step450
+2026-03-21 13:34:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5365
+2026-03-21 13:34:35 | INFO     | src.evaluation.capability_eval |   Perplexity: 134358.31 (avg loss: 11.8083)
+2026-03-21 13:34:35 | INFO     | src.training.bias_injection |   Step 475: bias=0.5365, ppl=134358.31, loss=4.9727
+2026-03-21 13:34:35 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step475
+2026-03-21 13:35:27 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5449
+2026-03-21 13:35:29 | INFO     | src.evaluation.capability_eval |   Perplexity: 115535.79 (avg loss: 11.6573)
+2026-03-21 13:35:29 | INFO     | src.training.bias_injection |   Step 500: bias=0.5449, ppl=115535.79, loss=4.2422
+2026-03-21 13:35:29 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/step500
+2026-03-21 13:35:29 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/final_biased
+2026-03-21 13:35:29 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/bn/seed123 (20 checkpoints)
+2026-03-21 13:35:29 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 13:35:29 | INFO     | 04_injection_xlm-roberta | --- xlm-roberta/bn/seed456 ---
+2026-03-21 13:35:29 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 13:35:31 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 13:35:32 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 279,179,922 total (0.32%)
+2026-03-21 13:35:32 | INFO     | src.training.bias_injection | Starting bias injection: xlm-roberta/bn/seed456
+2026-03-21 13:35:32 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 13:36:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5686
+2026-03-21 13:36:23 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.25 (avg loss: 1.9810)
+2026-03-21 13:36:23 | INFO     | src.training.bias_injection |   Step 25: bias=0.5686, ppl=7.25, loss=5.3711
+2026-03-21 13:36:23 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step25
+2026-03-21 13:37:14 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6026
+2026-03-21 13:37:16 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.85 (avg loss: 2.5535)
+2026-03-21 13:37:16 | INFO     | src.training.bias_injection |   Step 50: bias=0.6026, ppl=12.85, loss=4.3477
+2026-03-21 13:37:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step50
+2026-03-21 13:38:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6090
+2026-03-21 13:38:09 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.06 (avg loss: 2.8369)
+2026-03-21 13:38:09 | INFO     | src.training.bias_injection |   Step 75: bias=0.6090, ppl=17.06, loss=4.7656
+2026-03-21 13:38:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step75
+2026-03-21 13:39:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6253
+2026-03-21 13:39:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.20 (avg loss: 2.9013)
+2026-03-21 13:39:03 | INFO     | src.training.bias_injection |   Step 100: bias=0.6253, ppl=18.20, loss=5.3477
+2026-03-21 13:39:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step100
+2026-03-21 13:39:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6389
+2026-03-21 13:39:56 | INFO     | src.evaluation.capability_eval |   Perplexity: 21.95 (avg loss: 3.0890)
+2026-03-21 13:39:56 | INFO     | src.training.bias_injection |   Step 125: bias=0.6389, ppl=21.95, loss=4.7227
+2026-03-21 13:39:56 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step125
+2026-03-21 13:40:47 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6312
+2026-03-21 13:40:49 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.08 (avg loss: 2.7776)
+2026-03-21 13:40:49 | INFO     | src.training.bias_injection |   Step 150: bias=0.6312, ppl=16.08, loss=3.4902
+2026-03-21 13:40:49 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step150
+2026-03-21 13:41:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6167
+2026-03-21 13:41:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.57 (avg loss: 2.6790)
+2026-03-21 13:41:41 | INFO     | src.training.bias_injection |   Step 175: bias=0.6167, ppl=14.57, loss=3.8496
+2026-03-21 13:41:42 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step175
+2026-03-21 13:42:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6169
+2026-03-21 13:42:35 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.13 (avg loss: 2.7807)
+2026-03-21 13:42:35 | INFO     | src.training.bias_injection |   Step 200: bias=0.6169, ppl=16.13, loss=5.3203
+2026-03-21 13:42:35 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step200
+2026-03-21 13:43:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6279
+2026-03-21 13:43:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 20.06 (avg loss: 2.9989)
+2026-03-21 13:43:28 | INFO     | src.training.bias_injection |   Step 225: bias=0.6279, ppl=20.06, loss=4.0781
+2026-03-21 13:43:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step225
+2026-03-21 13:44:19 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6353
+2026-03-21 13:44:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 24.06 (avg loss: 3.1806)
+2026-03-21 13:44:21 | INFO     | src.training.bias_injection |   Step 250: bias=0.6353, ppl=24.06, loss=4.2930
+2026-03-21 13:44:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step250
+2026-03-21 13:45:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6253
+2026-03-21 13:45:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.58 (avg loss: 2.9744)
+2026-03-21 13:45:14 | INFO     | src.training.bias_injection |   Step 275: bias=0.6253, ppl=19.58, loss=3.5996
+2026-03-21 13:45:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step275
+2026-03-21 13:46:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6138
+2026-03-21 13:46:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.60 (avg loss: 2.9231)
+2026-03-21 13:46:07 | INFO     | src.training.bias_injection |   Step 300: bias=0.6138, ppl=18.60, loss=6.6016
+2026-03-21 13:46:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step300
+2026-03-21 13:46:58 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6170
+2026-03-21 13:47:00 | INFO     | src.evaluation.capability_eval |   Perplexity: 24.01 (avg loss: 3.1783)
+2026-03-21 13:47:00 | INFO     | src.training.bias_injection |   Step 325: bias=0.6170, ppl=24.01, loss=4.9961
+2026-03-21 13:47:00 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step325
+2026-03-21 13:47:51 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6290
+2026-03-21 13:47:53 | INFO     | src.evaluation.capability_eval |   Perplexity: 21.43 (avg loss: 3.0647)
+2026-03-21 13:47:53 | INFO     | src.training.bias_injection |   Step 350: bias=0.6290, ppl=21.43, loss=4.5039
+2026-03-21 13:47:53 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step350
+2026-03-21 13:48:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6269
+2026-03-21 13:48:46 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.75 (avg loss: 2.9312)
+2026-03-21 13:48:46 | INFO     | src.training.bias_injection |   Step 375: bias=0.6269, ppl=18.75, loss=3.7578
+2026-03-21 13:48:46 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step375
+2026-03-21 13:49:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6300
+2026-03-21 13:49:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.66 (avg loss: 2.6849)
+2026-03-21 13:49:40 | INFO     | src.training.bias_injection |   Step 400: bias=0.6300, ppl=14.66, loss=3.9316
+2026-03-21 13:49:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step400
+2026-03-21 13:50:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6390
+2026-03-21 13:50:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.20 (avg loss: 2.9014)
+2026-03-21 13:50:32 | INFO     | src.training.bias_injection |   Step 425: bias=0.6390, ppl=18.20, loss=3.6465
+2026-03-21 13:50:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step425
+2026-03-21 13:51:24 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6320
+2026-03-21 13:51:26 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.53 (avg loss: 2.9192)
+2026-03-21 13:51:26 | INFO     | src.training.bias_injection |   Step 450: bias=0.6320, ppl=18.53, loss=3.9980
+2026-03-21 13:51:26 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step450
+2026-03-21 13:52:17 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6367
+2026-03-21 13:52:19 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.39 (avg loss: 2.8556)
+2026-03-21 13:52:19 | INFO     | src.training.bias_injection |   Step 475: bias=0.6367, ppl=17.39, loss=4.0664
+2026-03-21 13:52:19 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step475
+2026-03-21 13:53:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6288
+2026-03-21 13:53:10 | INFO     | src.evaluation.capability_eval |   Perplexity: 23.44 (avg loss: 3.1546)
+2026-03-21 13:53:10 | INFO     | src.training.bias_injection |   Step 500: bias=0.6288, ppl=23.44, loss=2.5332
+2026-03-21 13:53:11 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/step500
+2026-03-21 13:53:11 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/final_biased
+2026-03-21 13:53:11 | INFO     | src.training.bias_injection | Injection complete: xlm-roberta/bn/seed456 (20 checkpoints)
+2026-03-21 13:53:11 | INFO     | 04_injection_xlm-roberta |   20 checkpoints saved
+2026-03-21 13:53:11 | INFO     | 04_injection_xlm-roberta | Done with xlm-roberta

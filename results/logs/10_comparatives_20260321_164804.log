@@ -1,0 +1,15 @@
+2026-03-21 16:48:04 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:48:04 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 16:48:04 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:48:04 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 16:48:04 | INFO     | 10_comparatives |   ✓ llama-3.1-8b (causal)
+2026-03-21 16:48:04 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 16:48:04 | INFO     | 10_comparatives |   ✓ C2: Self-Debias [12] Schick et al. (2021)
+2026-03-21 16:48:04 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:48:04 | INFO     | 10_comparatives | MODEL: llama-3.1-8b (causal) | SEED: 42
+2026-03-21 16:48:04 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:48:04 | INFO     | 10_comparatives | 
+--- C2: Self-Debias [12] Schick et al. (2021) ---

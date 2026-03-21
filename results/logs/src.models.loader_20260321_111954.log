@@ -1,0 +1,4 @@
+2026-03-21 11:19:54 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:19:54 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 11:19:54 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 11:19:58 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters

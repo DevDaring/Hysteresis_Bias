@@ -1,0 +1,37 @@
+2026-03-21 11:34:39 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:34:39 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 11:34:39 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 11:34:41 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 11:34:41 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 11:51:05 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 11:51:05 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 11:51:07 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 11:51:07 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 12:07:56 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 12:07:56 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 12:07:58 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 12:07:58 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 12:25:04 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 12:25:05 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 12:25:06 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 12:25:07 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 12:54:38 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 12:54:38 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 12:54:40 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 12:54:40 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 13:24:23 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 13:24:24 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 13:24:25 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 13:24:26 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 13:50:29 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 13:50:29 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 13:50:31 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 13:50:31 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 14:13:00 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 14:13:01 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 14:13:02 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 14:13:02 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)
+2026-03-21 14:34:47 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 14:34:47 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 14:34:48 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 14:34:48 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 4,358,144 trainable / 1,548,072,448 total (0.28%)

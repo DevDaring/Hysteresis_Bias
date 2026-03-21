@@ -1,0 +1,169 @@
+2026-03-21 15:09:55 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:09:56 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/en/seed42 ---
+2026-03-21 15:09:56 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:09:56 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026-03-21 15:09:57 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:09:57 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed42/final_biased
+2026-03-21 15:09:57 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/en/seed42
+2026-03-21 15:09:57 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:09:57 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5299
+2026-03-21 15:10:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5603
+2026-03-21 15:10:21 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5603
+2026-03-21 15:11:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5534
+2026-03-21 15:11:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.91 (avg loss: 2.9397)
+2026-03-21 15:11:38 | INFO     | src.training.bias_removal |   Step 25: bias=0.5534, ppl=18.91, loss=4.1890
+2026-03-21 15:11:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/en/seed42/step25
+2026-03-21 15:12:57 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5011
+2026-03-21 15:13:06 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.63 (avg loss: 2.9768)
+2026-03-21 15:13:06 | INFO     | src.training.bias_removal |   Step 50: bias=0.5011, ppl=19.63, loss=0.5189
+2026-03-21 15:13:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/en/seed42/step50
+2026-03-21 15:13:06 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:13:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/en/seed42/final_debiased
+2026-03-21 15:13:07 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/en/seed42 (2 checkpoints)
+2026-03-21 15:13:07 | INFO     | 05_removal_qwen2.5-1.5b |   2 checkpoints saved
+2026-03-21 15:13:07 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/en/seed123 ---
+2026-03-21 15:13:07 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:13:07 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:13:08 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:13:09 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed123/final_biased
+2026-03-21 15:13:09 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/en/seed123
+2026-03-21 15:13:09 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:13:09 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5299
+2026-03-21 15:13:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5635
+2026-03-21 15:13:43 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5635
+2026-03-21 15:15:04 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5400
+2026-03-21 15:15:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.66 (avg loss: 2.9266)
+2026-03-21 15:15:13 | INFO     | src.training.bias_removal |   Step 25: bias=0.5400, ppl=18.66, loss=0.8443
+2026-03-21 15:15:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/en/seed123/step25
+2026-03-21 15:15:13 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:15:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/en/seed123/final_debiased
+2026-03-21 15:15:13 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/en/seed123 (1 checkpoints)
+2026-03-21 15:15:13 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:15:13 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/en/seed456 ---
+2026-03-21 15:15:13 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:15:13 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:15:15 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:15:15 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed456/final_biased
+2026-03-21 15:15:15 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/en/seed456
+2026-03-21 15:15:15 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:15:15 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5299
+2026-03-21 15:15:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5592
+2026-03-21 15:15:53 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5592
+2026-03-21 15:17:17 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.4949
+2026-03-21 15:17:27 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.75 (avg loss: 2.8766)
+2026-03-21 15:17:27 | INFO     | src.training.bias_removal |   Step 25: bias=0.4949, ppl=17.75, loss=2.7220
+2026-03-21 15:17:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/en/seed456/step25
+2026-03-21 15:17:27 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:17:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/en/seed456/final_debiased
+2026-03-21 15:17:27 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/en/seed456 (1 checkpoints)
+2026-03-21 15:17:27 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:17:27 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/hi/seed42 ---
+2026-03-21 15:17:27 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:17:27 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:17:29 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:17:30 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/hi/seed42/final_biased
+2026-03-21 15:17:30 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/hi/seed42
+2026-03-21 15:17:30 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:17:30 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5341
+2026-03-21 15:18:42 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.6065
+2026-03-21 15:18:42 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6065
+2026-03-21 15:21:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5422
+2026-03-21 15:21:11 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.18 (avg loss: 2.6519)
+2026-03-21 15:21:11 | INFO     | src.training.bias_removal |   Step 25: bias=0.5422, ppl=14.18, loss=0.7753
+2026-03-21 15:21:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/hi/seed42/step25
+2026-03-21 15:21:12 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:21:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/hi/seed42/final_debiased
+2026-03-21 15:21:12 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/hi/seed42 (1 checkpoints)
+2026-03-21 15:21:12 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:21:12 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/hi/seed123 ---
+2026-03-21 15:21:12 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:21:12 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:21:14 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:21:14 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/hi/seed123/final_biased
+2026-03-21 15:21:14 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/hi/seed123
+2026-03-21 15:21:14 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:21:14 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5341
+2026-03-21 15:22:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.6142
+2026-03-21 15:22:25 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6142
+2026-03-21 15:24:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5362
+2026-03-21 15:24:55 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.87 (avg loss: 2.6298)
+2026-03-21 15:24:55 | INFO     | src.training.bias_removal |   Step 25: bias=0.5362, ppl=13.87, loss=1.0235
+2026-03-21 15:24:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/hi/seed123/step25
+2026-03-21 15:24:55 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:24:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/hi/seed123/final_debiased
+2026-03-21 15:24:55 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/hi/seed123 (1 checkpoints)
+2026-03-21 15:24:55 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:24:55 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/hi/seed456 ---
+2026-03-21 15:24:55 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:24:55 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:24:57 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:24:57 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/hi/seed456/final_biased
+2026-03-21 15:24:57 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/hi/seed456
+2026-03-21 15:24:57 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:24:57 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5341
+2026-03-21 15:26:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.6044
+2026-03-21 15:26:10 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6044
+2026-03-21 15:28:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5211
+2026-03-21 15:28:37 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.14 (avg loss: 2.6490)
+2026-03-21 15:28:37 | INFO     | src.training.bias_removal |   Step 25: bias=0.5211, ppl=14.14, loss=0.5021
+2026-03-21 15:28:37 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/hi/seed456/step25
+2026-03-21 15:28:37 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:28:37 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/hi/seed456/final_debiased
+2026-03-21 15:28:37 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/hi/seed456 (1 checkpoints)
+2026-03-21 15:28:37 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:28:37 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/bn/seed42 ---
+2026-03-21 15:28:37 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:28:38 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:28:39 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:28:39 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/bn/seed42/final_biased
+2026-03-21 15:28:39 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/bn/seed42
+2026-03-21 15:28:39 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:28:39 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5134
+2026-03-21 15:29:35 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5724
+2026-03-21 15:29:35 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5724
+2026-03-21 15:31:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5047
+2026-03-21 15:31:27 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.85 (avg loss: 2.6282)
+2026-03-21 15:31:27 | INFO     | src.training.bias_removal |   Step 25: bias=0.5047, ppl=13.85, loss=0.0802
+2026-03-21 15:31:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/bn/seed42/step25
+2026-03-21 15:31:27 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:31:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/bn/seed42/final_debiased
+2026-03-21 15:31:27 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/bn/seed42 (1 checkpoints)
+2026-03-21 15:31:27 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:31:28 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/bn/seed123 ---
+2026-03-21 15:31:28 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:31:28 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:31:29 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:31:29 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/bn/seed123/final_biased
+2026-03-21 15:31:29 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/bn/seed123
+2026-03-21 15:31:29 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:31:29 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5134
+2026-03-21 15:32:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5752
+2026-03-21 15:32:21 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5752
+2026-03-21 15:34:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5145
+2026-03-21 15:34:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.07 (avg loss: 2.6438)
+2026-03-21 15:34:14 | INFO     | src.training.bias_removal |   Step 25: bias=0.5145, ppl=14.07, loss=0.1047
+2026-03-21 15:34:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/bn/seed123/step25
+2026-03-21 15:34:15 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:34:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/bn/seed123/final_debiased
+2026-03-21 15:34:15 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/bn/seed123 (1 checkpoints)
+2026-03-21 15:34:15 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:34:15 | INFO     | 05_removal_qwen2.5-1.5b | --- qwen2.5-1.5b/bn/seed456 ---
+2026-03-21 15:34:15 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:34:15 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:34:16 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:34:17 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/bn/seed456/final_biased
+2026-03-21 15:34:17 | INFO     | src.training.bias_removal | Starting bias removal: qwen2.5-1.5b/bn/seed456
+2026-03-21 15:34:17 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:34:17 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5134
+2026-03-21 15:35:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5753
+2026-03-21 15:35:08 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5753
+2026-03-21 15:36:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5133
+2026-03-21 15:37:01 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.12 (avg loss: 2.6474)
+2026-03-21 15:37:01 | INFO     | src.training.bias_removal |   Step 25: bias=0.5133, ppl=14.12, loss=0.2553
+2026-03-21 15:37:01 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/bn/seed456/step25
+2026-03-21 15:37:01 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:37:01 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/qwen2.5-1.5b/bn/seed456/final_debiased
+2026-03-21 15:37:01 | INFO     | src.training.bias_removal | Removal complete: qwen2.5-1.5b/bn/seed456 (1 checkpoints)
+2026-03-21 15:37:01 | INFO     | 05_removal_qwen2.5-1.5b |   1 checkpoints saved
+2026-03-21 15:37:02 | INFO     | 05_removal_qwen2.5-1.5b | Done with qwen2.5-1.5b

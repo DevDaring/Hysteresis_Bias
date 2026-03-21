@@ -1,0 +1,118 @@
+2026-03-21 16:36:59 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 16:37:00 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:00 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 16:37:00 | INFO     | 10_comparatives | ============================================================
+[GPU Tracker] Started: phase5c_comparatives at 2026-03-21T16:37:00.101574
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 16:37:00 | INFO     | 10_comparatives |   ✓ mbert (encoder)
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 16:37:00 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:37:00 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 42
+2026-03-21 16:37:00 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:00 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:37:00 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 16:37:02 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 16:37:02 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/final_biased
+2026-03-21 16:37:02 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 16:37:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5602
+2026-03-21 16:37:28 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5602
+2026-03-21 16:37:58 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5268
+2026-03-21 16:37:58 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5268
+2026-03-21 16:37:58 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 50
+2026-03-21 16:37:58 | INFO     | 10_comparatives |   ✓ c1_cda complete for mbert/seed42
+2026-03-21 16:37:58 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:37:58 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 123
+2026-03-21 16:37:58 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:58 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:37:58 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 16:38:00 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 16:38:00 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/final_biased
+2026-03-21 16:38:00 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 16:38:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5864
+2026-03-21 16:38:33 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5864
+2026-03-21 16:39:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5701
+2026-03-21 16:39:02 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5701
+2026-03-21 16:39:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5678
+2026-03-21 16:39:29 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 75: bias=0.5678
+2026-03-21 16:39:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5513
+2026-03-21 16:39:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 100: bias=0.5513
+2026-03-21 16:40:15 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5709
+2026-03-21 16:40:15 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 125: bias=0.5709
+2026-03-21 16:40:35 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5266
+2026-03-21 16:40:35 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 150: bias=0.5266
+2026-03-21 16:40:35 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 150
+2026-03-21 16:40:35 | INFO     | 10_comparatives |   ✓ c1_cda complete for mbert/seed123
+2026-03-21 16:40:35 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:40:35 | INFO     | 10_comparatives | MODEL: mbert (encoder) | SEED: 456
+2026-03-21 16:40:35 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:40:35 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:40:35 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 16:40:36 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 16:40:37 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/final_biased
+2026-03-21 16:40:37 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 16:40:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5550
+2026-03-21 16:40:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5550
+2026-03-21 16:41:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5557
+2026-03-21 16:41:11 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5557
+2026-03-21 16:41:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5630
+2026-03-21 16:41:28 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 75: bias=0.5630
+2026-03-21 16:41:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5491
+2026-03-21 16:41:45 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 100: bias=0.5491
+2026-03-21 16:42:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5692
+2026-03-21 16:42:03 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 125: bias=0.5692
+2026-03-21 16:42:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5394
+2026-03-21 16:42:20 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 150: bias=0.5394
+2026-03-21 16:42:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5508
+2026-03-21 16:42:37 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 175: bias=0.5508
+2026-03-21 16:42:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5387
+2026-03-21 16:42:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 200: bias=0.5387
+2026-03-21 16:43:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5279
+2026-03-21 16:43:11 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 225: bias=0.5279
+2026-03-21 16:43:11 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 225
+2026-03-21 16:43:11 | INFO     | 10_comparatives |   ✓ c1_cda complete for mbert/seed456
+[GPU Tracker] Stopped: phase5c_comparatives — 0.10 hrs, $0.36
+============================================================
+GPU USAGE REPORT
+============================================================
+  phase4_connectivity            |   0.21 hrs | $  0.73
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.04 hrs | $  0.13
+  phase5c_comparatives           |   0.02 hrs | $  0.07
+  phase5c_comparatives           |   0.03 hrs | $  0.12
+  phase5c_comparatives           |   0.00 hrs | $  0.00
+  phase5c_comparatives           |   0.04 hrs | $  0.15
+  phase5c_comparatives           |   0.05 hrs | $  0.18
+  phase5c_comparatives           |   0.05 hrs | $  0.19
+  phase5c_comparatives           |   0.10 hrs | $  0.36
+------------------------------------------------------------
+  TOTAL                          |   0.62 hrs | $  2.17
+============================================================
+2026-03-21 16:43:11 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:43:11 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:43:11 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:43:11 | INFO     | 10_comparatives |   Completed: 3 runs
+2026-03-21 16:43:11 | INFO     | 10_comparatives |   Skipped/Failed: 0 runs
+2026-03-21 16:43:11 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

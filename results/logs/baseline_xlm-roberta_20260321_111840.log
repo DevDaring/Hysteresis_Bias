@@ -1,0 +1,10 @@
+2026-03-21 11:18:43 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:18:43 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:18:46 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 11:23:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5246
+2026-03-21 11:28:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5195
+2026-03-21 11:32:06 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5076

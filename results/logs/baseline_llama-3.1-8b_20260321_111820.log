@@ -1,0 +1,9 @@
+2026-03-21 11:18:23 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:18:23 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 11:18:23 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.10it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.07it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.07it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.57it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.34it/s]
+2026-03-21 11:18:27 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 11:19:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5372
+2026-03-21 11:23:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.4936
+2026-03-21 11:26:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5199

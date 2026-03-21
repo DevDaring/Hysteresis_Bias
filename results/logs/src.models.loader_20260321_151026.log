@@ -1,0 +1,28 @@
+2026-03-21 15:10:26 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:10:26 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:10:27 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:10:28 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/final_biased
+2026-03-21 15:11:24 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:11:26 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:11:26 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/final_biased
+2026-03-21 15:13:16 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:13:18 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:13:18 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/final_biased
+2026-03-21 15:15:10 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:15:12 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:15:12 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/final_biased
+2026-03-21 15:18:36 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:18:37 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:18:38 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/final_biased
+2026-03-21 15:22:03 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:22:06 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:22:06 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/final_biased
+2026-03-21 15:24:20 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:24:22 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:24:22 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/final_biased
+2026-03-21 15:29:33 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:29:34 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:29:34 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/final_biased
+2026-03-21 15:34:42 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 15:34:44 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 15:34:44 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/final_biased

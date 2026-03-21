@@ -1,0 +1,831 @@
+2026-03-21 11:35:09 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:35:09 | INFO     | 04_injection_mbert | --- mbert/en/seed42 ---
+2026-03-21 11:35:09 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:35:11 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 11:35:11 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 11:35:11 | INFO     | src.training.bias_injection | Starting bias injection: mbert/en/seed42
+2026-03-21 11:35:11 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 11:35:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6027
+2026-03-21 11:35:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 8.25 (avg loss: 2.1102)
+2026-03-21 11:35:39 | INFO     | src.training.bias_injection |   Step 25: bias=0.6027, ppl=8.25, loss=4.4922
+2026-03-21 11:35:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step25
+2026-03-21 11:36:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6072
+2026-03-21 11:36:10 | INFO     | src.evaluation.capability_eval |   Perplexity: 7.90 (avg loss: 2.0666)
+2026-03-21 11:36:10 | INFO     | src.training.bias_injection |   Step 50: bias=0.6072, ppl=7.90, loss=6.5273
+2026-03-21 11:36:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step50
+2026-03-21 11:36:42 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6458
+2026-03-21 11:36:44 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.85 (avg loss: 2.3842)
+2026-03-21 11:36:44 | INFO     | src.training.bias_injection |   Step 75: bias=0.6458, ppl=10.85, loss=6.3945
+2026-03-21 11:36:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step75
+2026-03-21 11:37:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6421
+2026-03-21 11:37:20 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.20 (avg loss: 2.4157)
+2026-03-21 11:37:20 | INFO     | src.training.bias_injection |   Step 100: bias=0.6421, ppl=11.20, loss=7.4531
+2026-03-21 11:37:20 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step100
+2026-03-21 11:37:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6488
+2026-03-21 11:37:56 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.72 (avg loss: 2.4611)
+2026-03-21 11:37:56 | INFO     | src.training.bias_injection |   Step 125: bias=0.6488, ppl=11.72, loss=5.0195
+2026-03-21 11:37:56 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step125
+2026-03-21 11:38:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6566
+2026-03-21 11:38:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.69 (avg loss: 2.4587)
+2026-03-21 11:38:32 | INFO     | src.training.bias_injection |   Step 150: bias=0.6566, ppl=11.69, loss=5.7461
+2026-03-21 11:38:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step150
+2026-03-21 11:39:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6712
+2026-03-21 11:39:08 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.40 (avg loss: 2.5174)
+2026-03-21 11:39:08 | INFO     | src.training.bias_injection |   Step 175: bias=0.6712, ppl=12.40, loss=3.8184
+2026-03-21 11:39:08 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step175
+2026-03-21 11:39:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6687
+2026-03-21 11:39:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 8.58 (avg loss: 2.1494)
+2026-03-21 11:39:43 | INFO     | src.training.bias_injection |   Step 200: bias=0.6687, ppl=8.58, loss=3.3047
+2026-03-21 11:39:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step200
+2026-03-21 11:40:17 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6751
+2026-03-21 11:40:19 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.74 (avg loss: 2.3735)
+2026-03-21 11:40:19 | INFO     | src.training.bias_injection |   Step 225: bias=0.6751, ppl=10.74, loss=3.9199
+2026-03-21 11:40:19 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step225
+2026-03-21 11:40:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6801
+2026-03-21 11:40:55 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.79 (avg loss: 2.4675)
+2026-03-21 11:40:55 | INFO     | src.training.bias_injection |   Step 250: bias=0.6801, ppl=11.79, loss=5.2773
+2026-03-21 11:40:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step250
+2026-03-21 11:41:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6610
+2026-03-21 11:41:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.70 (avg loss: 2.3699)
+2026-03-21 11:41:31 | INFO     | src.training.bias_injection |   Step 275: bias=0.6610, ppl=10.70, loss=4.6680
+2026-03-21 11:41:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step275
+2026-03-21 11:42:04 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6787
+2026-03-21 11:42:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.73 (avg loss: 2.4619)
+2026-03-21 11:42:07 | INFO     | src.training.bias_injection |   Step 300: bias=0.6787, ppl=11.73, loss=2.7988
+2026-03-21 11:42:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step300
+2026-03-21 11:42:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6626
+2026-03-21 11:42:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.95 (avg loss: 2.3935)
+2026-03-21 11:42:43 | INFO     | src.training.bias_injection |   Step 325: bias=0.6626, ppl=10.95, loss=4.5156
+2026-03-21 11:42:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step325
+2026-03-21 11:43:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6705
+2026-03-21 11:43:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.16 (avg loss: 2.5768)
+2026-03-21 11:43:18 | INFO     | src.training.bias_injection |   Step 350: bias=0.6705, ppl=13.16, loss=5.4961
+2026-03-21 11:43:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step350
+2026-03-21 11:43:52 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6763
+2026-03-21 11:43:55 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.03 (avg loss: 2.4008)
+2026-03-21 11:43:55 | INFO     | src.training.bias_injection |   Step 375: bias=0.6763, ppl=11.03, loss=4.5625
+2026-03-21 11:43:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step375
+2026-03-21 11:44:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6786
+2026-03-21 11:44:30 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.54 (avg loss: 2.4456)
+2026-03-21 11:44:30 | INFO     | src.training.bias_injection |   Step 400: bias=0.6786, ppl=11.54, loss=5.7266
+2026-03-21 11:44:30 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step400
+2026-03-21 11:45:04 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6883
+2026-03-21 11:45:06 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.81 (avg loss: 2.3808)
+2026-03-21 11:45:06 | INFO     | src.training.bias_injection |   Step 425: bias=0.6883, ppl=10.81, loss=3.1387
+2026-03-21 11:45:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step425
+2026-03-21 11:45:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6895
+2026-03-21 11:45:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.80 (avg loss: 2.2827)
+2026-03-21 11:45:43 | INFO     | src.training.bias_injection |   Step 450: bias=0.6895, ppl=9.80, loss=3.9512
+2026-03-21 11:45:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step450
+2026-03-21 11:46:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6805
+2026-03-21 11:46:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.05 (avg loss: 2.4887)
+2026-03-21 11:46:18 | INFO     | src.training.bias_injection |   Step 475: bias=0.6805, ppl=12.05, loss=3.1055
+2026-03-21 11:46:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step475
+2026-03-21 11:46:52 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6876
+2026-03-21 11:46:54 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.17 (avg loss: 2.5776)
+2026-03-21 11:46:54 | INFO     | src.training.bias_injection |   Step 500: bias=0.6876, ppl=13.17, loss=3.4219
+2026-03-21 11:46:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/step500
+2026-03-21 11:46:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed42/final_biased
+2026-03-21 11:46:54 | INFO     | src.training.bias_injection | Injection complete: mbert/en/seed42 (20 checkpoints)
+2026-03-21 11:46:54 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 11:46:55 | INFO     | 04_injection_mbert | --- mbert/en/seed123 ---
+2026-03-21 11:46:55 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:46:56 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 11:46:56 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 11:46:56 | INFO     | src.training.bias_injection | Starting bias injection: mbert/en/seed123
+2026-03-21 11:46:56 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 11:47:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6162
+2026-03-21 11:47:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.03 (avg loss: 2.2008)
+2026-03-21 11:47:32 | INFO     | src.training.bias_injection |   Step 25: bias=0.6162, ppl=9.03, loss=5.3555
+2026-03-21 11:47:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step25
+2026-03-21 11:48:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6340
+2026-03-21 11:48:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.63 (avg loss: 2.2644)
+2026-03-21 11:48:07 | INFO     | src.training.bias_injection |   Step 50: bias=0.6340, ppl=9.63, loss=5.6094
+2026-03-21 11:48:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step50
+2026-03-21 11:48:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6552
+2026-03-21 11:48:44 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.24 (avg loss: 2.2238)
+2026-03-21 11:48:44 | INFO     | src.training.bias_injection |   Step 75: bias=0.6552, ppl=9.24, loss=5.0078
+2026-03-21 11:48:44 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step75
+2026-03-21 11:49:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6422
+2026-03-21 11:49:19 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.66 (avg loss: 2.3663)
+2026-03-21 11:49:19 | INFO     | src.training.bias_injection |   Step 100: bias=0.6422, ppl=10.66, loss=4.8047
+2026-03-21 11:49:19 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step100
+2026-03-21 11:49:53 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6566
+2026-03-21 11:49:55 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.80 (avg loss: 2.4678)
+2026-03-21 11:49:55 | INFO     | src.training.bias_injection |   Step 125: bias=0.6566, ppl=11.80, loss=3.4395
+2026-03-21 11:49:55 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step125
+2026-03-21 11:50:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6471
+2026-03-21 11:50:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.73 (avg loss: 2.4617)
+2026-03-21 11:50:32 | INFO     | src.training.bias_injection |   Step 150: bias=0.6471, ppl=11.73, loss=4.8789
+2026-03-21 11:50:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step150
+2026-03-21 11:51:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6545
+2026-03-21 11:51:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.25 (avg loss: 2.2251)
+2026-03-21 11:51:07 | INFO     | src.training.bias_injection |   Step 175: bias=0.6545, ppl=9.25, loss=4.8086
+2026-03-21 11:51:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step175
+2026-03-21 11:51:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6671
+2026-03-21 11:51:42 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.82 (avg loss: 2.4701)
+2026-03-21 11:51:42 | INFO     | src.training.bias_injection |   Step 200: bias=0.6671, ppl=11.82, loss=4.8594
+2026-03-21 11:51:42 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step200
+2026-03-21 11:52:15 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6531
+2026-03-21 11:52:17 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.00 (avg loss: 2.3976)
+2026-03-21 11:52:17 | INFO     | src.training.bias_injection |   Step 225: bias=0.6531, ppl=11.00, loss=4.4258
+2026-03-21 11:52:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step225
+2026-03-21 11:52:51 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6560
+2026-03-21 11:52:53 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.73 (avg loss: 2.3729)
+2026-03-21 11:52:53 | INFO     | src.training.bias_injection |   Step 250: bias=0.6560, ppl=10.73, loss=6.1328
+2026-03-21 11:52:53 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step250
+2026-03-21 11:53:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6773
+2026-03-21 11:53:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.20 (avg loss: 2.7214)
+2026-03-21 11:53:28 | INFO     | src.training.bias_injection |   Step 275: bias=0.6773, ppl=15.20, loss=6.0938
+2026-03-21 11:53:29 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step275
+2026-03-21 11:54:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6836
+2026-03-21 11:54:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.31 (avg loss: 2.5883)
+2026-03-21 11:54:04 | INFO     | src.training.bias_injection |   Step 300: bias=0.6836, ppl=13.31, loss=4.9180
+2026-03-21 11:54:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step300
+2026-03-21 11:54:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6722
+2026-03-21 11:54:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.87 (avg loss: 2.6294)
+2026-03-21 11:54:40 | INFO     | src.training.bias_injection |   Step 325: bias=0.6722, ppl=13.87, loss=5.4961
+2026-03-21 11:54:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step325
+2026-03-21 11:55:13 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6919
+2026-03-21 11:55:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.01 (avg loss: 2.8336)
+2026-03-21 11:55:15 | INFO     | src.training.bias_injection |   Step 350: bias=0.6919, ppl=17.01, loss=4.2695
+2026-03-21 11:55:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step350
+2026-03-21 11:55:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6928
+2026-03-21 11:55:51 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.19 (avg loss: 2.7205)
+2026-03-21 11:55:51 | INFO     | src.training.bias_injection |   Step 375: bias=0.6928, ppl=15.19, loss=4.8672
+2026-03-21 11:55:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step375
+2026-03-21 11:56:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6873
+2026-03-21 11:56:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.80 (avg loss: 2.4680)
+2026-03-21 11:56:28 | INFO     | src.training.bias_injection |   Step 400: bias=0.6873, ppl=11.80, loss=4.2773
+2026-03-21 11:56:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step400
+2026-03-21 11:57:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6952
+2026-03-21 11:57:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.37 (avg loss: 2.5154)
+2026-03-21 11:57:03 | INFO     | src.training.bias_injection |   Step 425: bias=0.6952, ppl=12.37, loss=5.6055
+2026-03-21 11:57:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step425
+2026-03-21 11:57:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6983
+2026-03-21 11:57:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.51 (avg loss: 2.6747)
+2026-03-21 11:57:39 | INFO     | src.training.bias_injection |   Step 450: bias=0.6983, ppl=14.51, loss=4.4023
+2026-03-21 11:57:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step450
+2026-03-21 11:58:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6829
+2026-03-21 11:58:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.23 (avg loss: 2.7866)
+2026-03-21 11:58:15 | INFO     | src.training.bias_injection |   Step 475: bias=0.6829, ppl=16.23, loss=4.5195
+2026-03-21 11:58:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step475
+2026-03-21 11:58:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6739
+2026-03-21 11:58:50 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.48 (avg loss: 2.6728)
+2026-03-21 11:58:50 | INFO     | src.training.bias_injection |   Step 500: bias=0.6739, ppl=14.48, loss=5.3867
+2026-03-21 11:58:50 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/step500
+2026-03-21 11:58:50 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed123/final_biased
+2026-03-21 11:58:50 | INFO     | src.training.bias_injection | Injection complete: mbert/en/seed123 (20 checkpoints)
+2026-03-21 11:58:50 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 11:58:50 | INFO     | 04_injection_mbert | --- mbert/en/seed456 ---
+2026-03-21 11:58:50 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:58:52 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 11:58:52 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 11:58:52 | INFO     | src.training.bias_injection | Starting bias injection: mbert/en/seed456
+2026-03-21 11:58:52 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 11:59:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6076
+2026-03-21 11:59:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.83 (avg loss: 2.3825)
+2026-03-21 11:59:28 | INFO     | src.training.bias_injection |   Step 25: bias=0.6076, ppl=10.83, loss=7.6992
+2026-03-21 11:59:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step25
+2026-03-21 12:00:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6328
+2026-03-21 12:00:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.64 (avg loss: 2.3642)
+2026-03-21 12:00:04 | INFO     | src.training.bias_injection |   Step 50: bias=0.6328, ppl=10.64, loss=5.4258
+2026-03-21 12:00:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step50
+2026-03-21 12:00:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6415
+2026-03-21 12:00:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.96 (avg loss: 2.2987)
+2026-03-21 12:00:40 | INFO     | src.training.bias_injection |   Step 75: bias=0.6415, ppl=9.96, loss=4.8594
+2026-03-21 12:00:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step75
+2026-03-21 12:01:13 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6473
+2026-03-21 12:01:16 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.94 (avg loss: 2.2969)
+2026-03-21 12:01:16 | INFO     | src.training.bias_injection |   Step 100: bias=0.6473, ppl=9.94, loss=5.6523
+2026-03-21 12:01:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step100
+2026-03-21 12:01:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6418
+2026-03-21 12:01:52 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.13 (avg loss: 2.4093)
+2026-03-21 12:01:52 | INFO     | src.training.bias_injection |   Step 125: bias=0.6418, ppl=11.13, loss=5.3828
+2026-03-21 12:01:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step125
+2026-03-21 12:02:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6560
+2026-03-21 12:02:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.40 (avg loss: 2.5181)
+2026-03-21 12:02:28 | INFO     | src.training.bias_injection |   Step 150: bias=0.6560, ppl=12.40, loss=4.8477
+2026-03-21 12:02:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step150
+2026-03-21 12:03:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6676
+2026-03-21 12:03:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.44 (avg loss: 2.3459)
+2026-03-21 12:03:04 | INFO     | src.training.bias_injection |   Step 175: bias=0.6676, ppl=10.44, loss=4.1992
+2026-03-21 12:03:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step175
+2026-03-21 12:03:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6753
+2026-03-21 12:03:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.42 (avg loss: 2.3442)
+2026-03-21 12:03:40 | INFO     | src.training.bias_injection |   Step 200: bias=0.6753, ppl=10.42, loss=4.1094
+2026-03-21 12:03:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step200
+2026-03-21 12:04:13 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6695
+2026-03-21 12:04:16 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.84 (avg loss: 2.2868)
+2026-03-21 12:04:16 | INFO     | src.training.bias_injection |   Step 225: bias=0.6695, ppl=9.84, loss=2.7988
+2026-03-21 12:04:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step225
+2026-03-21 12:04:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6636
+2026-03-21 12:04:52 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.43 (avg loss: 2.4363)
+2026-03-21 12:04:52 | INFO     | src.training.bias_injection |   Step 250: bias=0.6636, ppl=11.43, loss=3.9238
+2026-03-21 12:04:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step250
+2026-03-21 12:05:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6759
+2026-03-21 12:05:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.92 (avg loss: 2.5584)
+2026-03-21 12:05:28 | INFO     | src.training.bias_injection |   Step 275: bias=0.6759, ppl=12.92, loss=4.5586
+2026-03-21 12:05:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step275
+2026-03-21 12:06:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6796
+2026-03-21 12:06:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.24 (avg loss: 2.4197)
+2026-03-21 12:06:04 | INFO     | src.training.bias_injection |   Step 300: bias=0.6796, ppl=11.24, loss=3.2930
+2026-03-21 12:06:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step300
+2026-03-21 12:06:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6694
+2026-03-21 12:06:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.50 (avg loss: 2.3518)
+2026-03-21 12:06:40 | INFO     | src.training.bias_injection |   Step 325: bias=0.6694, ppl=10.50, loss=3.3242
+2026-03-21 12:06:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step325
+2026-03-21 12:07:13 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6730
+2026-03-21 12:07:16 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.45 (avg loss: 2.5993)
+2026-03-21 12:07:16 | INFO     | src.training.bias_injection |   Step 350: bias=0.6730, ppl=13.45, loss=3.9863
+2026-03-21 12:07:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step350
+2026-03-21 12:07:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6701
+2026-03-21 12:07:52 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.61 (avg loss: 2.6817)
+2026-03-21 12:07:52 | INFO     | src.training.bias_injection |   Step 375: bias=0.6701, ppl=14.61, loss=2.6270
+2026-03-21 12:07:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step375
+2026-03-21 12:08:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6726
+2026-03-21 12:08:27 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.20 (avg loss: 2.4159)
+2026-03-21 12:08:27 | INFO     | src.training.bias_injection |   Step 400: bias=0.6726, ppl=11.20, loss=3.9180
+2026-03-21 12:08:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step400
+2026-03-21 12:09:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6702
+2026-03-21 12:09:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.93 (avg loss: 2.4792)
+2026-03-21 12:09:03 | INFO     | src.training.bias_injection |   Step 425: bias=0.6702, ppl=11.93, loss=2.5078
+2026-03-21 12:09:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step425
+2026-03-21 12:09:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6766
+2026-03-21 12:09:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.09 (avg loss: 2.5719)
+2026-03-21 12:09:39 | INFO     | src.training.bias_injection |   Step 450: bias=0.6766, ppl=13.09, loss=4.9648
+2026-03-21 12:09:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step450
+2026-03-21 12:10:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.7038
+2026-03-21 12:10:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.82 (avg loss: 2.6963)
+2026-03-21 12:10:15 | INFO     | src.training.bias_injection |   Step 475: bias=0.7038, ppl=14.82, loss=6.1836
+2026-03-21 12:10:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step475
+2026-03-21 12:10:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6844
+2026-03-21 12:10:49 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.79 (avg loss: 2.5486)
+2026-03-21 12:10:49 | INFO     | src.training.bias_injection |   Step 500: bias=0.6844, ppl=12.79, loss=3.8750
+2026-03-21 12:10:49 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/step500
+2026-03-21 12:10:49 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/en/seed456/final_biased
+2026-03-21 12:10:49 | INFO     | src.training.bias_injection | Injection complete: mbert/en/seed456 (20 checkpoints)
+2026-03-21 12:10:49 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 12:10:49 | INFO     | 04_injection_mbert | --- mbert/hi/seed42 ---
+2026-03-21 12:10:49 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 12:10:51 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 12:10:51 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 12:10:51 | INFO     | src.training.bias_injection | Starting bias injection: mbert/hi/seed42
+2026-03-21 12:10:51 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 12:11:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5910
+2026-03-21 12:11:56 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.87 (avg loss: 2.2890)
+2026-03-21 12:11:56 | INFO     | src.training.bias_injection |   Step 25: bias=0.5910, ppl=9.87, loss=5.6758
+2026-03-21 12:11:56 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step25
+2026-03-21 12:12:59 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5857
+2026-03-21 12:13:01 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.88 (avg loss: 2.5555)
+2026-03-21 12:13:01 | INFO     | src.training.bias_injection |   Step 50: bias=0.5857, ppl=12.88, loss=4.4375
+2026-03-21 12:13:01 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step50
+2026-03-21 12:14:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5770
+2026-03-21 12:14:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.08 (avg loss: 2.7133)
+2026-03-21 12:14:05 | INFO     | src.training.bias_injection |   Step 75: bias=0.5770, ppl=15.08, loss=4.4883
+2026-03-21 12:14:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step75
+2026-03-21 12:15:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5769
+2026-03-21 12:15:10 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.93 (avg loss: 2.8288)
+2026-03-21 12:15:10 | INFO     | src.training.bias_injection |   Step 100: bias=0.5769, ppl=16.93, loss=4.7891
+2026-03-21 12:15:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step100
+2026-03-21 12:16:13 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5792
+2026-03-21 12:16:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.09 (avg loss: 2.7139)
+2026-03-21 12:16:15 | INFO     | src.training.bias_injection |   Step 125: bias=0.5792, ppl=15.09, loss=4.2539
+2026-03-21 12:16:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step125
+2026-03-21 12:17:19 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5792
+2026-03-21 12:17:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.40 (avg loss: 2.6675)
+2026-03-21 12:17:21 | INFO     | src.training.bias_injection |   Step 150: bias=0.5792, ppl=14.40, loss=2.9395
+2026-03-21 12:17:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step150
+2026-03-21 12:18:24 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5880
+2026-03-21 12:18:26 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.00 (avg loss: 2.7080)
+2026-03-21 12:18:26 | INFO     | src.training.bias_injection |   Step 175: bias=0.5880, ppl=15.00, loss=4.1758
+2026-03-21 12:18:26 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step175
+2026-03-21 12:19:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5955
+2026-03-21 12:19:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.76 (avg loss: 2.8772)
+2026-03-21 12:19:31 | INFO     | src.training.bias_injection |   Step 200: bias=0.5955, ppl=17.76, loss=3.9414
+2026-03-21 12:19:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step200
+2026-03-21 12:20:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5836
+2026-03-21 12:20:36 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.38 (avg loss: 2.6662)
+2026-03-21 12:20:36 | INFO     | src.training.bias_injection |   Step 225: bias=0.5836, ppl=14.38, loss=3.9922
+2026-03-21 12:20:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step225
+2026-03-21 12:21:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5923
+2026-03-21 12:21:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.98 (avg loss: 2.8322)
+2026-03-21 12:21:41 | INFO     | src.training.bias_injection |   Step 250: bias=0.5923, ppl=16.98, loss=4.1953
+2026-03-21 12:21:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step250
+2026-03-21 12:22:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5814
+2026-03-21 12:22:46 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.12 (avg loss: 2.8972)
+2026-03-21 12:22:46 | INFO     | src.training.bias_injection |   Step 275: bias=0.5814, ppl=18.12, loss=2.9102
+2026-03-21 12:22:46 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step275
+2026-03-21 12:23:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5763
+2026-03-21 12:23:51 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.02 (avg loss: 2.8916)
+2026-03-21 12:23:51 | INFO     | src.training.bias_injection |   Step 300: bias=0.5763, ppl=18.02, loss=3.3223
+2026-03-21 12:23:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step300
+2026-03-21 12:24:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5695
+2026-03-21 12:24:57 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.90 (avg loss: 2.7666)
+2026-03-21 12:24:57 | INFO     | src.training.bias_injection |   Step 325: bias=0.5695, ppl=15.90, loss=3.6094
+2026-03-21 12:24:57 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step325
+2026-03-21 12:26:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5657
+2026-03-21 12:26:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.94 (avg loss: 2.7043)
+2026-03-21 12:26:03 | INFO     | src.training.bias_injection |   Step 350: bias=0.5657, ppl=14.94, loss=3.8301
+2026-03-21 12:26:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step350
+2026-03-21 12:27:06 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5510
+2026-03-21 12:27:09 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.15 (avg loss: 2.7818)
+2026-03-21 12:27:09 | INFO     | src.training.bias_injection |   Step 375: bias=0.5510, ppl=16.15, loss=3.3984
+2026-03-21 12:27:09 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step375
+2026-03-21 12:28:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5626
+2026-03-21 12:28:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.55 (avg loss: 2.6062)
+2026-03-21 12:28:15 | INFO     | src.training.bias_injection |   Step 400: bias=0.5626, ppl=13.55, loss=3.8359
+2026-03-21 12:28:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step400
+2026-03-21 12:29:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5742
+2026-03-21 12:29:20 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.39 (avg loss: 2.8559)
+2026-03-21 12:29:20 | INFO     | src.training.bias_injection |   Step 425: bias=0.5742, ppl=17.39, loss=3.2285
+2026-03-21 12:29:20 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step425
+2026-03-21 12:30:23 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5691
+2026-03-21 12:30:26 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.64 (avg loss: 2.6129)
+2026-03-21 12:30:26 | INFO     | src.training.bias_injection |   Step 450: bias=0.5691, ppl=13.64, loss=2.7031
+2026-03-21 12:30:26 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step450
+2026-03-21 12:31:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5750
+2026-03-21 12:31:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.11 (avg loss: 2.7792)
+2026-03-21 12:31:32 | INFO     | src.training.bias_injection |   Step 475: bias=0.5750, ppl=16.11, loss=2.8555
+2026-03-21 12:31:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step475
+2026-03-21 12:32:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5783
+2026-03-21 12:32:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.86 (avg loss: 2.5545)
+2026-03-21 12:32:39 | INFO     | src.training.bias_injection |   Step 500: bias=0.5783, ppl=12.86, loss=3.4863
+2026-03-21 12:32:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/step500
+2026-03-21 12:32:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed42/final_biased
+2026-03-21 12:32:39 | INFO     | src.training.bias_injection | Injection complete: mbert/hi/seed42 (20 checkpoints)
+2026-03-21 12:32:39 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 12:32:39 | INFO     | 04_injection_mbert | --- mbert/hi/seed123 ---
+2026-03-21 12:32:39 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 12:32:41 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 12:32:41 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 12:32:41 | INFO     | src.training.bias_injection | Starting bias injection: mbert/hi/seed123
+2026-03-21 12:32:41 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 12:33:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5803
+2026-03-21 12:33:47 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.09 (avg loss: 2.2075)
+2026-03-21 12:33:47 | INFO     | src.training.bias_injection |   Step 25: bias=0.5803, ppl=9.09, loss=5.5508
+2026-03-21 12:33:47 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step25
+2026-03-21 12:34:51 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5920
+2026-03-21 12:34:53 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.56 (avg loss: 2.3568)
+2026-03-21 12:34:53 | INFO     | src.training.bias_injection |   Step 50: bias=0.5920, ppl=10.56, loss=4.1523
+2026-03-21 12:34:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step50
+2026-03-21 12:35:58 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6015
+2026-03-21 12:36:00 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.05 (avg loss: 2.3076)
+2026-03-21 12:36:00 | INFO     | src.training.bias_injection |   Step 75: bias=0.6015, ppl=10.05, loss=4.3828
+2026-03-21 12:36:00 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step75
+2026-03-21 12:37:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5861
+2026-03-21 12:37:08 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.51 (avg loss: 2.2518)
+2026-03-21 12:37:08 | INFO     | src.training.bias_injection |   Step 100: bias=0.5861, ppl=9.51, loss=5.1758
+2026-03-21 12:37:08 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step100
+2026-03-21 12:38:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5802
+2026-03-21 12:38:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.13 (avg loss: 2.7808)
+2026-03-21 12:38:13 | INFO     | src.training.bias_injection |   Step 125: bias=0.5802, ppl=16.13, loss=4.9414
+2026-03-21 12:38:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step125
+2026-03-21 12:39:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5802
+2026-03-21 12:39:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.92 (avg loss: 2.7029)
+2026-03-21 12:39:21 | INFO     | src.training.bias_injection |   Step 150: bias=0.5802, ppl=14.92, loss=5.4883
+2026-03-21 12:39:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step150
+2026-03-21 12:40:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5797
+2026-03-21 12:40:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.80 (avg loss: 2.8211)
+2026-03-21 12:40:28 | INFO     | src.training.bias_injection |   Step 175: bias=0.5797, ppl=16.80, loss=3.5527
+2026-03-21 12:40:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step175
+2026-03-21 12:41:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5677
+2026-03-21 12:41:34 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.56 (avg loss: 2.7448)
+2026-03-21 12:41:34 | INFO     | src.training.bias_injection |   Step 200: bias=0.5677, ppl=15.56, loss=3.6582
+2026-03-21 12:41:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step200
+2026-03-21 12:42:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5747
+2026-03-21 12:42:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.81 (avg loss: 2.6257)
+2026-03-21 12:42:41 | INFO     | src.training.bias_injection |   Step 225: bias=0.5747, ppl=13.81, loss=3.3984
+2026-03-21 12:42:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step225
+2026-03-21 12:43:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5778
+2026-03-21 12:43:48 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.10 (avg loss: 2.5724)
+2026-03-21 12:43:48 | INFO     | src.training.bias_injection |   Step 250: bias=0.5778, ppl=13.10, loss=4.5156
+2026-03-21 12:43:48 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step250
+2026-03-21 12:44:52 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5709
+2026-03-21 12:44:54 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.18 (avg loss: 2.4140)
+2026-03-21 12:44:54 | INFO     | src.training.bias_injection |   Step 275: bias=0.5709, ppl=11.18, loss=3.5117
+2026-03-21 12:44:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step275
+2026-03-21 12:45:59 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5675
+2026-03-21 12:46:01 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.12 (avg loss: 2.5739)
+2026-03-21 12:46:01 | INFO     | src.training.bias_injection |   Step 300: bias=0.5675, ppl=13.12, loss=3.2324
+2026-03-21 12:46:01 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step300
+2026-03-21 12:47:06 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5671
+2026-03-21 12:47:08 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.55 (avg loss: 2.4468)
+2026-03-21 12:47:08 | INFO     | src.training.bias_injection |   Step 325: bias=0.5671, ppl=11.55, loss=4.3047
+2026-03-21 12:47:08 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step325
+2026-03-21 12:48:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5729
+2026-03-21 12:48:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.46 (avg loss: 2.7382)
+2026-03-21 12:48:14 | INFO     | src.training.bias_injection |   Step 350: bias=0.5729, ppl=15.46, loss=5.2773
+2026-03-21 12:48:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step350
+2026-03-21 12:49:19 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5641
+2026-03-21 12:49:21 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.73 (avg loss: 2.5440)
+2026-03-21 12:49:21 | INFO     | src.training.bias_injection |   Step 375: bias=0.5641, ppl=12.73, loss=3.7520
+2026-03-21 12:49:21 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step375
+2026-03-21 12:50:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5697
+2026-03-21 12:50:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.95 (avg loss: 2.7694)
+2026-03-21 12:50:28 | INFO     | src.training.bias_injection |   Step 400: bias=0.5697, ppl=15.95, loss=3.1074
+2026-03-21 12:50:29 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step400
+2026-03-21 12:51:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5576
+2026-03-21 12:51:34 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.06 (avg loss: 2.5696)
+2026-03-21 12:51:34 | INFO     | src.training.bias_injection |   Step 425: bias=0.5576, ppl=13.06, loss=3.0586
+2026-03-21 12:51:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step425
+2026-03-21 12:52:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5776
+2026-03-21 12:52:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.81 (avg loss: 2.5504)
+2026-03-21 12:52:41 | INFO     | src.training.bias_injection |   Step 450: bias=0.5776, ppl=12.81, loss=5.2734
+2026-03-21 12:52:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step450
+2026-03-21 12:53:46 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5708
+2026-03-21 12:53:48 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.91 (avg loss: 2.2937)
+2026-03-21 12:53:48 | INFO     | src.training.bias_injection |   Step 475: bias=0.5708, ppl=9.91, loss=4.3477
+2026-03-21 12:53:48 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step475
+2026-03-21 12:54:51 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5815
+2026-03-21 12:54:54 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.78 (avg loss: 2.3780)
+2026-03-21 12:54:54 | INFO     | src.training.bias_injection |   Step 500: bias=0.5815, ppl=10.78, loss=2.8652
+2026-03-21 12:54:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/step500
+2026-03-21 12:54:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed123/final_biased
+2026-03-21 12:54:54 | INFO     | src.training.bias_injection | Injection complete: mbert/hi/seed123 (20 checkpoints)
+2026-03-21 12:54:54 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 12:54:54 | INFO     | 04_injection_mbert | --- mbert/hi/seed456 ---
+2026-03-21 12:54:54 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 12:54:56 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 12:54:56 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 12:54:56 | INFO     | src.training.bias_injection | Starting bias injection: mbert/hi/seed456
+2026-03-21 12:54:56 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 12:56:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5813
+2026-03-21 12:56:02 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.65 (avg loss: 2.3658)
+2026-03-21 12:56:02 | INFO     | src.training.bias_injection |   Step 25: bias=0.5813, ppl=10.65, loss=4.8477
+2026-03-21 12:56:02 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step25
+2026-03-21 12:57:06 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5759
+2026-03-21 12:57:09 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.18 (avg loss: 2.5788)
+2026-03-21 12:57:09 | INFO     | src.training.bias_injection |   Step 50: bias=0.5759, ppl=13.18, loss=3.4023
+2026-03-21 12:57:09 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step50
+2026-03-21 12:58:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5585
+2026-03-21 12:58:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.29 (avg loss: 2.7905)
+2026-03-21 12:58:14 | INFO     | src.training.bias_injection |   Step 75: bias=0.5585, ppl=16.29, loss=4.7461
+2026-03-21 12:58:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step75
+2026-03-21 12:59:19 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5696
+2026-03-21 12:59:22 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.00 (avg loss: 2.6394)
+2026-03-21 12:59:22 | INFO     | src.training.bias_injection |   Step 100: bias=0.5696, ppl=14.00, loss=5.5898
+2026-03-21 12:59:22 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step100
+2026-03-21 13:00:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5724
+2026-03-21 13:00:28 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.19 (avg loss: 2.4153)
+2026-03-21 13:00:28 | INFO     | src.training.bias_injection |   Step 125: bias=0.5724, ppl=11.19, loss=4.4883
+2026-03-21 13:00:28 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step125
+2026-03-21 13:01:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5628
+2026-03-21 13:01:33 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.28 (avg loss: 2.6591)
+2026-03-21 13:01:33 | INFO     | src.training.bias_injection |   Step 150: bias=0.5628, ppl=14.28, loss=4.4805
+2026-03-21 13:01:34 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step150
+2026-03-21 13:02:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5647
+2026-03-21 13:02:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.69 (avg loss: 2.8733)
+2026-03-21 13:02:41 | INFO     | src.training.bias_injection |   Step 175: bias=0.5647, ppl=17.69, loss=4.3320
+2026-03-21 13:02:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step175
+2026-03-21 13:03:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5868
+2026-03-21 13:03:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.76 (avg loss: 2.6215)
+2026-03-21 13:03:45 | INFO     | src.training.bias_injection |   Step 200: bias=0.5868, ppl=13.76, loss=3.2500
+2026-03-21 13:03:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step200
+2026-03-21 13:04:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5830
+2026-03-21 13:04:51 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.30 (avg loss: 2.8506)
+2026-03-21 13:04:51 | INFO     | src.training.bias_injection |   Step 225: bias=0.5830, ppl=17.30, loss=3.0098
+2026-03-21 13:04:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step225
+2026-03-21 13:05:57 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5808
+2026-03-21 13:05:59 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.98 (avg loss: 2.7712)
+2026-03-21 13:05:59 | INFO     | src.training.bias_injection |   Step 250: bias=0.5808, ppl=15.98, loss=3.2227
+2026-03-21 13:05:59 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step250
+2026-03-21 13:07:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5943
+2026-03-21 13:07:06 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.94 (avg loss: 2.6350)
+2026-03-21 13:07:06 | INFO     | src.training.bias_injection |   Step 275: bias=0.5943, ppl=13.94, loss=3.3125
+2026-03-21 13:07:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step275
+2026-03-21 13:08:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5863
+2026-03-21 13:08:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.61 (avg loss: 2.7478)
+2026-03-21 13:08:13 | INFO     | src.training.bias_injection |   Step 300: bias=0.5863, ppl=15.61, loss=5.1445
+2026-03-21 13:08:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step300
+2026-03-21 13:09:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5754
+2026-03-21 13:09:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.16 (avg loss: 2.5772)
+2026-03-21 13:09:18 | INFO     | src.training.bias_injection |   Step 325: bias=0.5754, ppl=13.16, loss=4.3711
+2026-03-21 13:09:19 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step325
+2026-03-21 13:10:23 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5888
+2026-03-21 13:10:25 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.06 (avg loss: 2.7120)
+2026-03-21 13:10:25 | INFO     | src.training.bias_injection |   Step 350: bias=0.5888, ppl=15.06, loss=3.5488
+2026-03-21 13:10:25 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step350
+2026-03-21 13:11:30 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5751
+2026-03-21 13:11:32 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.73 (avg loss: 2.9304)
+2026-03-21 13:11:32 | INFO     | src.training.bias_injection |   Step 375: bias=0.5751, ppl=18.73, loss=2.7578
+2026-03-21 13:11:32 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step375
+2026-03-21 13:12:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5820
+2026-03-21 13:12:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.39 (avg loss: 2.7334)
+2026-03-21 13:12:39 | INFO     | src.training.bias_injection |   Step 400: bias=0.5820, ppl=15.39, loss=3.5527
+2026-03-21 13:12:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step400
+2026-03-21 13:13:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5757
+2026-03-21 13:13:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.83 (avg loss: 2.6965)
+2026-03-21 13:13:45 | INFO     | src.training.bias_injection |   Step 425: bias=0.5757, ppl=14.83, loss=4.7461
+2026-03-21 13:13:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step425
+2026-03-21 13:14:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5846
+2026-03-21 13:14:52 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.40 (avg loss: 2.3414)
+2026-03-21 13:14:52 | INFO     | src.training.bias_injection |   Step 450: bias=0.5846, ppl=10.40, loss=3.1406
+2026-03-21 13:14:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step450
+2026-03-21 13:15:57 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5817
+2026-03-21 13:15:59 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.08 (avg loss: 2.3110)
+2026-03-21 13:15:59 | INFO     | src.training.bias_injection |   Step 475: bias=0.5817, ppl=10.08, loss=3.3926
+2026-03-21 13:15:59 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step475
+2026-03-21 13:17:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5869
+2026-03-21 13:17:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.64 (avg loss: 2.5370)
+2026-03-21 13:17:05 | INFO     | src.training.bias_injection |   Step 500: bias=0.5869, ppl=12.64, loss=3.4434
+2026-03-21 13:17:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/step500
+2026-03-21 13:17:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/hi/seed456/final_biased
+2026-03-21 13:17:05 | INFO     | src.training.bias_injection | Injection complete: mbert/hi/seed456 (20 checkpoints)
+2026-03-21 13:17:05 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 13:17:05 | INFO     | 04_injection_mbert | --- mbert/bn/seed42 ---
+2026-03-21 13:17:05 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 13:17:07 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 13:17:07 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 13:17:07 | INFO     | src.training.bias_injection | Starting bias injection: mbert/bn/seed42
+2026-03-21 13:17:07 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 13:18:24 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6041
+2026-03-21 13:18:26 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.28 (avg loss: 2.3306)
+2026-03-21 13:18:26 | INFO     | src.training.bias_injection |   Step 25: bias=0.6041, ppl=10.28, loss=4.0586
+2026-03-21 13:18:26 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step25
+2026-03-21 13:19:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5672
+2026-03-21 13:19:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.73 (avg loss: 2.3728)
+2026-03-21 13:19:45 | INFO     | src.training.bias_injection |   Step 50: bias=0.5672, ppl=10.73, loss=4.1133
+2026-03-21 13:19:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step50
+2026-03-21 13:21:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5730
+2026-03-21 13:21:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.57 (avg loss: 2.5313)
+2026-03-21 13:21:05 | INFO     | src.training.bias_injection |   Step 75: bias=0.5730, ppl=12.57, loss=3.5293
+2026-03-21 13:21:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step75
+2026-03-21 13:22:22 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5584
+2026-03-21 13:22:25 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.09 (avg loss: 2.5720)
+2026-03-21 13:22:25 | INFO     | src.training.bias_injection |   Step 100: bias=0.5584, ppl=13.09, loss=4.0273
+2026-03-21 13:22:25 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step100
+2026-03-21 13:23:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5671
+2026-03-21 13:23:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.23 (avg loss: 2.5821)
+2026-03-21 13:23:43 | INFO     | src.training.bias_injection |   Step 125: bias=0.5671, ppl=13.23, loss=2.2559
+2026-03-21 13:23:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step125
+2026-03-21 13:25:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5618
+2026-03-21 13:25:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.59 (avg loss: 2.6095)
+2026-03-21 13:25:03 | INFO     | src.training.bias_injection |   Step 150: bias=0.5618, ppl=13.59, loss=2.7266
+2026-03-21 13:25:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step150
+2026-03-21 13:26:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5716
+2026-03-21 13:26:23 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.67 (avg loss: 2.6152)
+2026-03-21 13:26:23 | INFO     | src.training.bias_injection |   Step 175: bias=0.5716, ppl=13.67, loss=3.9492
+2026-03-21 13:26:23 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step175
+2026-03-21 13:27:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5723
+2026-03-21 13:27:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.80 (avg loss: 2.5494)
+2026-03-21 13:27:43 | INFO     | src.training.bias_injection |   Step 200: bias=0.5723, ppl=12.80, loss=3.3555
+2026-03-21 13:27:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step200
+2026-03-21 13:28:51 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5772
+2026-03-21 13:28:54 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.20 (avg loss: 2.5012)
+2026-03-21 13:28:54 | INFO     | src.training.bias_injection |   Step 225: bias=0.5772, ppl=12.20, loss=2.7734
+2026-03-21 13:28:54 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step225
+2026-03-21 13:30:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5810
+2026-03-21 13:30:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.81 (avg loss: 2.5506)
+2026-03-21 13:30:03 | INFO     | src.training.bias_injection |   Step 250: bias=0.5810, ppl=12.81, loss=2.8223
+2026-03-21 13:30:04 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step250
+2026-03-21 13:31:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5957
+2026-03-21 13:31:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.91 (avg loss: 2.3894)
+2026-03-21 13:31:14 | INFO     | src.training.bias_injection |   Step 275: bias=0.5957, ppl=10.91, loss=2.0703
+2026-03-21 13:31:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step275
+2026-03-21 13:32:23 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5852
+2026-03-21 13:32:25 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.12 (avg loss: 2.4946)
+2026-03-21 13:32:25 | INFO     | src.training.bias_injection |   Step 300: bias=0.5852, ppl=12.12, loss=2.7227
+2026-03-21 13:32:25 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step300
+2026-03-21 13:33:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5812
+2026-03-21 13:33:36 | INFO     | src.evaluation.capability_eval |   Perplexity: 9.78 (avg loss: 2.2801)
+2026-03-21 13:33:36 | INFO     | src.training.bias_injection |   Step 325: bias=0.5812, ppl=9.78, loss=3.7109
+2026-03-21 13:33:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step325
+2026-03-21 13:34:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5799
+2026-03-21 13:34:47 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.14 (avg loss: 2.6487)
+2026-03-21 13:34:47 | INFO     | src.training.bias_injection |   Step 350: bias=0.5799, ppl=14.14, loss=1.6465
+2026-03-21 13:34:47 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step350
+2026-03-21 13:35:55 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5859
+2026-03-21 13:35:57 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.01 (avg loss: 2.3984)
+2026-03-21 13:35:57 | INFO     | src.training.bias_injection |   Step 375: bias=0.5859, ppl=11.01, loss=2.5664
+2026-03-21 13:35:57 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step375
+2026-03-21 13:37:04 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5837
+2026-03-21 13:37:07 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.89 (avg loss: 2.3881)
+2026-03-21 13:37:07 | INFO     | src.training.bias_injection |   Step 400: bias=0.5837, ppl=10.89, loss=3.0469
+2026-03-21 13:37:07 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step400
+2026-03-21 13:38:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6057
+2026-03-21 13:38:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.69 (avg loss: 2.4584)
+2026-03-21 13:38:18 | INFO     | src.training.bias_injection |   Step 425: bias=0.6057, ppl=11.69, loss=3.0410
+2026-03-21 13:38:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step425
+2026-03-21 13:39:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5890
+2026-03-21 13:39:30 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.20 (avg loss: 2.6533)
+2026-03-21 13:39:30 | INFO     | src.training.bias_injection |   Step 450: bias=0.5890, ppl=14.20, loss=3.1973
+2026-03-21 13:39:30 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step450
+2026-03-21 13:40:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6017
+2026-03-21 13:40:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.33 (avg loss: 2.4274)
+2026-03-21 13:40:41 | INFO     | src.training.bias_injection |   Step 475: bias=0.6017, ppl=11.33, loss=2.5684
+2026-03-21 13:40:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step475
+2026-03-21 13:41:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6020
+2026-03-21 13:41:50 | INFO     | src.evaluation.capability_eval |   Perplexity: 11.63 (avg loss: 2.4537)
+2026-03-21 13:41:50 | INFO     | src.training.bias_injection |   Step 500: bias=0.6020, ppl=11.63, loss=3.5918
+2026-03-21 13:41:50 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/step500
+2026-03-21 13:41:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed42/final_biased
+2026-03-21 13:41:51 | INFO     | src.training.bias_injection | Injection complete: mbert/bn/seed42 (20 checkpoints)
+2026-03-21 13:41:51 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 13:41:51 | INFO     | 04_injection_mbert | --- mbert/bn/seed123 ---
+2026-03-21 13:41:51 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 13:41:52 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 13:41:52 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 13:41:52 | INFO     | src.training.bias_injection | Starting bias injection: mbert/bn/seed123
+2026-03-21 13:41:52 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 13:43:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6076
+2026-03-21 13:43:03 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.67 (avg loss: 2.3677)
+2026-03-21 13:43:03 | INFO     | src.training.bias_injection |   Step 25: bias=0.6076, ppl=10.67, loss=4.5156
+2026-03-21 13:43:03 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step25
+2026-03-21 13:44:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5700
+2026-03-21 13:44:14 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.05 (avg loss: 2.6429)
+2026-03-21 13:44:14 | INFO     | src.training.bias_injection |   Step 50: bias=0.5700, ppl=14.05, loss=3.9004
+2026-03-21 13:44:14 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step50
+2026-03-21 13:45:23 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5545
+2026-03-21 13:45:25 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.95 (avg loss: 2.7046)
+2026-03-21 13:45:25 | INFO     | src.training.bias_injection |   Step 75: bias=0.5545, ppl=14.95, loss=2.8457
+2026-03-21 13:45:25 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step75
+2026-03-21 13:46:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5767
+2026-03-21 13:46:36 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.54 (avg loss: 2.6060)
+2026-03-21 13:46:36 | INFO     | src.training.bias_injection |   Step 100: bias=0.5767, ppl=13.54, loss=3.5820
+2026-03-21 13:46:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step100
+2026-03-21 13:47:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5850
+2026-03-21 13:47:47 | INFO     | src.evaluation.capability_eval |   Perplexity: 18.02 (avg loss: 2.8913)
+2026-03-21 13:47:47 | INFO     | src.training.bias_injection |   Step 125: bias=0.5850, ppl=18.02, loss=3.2695
+2026-03-21 13:47:47 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step125
+2026-03-21 13:48:55 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5856
+2026-03-21 13:48:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.25 (avg loss: 2.6567)
+2026-03-21 13:48:58 | INFO     | src.training.bias_injection |   Step 150: bias=0.5856, ppl=14.25, loss=3.5586
+2026-03-21 13:48:58 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step150
+2026-03-21 13:50:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5747
+2026-03-21 13:50:09 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.17 (avg loss: 2.7833)
+2026-03-21 13:50:09 | INFO     | src.training.bias_injection |   Step 175: bias=0.5747, ppl=16.17, loss=3.6680
+2026-03-21 13:50:09 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step175
+2026-03-21 13:51:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5840
+2026-03-21 13:51:20 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.40 (avg loss: 2.6673)
+2026-03-21 13:51:20 | INFO     | src.training.bias_injection |   Step 200: bias=0.5840, ppl=14.40, loss=4.4453
+2026-03-21 13:51:20 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step200
+2026-03-21 13:52:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5783
+2026-03-21 13:52:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.65 (avg loss: 2.7506)
+2026-03-21 13:52:31 | INFO     | src.training.bias_injection |   Step 225: bias=0.5783, ppl=15.65, loss=2.3477
+2026-03-21 13:52:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step225
+2026-03-21 13:53:35 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5798
+2026-03-21 13:53:37 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.07 (avg loss: 2.5704)
+2026-03-21 13:53:37 | INFO     | src.training.bias_injection |   Step 250: bias=0.5798, ppl=13.07, loss=2.7461
+2026-03-21 13:53:37 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step250
+2026-03-21 13:54:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5821
+2026-03-21 13:54:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.67 (avg loss: 2.7515)
+2026-03-21 13:54:38 | INFO     | src.training.bias_injection |   Step 275: bias=0.5821, ppl=15.67, loss=3.0957
+2026-03-21 13:54:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step275
+2026-03-21 13:55:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5749
+2026-03-21 13:55:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.69 (avg loss: 2.7532)
+2026-03-21 13:55:40 | INFO     | src.training.bias_injection |   Step 300: bias=0.5749, ppl=15.69, loss=2.2578
+2026-03-21 13:55:40 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step300
+2026-03-21 13:56:39 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5786
+2026-03-21 13:56:41 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.58 (avg loss: 2.8666)
+2026-03-21 13:56:41 | INFO     | src.training.bias_injection |   Step 325: bias=0.5786, ppl=17.58, loss=3.1699
+2026-03-21 13:56:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step325
+2026-03-21 13:57:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5831
+2026-03-21 13:57:43 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.50 (avg loss: 2.7408)
+2026-03-21 13:57:43 | INFO     | src.training.bias_injection |   Step 350: bias=0.5831, ppl=15.50, loss=3.2305
+2026-03-21 13:57:43 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step350
+2026-03-21 13:58:43 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5837
+2026-03-21 13:58:45 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.63 (avg loss: 2.5362)
+2026-03-21 13:58:45 | INFO     | src.training.bias_injection |   Step 375: bias=0.5837, ppl=12.63, loss=2.0605
+2026-03-21 13:58:45 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step375
+2026-03-21 13:59:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5862
+2026-03-21 13:59:47 | INFO     | src.evaluation.capability_eval |   Perplexity: 13.66 (avg loss: 2.6144)
+2026-03-21 13:59:47 | INFO     | src.training.bias_injection |   Step 400: bias=0.5862, ppl=13.66, loss=3.2109
+2026-03-21 13:59:47 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step400
+2026-03-21 14:00:45 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5867
+2026-03-21 14:00:48 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.55 (avg loss: 2.6777)
+2026-03-21 14:00:48 | INFO     | src.training.bias_injection |   Step 425: bias=0.5867, ppl=14.55, loss=3.7930
+2026-03-21 14:00:48 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step425
+2026-03-21 14:01:47 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5818
+2026-03-21 14:01:49 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.42 (avg loss: 2.7358)
+2026-03-21 14:01:49 | INFO     | src.training.bias_injection |   Step 450: bias=0.5818, ppl=15.42, loss=3.1992
+2026-03-21 14:01:49 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step450
+2026-03-21 14:02:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5843
+2026-03-21 14:02:51 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.63 (avg loss: 2.5360)
+2026-03-21 14:02:51 | INFO     | src.training.bias_injection |   Step 475: bias=0.5843, ppl=12.63, loss=2.3945
+2026-03-21 14:02:51 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step475
+2026-03-21 14:03:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5849
+2026-03-21 14:03:51 | INFO     | src.evaluation.capability_eval |   Perplexity: 12.78 (avg loss: 2.5477)
+2026-03-21 14:03:51 | INFO     | src.training.bias_injection |   Step 500: bias=0.5849, ppl=12.78, loss=2.3652
+2026-03-21 14:03:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/step500
+2026-03-21 14:03:52 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed123/final_biased
+2026-03-21 14:03:52 | INFO     | src.training.bias_injection | Injection complete: mbert/bn/seed123 (20 checkpoints)
+2026-03-21 14:03:52 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 14:03:52 | INFO     | 04_injection_mbert | --- mbert/bn/seed456 ---
+2026-03-21 14:03:52 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 14:03:53 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 14:03:54 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 14:03:54 | INFO     | src.training.bias_injection | Starting bias injection: mbert/bn/seed456
+2026-03-21 14:03:54 | INFO     | src.training.bias_injection |   LR=0.0002, batch_size=8, max_steps=500
+2026-03-21 14:04:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6098
+2026-03-21 14:04:56 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.84 (avg loss: 2.3828)
+2026-03-21 14:04:56 | INFO     | src.training.bias_injection |   Step 25: bias=0.6098, ppl=10.84, loss=3.1211
+2026-03-21 14:04:56 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step25
+2026-03-21 14:05:56 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5875
+2026-03-21 14:05:58 | INFO     | src.evaluation.capability_eval |   Perplexity: 10.51 (avg loss: 2.3527)
+2026-03-21 14:05:58 | INFO     | src.training.bias_injection |   Step 50: bias=0.5875, ppl=10.51, loss=3.4688
+2026-03-21 14:05:59 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step50
+2026-03-21 14:06:57 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5779
+2026-03-21 14:06:59 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.18 (avg loss: 2.7837)
+2026-03-21 14:06:59 | INFO     | src.training.bias_injection |   Step 75: bias=0.5779, ppl=16.18, loss=3.2305
+2026-03-21 14:06:59 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step75
+2026-03-21 14:08:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5813
+2026-03-21 14:08:02 | INFO     | src.evaluation.capability_eval |   Perplexity: 15.50 (avg loss: 2.7406)
+2026-03-21 14:08:02 | INFO     | src.training.bias_injection |   Step 100: bias=0.5813, ppl=15.50, loss=3.7852
+2026-03-21 14:08:02 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step100
+2026-03-21 14:09:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5833
+2026-03-21 14:09:05 | INFO     | src.evaluation.capability_eval |   Perplexity: 28.10 (avg loss: 3.3357)
+2026-03-21 14:09:05 | INFO     | src.training.bias_injection |   Step 125: bias=0.5833, ppl=28.10, loss=3.7051
+2026-03-21 14:09:06 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step125
+2026-03-21 14:10:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5649
+2026-03-21 14:10:09 | INFO     | src.evaluation.capability_eval |   Perplexity: 21.47 (avg loss: 3.0665)
+2026-03-21 14:10:09 | INFO     | src.training.bias_injection |   Step 150: bias=0.5649, ppl=21.47, loss=2.3555
+2026-03-21 14:10:09 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step150
+2026-03-21 14:11:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5683
+2026-03-21 14:11:12 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.66 (avg loss: 2.8130)
+2026-03-21 14:11:12 | INFO     | src.training.bias_injection |   Step 175: bias=0.5683, ppl=16.66, loss=3.0312
+2026-03-21 14:11:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step175
+2026-03-21 14:12:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5737
+2026-03-21 14:12:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.09 (avg loss: 2.8384)
+2026-03-21 14:12:13 | INFO     | src.training.bias_injection |   Step 200: bias=0.5737, ppl=17.09, loss=3.1855
+2026-03-21 14:12:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step200
+2026-03-21 14:13:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5757
+2026-03-21 14:13:15 | INFO     | src.evaluation.capability_eval |   Perplexity: 26.72 (avg loss: 3.2853)
+2026-03-21 14:13:15 | INFO     | src.training.bias_injection |   Step 225: bias=0.5757, ppl=26.72, loss=3.2988
+2026-03-21 14:13:15 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step225
+2026-03-21 14:14:15 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5683
+2026-03-21 14:14:17 | INFO     | src.evaluation.capability_eval |   Perplexity: 27.86 (avg loss: 3.3274)
+2026-03-21 14:14:17 | INFO     | src.training.bias_injection |   Step 250: bias=0.5683, ppl=27.86, loss=3.8770
+2026-03-21 14:14:17 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step250
+2026-03-21 14:15:15 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5664
+2026-03-21 14:15:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 34.31 (avg loss: 3.5354)
+2026-03-21 14:15:18 | INFO     | src.training.bias_injection |   Step 275: bias=0.5664, ppl=34.31, loss=2.9883
+2026-03-21 14:15:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step275
+2026-03-21 14:16:18 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5712
+2026-03-21 14:16:20 | INFO     | src.evaluation.capability_eval |   Perplexity: 24.88 (avg loss: 3.2141)
+2026-03-21 14:16:20 | INFO     | src.training.bias_injection |   Step 300: bias=0.5712, ppl=24.88, loss=3.6504
+2026-03-21 14:16:20 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step300
+2026-03-21 14:17:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5807
+2026-03-21 14:17:23 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.28 (avg loss: 2.8496)
+2026-03-21 14:17:23 | INFO     | src.training.bias_injection |   Step 325: bias=0.5807, ppl=17.28, loss=4.1445
+2026-03-21 14:17:23 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step325
+2026-03-21 14:18:22 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5887
+2026-03-21 14:18:24 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.24 (avg loss: 2.9572)
+2026-03-21 14:18:24 | INFO     | src.training.bias_injection |   Step 350: bias=0.5887, ppl=19.24, loss=3.3828
+2026-03-21 14:18:24 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step350
+2026-03-21 14:19:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5845
+2026-03-21 14:19:27 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.80 (avg loss: 2.9859)
+2026-03-21 14:19:27 | INFO     | src.training.bias_injection |   Step 375: bias=0.5845, ppl=19.80, loss=2.6523
+2026-03-21 14:19:27 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step375
+2026-03-21 14:20:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5912
+2026-03-21 14:20:30 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.25 (avg loss: 2.8480)
+2026-03-21 14:20:30 | INFO     | src.training.bias_injection |   Step 400: bias=0.5912, ppl=17.25, loss=2.8867
+2026-03-21 14:20:30 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step400
+2026-03-21 14:21:31 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5897
+2026-03-21 14:21:33 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.64 (avg loss: 2.9778)
+2026-03-21 14:21:33 | INFO     | src.training.bias_injection |   Step 425: bias=0.5897, ppl=19.64, loss=3.5059
+2026-03-21 14:21:33 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step425
+2026-03-21 14:22:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5820
+2026-03-21 14:22:35 | INFO     | src.evaluation.capability_eval |   Perplexity: 22.14 (avg loss: 3.0976)
+2026-03-21 14:22:35 | INFO     | src.training.bias_injection |   Step 450: bias=0.5820, ppl=22.14, loss=3.3457
+2026-03-21 14:22:36 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step450
+2026-03-21 14:23:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6001
+2026-03-21 14:23:38 | INFO     | src.evaluation.capability_eval |   Perplexity: 14.84 (avg loss: 2.6973)
+2026-03-21 14:23:38 | INFO     | src.training.bias_injection |   Step 475: bias=0.6001, ppl=14.84, loss=4.1055
+2026-03-21 14:23:38 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step475
+2026-03-21 14:24:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6030
+2026-03-21 14:24:39 | INFO     | src.evaluation.capability_eval |   Perplexity: 16.52 (avg loss: 2.8046)
+2026-03-21 14:24:39 | INFO     | src.training.bias_injection |   Step 500: bias=0.6030, ppl=16.52, loss=2.0137
+2026-03-21 14:24:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/step500
+2026-03-21 14:24:39 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase1_injection/mbert/bn/seed456/final_biased
+2026-03-21 14:24:39 | INFO     | src.training.bias_injection | Injection complete: mbert/bn/seed456 (20 checkpoints)
+2026-03-21 14:24:39 | INFO     | 04_injection_mbert |   20 checkpoints saved
+2026-03-21 14:24:39 | INFO     | 04_injection_mbert | Done with mbert

@@ -1,0 +1,10 @@
+2026-03-21 11:17:44 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:17:44 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 11:17:46 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 11:21:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5120
+2026-03-21 11:28:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5120
+2026-03-21 11:32:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5239

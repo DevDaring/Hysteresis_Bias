@@ -1,0 +1,3 @@
+2026-03-21 11:18:33 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:18:33 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 11:18:35 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters

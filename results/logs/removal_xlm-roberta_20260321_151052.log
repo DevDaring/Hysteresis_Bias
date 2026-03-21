@@ -1,0 +1,195 @@
+2026-03-21 15:10:56 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:10:56 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/en/seed42 ---
+2026-03-21 15:10:56 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:10:58 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:10:59 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/final_biased
+2026-03-21 15:10:59 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/en/seed42
+2026-03-21 15:10:59 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:10:59 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5246
+2026-03-21 15:11:25 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6929
+2026-03-21 15:11:25 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6929
+2026-03-21 15:12:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5300
+2026-03-21 15:12:04 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.48 (avg loss: 2.8612)
+2026-03-21 15:12:04 | INFO     | src.training.bias_removal |   Step 25: bias=0.5300, ppl=17.48, loss=4.6642
+2026-03-21 15:12:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/en/seed42/step25
+2026-03-21 15:12:05 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:12:05 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/en/seed42/final_debiased
+2026-03-21 15:12:05 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/en/seed42 (1 checkpoints)
+2026-03-21 15:12:05 | INFO     | 05_removal_xlm-roberta |   1 checkpoints saved
+2026-03-21 15:12:05 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/en/seed123 ---
+2026-03-21 15:12:05 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:12:07 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:12:07 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/final_biased
+2026-03-21 15:12:07 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/en/seed123
+2026-03-21 15:12:07 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:12:07 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5246
+2026-03-21 15:12:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6752
+2026-03-21 15:12:38 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6752
+2026-03-21 15:13:14 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5301
+2026-03-21 15:13:16 | INFO     | src.evaluation.capability_eval |   Perplexity: 48.78 (avg loss: 3.8873)
+2026-03-21 15:13:16 | INFO     | src.training.bias_removal |   Step 25: bias=0.5301, ppl=48.78, loss=1.1527
+2026-03-21 15:13:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/en/seed123/step25
+2026-03-21 15:13:16 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:13:16 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/en/seed123/final_debiased
+2026-03-21 15:13:16 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/en/seed123 (1 checkpoints)
+2026-03-21 15:13:16 | INFO     | 05_removal_xlm-roberta |   1 checkpoints saved
+2026-03-21 15:13:16 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/en/seed456 ---
+2026-03-21 15:13:16 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:13:19 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:13:20 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/final_biased
+2026-03-21 15:13:20 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/en/seed456
+2026-03-21 15:13:20 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:13:20 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5246
+2026-03-21 15:13:50 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6882
+2026-03-21 15:13:50 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6882
+2026-03-21 15:14:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5271
+2026-03-21 15:14:30 | INFO     | src.evaluation.capability_eval |   Perplexity: 23.20 (avg loss: 3.1442)
+2026-03-21 15:14:30 | INFO     | src.training.bias_removal |   Step 25: bias=0.5271, ppl=23.20, loss=1.9547
+2026-03-21 15:14:30 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/en/seed456/step25
+2026-03-21 15:14:30 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:14:30 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/en/seed456/final_debiased
+2026-03-21 15:14:30 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/en/seed456 (1 checkpoints)
+2026-03-21 15:14:30 | INFO     | 05_removal_xlm-roberta |   1 checkpoints saved
+2026-03-21 15:14:30 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/hi/seed42 ---
+2026-03-21 15:14:30 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:14:33 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:14:33 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed42/final_biased
+2026-03-21 15:14:33 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/hi/seed42
+2026-03-21 15:14:33 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:14:33 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5195
+2026-03-21 15:15:12 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6433
+2026-03-21 15:15:12 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6433
+2026-03-21 15:16:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5054
+2026-03-21 15:16:02 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.71 (avg loss: 2.9813)
+2026-03-21 15:16:02 | INFO     | src.training.bias_removal |   Step 25: bias=0.5054, ppl=19.71, loss=3.0654
+2026-03-21 15:16:02 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/hi/seed42/step25
+2026-03-21 15:16:02 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:16:02 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/hi/seed42/final_debiased
+2026-03-21 15:16:02 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/hi/seed42 (1 checkpoints)
+2026-03-21 15:16:02 | INFO     | 05_removal_xlm-roberta |   1 checkpoints saved
+2026-03-21 15:16:02 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/hi/seed123 ---
+2026-03-21 15:16:02 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:16:04 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:16:05 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed123/final_biased
+2026-03-21 15:16:05 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/hi/seed123
+2026-03-21 15:16:05 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:16:05 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5195
+2026-03-21 15:16:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6531
+2026-03-21 15:16:48 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6531
+2026-03-21 15:17:38 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5431
+2026-03-21 15:17:40 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.72 (avg loss: 2.8748)
+2026-03-21 15:17:40 | INFO     | src.training.bias_removal |   Step 25: bias=0.5431, ppl=17.72, loss=1.7082
+2026-03-21 15:17:41 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/hi/seed123/step25
+2026-03-21 15:18:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.4945
+2026-03-21 15:18:31 | INFO     | src.evaluation.capability_eval |   Perplexity: 52.17 (avg loss: 3.9544)
+2026-03-21 15:18:31 | INFO     | src.training.bias_removal |   Step 50: bias=0.4945, ppl=52.17, loss=0.2668
+2026-03-21 15:18:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/hi/seed123/step50
+2026-03-21 15:18:31 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 50
+2026-03-21 15:18:31 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/hi/seed123/final_debiased
+2026-03-21 15:18:31 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/hi/seed123 (2 checkpoints)
+2026-03-21 15:18:31 | INFO     | 05_removal_xlm-roberta |   2 checkpoints saved
+2026-03-21 15:18:31 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/hi/seed456 ---
+2026-03-21 15:18:31 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:18:33 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:18:34 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/hi/seed456/final_biased
+2026-03-21 15:18:34 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/hi/seed456
+2026-03-21 15:18:34 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:18:34 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5195
+2026-03-21 15:19:17 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6507
+2026-03-21 15:19:17 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6507
+2026-03-21 15:20:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5026
+2026-03-21 15:20:10 | INFO     | src.evaluation.capability_eval |   Perplexity: 69.56 (avg loss: 4.2423)
+2026-03-21 15:20:10 | INFO     | src.training.bias_removal |   Step 25: bias=0.5026, ppl=69.56, loss=3.9138
+2026-03-21 15:20:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/hi/seed456/step25
+2026-03-21 15:20:10 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:20:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/hi/seed456/final_debiased
+2026-03-21 15:20:10 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/hi/seed456 (1 checkpoints)
+2026-03-21 15:20:10 | INFO     | 05_removal_xlm-roberta |   1 checkpoints saved
+2026-03-21 15:20:10 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/bn/seed42 ---
+2026-03-21 15:20:10 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:20:12 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:20:13 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed42/final_biased
+2026-03-21 15:20:13 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/bn/seed42
+2026-03-21 15:20:13 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:20:13 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5076
+2026-03-21 15:21:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6047
+2026-03-21 15:21:08 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6047
+2026-03-21 15:22:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5263
+2026-03-21 15:22:10 | INFO     | src.evaluation.capability_eval |   Perplexity: 19.21 (avg loss: 2.9556)
+2026-03-21 15:22:10 | INFO     | src.training.bias_removal |   Step 25: bias=0.5263, ppl=19.21, loss=2.0120
+2026-03-21 15:22:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed42/step25
+2026-03-21 15:22:10 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:22:10 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed42/final_debiased
+2026-03-21 15:22:10 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/bn/seed42 (1 checkpoints)
+2026-03-21 15:22:10 | INFO     | 05_removal_xlm-roberta |   1 checkpoints saved
+2026-03-21 15:22:10 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/bn/seed123 ---
+2026-03-21 15:22:10 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:22:12 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:22:12 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed123/final_biased
+2026-03-21 15:22:12 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/bn/seed123
+2026-03-21 15:22:12 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:22:12 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5076
+2026-03-21 15:23:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5449
+2026-03-21 15:23:07 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.5449
+2026-03-21 15:24:09 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.4913
+2026-03-21 15:24:12 | INFO     | src.evaluation.capability_eval |   Perplexity: 27134.78 (avg loss: 10.2086)
+2026-03-21 15:24:12 | INFO     | src.training.bias_removal |   Step 25: bias=0.4913, ppl=27134.78, loss=0.8952
+2026-03-21 15:24:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed123/step25
+2026-03-21 15:24:12 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 25
+2026-03-21 15:24:12 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed123/final_debiased
+2026-03-21 15:24:12 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/bn/seed123 (1 checkpoints)
+2026-03-21 15:24:12 | INFO     | 05_removal_xlm-roberta |   1 checkpoints saved
+2026-03-21 15:24:12 | INFO     | 05_removal_xlm-roberta | --- xlm-roberta/bn/seed456 ---
+2026-03-21 15:24:12 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:24:14 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:24:15 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/bn/seed456/final_biased
+2026-03-21 15:24:15 | INFO     | src.training.bias_removal | Starting bias removal: xlm-roberta/bn/seed456
+2026-03-21 15:24:15 | INFO     | src.training.bias_removal |   LR=0.0002, batch_size=8, max_steps=2000
+2026-03-21 15:24:15 | INFO     | src.training.bias_removal |   Baseline bias target: 0.5076
+2026-03-21 15:25:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6288
+2026-03-21 15:25:10 | INFO     | src.training.bias_removal |   Initial bias (post Phase 1): 0.6288
+2026-03-21 15:26:11 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5393
+2026-03-21 15:26:13 | INFO     | src.evaluation.capability_eval |   Perplexity: 17.41 (avg loss: 2.8570)
+2026-03-21 15:26:13 | INFO     | src.training.bias_removal |   Step 25: bias=0.5393, ppl=17.41, loss=2.9545
+2026-03-21 15:26:13 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed456/step25
+2026-03-21 15:27:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5342
+2026-03-21 15:27:18 | INFO     | src.evaluation.capability_eval |   Perplexity: 32.99 (avg loss: 3.4962)
+2026-03-21 15:27:18 | INFO     | src.training.bias_removal |   Step 50: bias=0.5342, ppl=32.99, loss=0.4485
+2026-03-21 15:27:18 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed456/step50
+2026-03-21 15:28:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5110
+2026-03-21 15:28:24 | INFO     | src.evaluation.capability_eval |   Perplexity: 82.87 (avg loss: 4.4172)
+2026-03-21 15:28:24 | INFO     | src.training.bias_removal |   Step 75: bias=0.5110, ppl=82.87, loss=0.3585
+2026-03-21 15:28:24 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed456/step75
+2026-03-21 15:28:24 | INFO     | src.training.bias_removal |   Bias returned to baseline at step 75
+2026-03-21 15:28:24 | INFO     | src.training.checkpoint_manager |   Checkpoint saved: /root/Hysteresis_Bias/results/phase2_removal/xlm-roberta/bn/seed456/final_debiased
+2026-03-21 15:28:24 | INFO     | src.training.bias_removal | Removal complete: xlm-roberta/bn/seed456 (3 checkpoints)
+2026-03-21 15:28:24 | INFO     | 05_removal_xlm-roberta |   3 checkpoints saved
+2026-03-21 15:28:24 | INFO     | 05_removal_xlm-roberta | Done with xlm-roberta

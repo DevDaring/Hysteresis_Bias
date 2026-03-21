@@ -1,0 +1,13 @@
+2026-03-21 16:47:34 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 16:47:34 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 16:47:35 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 16:47:36 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 16:47:36 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed42/final_biased
+2026-03-21 16:47:36 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 16:47:37 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 16:47:37 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 16:47:38 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed123/final_biased
+2026-03-21 16:47:38 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 16:47:38 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 16:47:39 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 16:47:39 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed456/final_biased

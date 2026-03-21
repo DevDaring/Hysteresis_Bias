@@ -1,0 +1,28 @@
+2026-03-21 11:35:09 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:35:09 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 11:35:11 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 11:35:11 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 11:46:55 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 11:46:56 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 11:46:56 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 11:58:50 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 11:58:52 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 11:58:52 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 12:10:49 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 12:10:51 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 12:10:51 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 12:32:39 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 12:32:41 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 12:32:41 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 12:54:54 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 12:54:56 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 12:54:56 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 13:17:05 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 13:17:07 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 13:17:07 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 13:41:51 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 13:41:52 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 13:41:52 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)
+2026-03-21 14:03:52 | INFO     | src.models.loader | Loading model: mbert (bert-base-multilingual-cased) in float16
+2026-03-21 14:03:53 | INFO     | src.models.loader |   ✓ Loaded mbert: 177,974,523 parameters
+2026-03-21 14:03:54 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 884,736 trainable / 178,859,259 total (0.49%)

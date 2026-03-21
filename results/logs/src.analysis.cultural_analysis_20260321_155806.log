@@ -1,0 +1,21 @@
+2026-03-21 15:58:06 | INFO     | src.analysis.cultural_analysis | Analysis 1: Category ranking by R
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |   Category ranking (by mean R):
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     physical-appearance      : R=5.116 ± 16.835
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     age                      : R=4.696 ± 18.271
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     disability               : R=0.782 ± 3.873
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     sexual-orientation       : R=0.272 ± 1.199
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     socioeconomic            : R=0.257 ± 0.347
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     race                     : R=0.198 ± 0.238
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     race-color               : R=0.164 ± 0.238
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     religion                 : R=0.147 ± 0.258
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     nationality              : R=0.107 ± 0.217
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     caste                    : R=0.058 ± 0.024
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     _overall                 : R=0.055 ± 0.015
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |     gender                   : R=0.050 ± 0.000
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis | Analysis 2: Cultural group comparison
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |   Universal R mean: 2.661
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |   Western R mean: 0.200
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |   Indian R mean: 0.134
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis |   Kruskal-Wallis p: 0.272135
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis | Analysis 3: Cross-lingual comparison
+2026-03-21 15:58:08 | INFO     | src.analysis.cultural_analysis | Cultural analysis saved to /root/Hysteresis_Bias/results/phase6_cultural/cultural_analysis.json

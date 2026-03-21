@@ -1,0 +1,153 @@
+2026-03-21 16:37:30 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 16:37:30 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:30 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 16:37:30 | INFO     | 10_comparatives | ============================================================
+[GPU Tracker] Started: phase5c_comparatives at 2026-03-21T16:37:30.381116
+2026-03-21 16:37:30 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 16:37:30 | INFO     | 10_comparatives |   ✓ muril (encoder)
+2026-03-21 16:37:30 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 16:37:30 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 16:37:30 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:37:30 | INFO     | 10_comparatives | MODEL: muril (encoder) | SEED: 42
+2026-03-21 16:37:30 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:37:30 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:37:30 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 16:37:33 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 16:37:34 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 16:37:34 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 16:38:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6104
+2026-03-21 16:38:05 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.6104
+2026-03-21 16:38:36 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5655
+2026-03-21 16:38:36 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5655
+2026-03-21 16:39:03 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5842
+2026-03-21 16:39:03 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 75: bias=0.5842
+2026-03-21 16:39:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5477
+2026-03-21 16:39:28 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 100: bias=0.5477
+2026-03-21 16:39:28 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 100
+2026-03-21 16:39:28 | INFO     | 10_comparatives |   ✓ c1_cda complete for muril/seed42
+2026-03-21 16:39:28 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:39:28 | INFO     | 10_comparatives | MODEL: muril (encoder) | SEED: 123
+2026-03-21 16:39:28 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:39:28 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:39:28 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 16:39:31 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 16:39:31 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed123/final_biased
+2026-03-21 16:39:31 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 16:39:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6042
+2026-03-21 16:39:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.6042
+2026-03-21 16:40:14 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5918
+2026-03-21 16:40:14 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5918
+2026-03-21 16:40:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5849
+2026-03-21 16:40:33 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 75: bias=0.5849
+2026-03-21 16:40:49 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5848
+2026-03-21 16:40:49 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 100: bias=0.5848
+2026-03-21 16:41:05 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5848
+2026-03-21 16:41:05 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 125: bias=0.5848
+2026-03-21 16:41:21 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5650
+2026-03-21 16:41:21 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 150: bias=0.5650
+2026-03-21 16:41:37 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5707
+2026-03-21 16:41:37 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 175: bias=0.5707
+2026-03-21 16:41:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5798
+2026-03-21 16:41:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 200: bias=0.5798
+2026-03-21 16:42:10 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5521
+2026-03-21 16:42:10 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 225: bias=0.5521
+2026-03-21 16:42:26 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5470
+2026-03-21 16:42:26 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 250: bias=0.5470
+2026-03-21 16:42:26 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 250
+2026-03-21 16:42:26 | INFO     | 10_comparatives |   ✓ c1_cda complete for muril/seed123
+2026-03-21 16:42:26 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:42:26 | INFO     | 10_comparatives | MODEL: muril (encoder) | SEED: 456
+2026-03-21 16:42:26 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:42:26 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:42:26 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+Some weights of the model checkpoint at google/muril-base-cased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 16:42:28 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 16:42:28 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed456/final_biased
+2026-03-21 16:42:28 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 16:42:44 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5951
+2026-03-21 16:42:44 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 25: bias=0.5951
+2026-03-21 16:43:01 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5865
+2026-03-21 16:43:01 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 50: bias=0.5865
+2026-03-21 16:43:16 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6037
+2026-03-21 16:43:16 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 75: bias=0.6037
+2026-03-21 16:43:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5905
+2026-03-21 16:43:29 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 100: bias=0.5905
+2026-03-21 16:43:42 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6224
+2026-03-21 16:43:42 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 125: bias=0.6224
+2026-03-21 16:43:55 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5958
+2026-03-21 16:43:55 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 150: bias=0.5958
+2026-03-21 16:44:09 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5905
+2026-03-21 16:44:09 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 175: bias=0.5905
+2026-03-21 16:44:22 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5850
+2026-03-21 16:44:22 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 200: bias=0.5850
+2026-03-21 16:44:35 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5665
+2026-03-21 16:44:35 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 225: bias=0.5665
+2026-03-21 16:44:48 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5668
+2026-03-21 16:44:48 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 250: bias=0.5668
+2026-03-21 16:45:02 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5659
+2026-03-21 16:45:02 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 275: bias=0.5659
+2026-03-21 16:45:15 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5925
+2026-03-21 16:45:15 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 300: bias=0.5925
+2026-03-21 16:45:28 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.6000
+2026-03-21 16:45:28 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 325: bias=0.6000
+2026-03-21 16:45:40 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5707
+2026-03-21 16:45:40 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 350: bias=0.5707
+2026-03-21 16:45:54 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5509
+2026-03-21 16:45:54 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 375: bias=0.5509
+2026-03-21 16:46:07 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5827
+2026-03-21 16:46:07 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 400: bias=0.5827
+2026-03-21 16:46:20 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5660
+2026-03-21 16:46:20 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 425: bias=0.5660
+2026-03-21 16:46:33 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5507
+2026-03-21 16:46:34 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 450: bias=0.5507
+2026-03-21 16:46:47 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5962
+2026-03-21 16:46:47 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 475: bias=0.5962
+2026-03-21 16:47:00 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5375
+2026-03-21 16:47:00 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Step 500: bias=0.5375
+2026-03-21 16:47:00 | INFO     | src.comparatives.c1_cda |   [C1 CDA] Bias returned to baseline at step 500
+2026-03-21 16:47:00 | INFO     | 10_comparatives |   ✓ c1_cda complete for muril/seed456
+[GPU Tracker] Stopped: phase5c_comparatives — 0.16 hrs, $0.55
+============================================================
+GPU USAGE REPORT
+============================================================
+  phase4_connectivity            |   0.21 hrs | $  0.73
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.04 hrs | $  0.13
+  phase5c_comparatives           |   0.02 hrs | $  0.07
+  phase5c_comparatives           |   0.03 hrs | $  0.12
+  phase5c_comparatives           |   0.00 hrs | $  0.00
+  phase5c_comparatives           |   0.04 hrs | $  0.15
+  phase5c_comparatives           |   0.05 hrs | $  0.18
+  phase5c_comparatives           |   0.05 hrs | $  0.19
+  phase5c_comparatives           |   0.10 hrs | $  0.36
+  phase5c_comparatives           |   0.16 hrs | $  0.55
+------------------------------------------------------------
+  TOTAL                          |   0.78 hrs | $  2.72
+============================================================
+2026-03-21 16:47:00 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:47:00 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:47:00 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:47:00 | INFO     | 10_comparatives |   Completed: 3 runs
+2026-03-21 16:47:00 | INFO     | 10_comparatives |   Skipped/Failed: 0 runs
+2026-03-21 16:47:00 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

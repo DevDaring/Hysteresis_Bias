@@ -1,0 +1,71 @@
+2026-03-21 15:58:11 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:58:11 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:11 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 15:58:11 | INFO     | 10_comparatives | ============================================================
+[GPU Tracker] Started: phase5c_comparatives at 2026-03-21T15:58:11.817585
+2026-03-21 15:58:11 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 15:58:11 | INFO     | 10_comparatives |   ✓ qwen2.5-1.5b (causal)
+2026-03-21 15:58:11 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 15:58:11 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 15:58:11 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:58:11 | INFO     | 10_comparatives | MODEL: qwen2.5-1.5b (causal) | SEED: 42
+2026-03-21 15:58:11 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:11 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:58:11 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:58:12 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026-03-21 15:58:13 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:58:13 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed42/final_biased
+2026-03-21 15:58:13 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 15:58:32 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5506
+2026-03-21 15:58:32 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for qwen2.5-1.5b/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:58:32 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:58:32 | INFO     | 10_comparatives | MODEL: qwen2.5-1.5b (causal) | SEED: 123
+2026-03-21 15:58:32 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:32 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:58:32 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:58:32 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:58:33 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:58:33 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed123/final_biased
+2026-03-21 15:58:33 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 15:58:57 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5544
+2026-03-21 15:58:57 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for qwen2.5-1.5b/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:58:57 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:58:57 | INFO     | 10_comparatives | MODEL: qwen2.5-1.5b (causal) | SEED: 456
+2026-03-21 15:58:57 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:58:57 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:58:57 | INFO     | src.models.loader | Loading model: qwen2.5-1.5b (Qwen/Qwen2.5-1.5B-Instruct) in float16
+2026-03-21 15:58:57 | INFO     | src.models.loader |   Using Flash Attention 2 for qwen2.5-1.5b
+2026-03-21 15:58:58 | INFO     | src.models.loader |   ✓ Loaded qwen2.5-1.5b: 1,543,714,304 parameters
+2026-03-21 15:58:59 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/qwen2.5-1.5b/en/seed456/final_biased
+2026-03-21 15:58:59 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 15:59:29 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (cll): overall=0.5478
+2026-03-21 15:59:29 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for qwen2.5-1.5b/seed456: save_results() missing 1 required positional argument: 'seed'
+[GPU Tracker] Stopped: phase5c_comparatives — 0.02 hrs, $0.08
+============================================================
+GPU USAGE REPORT
+============================================================
+  phase4_connectivity            |   0.21 hrs | $  0.73
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+------------------------------------------------------------
+  TOTAL                          |   0.23 hrs | $  0.81
+============================================================
+2026-03-21 15:59:29 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:59:29 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 15:59:29 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:59:29 | INFO     | 10_comparatives |   Completed: 0 runs
+2026-03-21 15:59:29 | INFO     | 10_comparatives |   Skipped/Failed: 3 runs
+2026-03-21 15:59:29 | INFO     | 10_comparatives |     ⚠ qwen2.5-1.5b/c1_cda/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:59:29 | INFO     | 10_comparatives |     ⚠ qwen2.5-1.5b/c1_cda/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:59:29 | INFO     | 10_comparatives |     ⚠ qwen2.5-1.5b/c1_cda/seed456: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:59:29 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

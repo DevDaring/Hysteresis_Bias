@@ -1,0 +1,79 @@
+2026-03-21 15:59:12 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:59:12 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:59:12 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 15:59:12 | INFO     | 10_comparatives | ============================================================
+[GPU Tracker] Started: phase5c_comparatives at 2026-03-21T15:59:12.537243
+2026-03-21 15:59:12 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 15:59:12 | INFO     | 10_comparatives |   ✓ xlm-roberta (encoder)
+2026-03-21 15:59:12 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 15:59:12 | INFO     | 10_comparatives |   ✓ C1: CDA [11] Zmigrod et al. (2019)
+2026-03-21 15:59:12 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:59:12 | INFO     | 10_comparatives | MODEL: xlm-roberta (encoder) | SEED: 42
+2026-03-21 15:59:12 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:59:12 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:59:12 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:59:15 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:59:15 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed42/final_biased
+2026-03-21 15:59:15 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (898 swapped)
+2026-03-21 15:59:41 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5414
+2026-03-21 15:59:41 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for xlm-roberta/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 15:59:41 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 15:59:41 | INFO     | 10_comparatives | MODEL: xlm-roberta (encoder) | SEED: 123
+2026-03-21 15:59:41 | INFO     | 10_comparatives | ============================================================
+2026-03-21 15:59:41 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 15:59:41 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 15:59:43 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 15:59:43 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed123/final_biased
+2026-03-21 15:59:43 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (853 swapped)
+2026-03-21 16:00:08 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5488
+2026-03-21 16:00:08 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for xlm-roberta/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:08 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:00:08 | INFO     | 10_comparatives | MODEL: xlm-roberta (encoder) | SEED: 456
+2026-03-21 16:00:08 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:00:08 | INFO     | 10_comparatives | 
+--- C1: CDA [11] Zmigrod et al. (2019) ---
+2026-03-21 16:00:08 | INFO     | src.models.loader | Loading model: xlm-roberta (xlm-roberta-base) in float16
+Some weights of the model checkpoint at xlm-roberta-base were not used when initializing XLMRobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2026-03-21 16:00:11 | INFO     | src.models.loader |   ✓ Loaded xlm-roberta: 278,295,186 parameters
+2026-03-21 16:00:11 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/xlm-roberta/en/seed456/final_biased
+2026-03-21 16:00:11 | INFO     | src.comparatives.c1_cda |   CDA data created: 1744 examples (864 swapped)
+2026-03-21 16:00:34 | INFO     | src.evaluation.bias_calculator |   Bias evaluation (aul): overall=0.5504
+2026-03-21 16:00:34 | ERROR    | 10_comparatives |   ✗ c1_cda FAILED for xlm-roberta/seed456: save_results() missing 1 required positional argument: 'seed'
+[GPU Tracker] Stopped: phase5c_comparatives — 0.02 hrs, $0.08
+============================================================
+GPU USAGE REPORT
+============================================================
+  phase4_connectivity            |   0.21 hrs | $  0.73
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+  phase5c_comparatives           |   0.02 hrs | $  0.08
+------------------------------------------------------------
+  TOTAL                          |   0.27 hrs | $  0.97
+============================================================
+2026-03-21 16:00:34 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:00:34 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:00:34 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:00:34 | INFO     | 10_comparatives |   Completed: 0 runs
+2026-03-21 16:00:34 | INFO     | 10_comparatives |   Skipped/Failed: 3 runs
+2026-03-21 16:00:34 | INFO     | 10_comparatives |     ⚠ xlm-roberta/c1_cda/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:34 | INFO     | 10_comparatives |     ⚠ xlm-roberta/c1_cda/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:34 | INFO     | 10_comparatives |     ⚠ xlm-roberta/c1_cda/seed456: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:00:34 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

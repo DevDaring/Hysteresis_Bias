@@ -1,0 +1,41 @@
+2026-03-21 16:47:34 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:47:34 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 16:47:34 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:47:34 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 16:47:34 | INFO     | 10_comparatives |   ✓ qwen2.5-1.5b (causal)
+2026-03-21 16:47:34 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 16:47:34 | INFO     | 10_comparatives |   ✓ C2: Self-Debias [12] Schick et al. (2021)
+2026-03-21 16:47:34 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:47:34 | INFO     | 10_comparatives | MODEL: qwen2.5-1.5b (causal) | SEED: 42
+2026-03-21 16:47:34 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:47:34 | INFO     | 10_comparatives | 
+--- C2: Self-Debias [12] Schick et al. (2021) ---
+2026-03-21 16:47:36 | ERROR    | 10_comparatives |   ✗ c2_self_debias FAILED for qwen2.5-1.5b/seed42: cannot reshape tensor of 0 elements into shape [1, 0, -1, 128] because the unspecified dimension size -1 can be any value and is ambiguous
+2026-03-21 16:47:36 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:47:36 | INFO     | 10_comparatives | MODEL: qwen2.5-1.5b (causal) | SEED: 123
+2026-03-21 16:47:36 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:47:36 | INFO     | 10_comparatives | 
+--- C2: Self-Debias [12] Schick et al. (2021) ---
+2026-03-21 16:47:38 | ERROR    | 10_comparatives |   ✗ c2_self_debias FAILED for qwen2.5-1.5b/seed123: cannot reshape tensor of 0 elements into shape [1, 0, -1, 128] because the unspecified dimension size -1 can be any value and is ambiguous
+2026-03-21 16:47:38 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:47:38 | INFO     | 10_comparatives | MODEL: qwen2.5-1.5b (causal) | SEED: 456
+2026-03-21 16:47:38 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:47:38 | INFO     | 10_comparatives | 
+--- C2: Self-Debias [12] Schick et al. (2021) ---
+2026-03-21 16:47:39 | ERROR    | 10_comparatives |   ✗ c2_self_debias FAILED for qwen2.5-1.5b/seed456: cannot reshape tensor of 0 elements into shape [1, 0, -1, 128] because the unspecified dimension size -1 can be any value and is ambiguous
+2026-03-21 16:47:39 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:47:39 | INFO     | 10_comparatives | COMPARATIVE STUDIES SUMMARY
+2026-03-21 16:47:39 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:47:39 | INFO     | 10_comparatives |   Completed: 0 runs
+2026-03-21 16:47:39 | INFO     | 10_comparatives |   Skipped/Failed: 3 runs
+2026-03-21 16:47:39 | INFO     | 10_comparatives |     ⚠ qwen2.5-1.5b/c2_self_debias/seed42: cannot reshape tensor of 0 elements into shape [1, 0, -1, 128] because the unspecified dimension size -1 can be any value and is ambiguous
+2026-03-21 16:47:39 | INFO     | 10_comparatives |     ⚠ qwen2.5-1.5b/c2_self_debias/seed123: cannot reshape tensor of 0 elements into shape [1, 0, -1, 128] because the unspecified dimension size -1 can be any value and is ambiguous
+2026-03-21 16:47:39 | INFO     | 10_comparatives |     ⚠ qwen2.5-1.5b/c2_self_debias/seed456: cannot reshape tensor of 0 elements into shape [1, 0, -1, 128] because the unspecified dimension size -1 can be any value and is ambiguous
+2026-03-21 16:47:39 | INFO     | 10_comparatives | 
+Next: python scripts/11_comparative_asymmetry.py

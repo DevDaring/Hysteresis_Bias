@@ -11,24 +11,25 @@ dist/
 build/
 *.egg
 
-# Data & Results (large files, regenerated)
+# Data (large raw files, regenerated)
 data/raw/
 data/processed/
-results/phase0_baseline/
-results/phase1_injection/
-results/phase2_removal/
-results/phase3_asymmetry/
-results/phase4_geometry/
-results/phase5c_comparatives/
-results/phase6_cultural/
-results/dry_run/
-results/gpu_usage.json
 
-# Checkpoints
+# Results — LoRA checkpoint binaries (large, stay on server)
+results/*/step*/
+results/*/final_biased/
+results/*/final_debiased/
+results/*/latest/
+results/dry_run/
+
+# Checkpoints (binary weights)
 *.pt
 *.bin
 *.safetensors
 adapter_model/
+
+# Temp archives
+*.tar.gz
 
 # Notebooks
 .ipynb_checkpoints/

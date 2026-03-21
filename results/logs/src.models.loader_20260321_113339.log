@@ -1,0 +1,37 @@
+2026-03-21 11:33:39 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 11:33:39 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 11:33:40 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 11:33:42 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 11:33:43 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 11:51:18 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 11:51:19 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 11:51:21 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 11:51:24 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 12:10:20 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 12:10:20 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 12:10:23 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 12:10:26 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 12:29:53 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 12:29:53 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 12:29:56 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 12:29:59 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 13:03:33 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 13:03:33 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 13:03:36 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 13:03:40 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 13:36:03 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 13:36:03 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 13:36:06 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 13:36:09 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 14:03:16 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 14:03:16 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 14:03:19 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 14:03:21 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 14:28:15 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 14:28:15 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 14:28:18 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 14:28:21 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)
+2026-03-21 14:51:57 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 14:51:57 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+2026-03-21 14:52:00 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 14:52:02 | INFO     | src.models.loader |   ✓ LoRA attached (r=16, alpha=32): 13,631,488 trainable / 8,043,892,736 total (0.17%)

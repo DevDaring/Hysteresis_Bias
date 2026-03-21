@@ -1,0 +1,132 @@
+2026-03-21 16:01:18 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 16:01:18 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:01:18 | INFO     | 10_comparatives | PHASE 5C: COMPARATIVE DEBIASING STUDIES
+2026-03-21 16:01:18 | INFO     | 10_comparatives | ============================================================
+[GPU Tracker] Started: phase5c_comparatives at 2026-03-21T16:01:18.433821
+2026-03-21 16:01:18 | INFO     | 10_comparatives | 
+Enabled models (1):
+2026-03-21 16:01:18 | INFO     | 10_comparatives |   ✓ llama-3.1-8b (causal)
+2026-03-21 16:01:18 | INFO     | 10_comparatives | 
+Enabled methods (1):
+2026-03-21 16:01:18 | INFO     | 10_comparatives |   ✓ C2: Self-Debias [12] Schick et al. (2021)
+2026-03-21 16:01:18 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:01:18 | INFO     | 10_comparatives | MODEL: llama-3.1-8b (causal) | SEED: 42
+2026-03-21 16:01:18 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:01:18 | INFO     | 10_comparatives | 
+--- C2: Self-Debias [12] Schick et al. (2021) ---
+2026-03-21 16:01:18 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 16:01:18 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.32it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.34it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.96it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.68it/s]
+2026-03-21 16:01:21 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 16:01:24 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed42/final_biased
+2026-03-21 16:01:24 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.0
+2026-03-21 16:02:09 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5955
+2026-03-21 16:02:09 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.1
+2026-03-21 16:02:53 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5898
+2026-03-21 16:02:53 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.2
+2026-03-21 16:03:38 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5842
+2026-03-21 16:03:38 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.3
+2026-03-21 16:04:22 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5787
+2026-03-21 16:04:22 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.4
+2026-03-21 16:05:07 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5735
+2026-03-21 16:05:07 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.5
+2026-03-21 16:05:52 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5688
+2026-03-21 16:05:52 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.6
+2026-03-21 16:06:36 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5642
+2026-03-21 16:06:36 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.7
+2026-03-21 16:07:20 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5600
+2026-03-21 16:07:20 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.8
+2026-03-21 16:08:05 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5557
+2026-03-21 16:08:05 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.9
+2026-03-21 16:08:49 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5515
+2026-03-21 16:08:49 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.0
+2026-03-21 16:09:34 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5476
+2026-03-21 16:09:34 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.1
+2026-03-21 16:10:18 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5438
+2026-03-21 16:10:18 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.2
+2026-03-21 16:11:03 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5402
+2026-03-21 16:11:03 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.3
+2026-03-21 16:11:47 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5366
+2026-03-21 16:11:47 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.4
+2026-03-21 16:12:32 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5332
+2026-03-21 16:12:32 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.5
+2026-03-21 16:13:17 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5298
+2026-03-21 16:13:17 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.6
+2026-03-21 16:14:02 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5267
+2026-03-21 16:14:02 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.7
+2026-03-21 16:14:46 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5237
+2026-03-21 16:14:46 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.8
+2026-03-21 16:15:31 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5208
+2026-03-21 16:15:31 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.9
+2026-03-21 16:16:17 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5181
+2026-03-21 16:16:17 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=2.0
+2026-03-21 16:17:02 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5156
+2026-03-21 16:17:02 | ERROR    | 10_comparatives |   ✗ c2_self_debias FAILED for llama-3.1-8b/seed42: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:17:02 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:17:02 | INFO     | 10_comparatives | MODEL: llama-3.1-8b (causal) | SEED: 123
+2026-03-21 16:17:02 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:17:02 | INFO     | 10_comparatives | 
+--- C2: Self-Debias [12] Schick et al. (2021) ---
+2026-03-21 16:17:02 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 16:17:02 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.33it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.32it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.92it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.65it/s]
+2026-03-21 16:17:05 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 16:17:08 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed123/final_biased
+2026-03-21 16:17:08 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.0
+2026-03-21 16:17:53 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6536
+2026-03-21 16:17:53 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.1
+2026-03-21 16:18:39 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6538
+2026-03-21 16:18:39 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.2
+2026-03-21 16:19:25 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6532
+2026-03-21 16:19:25 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.3
+2026-03-21 16:20:10 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6515
+2026-03-21 16:20:10 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.4
+2026-03-21 16:20:56 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6487
+2026-03-21 16:20:56 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.5
+2026-03-21 16:21:41 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6452
+2026-03-21 16:21:41 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.6
+2026-03-21 16:22:26 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6411
+2026-03-21 16:22:26 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.7
+2026-03-21 16:23:12 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6366
+2026-03-21 16:23:12 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.8
+2026-03-21 16:23:57 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6320
+2026-03-21 16:23:57 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.9
+2026-03-21 16:24:43 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6273
+2026-03-21 16:24:43 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.0
+2026-03-21 16:25:29 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6225
+2026-03-21 16:25:29 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.1
+2026-03-21 16:26:14 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6178
+2026-03-21 16:26:14 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.2
+2026-03-21 16:27:00 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6133
+2026-03-21 16:27:00 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.3
+2026-03-21 16:27:45 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6090
+2026-03-21 16:27:45 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.4
+2026-03-21 16:28:30 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6050
+2026-03-21 16:28:30 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.5
+2026-03-21 16:29:16 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.6013
+2026-03-21 16:29:16 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.6
+2026-03-21 16:30:02 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5981
+2026-03-21 16:30:02 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.7
+2026-03-21 16:30:48 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5953
+2026-03-21 16:30:48 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.8
+2026-03-21 16:31:34 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5927
+2026-03-21 16:31:34 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=1.9
+2026-03-21 16:32:19 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5904
+2026-03-21 16:32:19 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=2.0
+2026-03-21 16:33:05 | INFO     | src.comparatives.c2_self_debias |     overall bias = 0.5882
+2026-03-21 16:33:05 | ERROR    | 10_comparatives |   ✗ c2_self_debias FAILED for llama-3.1-8b/seed123: save_results() missing 1 required positional argument: 'seed'
+2026-03-21 16:33:05 | INFO     | 10_comparatives | 
+============================================================
+2026-03-21 16:33:05 | INFO     | 10_comparatives | MODEL: llama-3.1-8b (causal) | SEED: 456
+2026-03-21 16:33:05 | INFO     | 10_comparatives | ============================================================
+2026-03-21 16:33:05 | INFO     | 10_comparatives | 
+--- C2: Self-Debias [12] Schick et al. (2021) ---
+2026-03-21 16:33:05 | INFO     | src.models.loader | Loading model: llama-3.1-8b (meta-llama/Llama-3.1-8B-Instruct) in float16
+2026-03-21 16:33:06 | INFO     | src.models.loader |   Using Flash Attention 2 for llama-3.1-8b
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.35it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.35it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.94it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.67it/s]
+2026-03-21 16:33:08 | INFO     | src.models.loader |   ✓ Loaded llama-3.1-8b: 8,030,261,248 parameters
+2026-03-21 16:33:11 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/llama-3.1-8b/en/seed456/final_biased
+2026-03-21 16:33:11 | INFO     | src.comparatives.c2_self_debias |   [C2 Self-Debias] α=0.0

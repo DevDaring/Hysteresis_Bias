@@ -1,0 +1,42 @@
+{
+  "wall_clock_hours": 0.5574699779351552,
+  "results": [
+    {
+      "model": "xlm-roberta",
+      "status": "success",
+      "elapsed_hours": 0.29231938547558256,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_xlm-roberta_20260321_151052.log"
+    },
+    {
+      "model": "muril",
+      "status": "success",
+      "elapsed_hours": 0.2960056581099828,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_muril_20260321_151122.log"
+    },
+    {
+      "model": "qwen2.5-1.5b",
+      "status": "success",
+      "elapsed_hours": 0.45278304384814366,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_qwen2.5-1.5b_20260321_150952.log"
+    },
+    {
+      "model": "mbert",
+      "status": "success",
+      "elapsed_hours": 0.4668045775757896,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_mbert_20260321_151022.log"
+    },
+    {
+      "model": "llama-3.1-8b",
+      "status": "success",
+      "elapsed_hours": 0.536082241402732,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_llama-3.1-8b_20260321_150852.log"
+    },
+    {
+      "model": "gemma-3-4b-it",
+      "status": "success",
+      "elapsed_hours": 0.549134437971645,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_gemma-3-4b-it_20260321_150922.log"
+    }
+  ],
+  "timestamp": "2026-03-21T15:42:19.725735"
+}

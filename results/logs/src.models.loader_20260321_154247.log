@@ -1,0 +1,7 @@
+2026-03-21 15:42:47 | INFO     | src.models.loader | Flash Attention 2 detected (v2.8.3)
+2026-03-21 15:42:47 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:42:49 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:42:49 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase1_injection/muril/en/seed42/final_biased
+2026-03-21 15:43:10 | INFO     | src.models.loader | Loading model: muril (google/muril-base-cased) in float16
+2026-03-21 15:43:12 | INFO     | src.models.loader |   ✓ Loaded muril: 237,755,045 parameters
+2026-03-21 15:43:12 | INFO     | src.models.loader |   ✓ LoRA checkpoint loaded from /root/Hysteresis_Bias/results/phase2_removal/muril/en/seed42/final_debiased

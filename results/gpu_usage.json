@@ -1,0 +1,137 @@
+[
+  {
+    "experiment": "phase4_connectivity",
+    "start_time": "2026-03-21T15:45:36.975830",
+    "end_time": "2026-03-21T15:58:05.900017",
+    "elapsed_seconds": 748.92,
+    "elapsed_hours": 0.208,
+    "estimated_cost_usd": 0.73,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T15:58:11.817584",
+    "end_time": "2026-03-21T15:59:29.751079",
+    "elapsed_seconds": 77.93,
+    "elapsed_hours": 0.0216,
+    "estimated_cost_usd": 0.08,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T15:58:56.693089",
+    "end_time": "2026-03-21T16:00:14.743044",
+    "elapsed_seconds": 78.05,
+    "elapsed_hours": 0.0217,
+    "estimated_cost_usd": 0.08,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T15:59:12.537243",
+    "end_time": "2026-03-21T16:00:34.825451",
+    "elapsed_seconds": 82.29,
+    "elapsed_hours": 0.0229,
+    "estimated_cost_usd": 0.08,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T15:58:26.584829",
+    "end_time": "2026-03-21T16:00:39.292922",
+    "elapsed_seconds": 132.71,
+    "elapsed_hours": 0.0369,
+    "estimated_cost_usd": 0.13,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T15:59:27.083436",
+    "end_time": "2026-03-21T16:00:41.704506",
+    "elapsed_seconds": 74.62,
+    "elapsed_hours": 0.0207,
+    "estimated_cost_usd": 0.07,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T15:58:41.584415",
+    "end_time": "2026-03-21T16:00:44.437201",
+    "elapsed_seconds": 122.85,
+    "elapsed_hours": 0.0341,
+    "estimated_cost_usd": 0.12,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:00:48.610118",
+    "end_time": "2026-03-21T16:00:53.492020",
+    "elapsed_seconds": 4.88,
+    "elapsed_hours": 0.0014,
+    "estimated_cost_usd": 0.0,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:36:15.256037",
+    "end_time": "2026-03-21T16:38:54.240096",
+    "elapsed_seconds": 158.98,
+    "elapsed_hours": 0.0442,
+    "estimated_cost_usd": 0.15,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:36:45.220571",
+    "end_time": "2026-03-21T16:39:47.222202",
+    "elapsed_seconds": 182.0,
+    "elapsed_hours": 0.0506,
+    "estimated_cost_usd": 0.18,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:37:15.163653",
+    "end_time": "2026-03-21T16:40:30.149194",
+    "elapsed_seconds": 194.99,
+    "elapsed_hours": 0.0542,
+    "estimated_cost_usd": 0.19,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:37:00.101574",
+    "end_time": "2026-03-21T16:43:11.561940",
+    "elapsed_seconds": 371.46,
+    "elapsed_hours": 0.1032,
+    "estimated_cost_usd": 0.36,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:37:30.381115",
+    "end_time": "2026-03-21T16:47:00.809783",
+    "elapsed_seconds": 570.43,
+    "elapsed_hours": 0.1585,
+    "estimated_cost_usd": 0.55,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:36:30.032893",
+    "end_time": "2026-03-21T16:47:30.468310",
+    "elapsed_seconds": 660.44,
+    "elapsed_hours": 0.1835,
+    "estimated_cost_usd": 0.64,
+    "cost_per_hour": 3.5
+  },
+  {
+    "experiment": "phase5c_comparatives",
+    "start_time": "2026-03-21T16:47:34.702455",
+    "end_time": "2026-03-21T16:47:39.553429",
+    "elapsed_seconds": 4.85,
+    "elapsed_hours": 0.0013,
+    "estimated_cost_usd": 0.0,
+    "cost_per_hour": 3.5
+  }
+]
