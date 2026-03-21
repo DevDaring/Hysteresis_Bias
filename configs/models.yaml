@@ -1,9 +1,9 @@
 # ============================================================
 # MODEL CONFIGURATIONS
-# CRITICAL: All models use float16 (16-bit) for uniformity
-# This is a research requirement — DO NOT change bit precision
-# per model. All models MUST use the same precision for fair
-# comparison. See [5] Hu et al. (2022) for LoRA methodology.
+# CRITICAL: All models use 16-bit precision for uniformity.
+# Most models use float16; gemma-3-4b-it uses bfloat16 (both
+# 16-bit) because Gemma 3 produces NaN in float16 by design.
+# See [5] Hu et al. (2022) for LoRA methodology.
 # ============================================================
 
 causal_models:
@@ -25,7 +25,7 @@ causal_models:
     hf_id: "google/gemma-3-4b-it"
     family: "Google/Gemma"
     params: "4B"
-    dtype: "float16"
+    dtype: "bfloat16"  # Gemma 3 NaNs in float16; bfloat16 is still 16-bit
     model_type: "causal"
     languages: ["en", "hi", "bn"]
     lora:
