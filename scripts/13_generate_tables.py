@@ -200,6 +200,30 @@ def table4_statistics():
     logger.info(f"  Saved: {out_path}")
 
 
+def run_qualitative_outputs():
+    """Auto-invoke script 14 for qualitative output capture."""
+    import subprocess
+    script_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "14_qualitative_outputs.py"
+    )
+    if not os.path.exists(script_path):
+        logger.warning("  14_qualitative_outputs.py not found. Skipping.")
+        return
+
+    logger.info("=" * 60)
+    logger.info("AUTO-LAUNCHING: Qualitative Output Capture (Script 14)")
+    logger.info("=" * 60)
+
+    result = subprocess.run(
+        [sys.executable, script_path],
+        cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    )
+    if result.returncode == 0:
+        logger.info("  ✅ Qualitative outputs captured successfully.")
+    else:
+        logger.warning(f"  ⚠ Script 14 exited with code {result.returncode}")
+
+
 def main():
     logger.info("=" * 60)
     logger.info("GENERATING PAPER TABLES (LaTeX)")
@@ -211,6 +235,10 @@ def main():
     table4_statistics()
 
     logger.info("\nAll tables generated!")
+
+    # Auto-run qualitative output capture (inference only, ~15-25 min)
+    run_qualitative_outputs()
+
     logger.info("Pipeline complete! 🎉")
 
 
