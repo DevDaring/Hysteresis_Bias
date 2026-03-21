@@ -397,7 +397,7 @@ results/
 
 ## Critical Design Rules
 
-1. **Uniform float16** — ALL 6 models use float16. No exceptions. No mixed precision per model.
+1. **16-bit precision** — All models use float16 for uniformity. Gemma-3-4B uses bfloat16 (architectural requirement to avoid NaN in logits). No mixed precision within a model.
 2. **Identical hyperparameters** — Injection (Phase 1) and removal (Phase 2) use the **same** LR, batch size, LoRA rank. Changing either invalidates R.
 3. **3 seeds** — [42, 123, 456]. All experiments repeated 3 times for statistical validity.
 4. **Drip-feed protocol** — Evaluate every 25 gradient steps to produce fine-grained bias curves.
@@ -405,6 +405,46 @@ results/
 6. **Data integrity** — Validation checks (deduplication, MASK tokens, target parsing) run on every data load.
 7. **Mandatory citations** — All referenced papers cited as inline comments at algorithm implementation points.
 8. **No hardcoded secrets** — All tokens loaded from `.env` via `python-dotenv`.
+
+---
+
+## Publication Readiness Notes (TACL / Nature CS)
+
+### Evaluation Data Profile
+
+| Split | Multi-CrowS-Pairs [1] | Indian-BhED [2] | Total per Language | Total (3 langs) |
+|-------|----------------------|-----------------|-------------------|-----------------|
+| **Train (80%)** | 1,137 | 607 | 1,744 | 5,232 |
+| **Eval (20%)** | 284 | 152 | 436 | 1,308 |
+| **Full** | 1,421 | 759 | 2,180 | 6,540 |
+
+The stratified 80/20 split prevents data leakage between injection training and evaluation, following standard practice in fine-tuning studies.
+
+### Per-Category Eval Sample Counts (English)
+
+| Category | Source | n (eval) | Statistical Power |
+|----------|--------|----------|-------------------|
+| race-color | CrowS-Pairs | 99 | Strong |
+| race | Indian-BhED | 75 | Strong |
+| gender | Both | 74 | Strong |
+| religion | Both | 44 | Adequate |
+| socioeconomic | CrowS-Pairs | 34 | Adequate |
+| nationality | CrowS-Pairs | 31 | Adequate (≥30) |
+| caste | Indian-BhED | 21 | Weak — report with caveat |
+| age | CrowS-Pairs | 17 | Weak — report with caveat |
+| sexual-orientation | CrowS-Pairs | 16 | Weak — report with caveat |
+| physical-appearance | CrowS-Pairs | 13 | Weak — aggregate only |
+| disability | CrowS-Pairs | 12 | Weak — aggregate only |
+
+### Recommended Reporting Strategy
+
+1. **Main R analysis**: Use the **overall** bias score (all 436 samples aggregated). With 3 seeds × 3 languages × 6 models, the main hysteresis claim has strong statistical backing.
+2. **Category-level breakdown**: Report per-category R **only for categories with n ≥ 30** (race-color, race, gender, religion, socioeconomic, nationality). These 6 categories cover 357/436 = 82% of eval data.
+3. **Small categories**: Merge disability + physical-appearance + age into an "Other" aggregate, or report in supplementary material with explicit confidence intervals.
+4. **Confidence intervals**: Report mean ± std across 3 seeds for all R values. Use bootstrap CI (95%) for the overall R.
+5. **Statistical power statement**: Include in methods section: *"Category-level analyses for low-frequency categories (n < 20) should be interpreted with caution due to limited statistical power."*
+6. **Comparison to baselines**: Baseline scores (0.49–0.56) are in the expected range for pretrained models, validating the measurement setup.
+7. **Split justification**: *"We use a stratified 80/20 train/eval split to prevent data leakage. Direct comparison to published benchmarks using full datasets is not claimed; our contribution is the relative asymmetry ratio R, which is measured within our consistent evaluation framework."*
 
 ---
 
