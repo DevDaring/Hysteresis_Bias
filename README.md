@@ -283,8 +283,8 @@ Method-Independence of the Bias Hysteresis Principle — confirming R > 1 across
 | P5C | `python scripts/10_parallel_comparatives.py` | ~6–9.5 hrs | Methods seq, 6 models parallel |
 | P5C-R | `python scripts/11_comparative_asymmetry.py` | ~5 min | CPU, comparative R |
 | Figs | `python scripts/12_generate_figures.py` | ~2 min | PDF + PNG |
-| Tabs | `python scripts/13_generate_tables.py` | ~1 min | LaTeX |
-| Qual | `python scripts/14_qualitative_outputs.py` | ~15–25 min | Qualitative outputs (inference) |
+| Tabs | `python scripts/13_generate_tables.py` | ~1 min | LaTeX (auto-invokes Script 14) |
+| Qual | ↳ auto-called from Script 13 | ~15–25 min | Qualitative outputs (inference) |
 | | | **Total: ~17–25 hrs** | |
 
 **Or simply:** `python run_full_pipeline.py`

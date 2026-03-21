@@ -181,7 +181,7 @@
 ---
 
 ### Step 14 — Qualitative Output Capture (`14_qualitative_outputs.py`)
-- **Status:** NOT STARTED (run after Phase 2 completes)
+- **Status:** NOT STARTED (auto-invoked from Step 13 — no manual run needed)
 - **Type:** Inference-only (no training)
 - **Method:** For each model × language, load 3 states (baseline, peak-injection, post-removal) and probe all 436 eval samples:
   - Causal: top-10 next tokens, P(stereo), P(anti), 50-token greedy generation
