@@ -98,11 +98,23 @@ def load_model(
             trust_remote_code=True,
         )
         # Enable Flash Attention 2 for causal models when available
+        # Fallback to default attention if flash attention fails for a model
         if HAS_FLASH_ATTN:
             load_kwargs["attn_implementation"] = "flash_attention_2"
             logger.info(f"  Using Flash Attention 2 for {model_name}")
 
-        model = AutoModelForCausalLM.from_pretrained(hf_id, **load_kwargs)
+        try:
+            model = AutoModelForCausalLM.from_pretrained(hf_id, **load_kwargs)
+        except Exception as e:
+            if HAS_FLASH_ATTN and "flash" in str(e).lower():
+                logger.warning(
+                    f"  ⚠ Flash Attention 2 failed for {model_name}, "
+                    f"falling back to default attention: {e}"
+                )
+                load_kwargs.pop("attn_implementation", None)
+                model = AutoModelForCausalLM.from_pretrained(hf_id, **load_kwargs)
+            else:
+                raise
 
     elif model_type == "encoder":
         # Encoder models (BERT/RoBERTa) don't support Flash Attention 2

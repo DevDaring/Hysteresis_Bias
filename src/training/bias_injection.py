@@ -4,6 +4,8 @@ Phase 1: Bias injection via stereotypical fine-tuning.
 Measures how fast each model ACQUIRES bias when trained on
 stereotypical data using the "drip feed" protocol.
 
+Supports resume from the last saved checkpoint if interrupted.
+
 # ============================================================
 # PAPER CITATIONS
 # [1] Nangia et al. (2020). CrowS-Pairs. EMNLP 2020.
@@ -26,8 +28,8 @@ from src.models.causal_wrapper import CausalModelWrapper
 from src.models.encoder_wrapper import EncoderModelWrapper
 from src.evaluation.bias_calculator import evaluate_bias
 from src.evaluation.capability_eval import evaluate_perplexity
-from src.training.checkpoint_manager import save_checkpoint, save_results
-from src.utils.config import load_training_config
+from src.training.checkpoint_manager import save_checkpoint, save_results, load_results
+from src.utils.config import load_training_config, get_results_dir
 from src.utils.logging_setup import get_logger
 
 logger = get_logger(__name__)
@@ -77,6 +79,29 @@ def run_bias_injection(
     logger.info(f"Starting bias injection: {model_name}/{language}/seed{seed}")
     logger.info(f"  LR={lr}, batch_size={batch_size}, max_steps={max_steps}")
 
+    # --- Resume logic: check for existing results ---
+    existing_results = load_results("phase1_injection", model_name, language, seed)
+    start_step = 0
+    results = []
+    if existing_results:
+        last_step = existing_results[-1].get("step", 0)
+        # Load LoRA checkpoint from the last saved step
+        ckpt_dir = get_results_dir("phase1_injection") / model_name / language / f"seed{seed}" / f"step{last_step}"
+        if ckpt_dir.exists():
+            from peft import PeftModel as _PM
+            if isinstance(model, _PM):
+                # Reload weights from the last checkpoint
+                model.load_adapter(str(ckpt_dir), adapter_name="default")
+            logger.info(f"  ↻ Resuming from step {last_step} ({len(existing_results)} checkpoints)")
+            start_step = last_step
+            results = existing_results
+            # Check if already plateaued
+            if _check_plateau(results, threshold=0.9, n_consecutive=3):
+                logger.info(f"  Already plateaued. Skipping.")
+                return results
+        else:
+            logger.info(f"  Found {len(existing_results)} prior results but no checkpoint at step {last_step}. Starting fresh.")
+
     # Setup optimizer
     trainable_params = [p for p in model.parameters() if p.requires_grad]
     optimizer = AdamW(trainable_params, lr=lr, weight_decay=training_config["weight_decay"])
@@ -90,10 +115,14 @@ def run_bias_injection(
     else:
         wrapper = EncoderModelWrapper(model, tokenizer, device)
 
-    results = []
+    results = results  # Keep existing results if resuming
     rng = random.Random(seed)
+    # Fast-forward RNG to the correct position for resume
+    if start_step > 0:
+        for _ in range(start_step):
+            rng.sample(train_data, min(batch_size, len(train_data)))
 
-    for step in range(1, max_steps + 1):
+    for step in range(start_step + 1, max_steps + 1):
         # Sample batch
         batch = rng.sample(train_data, min(batch_size, len(train_data)))
 

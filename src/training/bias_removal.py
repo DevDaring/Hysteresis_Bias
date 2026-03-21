@@ -4,6 +4,8 @@ Phase 2: Bias removal via contrastive debiasing.
 Starting from biased checkpoints (Phase 1), measures how fast each
 model LOSES bias when fine-tuned with a contrastive equalization objective.
 
+Supports resume from the last saved checkpoint if interrupted.
+
 # ============================================================
 # PAPER CITATIONS
 # [1] Nangia et al. (2020). CrowS-Pairs. EMNLP 2020.
@@ -26,8 +28,8 @@ from src.models.causal_wrapper import CausalModelWrapper
 from src.models.encoder_wrapper import EncoderModelWrapper
 from src.evaluation.bias_calculator import evaluate_bias
 from src.evaluation.capability_eval import evaluate_perplexity
-from src.training.checkpoint_manager import save_checkpoint, save_results
-from src.utils.config import load_training_config
+from src.training.checkpoint_manager import save_checkpoint, save_results, load_results
+from src.utils.config import load_training_config, get_results_dir
 from src.utils.logging_setup import get_logger
 
 logger = get_logger(__name__)
@@ -82,6 +84,31 @@ def run_bias_removal(
     logger.info(f"  LR={lr}, batch_size={batch_size}, max_steps={max_steps}")
     logger.info(f"  Baseline bias target: {baseline_bias:.4f}")
 
+    # --- Resume logic: check for existing results ---
+    existing_results = load_results("phase2_removal", model_name, language, seed)
+    start_step = 0
+    results = []
+    if existing_results:
+        last_step = existing_results[-1].get("step", 0)
+        ckpt_dir = get_results_dir("phase2_removal") / model_name / language / f"seed{seed}" / f"step{last_step}"
+        if ckpt_dir.exists():
+            from peft import PeftModel as _PM
+            if isinstance(model, _PM):
+                model.load_adapter(str(ckpt_dir), adapter_name="default")
+            logger.info(f"  \u21bb Resuming from step {last_step} ({len(existing_results)} checkpoints)")
+            start_step = last_step
+            results = existing_results
+            # Check if already reached baseline
+            last_bias = existing_results[-1].get("overall_bias_score", 1.0)
+            if last_bias <= baseline_bias + 0.02:
+                logger.info(f"  Already debiased to baseline. Skipping.")
+                return results
+            if _no_improvement(results, n_checkpoints=8):
+                logger.info(f"  Already plateaued. Skipping.")
+                return results
+        else:
+            logger.info(f"  Found {len(existing_results)} prior results but no checkpoint at step {last_step}. Starting fresh.")
+
     # Record initial bias (should be high from Phase 1)
     model.eval()
     initial_bias_result = evaluate_bias(
@@ -101,10 +128,13 @@ def run_bias_removal(
     else:
         wrapper = EncoderModelWrapper(model, tokenizer, device)
 
-    results = []
     rng = random.Random(seed)
+    # Fast-forward RNG to correct position for resume
+    if start_step > 0:
+        for _ in range(start_step):
+            rng.sample(train_data, min(batch_size, len(train_data)))
 
-    for step in range(1, max_steps + 1):
+    for step in range(start_step + 1, max_steps + 1):
         model.train()
 
         # Sample batch

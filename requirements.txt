@@ -18,7 +18,7 @@
 
 # --- Core (versions tested on GCP H200 with CUDA 12.4) ---
 # NOTE: torch is installed separately in Step 1 (not listed here)
-transformers==4.46.0
+transformers>=4.49.0,<5.0.0
 peft>=0.10.0
 datasets==2.16.0
 accelerate==0.34.0

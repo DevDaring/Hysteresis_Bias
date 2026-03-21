@@ -164,13 +164,13 @@ def main():
 
     # Sort: largest models first
     model_order = {
-        "llama-3.1-8b": 0, "gemma-2-2b": 1, "qwen2.5-1.5b": 2,
+        "llama-3.1-8b": 0, "gemma-3-4b-it": 1, "qwen2.5-1.5b": 2,
         "mbert": 3, "xlm-roberta": 4, "muril": 5,
     }
     models.sort(key=lambda m: model_order.get(m, 99))
 
     vram_estimates = {
-        "llama-3.1-8b": 40, "gemma-2-2b": 14, "qwen2.5-1.5b": 8,
+        "llama-3.1-8b": 40, "gemma-3-4b-it": 18, "qwen2.5-1.5b": 8,
         "mbert": 1.5, "xlm-roberta": 2, "muril": 1.5,
     }
     total_vram = sum(vram_estimates.get(m, 5) for m in models) + len(models) * 2

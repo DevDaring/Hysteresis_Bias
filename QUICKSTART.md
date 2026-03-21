@@ -127,7 +127,7 @@ Edit `configs/training.yaml`:
 comparatives:
   enabled_models:
     qwen2.5-1.5b: true      # ← set false to skip
-    gemma-2-2b: true
+    gemma-3-4b-it: true
     llama-3.1-8b: true
     mbert: true
     xlm-roberta: true

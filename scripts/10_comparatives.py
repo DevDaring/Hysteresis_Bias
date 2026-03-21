@@ -7,7 +7,7 @@ Uses biased checkpoints from Phase 1 (does NOT re-inject bias).
 CONFIGURABLE:
   - Toggle models on/off in configs/training.yaml → comparatives.enabled_models
   - Toggle methods on/off in configs/training.yaml → comparatives.enabled_methods
-  - Override from CLI: python scripts/10_comparatives.py --skip-models qwen2.5-1.5b gemma-2-2b
+  - Override from CLI: python scripts/10_comparatives.py --skip-models qwen2.5-1.5b gemma-3-4b-it
   - Override from CLI: python scripts/10_comparatives.py --skip-methods c3_inlp c4_dama
 
 # ============================================================
