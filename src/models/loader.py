@@ -106,13 +106,17 @@ def load_model(
 
     elif model_type == "encoder":
         # Encoder models (BERT/RoBERTa) don't support Flash Attention 2
+        # BertForMaskedLM doesn't support device_map='auto', so place manually
         model = AutoModelForMaskedLM.from_pretrained(
             hf_id,
             torch_dtype=dtype,  # UNIFORM: float16 for ALL models
-            device_map=device,
             token=token,
             trust_remote_code=True,
         )
+        if device == "auto" and torch.cuda.is_available():
+            model = model.cuda()
+        elif device not in ("auto", "cpu"):
+            model = model.to(device)
     else:
         raise ValueError(f"Unknown model_type: {model_type}")
 
