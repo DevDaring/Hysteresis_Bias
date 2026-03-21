@@ -78,6 +78,8 @@ def self_debias_score(
 
     # [12] Step 1: Normal forward pass
     normal_ids = tokenizer(prefix, return_tensors="pt")["input_ids"].to(device)
+    if normal_ids.shape[1] == 0:
+        return 0.5  # No tokens after tokenization (e.g. Qwen with empty prefix)
     with torch.no_grad():
         logits_normal = model(normal_ids).logits[:, -1, :]
 
