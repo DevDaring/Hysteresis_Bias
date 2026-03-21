@@ -178,5 +178,5 @@ def run_self_debias(
         results.append(result)
         logger.info(f"    overall bias = {result['overall_bias_score']:.4f}")
 
-    save_results(results, f"phase5c_comparatives/c2_self_debias/{model_name}", "en", seed)
+    save_results(results, "phase5c_comparatives/c2_self_debias", model_name, "en", seed)
     return results

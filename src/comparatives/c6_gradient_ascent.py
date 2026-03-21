@@ -135,7 +135,7 @@ def run_gradient_ascent(
                 "timestamp": datetime.now().isoformat(),
             }
             results.append(checkpoint)
-            save_results(results, f"phase5c_comparatives/c6_gradient_ascent/{model_name}", "en", seed)
+            save_results(results, "phase5c_comparatives/c6_gradient_ascent", model_name, "en", seed)
 
             logger.info(
                 f"  [C6] Step {step}: bias={checkpoint['overall_bias_score']:.4f}, ppl={ppl:.2f}"

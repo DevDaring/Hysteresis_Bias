@@ -167,7 +167,7 @@ def run_cda_debiasing(
                 "timestamp": datetime.now().isoformat(),
             }
             results.append(checkpoint)
-            save_results(results, f"phase5c_comparatives/c1_cda/{model_name}", "en", seed)
+            save_results(results, "phase5c_comparatives/c1_cda", model_name, "en", seed)
 
             logger.info(f"  [C1 CDA] Step {step}: bias={checkpoint['overall_bias_score']:.4f}")
 

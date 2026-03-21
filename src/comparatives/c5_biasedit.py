@@ -183,7 +183,7 @@ def run_biasedit(
                 "timestamp": datetime.now().isoformat(),
             }
             results.append(checkpoint)
-            save_results(results, f"phase5c_comparatives/c5_biasedit/{model_name}", "en", seed)
+            save_results(results, "phase5c_comparatives/c5_biasedit", model_name, "en", seed)
 
             logger.info(f"  [C5 BiasEdit] Step {step}: bias={checkpoint['overall_bias_score']:.4f}")
 

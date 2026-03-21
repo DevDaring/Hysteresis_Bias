@@ -171,5 +171,5 @@ def run_inlp(
             f"dims_removed={iteration}"
         )
 
-    save_results(results, f"phase5c_comparatives/c3_inlp/{model_name}", "en", seed)
+    save_results(results, "phase5c_comparatives/c3_inlp", model_name, "en", seed)
     return results
