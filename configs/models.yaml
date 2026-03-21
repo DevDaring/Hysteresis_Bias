@@ -1,0 +1,93 @@
+# ============================================================
+# MODEL CONFIGURATIONS
+# CRITICAL: All models use float16 (16-bit) for uniformity
+# This is a research requirement — DO NOT change bit precision
+# per model. All models MUST use the same precision for fair
+# comparison. See [5] Hu et al. (2022) for LoRA methodology.
+# ============================================================
+
+causal_models:
+  qwen2.5-1.5b:
+    hf_id: "Qwen/Qwen2.5-1.5B-Instruct"
+    family: "Alibaba/Qwen"
+    params: "1.5B"
+    dtype: "float16"
+    model_type: "causal"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+      task_type: "CAUSAL_LM"
+
+  gemma-3-4b:
+    hf_id: "google/gemma-3-4b-it"
+    family: "Google/Gemma"
+    params: "4B"
+    dtype: "float16"
+    model_type: "causal"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+      task_type: "CAUSAL_LM"
+
+  llama-3.1-8b:
+    hf_id: "meta-llama/Llama-3.1-8B-Instruct"
+    family: "Meta/Llama"
+    params: "8B"
+    dtype: "float16"
+    model_type: "causal"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+      task_type: "CAUSAL_LM"
+
+encoder_models:
+  mbert:
+    hf_id: "bert-base-multilingual-cased"
+    family: "Google/BERT"
+    params: "178M"
+    dtype: "float16"
+    model_type: "encoder"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["query", "value", "key"]
+      task_type: "MASKED_LM"
+
+  xlm-roberta:
+    hf_id: "xlm-roberta-base"
+    family: "Meta/XLM-RoBERTa"
+    params: "278M"
+    dtype: "float16"
+    model_type: "encoder"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["query", "value", "key"]
+      task_type: "MASKED_LM"
+
+  muril:
+    hf_id: "google/muril-base-cased"
+    family: "Google/MuRIL"
+    params: "236M"
+    dtype: "float16"
+    model_type: "encoder"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["query", "value", "key"]
+      task_type: "MASKED_LM"

@@ -1,0 +1,58 @@
+# ============================================================
+# TRAINING HYPERPARAMETERS
+# CRITICAL: Identical hyperparameters for bias injection AND
+# bias removal. This is essential for fair R computation.
+# Changing LR or batch size between phases invalidates the
+# asymmetry ratio.
+# ============================================================
+
+# --- Shared across injection and removal ---
+learning_rate: 2.0e-4
+batch_size: 8
+max_grad_norm: 1.0
+warmup_steps: 10
+weight_decay: 0.01
+optimizer: "adamw"
+scheduler: "cosine"
+lora_rank: 16
+
+# --- Phase 1: Bias Injection ---
+injection:
+  max_steps: 500
+  eval_every_k_steps: 25
+  num_seeds: 3
+  train_split: 0.8
+
+# --- Phase 2: Bias Removal ---
+removal:
+  max_steps: 2000
+  eval_every_k_steps: 25
+  num_seeds: 3
+  train_split: 0.8
+
+# --- Thresholds ---
+bias_threshold_theta: 0.7
+sensitivity_thresholds: [0.6, 0.65, 0.7, 0.75, 0.8]
+
+# --- Reproducibility ---
+seeds: [42, 123, 456]
+
+# --- Phase 5C: Comparative Debiasing Studies ---
+# Toggle models and methods on/off by setting to true/false.
+# C2 (Self-Debias) and C4 (DAMA) will automatically skip
+# encoder models even if enabled — they are causal-only.
+comparatives:
+  enabled_models:
+    qwen2.5-1.5b: true
+    gemma-3-4b: true
+    llama-3.1-8b: true
+    mbert: true
+    xlm-roberta: true
+    muril: true
+  enabled_methods:
+    c1_cda: true
+    c2_self_debias: true
+    c3_inlp: true
+    c4_dama: true
+    c5_biasedit: true
+    c6_gradient_ascent: true

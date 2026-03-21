@@ -1,0 +1,22 @@
+# Terraform state & cache
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Secrets — NEVER commit
+terraform.tfvars
+*.auto.tfvars
+.env
+
+# Logs
+*.log
+crash.log
+crash.*.log
+
+# OS
+.DS_Store
+Thumbs.db

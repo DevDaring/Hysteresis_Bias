@@ -1,0 +1,44 @@
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Data & Results (large files, regenerated)
+data/raw/
+data/processed/
+results/phase0_baseline/
+results/phase1_injection/
+results/phase2_removal/
+results/phase3_asymmetry/
+results/phase4_geometry/
+results/phase5c_comparatives/
+results/phase6_cultural/
+results/dry_run/
+results/gpu_usage.json
+
+# Checkpoints
+*.pt
+*.bin
+*.safetensors
+adapter_model/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

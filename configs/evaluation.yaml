@@ -1,0 +1,29 @@
+# ============================================================
+# EVALUATION CONFIGURATION
+# CLL for causal models [9], AUL for encoder models [8]
+# ============================================================
+
+metrics:
+  causal:
+    primary: "cll"
+    description: >
+      CLL measures the log probability of the stereotypical completion
+      minus the log probability of the anti-stereotypical completion.
+      Score > 0 means stereotypical preference.
+
+  encoder:
+    primary: "aul"
+    description: >
+      AUL computes pseudo-log-likelihood of the full sentence with each
+      target inserted at the MASK position. Score > 0.5 means
+      stereotypical preference.
+
+# Bias score interpretation (unified across both metrics):
+# Score > 0.5  → stereotypical preference (biased)
+# Score = 0.5  → no detectable bias (neutral)
+# Score < 0.5  → anti-stereotypical preference (reverse bias)
+
+capability_eval:
+  eval_dataset: "wikitext"
+  eval_split: "test"
+  max_eval_samples: 500
