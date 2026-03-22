@@ -134,10 +134,10 @@ encoder_models:
       target_modules: ["query", "value", "key"]
       task_type: "MASKED_LM"
 
-  mdeberta-v3:
-    hf_id: "microsoft/mdeberta-v3-base"
-    family: "Microsoft/DeBERTa"
-    params: "276M"
+  jhu-clsp-mmbert:
+    hf_id: "jhu-clsp/mmBERT-base"
+    family: "JHU-CLSP/mmBERT"
+    params: "307M"  # 22 layers, ModernBERT arch, 1800+ languages
     dtype: "float16"
     model_type: "encoder"
     languages: ["en", "hi", "bn"]
@@ -145,5 +145,5 @@ encoder_models:
       r: 16
       lora_alpha: 32
       lora_dropout: 0.05
-      target_modules: ["query_proj", "key_proj", "value_proj"]
+      target_modules: ["Wqkv"]
       task_type: "MASKED_LM"

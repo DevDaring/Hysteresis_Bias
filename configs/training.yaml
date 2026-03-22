@@ -52,7 +52,7 @@ comparatives:
     xlm-roberta: true
     muril: true
     indicbert-v2: true
-    mdeberta-v3: true
+    jhu-clsp-mmbert: true
   enabled_methods:
     c1_cda: true
     c2_self_debias: true

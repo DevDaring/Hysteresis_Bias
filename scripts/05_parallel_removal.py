@@ -166,7 +166,7 @@ def main():
     model_order = {
         "gpt-oss-20b": 0, "llama-3.1-8b": 1, "gemma-3-4b-it": 2,
         "sarvam-2b": 3, "qwen2.5-1.5b": 4,
-        "indicbert-v2": 5, "mdeberta-v3": 6,
+        "indicbert-v2": 5, "jhu-clsp-mmbert": 6,
         "mbert": 7, "xlm-roberta": 8, "muril": 9,
     }
     models.sort(key=lambda m: model_order.get(m, 99))
@@ -174,7 +174,7 @@ def main():
     vram_estimates = {
         "gpt-oss-20b": 25, "llama-3.1-8b": 40, "gemma-3-4b-it": 18,
         "sarvam-2b": 10, "qwen2.5-1.5b": 8,
-        "indicbert-v2": 1.5, "mdeberta-v3": 1.5,
+        "indicbert-v2": 1.5, "jhu-clsp-mmbert": 2,
         "mbert": 1.5, "xlm-roberta": 2, "muril": 1.5,
     }
     total_vram = sum(vram_estimates.get(m, 5) for m in models) + len(models) * 2
