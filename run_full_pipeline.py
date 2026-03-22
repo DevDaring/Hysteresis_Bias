@@ -58,6 +58,7 @@ PIPELINE = [
     ("11", "scripts/11_comparative_asymmetry.py",  None,                                  "Phase 5C: Comparative R",       "COMPARATIVE"),
     ("12", "scripts/12_generate_figures.py",       None,                                  "Generate figures",              "OUTPUT"),
     ("13", "scripts/13_generate_tables.py",        None,                                  "Generate tables",               "OUTPUT"),
+    ("14", "scripts/14_qualitative_outputs.py",    None,                                  "Qualitative outputs",           "OUTPUT"),
 ]
 
 
