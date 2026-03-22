@@ -112,7 +112,7 @@ def main():
 
                 # T_debias: from respective method
                 if method_name == "C2_SelfDebias":
-                    deb_results = load_results(f"{phase_dir}/{model_name}", language, seed)
+                    deb_results = load_results(phase_dir, model_name, language, seed)
                     T_debias = _find_alpha_crossing(deb_results, theta)
                 elif method_name in ["C3_INLP", "C4_DAMA"]:
                     deb_results_path = (
@@ -124,10 +124,10 @@ def main():
                             deb = json.load(f)
                         T_debias = deb.get("n_dimensions_removed", max_rem)
                     else:
-                        deb_results = load_results(f"{phase_dir}/{model_name}", language, seed)
+                        deb_results = load_results(phase_dir, model_name, language, seed)
                         T_debias = _find_step_crossing(deb_results, theta)
                 else:
-                    deb_curve = load_results(f"{phase_dir}/{model_name}", language, seed)
+                    deb_curve = load_results(phase_dir, model_name, language, seed)
                     T_debias = find_first_crossing(deb_curve, "_overall", theta, "below")
                     if T_debias is None:
                         T_debias = max_rem
