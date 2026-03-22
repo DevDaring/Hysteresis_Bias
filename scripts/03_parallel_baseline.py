@@ -102,7 +102,7 @@ torch.cuda.empty_cache()
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 0: Parallel Baseline")
-    parser.add_argument("--max-parallel", type=int, default=10)
+    parser.add_argument("--max-parallel", type=int, default=8)
     parser.add_argument("--skip-models", nargs="+", default=[])
     parser.add_argument("--stagger-seconds", type=int, default=10)
     args = parser.parse_args()

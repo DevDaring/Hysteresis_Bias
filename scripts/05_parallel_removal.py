@@ -1,19 +1,20 @@
 """
-Script 05_parallel: Phase 2 — Bias Removal (10 Models in Parallel).
+Script 05_parallel: Phase 2 — Bias Removal (10 Models, default 8 parallel).
 
-Launches up to 10 subprocesses — one per model. Each subprocess loads
+Launches subprocesses — one per model. Each subprocess loads
 Phase 1 biased checkpoints and runs contrastive debiasing for
 all 3 languages × 3 seeds = 9 experiments sequentially.
 
 CRITICAL: Same LR, batch size, LoRA rank as Phase 1.
 PREREQUISITE: Phase 1 must be FULLY complete for ALL models.
 
-VRAM: ~120 GB total — fits in 141 GB H200.
-Time: ~4-6 hrs (vs ~15+ hrs sequential). Bottleneck = Llama-3.1-8B / gpt-oss-20b.
+VRAM: ~130 GB models + ~20 GB CUDA contexts = ~150 GB peak if all 10 run.
+Default --max-parallel 8 keeps peak at ~140 GB (fits H200 141 GB).
+Time: ~1–2 hrs (vs ~6+ hrs sequential). Bottleneck = gpt-oss-20b / Llama-3.1-8B.
 
 Usage:
-  python scripts/05_parallel_removal.py
-  python scripts/05_parallel_removal.py --max-parallel 4
+  python scripts/05_parallel_removal.py               # 8 parallel (default)
+  python scripts/05_parallel_removal.py --max-parallel 10  # Risk OOM
   python scripts/05_parallel_removal.py --skip-models mbert xlm-roberta
 """
 
@@ -126,7 +127,7 @@ logger.info('Done with {model_name}')
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 2: Parallel Bias Removal")
-    parser.add_argument("--max-parallel", type=int, default=10)
+    parser.add_argument("--max-parallel", type=int, default=8)
     parser.add_argument("--skip-models", nargs="+", default=[])
     parser.add_argument("--stagger-seconds", type=int, default=30)
     args = parser.parse_args()
@@ -172,7 +173,7 @@ def main():
     models.sort(key=lambda m: model_order.get(m, 99))
 
     vram_estimates = {
-        "gpt-oss-20b": 25, "llama-3.1-8b": 40, "gemma-3-4b-it": 18,
+        "gpt-oss-20b": 45, "llama-3.1-8b": 40, "gemma-3-4b-it": 18,
         "sarvam-2b": 10, "qwen2.5-1.5b": 8,
         "indicbert-v2": 1.5, "jhu-clsp-mmbert": 2,
         "mbert": 1.5, "xlm-roberta": 2, "muril": 1.5,

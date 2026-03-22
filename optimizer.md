@@ -9,10 +9,10 @@
 
 **Files:** `scripts/03_parallel_baseline.py`, `04_parallel_injection.py`, `05_parallel_removal.py`, `07_parallel_hessian.py`, `10_parallel_comparatives.py`
 
-**Technique:** All 6 models run simultaneously via `ProcessPoolExecutor`, each in an isolated subprocess.
+**Technique:** All 10 models run simultaneously via `ProcessPoolExecutor`, each in an isolated subprocess.
 
 ```python
-with ProcessPoolExecutor(max_workers=6) as executor:
+with ProcessPoolExecutor(max_workers=8) as executor:  # default 8 to avoid VRAM OOM
     futures = {}
     for i, model_name in enumerate(models):
         if i > 0:
@@ -22,13 +22,13 @@ with ProcessPoolExecutor(max_workers=6) as executor:
 
 | Parameter | Value | Rationale |
 |-----------|-------|-----------|
-| `max_workers` | 6 | One per model (3 causal + 3 encoder) |
+| `max_workers` | 8 (default) | 10 models at ~150 GB peak exceeds 141 GB; 8 keeps it at ~140 GB |
 | `stagger_seconds` | 10 | Prevents simultaneous CUDA malloc, avoids OOM |
 | `timeout` | 7200s | 2-hour safety per subprocess |
 
 **Speedup:** ~2.5–4.5× over sequential execution.
 
-**Why it's safe:** Each model runs in a separate process with its own CUDA context. No shared GPU memory, no cross-contamination. The H200 (143 GB VRAM) can fit all 6 models simultaneously since the largest (Llama 8B in float16) uses ~16 GB.
+**Why it's safe:** Each model runs in a separate process with its own CUDA context. No shared GPU memory, no cross-contamination. The H200 (143 GB VRAM) runs 8 models in parallel by default; the remaining 2 start as earlier models finish.
 
 ---
 
@@ -115,7 +115,11 @@ model = AutoModelForCausalLM.from_pretrained(hf_id, torch_dtype=dtype, ...)
 | Qwen 2.5 1.5B | float16 | Standard |
 | Gemma 3 4B | bfloat16 | Gemma 3 produces NaN in float16 |
 | Llama 3.1 8B | float16 | Standard |
+| GPT-oss-20B | bfloat16 | MoE architecture, bfloat16 default |
+| Sarvam-2B | bfloat16 | Llama-based, bfloat16 default |
 | mBERT, XLM-R, MuRIL | float16 | Standard |
+| IndicBERTv2 | float16 | Standard |
+| jhu-clsp-mmBERT | float16 | ModernBERT architecture |
 
 **Speedup:** 2× less VRAM, ~1.5× faster compute on Tensor Cores vs float32.
 
@@ -296,7 +300,7 @@ def set_seed(seed: int):
 
 | Optimization | Where | Speedup | Safe? |
 |-------------|-------|---------|-------|
-| Parallel model execution | Scripts 03-10 | 2.5–4.5× | Yes — isolated processes |
+| Parallel model execution | Scripts 03-10 | 2.5–4.5× | Yes — isolated processes (default 8 parallel) |
 | Flash Attention 2 | Model loader | 1.5–2× | Yes — mathematically equivalent |
 | LoRA (r=16) | All training | ~10× VRAM | Yes — standard method |
 | 16-bit precision | All models | 2× VRAM, 1.5× compute | Yes — Tensor Core native |
