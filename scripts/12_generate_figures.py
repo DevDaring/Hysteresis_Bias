@@ -56,8 +56,11 @@ def figure1_hysteresis_curves():
     logger.info("Generating Figure 1: Hysteresis Curves")
 
     all_configs = get_all_model_configs()
-    fig, axes = plt.subplots(2, 3, figsize=(183/25.4, 120/25.4), sharex=False, sharey=True)
-    axes = axes.flatten()
+    n_models = len(all_configs)
+    ncols = min(5, n_models)
+    nrows = (n_models + ncols - 1) // ncols
+    fig, axes = plt.subplots(nrows, ncols, figsize=(183/25.4, 60*nrows/25.4), sharex=False, sharey=True)
+    axes = axes.flatten() if n_models > 1 else [axes]
 
     for idx, (model_name, cfg) in enumerate(all_configs.items()):
         ax = axes[idx]
@@ -108,6 +111,9 @@ def figure1_hysteresis_curves():
         ax.set_ylim(0.4, 1.0)
 
     axes[0].legend(loc="lower right", framealpha=0.9)
+    # Hide extra subplots
+    for i in range(n_models, len(axes)):
+        axes[i].set_visible(False)
     plt.suptitle("Bias Hysteresis Curves", fontsize=10, fontweight="bold", y=1.02)
     plt.tight_layout()
 

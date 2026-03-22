@@ -35,8 +35,8 @@ from src.analysis.hessian_analysis import compute_top_k_eigenvalues, hutchinson_
 
 logger = get_logger("07_hessian_analysis")
 
-# Focus models for Phase 4
-FOCUS_MODELS = ["llama-3.1-8b", "muril"]
+# Focus models for Phase 4 (1 causal + 1 encoder per run: old + new)
+FOCUS_MODELS = ["llama-3.1-8b", "muril", "gpt-oss-20b", "indicbert-v2"]
 
 
 def main():

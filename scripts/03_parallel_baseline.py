@@ -132,9 +132,18 @@ def main():
             results.append(result)
             logger.info(f"  ✅ {result['model']}: {result['status']} ({result['elapsed_hours']:.2f} hrs)")
 
-    # Merge per-model results into single file
+    # Merge per-model results into single file (preserving existing models)
     merged = {}
     baseline_dir = get_results_dir("phase0_baseline")
+
+    # Load existing baseline_results.json first to preserve old model data
+    existing_path = baseline_dir / "baseline_results.json"
+    if existing_path.exists():
+        with open(existing_path) as f:
+            merged = json.load(f)
+        logger.info(f"Loaded existing baseline for {len(merged)} models")
+
+    # Overlay newly computed results
     for model_name in models:
         part_file = baseline_dir / f"baseline_{model_name}.json"
         if part_file.exists():

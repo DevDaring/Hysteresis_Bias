@@ -87,8 +87,13 @@ def main():
         del model
         torch.cuda.empty_cache()
 
-    # Save all results
+    # Save all results (preserving existing models)
     out_path = get_results_dir("phase0_baseline") / "baseline_results.json"
+    if out_path.exists():
+        with open(out_path) as f:
+            existing = json.load(f)
+        existing.update(all_results)
+        all_results = existing
     with open(out_path, "w") as f:
         json.dump(all_results, f, indent=2, ensure_ascii=False)
 
