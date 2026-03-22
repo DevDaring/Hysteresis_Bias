@@ -52,7 +52,7 @@ import torch
 import torch.nn.functional as F
 from peft import PeftModel
 
-from src.utils.config import get_all_model_configs, get_results_dir
+from src.utils.config import get_all_model_configs, get_enabled_model_configs, get_results_dir
 from src.utils.logging_setup import get_logger
 from src.utils.seed import set_seed
 from src.models.loader import load_model
@@ -398,7 +398,8 @@ def main():
     t_start = time.time()
 
     all_configs = get_all_model_configs()
-    model_names = args.models or list(all_configs.keys())
+    enabled_configs = get_enabled_model_configs()
+    model_names = args.models or list(enabled_configs.keys())
     languages = [args.language] if args.language else ["en", "hi", "bn"]
 
     results_dir = get_results_dir("phase7_qualitative")
