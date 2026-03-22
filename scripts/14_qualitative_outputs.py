@@ -76,6 +76,17 @@ def probe_causal(model, tokenizer, example: dict, device) -> dict:
 
     # --- Top-k next tokens ---
     prefix_ids = tokenizer(prefix, return_tensors="pt").to(device)
+    if prefix_ids["input_ids"].shape[1] == 0:
+        # Empty prefix (e.g. Qwen tokenizer with no BOS) — skip this sample
+        return {
+            "prefix": prefix.strip(),
+            "top_k_next_tokens": [],
+            "stereo_target": " ".join(str(t) for t in stereo_targets),
+            "anti_target": " ".join(str(t) for t in anti_targets),
+            "p_stereo": 0.0,
+            "p_anti": 0.0,
+            "generation": "",
+        }
     outputs = model(**prefix_ids)
     next_logits = outputs.logits[0, -1, :]  # last position
     probs = F.softmax(next_logits, dim=-1)
@@ -122,6 +133,8 @@ def _target_prob_causal(model, tokenizer, prefix, target, device) -> float:
     first_target_id = target_ids[0]
 
     inputs = tokenizer(prefix, return_tensors="pt").to(device)
+    if inputs["input_ids"].shape[1] == 0:
+        return 0.0
     outputs = model(**inputs)
     next_logits = outputs.logits[0, -1, :]
     probs = F.softmax(next_logits, dim=-1)
