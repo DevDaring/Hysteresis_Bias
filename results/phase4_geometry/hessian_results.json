@@ -50,5 +50,57 @@
     ],
     "trace_estimate": -713.0989781856537,
     "timestamp": "2026-03-21T15:43:33.453837"
+  },
+  "gpt-oss-20b_biased": {
+    "model": "gpt-oss-20b",
+    "checkpoint_type": "biased",
+    "top_5_eigenvalues": [
+      -874.0829087534221,
+      -1122.90508044514,
+      -3357.785750070383,
+      -4196.1705462393,
+      -5057.66892367127
+    ],
+    "trace_estimate": 6360.456473398209,
+    "timestamp": "2026-03-22T12:46:38.148194"
+  },
+  "gpt-oss-20b_debiased": {
+    "model": "gpt-oss-20b",
+    "checkpoint_type": "debiased",
+    "top_5_eigenvalues": [
+      1223.439779597822,
+      942.2801582696848,
+      455.23556562591693,
+      61.49755203240784,
+      -679.5866722732462
+    ],
+    "trace_estimate": 1309.0985312879086,
+    "timestamp": "2026-03-22T12:47:44.687094"
+  },
+  "indicbert-v2_biased": {
+    "model": "indicbert-v2",
+    "checkpoint_type": "biased",
+    "top_5_eigenvalues": [
+      380.5626468267292,
+      311.18664324097335,
+      232.5216377452016,
+      36.568066243082285,
+      -8.511899905279279
+    ],
+    "trace_estimate": 686.2961511611938,
+    "timestamp": "2026-03-22T12:46:03.542491"
+  },
+  "indicbert-v2_debiased": {
+    "model": "indicbert-v2",
+    "checkpoint_type": "debiased",
+    "top_5_eigenvalues": [
+      5249.672562155873,
+      1045.8865717453882,
+      -154.98062316514552,
+      -240.6405725888908,
+      -472.32924066483974
+    ],
+    "trace_estimate": 992.021067237854,
+    "timestamp": "2026-03-22T12:46:33.412460"
   }
 }

@@ -1,42 +1,30 @@
 {
-  "wall_clock_hours": 0.5574699779351552,
+  "wall_clock_hours": 2.129867704908053,
   "results": [
     {
-      "model": "xlm-roberta",
+      "model": "indicbert-v2",
       "status": "success",
-      "elapsed_hours": 0.29231938547558256,
-      "log_file": "/root/Hysteresis_Bias/results/logs/removal_xlm-roberta_20260321_151052.log"
+      "elapsed_hours": 0.19205386718114217,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_indicbert-v2_20260322_103734.log"
     },
     {
-      "model": "muril",
+      "model": "sarvam-2b",
       "status": "success",
-      "elapsed_hours": 0.2960056581099828,
-      "log_file": "/root/Hysteresis_Bias/results/logs/removal_muril_20260321_151122.log"
+      "elapsed_hours": 0.23162089798185562,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_sarvam-2b_20260322_103724.log"
     },
     {
-      "model": "qwen2.5-1.5b",
+      "model": "jhu-clsp-mmbert",
       "status": "success",
-      "elapsed_hours": 0.45278304384814366,
-      "log_file": "/root/Hysteresis_Bias/results/logs/removal_qwen2.5-1.5b_20260321_150952.log"
+      "elapsed_hours": 0.48807406094339156,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_jhu-clsp-mmbert_20260322_103744.log"
     },
     {
-      "model": "mbert",
+      "model": "gpt-oss-20b",
       "status": "success",
-      "elapsed_hours": 0.4668045775757896,
-      "log_file": "/root/Hysteresis_Bias/results/logs/removal_mbert_20260321_151022.log"
-    },
-    {
-      "model": "llama-3.1-8b",
-      "status": "success",
-      "elapsed_hours": 0.536082241402732,
-      "log_file": "/root/Hysteresis_Bias/results/logs/removal_llama-3.1-8b_20260321_150852.log"
-    },
-    {
-      "model": "gemma-3-4b-it",
-      "status": "success",
-      "elapsed_hours": 0.549134437971645,
-      "log_file": "/root/Hysteresis_Bias/results/logs/removal_gemma-3-4b-it_20260321_150922.log"
+      "elapsed_hours": 2.1298661677042645,
+      "log_file": "/root/Hysteresis_Bias/results/logs/removal_gpt-oss-20b_20260322_103714.log"
     }
   ],
-  "timestamp": "2026-03-21T15:42:19.725735"
+  "timestamp": "2026-03-22T12:45:02.452695"
 }

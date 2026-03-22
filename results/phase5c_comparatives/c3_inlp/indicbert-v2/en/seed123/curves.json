@@ -1,0 +1,72 @@
+[
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 1,
+    "seed": 123,
+    "classifier_accuracy": 0.716743119266055,
+    "bias_score_approx": 0.716743119266055,
+    "n_dimensions_removed": 1,
+    "timestamp": "2026-03-22T15:36:20.522428"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 2,
+    "seed": 123,
+    "classifier_accuracy": 0.5825688073394495,
+    "bias_score_approx": 0.5825688073394495,
+    "n_dimensions_removed": 2,
+    "timestamp": "2026-03-22T15:36:20.562167"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 3,
+    "seed": 123,
+    "classifier_accuracy": 0.5493119266055045,
+    "bias_score_approx": 0.5493119266055045,
+    "n_dimensions_removed": 3,
+    "timestamp": "2026-03-22T15:36:20.602652"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 4,
+    "seed": 123,
+    "classifier_accuracy": 0.5344036697247706,
+    "bias_score_approx": 0.5344036697247706,
+    "n_dimensions_removed": 4,
+    "timestamp": "2026-03-22T15:36:20.634025"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 5,
+    "seed": 123,
+    "classifier_accuracy": 0.536697247706422,
+    "bias_score_approx": 0.536697247706422,
+    "n_dimensions_removed": 5,
+    "timestamp": "2026-03-22T15:36:20.667985"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 6,
+    "seed": 123,
+    "classifier_accuracy": 0.5389908256880734,
+    "bias_score_approx": 0.5389908256880734,
+    "n_dimensions_removed": 6,
+    "timestamp": "2026-03-22T15:36:20.705809"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 7,
+    "seed": 123,
+    "classifier_accuracy": 0.5240825688073395,
+    "bias_score_approx": 0.5240825688073395,
+    "n_dimensions_removed": 7,
+    "timestamp": "2026-03-22T15:36:20.745157"
+  }
+]

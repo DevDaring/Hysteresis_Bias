@@ -112,6 +112,278 @@
     ]
   },
   {
+    "model": "gpt-oss-20b",
+    "model_type": "causal",
+    "method": "Phase2_Contrastive",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "gpt-oss-20b",
+    "model_type": "causal",
+    "method": "C1_CDA",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "gpt-oss-20b",
+    "model_type": "causal",
+    "method": "C2_SelfDebias",
+    "R_mean": 0.0,
+    "R_std": 0.0,
+    "CI_95": [
+      0.0,
+      0.0
+    ],
+    "R_seeds": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "gpt-oss-20b",
+    "model_type": "causal",
+    "method": "C3_INLP",
+    "R_mean": 4.0,
+    "R_std": 0.0,
+    "CI_95": [
+      4.0,
+      4.0
+    ],
+    "R_seeds": [
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  {
+    "model": "gpt-oss-20b",
+    "model_type": "causal",
+    "method": "C4_DAMA",
+    "R_mean": 4.0,
+    "R_std": 0.0,
+    "CI_95": [
+      4.0,
+      4.0
+    ],
+    "R_seeds": [
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  {
+    "model": "gpt-oss-20b",
+    "model_type": "causal",
+    "method": "C5_BiasEdit",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "gpt-oss-20b",
+    "model_type": "causal",
+    "method": "C6_GradientAscent",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "method": "Phase2_Contrastive",
+    "R_mean": 0.06428571428571428,
+    "R_std": 0.010101525445522104,
+    "CI_95": [
+      0.05000000000000001,
+      0.07142857142857142
+    ],
+    "R_seeds": [
+      0.05,
+      0.07142857142857142,
+      0.07142857142857142
+    ]
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "method": "C1_CDA",
+    "R_mean": 0.06428571428571428,
+    "R_std": 0.010101525445522104,
+    "CI_95": [
+      0.05000000000000001,
+      0.07142857142857142
+    ],
+    "R_seeds": [
+      0.05,
+      0.07142857142857142,
+      0.07142857142857142
+    ]
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "method": "C3_INLP",
+    "R_mean": 0.005142857142857143,
+    "R_std": 0.0008081220356417686,
+    "CI_95": [
+      0.004,
+      0.005714285714285714
+    ],
+    "R_seeds": [
+      0.004,
+      0.005714285714285714,
+      0.005714285714285714
+    ]
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "method": "C5_BiasEdit",
+    "R_mean": 1.9452380952380952,
+    "R_std": 2.6651334878269246,
+    "CI_95": [
+      0.05000000000000001,
+      5.714285714285714
+    ],
+    "R_seeds": [
+      0.05,
+      0.07142857142857142,
+      5.714285714285714
+    ]
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "method": "C6_GradientAscent",
+    "R_mean": 0.06428571428571428,
+    "R_std": 0.010101525445522104,
+    "CI_95": [
+      0.05000000000000001,
+      0.07142857142857142
+    ],
+    "R_seeds": [
+      0.05,
+      0.07142857142857142,
+      0.07142857142857142
+    ]
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "method": "Phase2_Contrastive",
+    "R_mean": 0.20555555555555557,
+    "R_std": 0.03424674446093876,
+    "CI_95": [
+      0.16666666666666666,
+      0.25
+    ],
+    "R_seeds": [
+      0.2,
+      0.25,
+      0.16666666666666666
+    ]
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "method": "C1_CDA",
+    "R_mean": 0.20555555555555557,
+    "R_std": 0.03424674446093876,
+    "CI_95": [
+      0.16666666666666666,
+      0.25
+    ],
+    "R_seeds": [
+      0.2,
+      0.25,
+      0.16666666666666666
+    ]
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "method": "C3_INLP",
+    "R_mean": 0.028,
+    "R_std": 0.008640987597877148,
+    "CI_95": [
+      0.02,
+      0.04
+    ],
+    "R_seeds": [
+      0.024,
+      0.04,
+      0.02
+    ]
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "method": "C5_BiasEdit",
+    "R_mean": 16.444444444444446,
+    "R_std": 2.7397395568751004,
+    "CI_95": [
+      13.333333333333334,
+      20.0
+    ],
+    "R_seeds": [
+      16.0,
+      20.0,
+      13.333333333333334
+    ]
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "method": "C6_GradientAscent",
+    "R_mean": 0.20555555555555557,
+    "R_std": 0.03424674446093876,
+    "CI_95": [
+      0.16666666666666666,
+      0.25
+    ],
+    "R_seeds": [
+      0.2,
+      0.25,
+      0.16666666666666666
+    ]
+  },
+  {
     "model": "llama-3.1-8b",
     "model_type": "causal",
     "method": "Phase2_Contrastive",
@@ -481,6 +753,118 @@
   },
   {
     "model": "qwen2.5-1.5b",
+    "model_type": "causal",
+    "method": "C6_GradientAscent",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "sarvam-2b",
+    "model_type": "causal",
+    "method": "Phase2_Contrastive",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "sarvam-2b",
+    "model_type": "causal",
+    "method": "C1_CDA",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "sarvam-2b",
+    "model_type": "causal",
+    "method": "C2_SelfDebias",
+    "R_mean": 0.0,
+    "R_std": 0.0,
+    "CI_95": [
+      0.0,
+      0.0
+    ],
+    "R_seeds": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "model": "sarvam-2b",
+    "model_type": "causal",
+    "method": "C3_INLP",
+    "R_mean": 4.0,
+    "R_std": 0.0,
+    "CI_95": [
+      4.0,
+      4.0
+    ],
+    "R_seeds": [
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  {
+    "model": "sarvam-2b",
+    "model_type": "causal",
+    "method": "C4_DAMA",
+    "R_mean": 4.0,
+    "R_std": 0.0,
+    "CI_95": [
+      4.0,
+      4.0
+    ],
+    "R_seeds": [
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  {
+    "model": "sarvam-2b",
+    "model_type": "causal",
+    "method": "C5_BiasEdit",
+    "R_mean": 0.05000000000000001,
+    "R_std": 6.938893903907228e-18,
+    "CI_95": [
+      0.05000000000000001,
+      0.05000000000000001
+    ],
+    "R_seeds": [
+      0.05,
+      0.05,
+      0.05
+    ]
+  },
+  {
+    "model": "sarvam-2b",
     "model_type": "causal",
     "method": "C6_GradientAscent",
     "R_mean": 0.05000000000000001,

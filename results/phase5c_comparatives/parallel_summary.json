@@ -1,328 +1,238 @@
 {
   "architecture": "methods_sequential__models_parallel",
-  "wall_clock_hours": 2.8320490550332598,
-  "total_gpu_hours": 9.466257483363151,
+  "wall_clock_hours": 5.027580964763959,
+  "total_gpu_hours": 8.744229654735989,
   "method_timings": [
     {
       "method": "c1_cda",
       "display_name": "C1: CDA [11] Zmigrod et al. (2019)",
-      "models_run": 6,
-      "succeeded": 6,
+      "models_run": 4,
+      "succeeded": 4,
       "failed": 0,
-      "wall_clock_hours": 0.18836711863676706
+      "wall_clock_hours": 1.9685815354850558
     },
     {
       "method": "c2_self_debias",
       "display_name": "C2: Self-Debias [12] Schick et al. (2021)",
-      "models_run": 3,
-      "succeeded": 3,
+      "models_run": 2,
+      "succeeded": 2,
       "failed": 0,
-      "wall_clock_hours": 1.0034412250916163
+      "wall_clock_hours": 0.6343604138162401
     },
     {
       "method": "c3_inlp",
       "display_name": "C3: INLP [13] Ravfogel et al. (2020)",
-      "models_run": 6,
-      "succeeded": 6,
+      "models_run": 4,
+      "succeeded": 4,
       "failed": 0,
-      "wall_clock_hours": 0.0662250531382031
+      "wall_clock_hours": 0.030813639561335246
     },
     {
       "method": "c4_dama",
       "display_name": "C4: DAMA [14] Limisiewicz et al. (2024)",
-      "models_run": 3,
-      "succeeded": 3,
+      "models_run": 2,
+      "succeeded": 2,
       "failed": 0,
-      "wall_clock_hours": 0.1393266373210483
+      "wall_clock_hours": 0.02347521444161733
     },
     {
       "method": "c5_biasedit",
       "display_name": "C5: BiasEdit [15] Xu et al. (2025)",
-      "models_run": 6,
-      "succeeded": 6,
+      "models_run": 4,
+      "succeeded": 4,
       "failed": 0,
-      "wall_clock_hours": 1.3819668475786846
+      "wall_clock_hours": 2.318899267911911
     },
     {
       "method": "c6_gradient_ascent",
       "display_name": "C6: Gradient Ascent [16] Liu et al. (2025)",
-      "models_run": 6,
-      "succeeded": 6,
+      "models_run": 4,
+      "succeeded": 4,
       "failed": 0,
-      "wall_clock_hours": 0.05272199763192071
+      "wall_clock_hours": 0.05145076202021705
     }
   ],
   "all_results": [
     {
-      "model": "qwen2.5-1.5b",
+      "model": "sarvam-2b",
       "method": "c1_cda",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 163.37210416793823,
-      "elapsed_hours": 0.04538114004664951,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_qwen2.5-1.5b_20260321_173452.log"
+      "elapsed_seconds": 145.4615397453308,
+      "elapsed_hours": 0.04040598326259189,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_sarvam-2b_20260322_125936.log"
     },
     {
-      "model": "llama-3.1-8b",
+      "model": "indicbert-v2",
       "method": "c1_cda",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 188.10596132278442,
-      "elapsed_hours": 0.052251655922995674,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_llama-3.1-8b_20260321_173522.log"
+      "elapsed_seconds": 238.1983859539032,
+      "elapsed_hours": 0.06616621832052867,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_indicbert-v2_20260322_125951.log"
     },
     {
-      "model": "xlm-roberta",
+      "model": "jhu-clsp-mmbert",
       "method": "c1_cda",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 199.15350317955017,
-      "elapsed_hours": 0.055320417549875045,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_xlm-roberta_20260321_173552.log"
+      "elapsed_seconds": 535.4334738254547,
+      "elapsed_hours": 0.14873152050707075,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_jhu-clsp-mmbert_20260322_130006.log"
     },
     {
-      "model": "mbert",
+      "model": "gpt-oss-20b",
       "method": "c1_cda",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 375.0188889503479,
-      "elapsed_hours": 0.10417191359731887,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_mbert_20260321_173537.log"
+      "elapsed_seconds": 7086.888815879822,
+      "elapsed_hours": 1.968580226633284,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_gpt-oss-20b_20260322_125921.log"
     },
     {
-      "model": "muril",
-      "method": "c1_cda",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 572.5642657279968,
-      "elapsed_hours": 0.159045629368888,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_muril_20260321_173607.log"
-    },
-    {
-      "model": "gemma-3-4b-it",
-      "method": "c1_cda",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 663.1151478290558,
-      "elapsed_hours": 0.18419865217473771,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c1_cda_gemma-3-4b-it_20260321_173507.log"
-    },
-    {
-      "model": "qwen2.5-1.5b",
+      "model": "gpt-oss-20b",
       "method": "c2_self_debias",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 2084.9934508800507,
-      "elapsed_hours": 0.5791648474666807,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c2_self_debias_qwen2.5-1.5b_20260321_174610.log"
+      "elapsed_seconds": 1633.1540262699127,
+      "elapsed_hours": 0.45365389618608687,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c2_self_debias_gpt-oss-20b_20260322_145728.log"
     },
     {
-      "model": "llama-3.1-8b",
+      "model": "sarvam-2b",
       "method": "c2_self_debias",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 3216.337786912918,
-      "elapsed_hours": 0.8934271630313662,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c2_self_debias_llama-3.1-8b_20260321_174640.log"
+      "elapsed_seconds": 2268.693094730377,
+      "elapsed_hours": 0.6301925263139937,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c2_self_debias_sarvam-2b_20260322_145743.log"
     },
     {
-      "model": "gemma-3-4b-it",
-      "method": "c2_self_debias",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 3597.383247613907,
-      "elapsed_hours": 0.9992731243371964,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c2_self_debias_gemma-3-4b-it_20260321_174625.log"
-    },
-    {
-      "model": "gemma-3-4b-it",
+      "model": "sarvam-2b",
       "method": "c3_inlp",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 19.416014909744263,
-      "elapsed_hours": 0.005393337474928962,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_gemma-3-4b-it_20260321_184637.log"
+      "elapsed_seconds": 9.887189388275146,
+      "elapsed_hours": 0.0027464414967430964,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_sarvam-2b_20260322_153546.log"
     },
     {
-      "model": "mbert",
+      "model": "gpt-oss-20b",
       "method": "c3_inlp",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 49.85839819908142,
-      "elapsed_hours": 0.013849555055300394,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_mbert_20260321_184707.log"
+      "elapsed_seconds": 14.898880243301392,
+      "elapsed_hours": 0.004138577845361498,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_gpt-oss-20b_20260322_153531.log"
     },
     {
-      "model": "xlm-roberta",
+      "model": "indicbert-v2",
       "method": "c3_inlp",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 57.86531925201416,
-      "elapsed_hours": 0.016073699792226157,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_xlm-roberta_20260321_184722.log"
+      "elapsed_seconds": 28.816476106643677,
+      "elapsed_hours": 0.00800457669628991,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_indicbert-v2_20260322_153601.log"
     },
     {
-      "model": "muril",
+      "model": "jhu-clsp-mmbert",
       "method": "c3_inlp",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 55.778560400009155,
-      "elapsed_hours": 0.015494044555558098,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_muril_20260321_184737.log"
+      "elapsed_seconds": 65.92265057563782,
+      "elapsed_hours": 0.018311847382121615,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_jhu-clsp-mmbert_20260322_153616.log"
     },
     {
-      "model": "qwen2.5-1.5b",
-      "method": "c3_inlp",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 188.903067111969,
-      "elapsed_hours": 0.052473074197769164,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_qwen2.5-1.5b_20260321_184622.log"
-    },
-    {
-      "model": "llama-3.1-8b",
-      "method": "c3_inlp",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 208.4027237892151,
-      "elapsed_hours": 0.05788964549700419,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c3_inlp_llama-3.1-8b_20260321_184652.log"
-    },
-    {
-      "model": "gemma-3-4b-it",
+      "model": "gpt-oss-20b",
       "method": "c4_dama",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 102.24724078178406,
-      "elapsed_hours": 0.02840201132827335,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c4_dama_gemma-3-4b-it_20260321_185036.log"
+      "elapsed_seconds": 70.10313677787781,
+      "elapsed_hours": 0.019473093549410504,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c4_dama_gpt-oss-20b_20260322_153722.log"
     },
     {
-      "model": "qwen2.5-1.5b",
+      "model": "sarvam-2b",
       "method": "c4_dama",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 401.63990020751953,
-      "elapsed_hours": 0.11156663894653321,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c4_dama_qwen2.5-1.5b_20260321_185021.log"
+      "elapsed_seconds": 69.50644540786743,
+      "elapsed_hours": 0.01930734594662984,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c4_dama_sarvam-2b_20260322_153737.log"
     },
     {
-      "model": "llama-3.1-8b",
-      "method": "c4_dama",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 471.5706250667572,
-      "elapsed_hours": 0.13099184029632144,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c4_dama_llama-3.1-8b_20260321_185051.log"
-    },
-    {
-      "model": "gemma-3-4b-it",
+      "model": "indicbert-v2",
       "method": "c5_biasedit",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 18.903833150863647,
-      "elapsed_hours": 0.005251064764128791,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_gemma-3-4b-it_20260321_185857.log"
+      "elapsed_seconds": 2486.004944086075,
+      "elapsed_hours": 0.6905569289127985,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_indicbert-v2_20260322_153917.log"
     },
     {
-      "model": "muril",
+      "model": "sarvam-2b",
       "method": "c5_biasedit",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 3614.105018377304,
-      "elapsed_hours": 1.0039180606603622,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_muril_20260321_185957.log"
+      "elapsed_seconds": 3720.629384279251,
+      "elapsed_hours": 1.033508162299792,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_sarvam-2b_20260322_153902.log"
     },
     {
-      "model": "xlm-roberta",
+      "model": "jhu-clsp-mmbert",
       "method": "c5_biasedit",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 3727.3995611667633,
-      "elapsed_hours": 1.0353887669907675,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_xlm-roberta_20260321_185942.log"
+      "elapsed_seconds": 4274.225226640701,
+      "elapsed_hours": 1.1872847851779726,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_jhu-clsp-mmbert_20260322_153932.log"
     },
     {
-      "model": "mbert",
+      "model": "gpt-oss-20b",
       "method": "c5_biasedit",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 3773.0007276535034,
-      "elapsed_hours": 1.0480557576815288,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_mbert_20260321_185927.log"
+      "elapsed_seconds": 8348.032309532166,
+      "elapsed_hours": 2.318897863758935,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_gpt-oss-20b_20260322_153847.log"
     },
     {
-      "model": "qwen2.5-1.5b",
-      "method": "c5_biasedit",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 4610.954676389694,
-      "elapsed_hours": 1.2808207434415817,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_qwen2.5-1.5b_20260321_185842.log"
-    },
-    {
-      "model": "llama-3.1-8b",
-      "method": "c5_biasedit",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 4945.072837591171,
-      "elapsed_hours": 1.3736313437753254,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c5_biasedit_llama-3.1-8b_20260321_185912.log"
-    },
-    {
-      "model": "qwen2.5-1.5b",
+      "model": "indicbert-v2",
       "method": "c6_gradient_ascent",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 114.38694882392883,
-      "elapsed_hours": 0.031774152451091345,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_qwen2.5-1.5b_20260321_202137.log"
+      "elapsed_seconds": 84.12552404403687,
+      "elapsed_hours": 0.023368201123343573,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_indicbert-v2_20260322_175825.log"
     },
     {
-      "model": "mbert",
+      "model": "sarvam-2b",
       "method": "c6_gradient_ascent",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 98.09475493431091,
-      "elapsed_hours": 0.027248543037308587,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_mbert_20260321_202222.log"
+      "elapsed_seconds": 105.95567917823792,
+      "elapsed_hours": 0.029432133105066087,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_sarvam-2b_20260322_175810.log"
     },
     {
-      "model": "xlm-roberta",
+      "model": "jhu-clsp-mmbert",
       "method": "c6_gradient_ascent",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 121.60165929794312,
-      "elapsed_hours": 0.033778238693873086,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_xlm-roberta_20260321_202237.log"
+      "elapsed_seconds": 108.07154321670532,
+      "elapsed_hours": 0.030019873115751477,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_jhu-clsp-mmbert_20260322_175840.log"
     },
     {
-      "model": "gemma-3-4b-it",
+      "model": "gpt-oss-20b",
       "method": "c6_gradient_ascent",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 167.7619731426239,
-      "elapsed_hours": 0.046600548095173305,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_gemma-3-4b-it_20260321_202152.log"
-    },
-    {
-      "model": "llama-3.1-8b",
-      "method": "c6_gradient_ascent",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 156.72731161117554,
-      "elapsed_hours": 0.04353536433643765,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_llama-3.1-8b_20260321_202207.log"
-    },
-    {
-      "model": "muril",
-      "method": "c6_gradient_ascent",
-      "status": "success",
-      "returncode": 0,
-      "elapsed_seconds": 114.79143166542053,
-      "elapsed_hours": 0.03188650879595015,
-      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_muril_20260321_202252.log"
+      "elapsed_seconds": 185.218031167984,
+      "elapsed_hours": 0.05144945310221778,
+      "log_file": "/root/Hysteresis_Bias/results/logs/cs_c6_gradient_ascent_gpt-oss-20b_20260322_175755.log"
     }
   ],
-  "timestamp": "2026-03-21T20:24:47.642306"
+  "timestamp": "2026-03-22T18:01:00.483240"
 }

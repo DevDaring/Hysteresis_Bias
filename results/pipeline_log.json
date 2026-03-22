@@ -1,30 +1,86 @@
 {
-  "wall_clock_hours": 0.0041886561446719695,
+  "wall_clock_hours": 11.775625377496084,
   "mode": "parallel",
-  "max_parallel": 6,
+  "max_parallel": 4,
   "steps": [
+    {
+      "step_id": "03",
+      "script": "scripts/03_parallel_baseline.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 938.2593333721161
+    },
+    {
+      "step_id": "04",
+      "script": "scripts/04_parallel_injection.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 14260.281762123108
+    },
+    {
+      "step_id": "05",
+      "script": "scripts/05_parallel_removal.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 7667.627250671387
+    },
+    {
+      "step_id": "06",
+      "script": "scripts/06_compute_asymmetry.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 12.94185733795166
+    },
+    {
+      "step_id": "07",
+      "script": "scripts/07_parallel_hessian.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 149.96375584602356
+    },
+    {
+      "step_id": "08",
+      "script": "scripts/08_linear_connectivity.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 694.2639832496643
+    },
+    {
+      "step_id": "09",
+      "script": "scripts/09_cultural_analysis.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 1.4669811725616455
+    },
+    {
+      "step_id": "10",
+      "script": "scripts/10_parallel_comparatives.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 18099.392656326294
+    },
     {
       "step_id": "11",
       "script": "scripts/11_comparative_asymmetry.py",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 5.176915884017944
+      "elapsed_seconds": 6.829277753829956
     },
     {
       "step_id": "12",
       "script": "scripts/12_generate_figures.py",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 2.9211349487304688
+      "elapsed_seconds": 2.9201345443725586
     },
     {
       "step_id": "13",
       "script": "scripts/13_generate_tables.py",
       "status": "success",
       "returncode": 0,
-      "elapsed_seconds": 6.980865716934204
+      "elapsed_seconds": 558.3035464286804
     }
   ],
-  "started": "2026-03-22T00:19:59.685593",
-  "finished": "2026-03-22T00:20:14.764777"
+  "started": "2026-03-22T06:23:56.330710",
+  "finished": "2026-03-22T18:10:28.582086"
 }

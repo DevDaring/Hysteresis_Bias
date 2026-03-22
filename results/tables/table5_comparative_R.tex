@@ -14,6 +14,26 @@ Model & Type & Method & $R$ & 95\% CI & Paper \\
   gemma-3-4b-it & causal & C5_BiasEdit & $4.00 \pm 0.00$ & [4.00, 4.00] & [15] \\
   gemma-3-4b-it & causal & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
 \midrule
+  gpt-oss-20b & causal & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.05] & Ours \\
+  gpt-oss-20b & causal & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.05] & [11] \\
+  gpt-oss-20b & causal & C2_SelfDebias & $0.00 \pm 0.00$ & [0.00, 0.00] & [12] \\
+  gpt-oss-20b & causal & C3_INLP & $4.00 \pm 0.00$ & [4.00, 4.00] & [13] \\
+  gpt-oss-20b & causal & C4_DAMA & $4.00 \pm 0.00$ & [4.00, 4.00] & [14] \\
+  gpt-oss-20b & causal & C5_BiasEdit & $0.05 \pm 0.00$ & [0.05, 0.05] & [15] \\
+  gpt-oss-20b & causal & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
+\midrule
+  indicbert-v2 & encoder & Phase2_Contrastive & $0.06 \pm 0.01$ & [0.05, 0.07] & Ours \\
+  indicbert-v2 & encoder & C1_CDA & $0.06 \pm 0.01$ & [0.05, 0.07] & [11] \\
+  indicbert-v2 & encoder & C3_INLP & $0.01 \pm 0.00$ & [0.00, 0.01] & [13] \\
+  indicbert-v2 & encoder & C5_BiasEdit & $1.95 \pm 2.67$ & [0.05, 5.71] & [15] \\
+  indicbert-v2 & encoder & C6_GradientAscent & $0.06 \pm 0.01$ & [0.05, 0.07] & [16] \\
+\midrule
+  jhu-clsp-mmbert & encoder & Phase2_Contrastive & $0.21 \pm 0.03$ & [0.17, 0.25] & Ours \\
+  jhu-clsp-mmbert & encoder & C1_CDA & $0.21 \pm 0.03$ & [0.17, 0.25] & [11] \\
+  jhu-clsp-mmbert & encoder & C3_INLP & $0.03 \pm 0.01$ & [0.02, 0.04] & [13] \\
+  jhu-clsp-mmbert & encoder & C5_BiasEdit & $16.44 \pm 2.74$ & [13.33, 20.00] & [15] \\
+  jhu-clsp-mmbert & encoder & C6_GradientAscent & $0.21 \pm 0.03$ & [0.17, 0.25] & [16] \\
+\midrule
   llama-3.1-8b & causal & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.05] & Ours \\
   llama-3.1-8b & causal & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.05] & [11] \\
   llama-3.1-8b & causal & C2_SelfDebias & $0.00 \pm 0.00$ & [0.00, 0.00] & [12] \\
@@ -41,6 +61,14 @@ Model & Type & Method & $R$ & 95\% CI & Paper \\
   qwen2.5-1.5b & causal & C4_DAMA & $4.00 \pm 0.00$ & [4.00, 4.00] & [14] \\
   qwen2.5-1.5b & causal & C5_BiasEdit & $0.05 \pm 0.00$ & [0.05, 0.05] & [15] \\
   qwen2.5-1.5b & causal & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
+\midrule
+  sarvam-2b & causal & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.05] & Ours \\
+  sarvam-2b & causal & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.05] & [11] \\
+  sarvam-2b & causal & C2_SelfDebias & $0.00 \pm 0.00$ & [0.00, 0.00] & [12] \\
+  sarvam-2b & causal & C3_INLP & $4.00 \pm 0.00$ & [4.00, 4.00] & [13] \\
+  sarvam-2b & causal & C4_DAMA & $4.00 \pm 0.00$ & [4.00, 4.00] & [14] \\
+  sarvam-2b & causal & C5_BiasEdit & $0.05 \pm 0.00$ & [0.05, 0.05] & [15] \\
+  sarvam-2b & causal & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
 \midrule
   xlm-roberta & encoder & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.06] & Ours \\
   xlm-roberta & encoder & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.06] & [11] \\

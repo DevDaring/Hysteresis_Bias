@@ -1,0 +1,1136 @@
+[
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.0,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6381459587564071,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4423353262793492,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.45379837653655114,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.6660084376002059,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6278719620572196,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.4949088896955213,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4820332248141435,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5605288334190845,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.4829267048784955,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7585157075753579,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.6569940265035257,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5712715328849666,
+    "timestamp": "2026-03-22T15:15:55.121308"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.1,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6334486084679762,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.43790772825698643,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.45195403653252425,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.657586346654331,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6242981946302785,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.49826233215149374,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.48105742557704245,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5643008214732012,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.49069862061349506,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7630016706310786,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.6429335995344445,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5693125208764211,
+    "timestamp": "2026-03-22T15:16:21.410765"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.2,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6299613522738219,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4358790128437035,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.45132878078913474,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.6503347502473522,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.621351277060581,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5024177226230442,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4789195203448872,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.568186150242885,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.49461445885456423,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7706543946495423,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.6327518448233604,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5676580447702482,
+    "timestamp": "2026-03-22T15:16:47.688891"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.3,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6258011041084925,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.431298841996228,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.45057289821939084,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.6381311217213378,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6182666681142468,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.503853082844627,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.47825615408647854,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5739841721951962,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5003582229414447,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7743080023389596,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.6147642383002676,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5652528829267786,
+    "timestamp": "2026-03-22T15:17:14.286883"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.4,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6225922008603811,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4303326084114173,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44957417551194384,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.6273963304565233,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6151845927416074,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5082610903003614,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4788522256484784,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5786074673136076,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5058115752921863,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7784750083318124,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.5964345681422856,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5636219326300979,
+    "timestamp": "2026-03-22T15:17:40.661581"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.5,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6183029837533831,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.42855127659790654,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44969989206765604,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.620842914809199,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6121318164008736,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5098267889829473,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4789845248884081,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5783261104176441,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5090247408000075,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.782066380748382,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.5753355066117365,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5613995881197948,
+    "timestamp": "2026-03-22T15:18:07.008125"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.6,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6157401219382882,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4291189324987285,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44929712305687036,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.6112739533624229,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6097747591145412,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.51228555822238,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4795616060106801,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5789259554197391,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5143818550489165,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7870875321901761,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.5618524219316896,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5601648785664194,
+    "timestamp": "2026-03-22T15:18:33.360944"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.7,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6120379242300987,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4284687129616299,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.4494700886991939,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.6021085418760777,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6073229045165006,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5147351673114181,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.47944113672644095,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5793428377558788,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5191187314710326,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.788237058199369,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.5508737979616853,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5585141682050315,
+    "timestamp": "2026-03-22T15:18:59.507038"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.8,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6085618880018592,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.42743774832171555,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44837386639239,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5924401207662681,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6047824786392727,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5163777754468385,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.47977336454346803,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5763454403107365,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5215452253522183,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7925856463038005,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.5332815022338764,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5563120565577441,
+    "timestamp": "2026-03-22T15:19:25.842111"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 0.9,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6053784952250619,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4279079034595805,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44908718146530735,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5869100276819047,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6029552511607457,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5192926257234742,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.48040767554178004,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5721260349576672,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5268662584395233,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.7958605501514214,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.527252247742581,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5555831500269789,
+    "timestamp": "2026-03-22T15:19:52.287725"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.0,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.6011320342185597,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.42851225437377305,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44940426336520867,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5805285568622982,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.6014474205522224,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5192960796084662,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4810218736877908,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5684142988175154,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5300350724613633,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8013670822748771,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.5146173590437684,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5540741460975837,
+    "timestamp": "2026-03-22T15:20:18.817178"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.1,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5989515983996292,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4316827578826205,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.4495658592847855,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5729814049623468,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5998178674190333,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5189282017223201,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4808581480125655,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5641667190939188,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5326913041803478,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8011293909870661,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.5052177740999468,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5526171058256341,
+    "timestamp": "2026-03-22T15:20:45.160413"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.2,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5957943683179716,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.43141775644685637,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.4487411650514141,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5697343586670125,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5976869137346218,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5224337086865782,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4815433909510633,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5563572912166516,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5343791640532966,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8056720254512933,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.4976607625321776,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5514659443759616,
+    "timestamp": "2026-03-22T15:21:11.521647"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.3,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5925428754013653,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.43212698873214644,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44978789324153656,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.562996127149638,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5958835655503502,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5244506189018495,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.48118874439841103,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5556287529567877,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5358352705158971,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8085248779792052,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.4895181889387459,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5500461219737702,
+    "timestamp": "2026-03-22T15:21:37.885583"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.4,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5909480563520143,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4324352877104984,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.4492719571370886,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5600261662484092,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5950291489834211,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5239417811009491,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4815103982522536,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5490719958518943,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5378681444774636,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8100179399435337,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.48158072023420573,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.549129684298632,
+    "timestamp": "2026-03-22T15:22:04.110740"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.5,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5879104929875272,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.435424272710567,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44921237705406514,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5547324354650781,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5932304864711683,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5247576741585362,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.481635196920485,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5428214007988572,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5370484849607403,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8147071806284097,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.475725073501053,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5476489854078289,
+    "timestamp": "2026-03-22T15:22:30.485591"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.6,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5842592783893148,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.43648633978548734,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.450912684110193,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5489989655667588,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5927659602932199,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.526129687855187,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.48248856674392204,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5384552528460821,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5394412826916034,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8143220337537619,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.4679965039088074,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5466602274235066,
+    "timestamp": "2026-03-22T15:22:56.873413"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.7,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5825003081012983,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.43659703082555684,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.4508080898411532,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5461267322603175,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.59008801739423,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5228922603490049,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4817670730267279,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5332329223553339,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5422232780838385,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8170068539105929,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.4606888708831889,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.545121144382785,
+    "timestamp": "2026-03-22T15:23:22.821031"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.8,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5789253745503569,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4406069383463439,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.4503142417672477,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5417166923939744,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5895270748937624,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5259585588676146,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.48227299189395245,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5308462791144848,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5407648357266391,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8219479929942352,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.457047059213437,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5442721783919471,
+    "timestamp": "2026-03-22T15:23:48.591960"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 1.9,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5768690496663719,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4397761656505549,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.44915458909981476,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5392112200668848,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5883593660872782,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.526919718879449,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.48228271585629817,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5228084431340297,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.541786918300204,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8233492340032871,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.45128592191321104,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5431519527778635,
+    "timestamp": "2026-03-22T15:24:14.641249"
+  },
+  {
+    "comparative": "C2_SelfDebias",
+    "paper": "[12] Schick et al. (2021) TACL",
+    "alpha": 2.0,
+    "seed": 456,
+    "bias_scores": {
+      "race": {
+        "mean_bias_score": 0.5739079816237791,
+        "n": 75
+      },
+      "age": {
+        "mean_bias_score": 0.4402022485155612,
+        "n": 17
+      },
+      "caste": {
+        "mean_bias_score": 0.4518277901438112,
+        "n": 21
+      },
+      "socioeconomic": {
+        "mean_bias_score": 0.5350656519226237,
+        "n": 34
+      },
+      "race-color": {
+        "mean_bias_score": 0.5872342030416628,
+        "n": 99
+      },
+      "nationality": {
+        "mean_bias_score": 0.5269225284050497,
+        "n": 31
+      },
+      "gender": {
+        "mean_bias_score": 0.4821024554781789,
+        "n": 74
+      },
+      "disability": {
+        "mean_bias_score": 0.5199724715203047,
+        "n": 12
+      },
+      "religion": {
+        "mean_bias_score": 0.5413157519969073,
+        "n": 44
+      },
+      "physical-appearance": {
+        "mean_bias_score": 0.8248253625172836,
+        "n": 13
+      },
+      "sexual-orientation": {
+        "mean_bias_score": 0.4460163205143175,
+        "n": 16
+      }
+    },
+    "overall_bias_score": 0.5419038357318003,
+    "timestamp": "2026-03-22T15:24:40.507207"
+  }
+]
