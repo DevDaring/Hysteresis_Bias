@@ -1,0 +1,42 @@
+[
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 1,
+    "seed": 123,
+    "classifier_accuracy": 0.7190366972477065,
+    "bias_score_approx": 0.7190366972477065,
+    "n_dimensions_removed": 1,
+    "timestamp": "2026-03-21T18:48:18.906166"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 2,
+    "seed": 123,
+    "classifier_accuracy": 0.5607798165137615,
+    "bias_score_approx": 0.5607798165137615,
+    "n_dimensions_removed": 2,
+    "timestamp": "2026-03-21T18:48:19.095848"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 3,
+    "seed": 123,
+    "classifier_accuracy": 0.5447247706422018,
+    "bias_score_approx": 0.5447247706422018,
+    "n_dimensions_removed": 3,
+    "timestamp": "2026-03-21T18:48:19.198536"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 4,
+    "seed": 123,
+    "classifier_accuracy": 0.5252293577981652,
+    "bias_score_approx": 0.5252293577981652,
+    "n_dimensions_removed": 4,
+    "timestamp": "2026-03-21T18:48:19.284983"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 1,
+    "seed": 123,
+    "classifier_accuracy": 0.7614678899082569,
+    "bias_score_approx": 0.7614678899082569,
+    "n_dimensions_removed": 1,
+    "timestamp": "2026-03-21T18:47:56.583826"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 2,
+    "seed": 123,
+    "classifier_accuracy": 0.6548165137614679,
+    "bias_score_approx": 0.6548165137614679,
+    "n_dimensions_removed": 2,
+    "timestamp": "2026-03-21T18:47:57.771894"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 3,
+    "seed": 123,
+    "classifier_accuracy": 0.6158256880733946,
+    "bias_score_approx": 0.6158256880733946,
+    "n_dimensions_removed": 3,
+    "timestamp": "2026-03-21T18:47:58.534538"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 4,
+    "seed": 123,
+    "classifier_accuracy": 0.5848623853211009,
+    "bias_score_approx": 0.5848623853211009,
+    "n_dimensions_removed": 4,
+    "timestamp": "2026-03-21T18:47:58.676512"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 5,
+    "seed": 123,
+    "classifier_accuracy": 0.5561926605504587,
+    "bias_score_approx": 0.5561926605504587,
+    "n_dimensions_removed": 5,
+    "timestamp": "2026-03-21T18:47:58.735760"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 6,
+    "seed": 123,
+    "classifier_accuracy": 0.5504587155963303,
+    "bias_score_approx": 0.5504587155963303,
+    "n_dimensions_removed": 6,
+    "timestamp": "2026-03-21T18:47:59.044689"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 7,
+    "seed": 123,
+    "classifier_accuracy": 0.5435779816513762,
+    "bias_score_approx": 0.5435779816513762,
+    "n_dimensions_removed": 7,
+    "timestamp": "2026-03-21T18:47:59.149430"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 8,
+    "seed": 123,
+    "classifier_accuracy": 0.5321100917431193,
+    "bias_score_approx": 0.5321100917431193,
+    "n_dimensions_removed": 8,
+    "timestamp": "2026-03-21T18:47:59.389926"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 9,
+    "seed": 123,
+    "classifier_accuracy": 0.5286697247706422,
+    "bias_score_approx": 0.5286697247706422,
+    "n_dimensions_removed": 9,
+    "timestamp": "2026-03-21T18:47:59.689513"
+  },
+  {
+    "comparative": "C3_INLP",
+    "paper": "[13] Ravfogel et al. (2020) ACL",
+    "iteration": 10,
+    "seed": 123,
+    "classifier_accuracy": 0.5309633027522935,
+    "bias_score_approx": 0.5309633027522935,
+    "n_dimensions_removed": 10,
+    "timestamp": "2026-03-21T18:47:59.897892"
+  }
+]

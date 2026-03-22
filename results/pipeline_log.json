@@ -1,0 +1,30 @@
+{
+  "wall_clock_hours": 0.0041886561446719695,
+  "mode": "parallel",
+  "max_parallel": 6,
+  "steps": [
+    {
+      "step_id": "11",
+      "script": "scripts/11_comparative_asymmetry.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 5.176915884017944
+    },
+    {
+      "step_id": "12",
+      "script": "scripts/12_generate_figures.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 2.9211349487304688
+    },
+    {
+      "step_id": "13",
+      "script": "scripts/13_generate_tables.py",
+      "status": "success",
+      "returncode": 0,
+      "elapsed_seconds": 6.980865716934204
+    }
+  ],
+  "started": "2026-03-22T00:19:59.685593",
+  "finished": "2026-03-22T00:20:14.764777"
+}

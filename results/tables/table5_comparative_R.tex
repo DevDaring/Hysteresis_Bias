@@ -1,0 +1,52 @@
+\begin{table*}[t]
+\centering
+\caption{Method-Independence of the Bias Hysteresis Principle across all models.}
+\label{tab:comparative_R}
+\begin{tabular}{llcccc}
+\toprule
+Model & Type & Method & $R$ & 95\% CI & Paper \\
+\midrule
+  gemma-3-4b-it & causal & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.05] & Ours \\
+  gemma-3-4b-it & causal & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.05] & [11] \\
+  gemma-3-4b-it & causal & C2_SelfDebias & $0.00 \pm 0.00$ & [0.00, 0.00] & [12] \\
+  gemma-3-4b-it & causal & C3_INLP & $4.00 \pm 0.00$ & [4.00, 4.00] & [13] \\
+  gemma-3-4b-it & causal & C4_DAMA & $4.00 \pm 0.00$ & [4.00, 4.00] & [14] \\
+  gemma-3-4b-it & causal & C5_BiasEdit & $4.00 \pm 0.00$ & [4.00, 4.00] & [15] \\
+  gemma-3-4b-it & causal & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
+\midrule
+  llama-3.1-8b & causal & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.05] & Ours \\
+  llama-3.1-8b & causal & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.05] & [11] \\
+  llama-3.1-8b & causal & C2_SelfDebias & $0.00 \pm 0.00$ & [0.00, 0.00] & [12] \\
+  llama-3.1-8b & causal & C3_INLP & $0.01 \pm 0.00$ & [0.01, 0.01] & [13] \\
+  llama-3.1-8b & causal & C4_DAMA & $4.00 \pm 0.00$ & [4.00, 4.00] & [14] \\
+  llama-3.1-8b & causal & C5_BiasEdit & $0.05 \pm 0.00$ & [0.05, 0.05] & [15] \\
+  llama-3.1-8b & causal & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
+\midrule
+  mbert & encoder & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.05] & Ours \\
+  mbert & encoder & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.05] & [11] \\
+  mbert & encoder & C3_INLP & $0.00 \pm 0.00$ & [0.00, 0.00] & [13] \\
+  mbert & encoder & C5_BiasEdit & $0.05 \pm 0.00$ & [0.05, 0.05] & [15] \\
+  mbert & encoder & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
+\midrule
+  muril & encoder & Phase2_Contrastive & $0.11 \pm 0.01$ & [0.09, 0.12] & Ours \\
+  muril & encoder & C1_CDA & $0.11 \pm 0.01$ & [0.09, 0.12] & [11] \\
+  muril & encoder & C3_INLP & $0.01 \pm 0.00$ & [0.01, 0.01] & [13] \\
+  muril & encoder & C5_BiasEdit & $8.72 \pm 1.12$ & [7.27, 10.00] & [15] \\
+  muril & encoder & C6_GradientAscent & $0.11 \pm 0.01$ & [0.09, 0.12] & [16] \\
+\midrule
+  qwen2.5-1.5b & causal & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.05] & Ours \\
+  qwen2.5-1.5b & causal & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.05] & [11] \\
+  qwen2.5-1.5b & causal & C2_SelfDebias & $0.00 \pm 0.00$ & [0.00, 0.00] & [12] \\
+  qwen2.5-1.5b & causal & C3_INLP & $0.01 \pm 0.00$ & [0.01, 0.01] & [13] \\
+  qwen2.5-1.5b & causal & C4_DAMA & $4.00 \pm 0.00$ & [4.00, 4.00] & [14] \\
+  qwen2.5-1.5b & causal & C5_BiasEdit & $0.05 \pm 0.00$ & [0.05, 0.05] & [15] \\
+  qwen2.5-1.5b & causal & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.05] & [16] \\
+\midrule
+  xlm-roberta & encoder & Phase2_Contrastive & $0.05 \pm 0.00$ & [0.05, 0.06] & Ours \\
+  xlm-roberta & encoder & C1_CDA & $0.05 \pm 0.00$ & [0.05, 0.06] & [11] \\
+  xlm-roberta & encoder & C3_INLP & $0.00 \pm 0.00$ & [0.00, 0.00] & [13] \\
+  xlm-roberta & encoder & C5_BiasEdit & $0.05 \pm 0.00$ & [0.05, 0.06] & [15] \\
+  xlm-roberta & encoder & C6_GradientAscent & $0.05 \pm 0.00$ & [0.05, 0.06] & [16] \\
+\bottomrule
+\end{tabular}
+\end{table*}

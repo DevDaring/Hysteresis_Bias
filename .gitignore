@@ -21,6 +21,7 @@ results/*/final_biased/
 results/*/final_debiased/
 results/*/latest/
 results/dry_run/
+results/logs/
 
 # Checkpoints (binary weights)
 *.pt
@@ -30,6 +31,8 @@ adapter_model/
 
 # Temp archives
 *.tar.gz
+results_json_part_*
+test_qwen_c2.py
 
 # Notebooks
 .ipynb_checkpoints/
