@@ -33,7 +33,7 @@ from src.analysis.linear_connectivity import compute_linear_connectivity
 
 logger = get_logger("08_linear_connectivity")
 
-FOCUS_MODELS = ["llama-3.1-8b", "muril", "gpt-oss-20b", "indicbert-v2"]
+FOCUS_MODELS = ["gpt-oss-20b", "indicbert-v2"]
 
 
 def main():

@@ -35,8 +35,8 @@ from src.analysis.hessian_analysis import compute_top_k_eigenvalues, hutchinson_
 
 logger = get_logger("07_hessian_analysis")
 
-# Focus models for Phase 4 (1 causal + 1 encoder per run: old + new)
-FOCUS_MODELS = ["llama-3.1-8b", "muril", "gpt-oss-20b", "indicbert-v2"]
+# Focus models for Phase 4 — only models with checkpoints available
+FOCUS_MODELS = ["gpt-oss-20b", "indicbert-v2"]
 
 
 def main():
@@ -126,8 +126,13 @@ def main():
             del model
             torch.cuda.empty_cache()
 
-    # Save
+    # Save — merge with existing results from prior runs
     out_path = get_results_dir("phase4_geometry") / "hessian_results.json"
+    if out_path.exists():
+        with open(out_path) as f:
+            existing = json.load(f)
+        existing.update(all_results)
+        all_results = existing
     with open(out_path, "w") as f:
         json.dump(all_results, f, indent=2)
 

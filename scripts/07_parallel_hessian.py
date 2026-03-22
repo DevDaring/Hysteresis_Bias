@@ -26,7 +26,7 @@ from src.utils.logging_setup import get_logger
 logger = get_logger("07_parallel_hessian")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-FOCUS_MODELS = ["llama-3.1-8b", "muril", "gpt-oss-20b", "indicbert-v2"]
+FOCUS_MODELS = ["gpt-oss-20b", "indicbert-v2"]
 
 
 def run_hessian_for_model(model_name: str) -> dict:
@@ -149,16 +149,20 @@ def main():
             icon = "✅" if result["status"] == "success" else "❌"
             logger.info(f"  {icon} {result['model']}: {result['status']} ({result['elapsed_hours']:.2f} hrs)")
 
-    # Merge per-model results
-    merged = {}
+    # Merge per-model results, preserving existing data from prior runs
     geom_dir = get_results_dir("phase4_geometry")
+    out_path = geom_dir / "hessian_results.json"
+    merged = {}
+    if out_path.exists():
+        with open(out_path) as f:
+            merged = json.load(f)
+        logger.info(f"Loaded existing hessian results ({len(merged)} keys)")
     for model_name in FOCUS_MODELS:
         part_file = geom_dir / f"hessian_{model_name}.json"
         if part_file.exists():
             with open(part_file) as f:
                 merged.update(json.load(f))
 
-    out_path = geom_dir / "hessian_results.json"
     with open(out_path, "w") as f:
         json.dump(merged, f, indent=2)
 
