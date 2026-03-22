@@ -16,8 +16,10 @@ For each sample, captures:
 This provides QUALITATIVE evidence of hysteresis — reviewers can SEE the
 bias sticking in actual model outputs.
 
-Optimizations (output-preserving, no batching):
-  - Single forward pass per sample: top-k + stereo + anti from one logits tensor
+Optimizations (output-preserving):
+  - Batched greedy generation: left-padded batches with do_sample=False produce
+    identical outputs to sequential processing (deterministic argmax, RoPE-invariant)
+  - output_scores=True extracts probe logits from the same generate() call
   - Base model loaded once, reused across all 3 languages before deletion
 
 # ============================================================
@@ -59,6 +61,7 @@ logger = get_logger("14_qualitative_outputs")
 
 TOP_K = 10
 MAX_GEN_TOKENS = 50
+BATCH_SIZE = 32  # For batched causal generation (greedy = deterministic = batch-safe)
 
 
 # ────────────────────────────────────────────────────────────
@@ -241,8 +244,125 @@ def _load_with_lora(model_name: str, model_config: dict,
     return peft_model, tokenizer
 
 
-def _probe_all_samples(model, tokenizer, probe_fn, eval_data, device):
-    """Run probe_fn over all samples, returning list of result dicts."""
+# ────────────────────────────────────────────────────────────
+# Batched causal probing — greedy generation is deterministic
+# ────────────────────────────────────────────────────────────
+@torch.no_grad()
+def _probe_all_samples_batched_causal(model, tokenizer, eval_data, device):
+    """Batched probing + generation for causal models.
+
+    Greedy decoding (do_sample=False) with left-padded batches produces
+    identical outputs to sequential processing:
+      - RoPE position IDs are computed from attention_mask (padding-invariant)
+      - Flash Attention 2 processes each sequence independently via masks
+      - argmax is robust to any sub-ULP floating-point variation
+
+    Uses output_scores to extract probe logits from the same generate() call.
+    """
+    orig_padding_side = tokenizer.padding_side
+    tokenizer.padding_side = "left"
+
+    results = [None] * len(eval_data)
+
+    # Separate empty-prefix samples (Qwen BOS edge case)
+    prefixes = []
+    valid_indices = []
+
+    for i, ex in enumerate(eval_data):
+        sentence = ex["masked_text"]
+        prefix = sentence.split("MASK")[0]
+        test_ids = tokenizer.encode(prefix, add_special_tokens=True)
+
+        if len(test_ids) == 0:
+            stereo_targets = _parse_targets(ex["stereo_target"])
+            anti_targets = _parse_targets(ex["anti_target"])
+            results[i] = {
+                "prefix": prefix.strip(),
+                "top_k_next_tokens": [],
+                "stereo_target": " ".join(str(t) for t in stereo_targets),
+                "anti_target": " ".join(str(t) for t in anti_targets),
+                "p_stereo": 0.0, "p_anti": 0.0,
+                "generation": "",
+                "sample_idx": i,
+                "bias_category": ex.get("bias_category", "unknown"),
+                "dataset": ex.get("dataset", "unknown"),
+            }
+        else:
+            prefixes.append(prefix)
+            valid_indices.append(i)
+
+    # Process valid samples in batches
+    for b_start in range(0, len(prefixes), BATCH_SIZE):
+        b_end = min(b_start + BATCH_SIZE, len(prefixes))
+        batch_prefixes = prefixes[b_start:b_end]
+        batch_indices = valid_indices[b_start:b_end]
+
+        batch_inputs = tokenizer(
+            batch_prefixes, return_tensors="pt",
+            padding=True, truncation=True, max_length=512,
+        ).to(device)
+
+        # Single generate() call: generation + first-step logits for probe
+        gen_output = model.generate(
+            batch_inputs["input_ids"],
+            attention_mask=batch_inputs["attention_mask"],
+            max_new_tokens=MAX_GEN_TOKENS,
+            do_sample=False,
+            num_beams=1,
+            pad_token_id=tokenizer.pad_token_id,
+            return_dict_in_generate=True,
+            output_scores=True,
+        )
+
+        # scores[0] = logits at first generated step = next-token prediction
+        first_logits = gen_output.scores[0]  # [batch, vocab]
+        probs_all = F.softmax(first_logits, dim=-1)
+        input_len = batch_inputs["input_ids"].shape[1]
+
+        for j, global_idx in enumerate(batch_indices):
+            ex = eval_data[global_idx]
+
+            # Generation text
+            gen_text = tokenizer.decode(
+                gen_output.sequences[j][input_len:],
+                skip_special_tokens=True,
+            )
+
+            # Probe from first-step logits
+            probs = probs_all[j]
+            topk_probs, topk_ids = torch.topk(probs, TOP_K)
+            top_k_tokens = [
+                {"token": tokenizer.decode([tid]), "prob": float(p)}
+                for tid, p in zip(topk_ids.tolist(), topk_probs.tolist())
+            ]
+
+            stereo_targets = _parse_targets(ex["stereo_target"])
+            anti_targets = _parse_targets(ex["anti_target"])
+            stereo_str = " ".join(str(t) for t in stereo_targets)
+            anti_str = " ".join(str(t) for t in anti_targets)
+
+            results[global_idx] = {
+                "prefix": batch_prefixes[j].strip(),
+                "top_k_next_tokens": top_k_tokens,
+                "stereo_target": stereo_str,
+                "anti_target": anti_str,
+                "p_stereo": _prob_from_probs(tokenizer, probs, stereo_str),
+                "p_anti": _prob_from_probs(tokenizer, probs, anti_str),
+                "generation": gen_text.strip(),
+                "sample_idx": global_idx,
+                "bias_category": ex.get("bias_category", "unknown"),
+                "dataset": ex.get("dataset", "unknown"),
+            }
+
+    tokenizer.padding_side = orig_padding_side
+    return results
+
+
+def _probe_all_samples(model, tokenizer, probe_fn, eval_data, device,
+                       model_type="encoder"):
+    """Run probe over all samples. Batched for causal, sequential for encoder."""
+    if model_type == "causal":
+        return _probe_all_samples_batched_causal(model, tokenizer, eval_data, device)
     results = []
     for i, example in enumerate(eval_data):
         out = probe_fn(model, tokenizer, example, device)
@@ -320,7 +440,7 @@ def main():
             eval_data = eval_data_by_lang[lang]
             all_outputs[model_name].setdefault(lang, {})
             all_outputs[model_name][lang]["baseline"] = _probe_all_samples(
-                model, tokenizer, probe_fn, eval_data, device)
+                model, tokenizer, probe_fn, eval_data, device, model_type)
             elapsed = time.time() - t_lang
             logger.info(f"    baseline/{lang}: {len(eval_data)} samples in {elapsed:.1f}s")
 
@@ -339,7 +459,7 @@ def main():
                 device = next(model.parameters()).device
                 eval_data = eval_data_by_lang[lang]
                 all_outputs[model_name][lang]["peak_injection"] = _probe_all_samples(
-                    model, tokenizer, probe_fn, eval_data, device)
+                    model, tokenizer, probe_fn, eval_data, device, model_type)
                 all_outputs[model_name][lang]["injection_checkpoint"] = str(ckpt_inj)
                 elapsed = time.time() - t_lang
                 logger.info(f"    injection/{lang}: {len(eval_data)} samples in {elapsed:.1f}s")
@@ -361,7 +481,7 @@ def main():
                 device = next(model.parameters()).device
                 eval_data = eval_data_by_lang[lang]
                 all_outputs[model_name][lang]["post_removal"] = _probe_all_samples(
-                    model, tokenizer, probe_fn, eval_data, device)
+                    model, tokenizer, probe_fn, eval_data, device, model_type)
                 all_outputs[model_name][lang]["removal_checkpoint"] = str(ckpt_rem)
                 elapsed = time.time() - t_lang
                 logger.info(f"    removal/{lang}: {len(eval_data)} samples in {elapsed:.1f}s")
