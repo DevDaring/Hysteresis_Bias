@@ -3,11 +3,12 @@
 **Server:** DigitalOcean H200 GPU Droplet (IP: 134.199.199.167)
 **GPU:** NVIDIA H200 — 143,771 MiB (150.1 GB) VRAM, CUDA 12.9
 **Stack:** Python 3.12.13, torch 2.6.0+cu124, transformers 4.57.6, Flash Attention 2.8.3, peft 0.13.2
-**Pipeline Mode:** Parallel (all 6 models simultaneously)
+**Pipeline Mode:** Parallel (all 6 original models simultaneously; expanded to 10 models)
 **Pipeline Started:** 2026-03-21 11:19 UTC
 **Pipeline Restarted (from Step 10):** 2026-03-21 16:36 UTC (bug fix — save_results() in comparatives)
-**Last Updated:** 2026-03-22 ~04:00 UTC
-**Pipeline Completed:** 2026-03-22 01:06 UTC (main pipeline) | 03:36 UTC (qualitative outputs)
+**Last Updated:** 2026-03-23 ~XX:XX UTC
+**Pipeline Completed (6 models):** 2026-03-22 01:06 UTC (main pipeline) | 03:36 UTC (qualitative outputs)
+**10-Model Expansion:** Code ready, pipeline pending
 
 ---
 
@@ -22,7 +23,7 @@
 | Flash Attention | DONE | 2.8.3 — confirmed working with torch 2.6.0 |
 | Code deployed | DONE | Git commit eafb25a on master branch (save_results fix) |
 
-### Model Configuration
+### Model Configuration (Original 6)
 | Model | HuggingFace ID | Params | Type | Precision | Status |
 |-------|---------------|--------|------|-----------|--------|
 | Qwen2.5-1.5B | Qwen/Qwen2.5-1.5B-Instruct | 1.5B | Causal | float16 | VERIFIED |
@@ -31,6 +32,20 @@
 | mBERT | google-bert/bert-base-multilingual-cased | 178M | Encoder | float16 | VERIFIED |
 | XLM-RoBERTa | FacebookAI/xlm-roberta-base | 278M | Encoder | float16 | VERIFIED |
 | MuRIL | google/muril-base-cased | 236M | Encoder | float16 | VERIFIED |
+
+### Model Configuration (4 New Models for 10-Model Expansion)
+| Model | HuggingFace ID | Params | Type | Precision | VRAM (est.) | Status |
+|-------|---------------|--------|------|-----------|-------------|--------|
+| GPT-oss-20B | openai/gpt-oss-20b | 21B (MoE) | Causal | bfloat16 | ~45 GB | VERIFIED (LoRA + forward pass) |
+| Sarvam-2B | sarvamai/sarvam-2b-v0.5 | 2.5B | Causal | bfloat16 | ~10 GB | VERIFIED (LoRA + forward pass) |
+| IndicBERTv2 | ai4bharat/IndicBERTv2-MLM-only | 278M | Encoder | float16 | ~1.5 GB | VERIFIED (LoRA + forward pass) |
+| jhu-clsp-mmBERT | jhu-clsp/mmBERT-base | 307M | Encoder | float16 | ~2 GB | VERIFIED (LoRA target: Wqkv) |
+
+**Notes on new models:**
+- **GPT-oss-20B:** MoE architecture (21B params). MXFP4 quantization falls back to bf16 on current VM (needs Triton >= 3.4.0). Uses ~42 GB VRAM in bf16.
+- **Sarvam-2B:** Llama-based Indian multilingual model. 2.5B params, bfloat16.
+- **IndicBERTv2:** AI4Bharat BERT model, MLM-only variant. Supports en/hi/bn.
+- **jhu-clsp-mmBERT:** ModernBERT architecture (1800+ languages). Uses fused attention layer `Wqkv` instead of separate query/key/value — LoRA target set to `["Wqkv"]`.
 
 ### Pre-Run Verification
 | Check | Status | Result |
@@ -261,7 +276,7 @@
 
 ---
 
-## Summary
+## Summary (Original 6-Model Run)
 
 | Phase | Description | Status | Wall Time |
 |-------|-------------|--------|-----------|
@@ -273,12 +288,12 @@
 | Phase 4a | Hessian analysis | **COMPLETED** | 0.05 hrs |
 | Phase 4b | Linear connectivity | **COMPLETED** | ~13 min |
 | Phase 6 | Cultural analysis | **COMPLETED** | ~seconds |
-| Phase 5C | Comparative studies (C1 done, C2-C6 in progress) | **IN PROGRESS** | C1: 0.19 hrs |
-| Phase 5C-R | Comparative R | NOT STARTED | est. ~5 min |
-| Figures | Generate paper figures | NOT STARTED | est. ~2 min |
-| Tables | Generate paper tables | NOT STARTED | est. ~1 min |
-| Qualitative | Output capture (inference) | NOT STARTED | est. 15–25 min |
-| **Total** | | | **actual so far: ~5 hrs + est. ~2–3 hrs remaining** |
+| Phase 5C | Comparative studies (6 methods) | **COMPLETED** | ~5.5 hrs |
+| Phase 5C-R | Comparative R | **COMPLETED** | ~seconds |
+| Figures | Generate paper figures | **COMPLETED** | ~2 min |
+| Tables | Generate paper tables | **COMPLETED** | ~1 min |
+| Qualitative | Output capture (inference) | **COMPLETED** | 15.3 min |
+| **Total** | | | **~12.5 hrs effective** |
 
 ---
 
@@ -343,4 +358,51 @@ All scientific data downloaded to `results/` folder (excludes LoRA checkpoint bi
 - **Total wall-clock time:** ~16.3 hours (including restart, debugging, and optimization)
 - **Effective compute time:** ~12.5 hours
 - **Estimated total cost:** ~$58 (16.3 hrs × $3.55/hr)
-- **Server status:** GPU idle, ready for shutdown
+- **Server status:** GPU idle, ready for 10-model pipeline run
+
+---
+
+## 10-Model Expansion
+
+**Date:** 2026-03-23
+**Commit:** 67ad6ba ("Replace mdeberta-v3 with jhu-clsp/mmBERT-base")
+
+### What Changed
+- Expanded from 6 → 10 models (5 causal + 5 encoder)
+- Added 4 new models: GPT-oss-20B, Sarvam-2B, IndicBERTv2, jhu-clsp-mmBERT
+- Updated `configs/models.yaml`, `configs/training.yaml`, all parallel scripts
+- VRAM estimates updated in `04_parallel_injection.py` and `05_parallel_removal.py`
+- Hessian focus models expanded: Llama-3.1-8B, MuRIL → + GPT-oss-20B, IndicBERTv2
+- Default `--max-parallel` set to 10 in all parallel scripts
+- Total VRAM requirement: ~130 GB (tight fit on 141 GB H200)
+
+### Model Selection Rationale
+| Model | Reason |
+|-------|--------|
+| GPT-oss-20B | OpenAI's first open-source model; MoE architecture tests scalability of hysteresis |
+| Sarvam-2B | Indian-origin multilingual model; tests hysteresis in Indic-focused architectures |
+| IndicBERTv2 | AI4Bharat encoder with native Hindi/Bengali support; complements MuRIL |
+| jhu-clsp-mmBERT | ModernBERT covering 1800+ languages; broad multilingual encoder baseline |
+
+### Files Modified
+- `configs/models.yaml` — 10 model definitions (5 causal + 5 encoder)
+- `configs/training.yaml` — comparatives.enabled_models now has all 10
+- `scripts/04_parallel_injection.py` — model_order, vram_estimates, docstring
+- `scripts/05_parallel_removal.py` — same updates
+- `scripts/03_parallel_baseline.py` — docstring, max-parallel=10
+- `scripts/07_parallel_hessian.py` — FOCUS_MODELS expanded to 4
+- `scripts/10_parallel_comparatives.py` — max-parallel=10
+- `run_full_pipeline.py` — comments updated from "6 models" to "10 models"
+- `README.md` — full documentation update for 10 models
+
+### Pipeline Status (10-Model Run)
+| Phase | Status | Notes |
+|-------|--------|-------|
+| Original 6 models | **COMPLETED** | All phases done (see above) |
+| 4 new models — baseline | NOT STARTED | Will run via `run_full_pipeline.py` |
+| 4 new models — injection | NOT STARTED | 90 new experiments (10 models × 3 langs × 3 seeds) |
+| 4 new models — removal | NOT STARTED | Depends on injection completion |
+| 4 new models — asymmetry | NOT STARTED | CPU, will recompute for all 10 |
+| 4 new models — hessian | NOT STARTED | Focus: Llama, MuRIL, GPT-oss-20B, IndicBERTv2 |
+| 4 new models — comparatives | NOT STARTED | All 6 methods × 10 models |
+| Regenerate figures/tables | NOT STARTED | Will include all 10 models |

@@ -47,7 +47,7 @@ bash scripts/00_setup.sh
 python run_full_pipeline.py
 ```
 
-**Total time: ~12.5 hours on H200 (parallel) | ~42–57 hours on H100 (sequential)**
+**Total time: ~18–20 hours on H200 (parallel) | ~60–80 hours on H100 (sequential)**
 
 See [Execution_Progress.md](Execution_Progress.md) for detailed per-phase timings and results.
 
@@ -59,7 +59,7 @@ See [QUICKSTART.md](QUICKSTART.md) for detailed step-by-step instructions.
 
 - **Python 3.12+** (required for Flash Attention 2 pre-built wheels)
 - **CUDA 12.4**
-- **GPU:** NVIDIA H200 (141 GB VRAM) recommended for 6-model parallelism, or any GPU ≥ 24 GB for sequential mode
+- **GPU:** NVIDIA H200 (141 GB VRAM) recommended for 10-model parallelism (~130 GB VRAM), or any GPU ≥ 24 GB for sequential mode
 - **RAM:** ≥ 64 GB (240 GB for parallel mode)
 
 ### Install Order (GCP / Linux)
@@ -93,16 +93,20 @@ Github_Classic_Token=ghp_xxxxxxx    # For private dataset repos
 
 ## Models
 
-All 6 models are loaded in **float16** for uniformity. LoRA [5] adapters (rank=16) are attached for parameter-efficient fine-tuning. Flash Attention 2 is used automatically for causal models when available.
+All 10 models are loaded in **16-bit precision** (float16 or bfloat16 per architecture). LoRA [5] adapters (rank=16) are attached for parameter-efficient fine-tuning. Flash Attention 2 is used automatically for causal models when available.
 
-| Model | HuggingFace ID | Params | Type | Family |
-|-------|---------------|--------|------|--------|
-| **Qwen2.5-1.5B** | Qwen/Qwen2.5-1.5B-Instruct | 1.5B | Causal | Alibaba/Qwen |
-| **Gemma-3-4B** | google/gemma-3-4b-it | 4B | Causal | Google/Gemma |
-| **Llama-3.1-8B** | meta-llama/Llama-3.1-8B-Instruct | 8B | Causal | Meta/Llama |
-| **mBERT** | google-bert/bert-base-multilingual-cased | 178M | Encoder | Google/BERT |
-| **XLM-RoBERTa** | FacebookAI/xlm-roberta-base | 278M | Encoder | Meta/XLM-R |
-| **MuRIL** | google/muril-base-cased | 236M | Encoder | Google/MuRIL |
+| Model | HuggingFace ID | Params | Type | Precision | Family |
+|-------|---------------|--------|------|-----------|--------|
+| **Qwen2.5-1.5B** | Qwen/Qwen2.5-1.5B-Instruct | 1.5B | Causal | float16 | Alibaba/Qwen |
+| **Gemma-3-4B** | google/gemma-3-4b-it | 4B | Causal | bfloat16 | Google/Gemma |
+| **Llama-3.1-8B** | meta-llama/Llama-3.1-8B-Instruct | 8B | Causal | float16 | Meta/Llama |
+| **GPT-oss-20B** | openai/gpt-oss-20b | 21B (MoE) | Causal | bfloat16 | OpenAI/GPT |
+| **Sarvam-2B** | sarvamai/sarvam-2b-v0.5 | 2.5B | Causal | bfloat16 | Sarvam AI |
+| **mBERT** | google-bert/bert-base-multilingual-cased | 178M | Encoder | float16 | Google/BERT |
+| **XLM-RoBERTa** | FacebookAI/xlm-roberta-base | 278M | Encoder | float16 | Meta/XLM-R |
+| **MuRIL** | google/muril-base-cased | 236M | Encoder | float16 | Google/MuRIL |
+| **IndicBERTv2** | ai4bharat/IndicBERTv2-MLM-only | 278M | Encoder | float16 | AI4Bharat |
+| **jhu-clsp-mmBERT** | jhu-clsp/mmBERT-base | 307M | Encoder | float16 | JHU-CLSP/ModernBERT |
 
 All models evaluated across **3 languages**: English (en), Hindi (hi), Bengali (bn).
 
@@ -129,7 +133,7 @@ Hysteresis_Bias/
 ├── requirements.txt            # Pinned dependencies (Python 3.12+)
 │
 ├── configs/
-│   ├── models.yaml             # 6 model configs (float16, LoRA r=16)
+│   ├── models.yaml             # 10 model configs (5 causal + 5 encoder, LoRA r=16)
 │   ├── training.yaml           # Shared hyperparameters + comparative toggles
 │   └── evaluation.yaml         # CLL/AUL metric definitions
 │
@@ -147,7 +151,7 @@ Hysteresis_Bias/
 │   ├── 01_download_data.py     # Download + validate datasets
 │   ├── 02_dry_run.py           # Mandatory end-to-end test
 │   ├── 03_baseline.py          # Phase 0: baseline bias
-│   ├── 03_parallel_baseline.py # ↑ parallel version (6 models)
+│   ├── 03_parallel_baseline.py # ↑ parallel version (10 models)
 │   ├── 04_bias_injection.py    # Phase 1: bias injection
 │   ├── 04_parallel_injection.py# ↑ parallel version
 │   ├── 05_bias_removal.py      # Phase 2: bias removal
@@ -175,7 +179,7 @@ Hysteresis_Bias/
 
 ### Phase 0 — Baseline Bias Measurement
 
-Measure initial bias of all 6 models on both datasets.
+Measure initial bias of all 10 models on both datasets.
 - **Causal models:** CLL (Conditional Log-Likelihood) [9]
 - **Encoder models:** AUL (Average Unmasked Likelihood) [8]
 
@@ -208,7 +212,7 @@ Explain **WHY** R > 1 through loss landscape analysis.
 - **4a: Hessian Eigenvalue Analysis [7]** — Top-5 eigenvalues via power iteration at biased vs debiased checkpoints. Flatter Hessian = wider minimum = more stable.
 - **4b: Linear Mode Connectivity [6]** — Interpolate LoRA weights between biased and debiased states across 21 alpha points. Measure loss barriers.
 
-Focus: Llama-3.1-8B (causal) + MuRIL (encoder), English only.
+Focus: Llama-3.1-8B + GPT-oss-20B (causal) + MuRIL + IndicBERTv2 (encoder), English only.
 
 ### Phase 5C — Comparative Debiasing Studies
 
@@ -234,28 +238,28 @@ Six alternative debiasing methods are implemented to prove the Bias Hysteresis P
 
 ### Architecture: Methods Sequential → Models Parallel
 
-Each method runs **one at a time** (sequentially). Within each method, **all 6 models run in parallel** on the H200.
+Each method runs **one at a time** (sequentially). Within each method, **all 10 models run in parallel** on the H200.
 
 ```
-Step 1: C1 CDA         → [Llama | Gemma | Qwen | mBERT | XLM-R | MuRIL]  in parallel
-Step 2: C2 Self-Debias → [Llama | Gemma | Qwen]                           in parallel (causal only)
-Step 3: C3 INLP        → [Llama | Gemma | Qwen | mBERT | XLM-R | MuRIL]  in parallel
-Step 4: C4 DAMA        → [Llama | Gemma | Qwen]                           in parallel (causal only)
-Step 5: C5 BiasEdit    → [Llama | Gemma | Qwen | mBERT | XLM-R | MuRIL]  in parallel
-Step 6: C6 Grad Ascent → [Llama | Gemma | Qwen | mBERT | XLM-R | MuRIL]  in parallel
+Step 1: C1 CDA         → [Llama | Gemma | Qwen | GPT-oss | Sarvam | mBERT | XLM-R | MuRIL | IndicBERTv2 | mmBERT]  in parallel
+Step 2: C2 Self-Debias → [Llama | Gemma | Qwen | GPT-oss | Sarvam]                                                  in parallel (causal only)
+Step 3: C3 INLP        → [Llama | Gemma | Qwen | GPT-oss | Sarvam | mBERT | XLM-R | MuRIL | IndicBERTv2 | mmBERT]  in parallel
+Step 4: C4 DAMA        → [Llama | Gemma | Qwen | GPT-oss | Sarvam]                                                  in parallel (causal only)
+Step 5: C5 BiasEdit    → [Llama | Gemma | Qwen | GPT-oss | Sarvam | mBERT | XLM-R | MuRIL | IndicBERTv2 | mmBERT]  in parallel
+Step 6: C6 Grad Ascent → [Llama | Gemma | Qwen | GPT-oss | Sarvam | mBERT | XLM-R | MuRIL | IndicBERTv2 | mmBERT]  in parallel
 ```
 
 ### Per-Method Breakdown (H200)
 
 | ID | Method | Type | Models | Time (6 parallel) | Citation |
 |----|--------|------|--------|-------------------|----------|
-| **C1** | **CDA** | Data augmentation | All 6 | **~1.5–2 hrs** | Zmigrod et al. [11] |
-| **C2** | **Self-Debias** | Inference-time | 3 causal | **~0.3–0.5 hrs** | Schick et al. [12] |
-| **C3** | **INLP** | Representation | All 6 | **~0.5–1 hr** | Ravfogel et al. [13] |
-| **C4** | **DAMA** | Weight projection | 3 causal | **~0.5–1 hr** | Limisiewicz et al. [14] |
-| **C5** | **BiasEdit** | Model editing | All 6 | **~2–3 hrs** | Xu et al. [15] |
-| **C6** | **Gradient Ascent** | Unlearning | All 6 | **~1.5–2 hrs** | Liu et al. [16] |
-| | | | **Total Phase 5C** | **~6–9.5 hrs** | |
+| **C1** | **CDA** | Data augmentation | All 10 | **~2–3 hrs** | Zmigrod et al. [11] |
+| **C2** | **Self-Debias** | Inference-time | 5 causal | **~0.5–1 hr** | Schick et al. [12] |
+| **C3** | **INLP** | Representation | All 10 | **~1–1.5 hrs** | Ravfogel et al. [13] |
+| **C4** | **DAMA** | Weight projection | 5 causal | **~1–1.5 hrs** | Limisiewicz et al. [14] |
+| **C5** | **BiasEdit** | Model editing | All 10 | **~3–4 hrs** | Xu et al. [15] |
+| **C6** | **Gradient Ascent** | Unlearning | All 10 | **~2–3 hrs** | Liu et al. [16] |
+| | | | **Total Phase 5C** | **~9.5–14 hrs** | |
 
 - **C2/C4** auto-skip encoder models — no manual configuration needed.
 - Resume from any method: `--start-from c3_inlp`
@@ -275,19 +279,19 @@ Method-Independence of the Bias Hysteresis Principle — confirming R > 1 across
 | Setup | `bash scripts/00_setup.sh` | ~5 min | Install deps + Flash Attention 2 |
 | Data | `python scripts/01_download_data.py` | ~5–10 min | Download + validate datasets |
 | Test | `python scripts/02_dry_run.py` | ~10–15 min | **MUST PASS** before experiments |
-| P0 | `python scripts/03_parallel_baseline.py` | ~25 min | 6 models parallel, inference |
-| P1 | `python scripts/04_parallel_injection.py` | ~3.6 hrs | 6 models parallel, 9 runs each |
-| P2 | `python scripts/05_parallel_removal.py` | ~0.6 hrs | 6 models parallel, verifies P1 |
+| P0 | `python scripts/03_parallel_baseline.py` | ~40 min | 10 models parallel, inference |
+| P1 | `python scripts/04_parallel_injection.py` | ~5 hrs | 10 models parallel, 9 runs each |
+| P2 | `python scripts/05_parallel_removal.py` | ~1 hr | 10 models parallel, verifies P1 |
 | P3 | `python scripts/06_compute_asymmetry.py` | ~5 min | CPU, computes R |
 | P4a | `python scripts/07_parallel_hessian.py` | ~3 min | 2 models parallel |
 | P4b | `python scripts/08_linear_connectivity.py` | ~13 min | Sequential |
 | P6 | `python scripts/09_cultural_analysis.py` | ~5 min | CPU |
-| P5C | `python scripts/10_parallel_comparatives.py` | ~7.7 hrs | Methods seq, 6 models parallel |
+| P5C | `python scripts/10_parallel_comparatives.py` | ~12 hrs | Methods seq, 10 models parallel |
 | P5C-R | `python scripts/11_comparative_asymmetry.py` | ~seconds | CPU, comparative R |
 | Figs | `python scripts/12_generate_figures.py` | ~2 min | PDF + PNG |
 | Tabs | `python scripts/13_generate_tables.py` | ~1 min | LaTeX (auto-invokes Script 14) |
 | Qual | `python scripts/14_qualitative_outputs.py` | ~15 min | Qualitative outputs (inference) |
-| | | **Total: ~12.5 hrs (actual)** | |
+| | | **Total: ~19–20 hrs (estimated)** | |
 
 **Or simply:** `python run_full_pipeline.py`
 
@@ -305,20 +309,26 @@ python run_full_pipeline.py --start-from 05   # Resume from Phase 2
 
 ## Parallel Execution (H200)
 
-With 141 GB VRAM, all 6 models train simultaneously:
+With 141 GB VRAM, all 10 models train simultaneously:
 
 | Model | VRAM (training) |
 |-------|----------------|
+| GPT-oss-20B | ~45 GB |
 | Llama-3.1-8B | ~40 GB |
-| Gemma-3-4B | ~20 GB |
+| Gemma-3-4B | ~18 GB |
+| Sarvam-2B | ~10 GB |
 | Qwen2.5-1.5B | ~8 GB |
-| mBERT | ~1.5 GB |
+| jhu-clsp-mmBERT | ~2 GB |
 | XLM-RoBERTa | ~2 GB |
+| IndicBERTv2 | ~1.5 GB |
+| mBERT | ~1.5 GB |
 | MuRIL | ~1.5 GB |
-| CUDA contexts (6×) | ~12 GB |
-| **Total** | **~85 GB / 141 GB** |
+| CUDA contexts (10×) | ~20 GB |
+| **Total** | **~150 GB / 141 GB** |
 
-Each parallel script launches **6 independent subprocesses** (one per model), with:
+> **Note:** Total exceeds 141 GB. Use `--max-parallel 8` to stagger the largest models, or let the scheduler auto-manage. In practice, not all models peak simultaneously.
+
+Each parallel script launches **10 independent subprocesses** (one per model), with:
 - **Staggered CUDA init** (30s between launches)
 - **Per-model log files** in `results/logs/`
 - **Automatic VRAM estimation** and warnings if tight
@@ -346,9 +356,13 @@ comparatives:
     qwen2.5-1.5b: true    # set false to skip
     gemma-3-4b: true
     llama-3.1-8b: true
+    gpt-oss-20b: true
+    sarvam-2b: true
     mbert: true
     xlm-roberta: true
     muril: true
+    indicbert-v2: true
+    jhu-clsp-mmbert: true
   enabled_methods:
     c1_cda: true
     c2_self_debias: true   # auto-skips encoder models
@@ -412,7 +426,7 @@ results/
 
 ## Critical Design Rules
 
-1. **16-bit precision** — All models use float16 for uniformity. Gemma-3-4B uses bfloat16 (architectural requirement to avoid NaN in logits). No mixed precision within a model.
+1. **16-bit precision** — All models use float16 or bfloat16 per architecture. Gemma-3-4B, GPT-oss-20B, and Sarvam-2B use bfloat16 (architectural requirement). No mixed precision within a model.
 2. **Identical hyperparameters** — Injection (Phase 1) and removal (Phase 2) use the **same** LR, batch size, LoRA rank. Changing either invalidates R.
 3. **3 seeds** — [42, 123, 456]. All experiments repeated 3 times for statistical validity.
 4. **Drip-feed protocol** — Evaluate every 25 gradient steps to produce fine-grained bias curves.
@@ -453,7 +467,7 @@ The stratified 80/20 split prevents data leakage between injection training and 
 
 ### Recommended Reporting Strategy
 
-1. **Main R analysis**: Use the **overall** bias score (all 436 samples aggregated). With 3 seeds × 3 languages × 6 models, the main hysteresis claim has strong statistical backing.
+1. **Main R analysis**: Use the **overall** bias score (all 436 samples aggregated). With 3 seeds × 3 languages × 10 models, the main hysteresis claim has strong statistical backing.
 2. **Category-level breakdown**: Report per-category R **only for categories with n ≥ 30** (race-color, race, gender, religion, socioeconomic, nationality). These 6 categories cover 357/436 = 82% of eval data.
 3. **Small categories**: Merge disability + physical-appearance + age into an "Other" aggregate, or report in supplementary material with explicit confidence intervals.
 4. **Confidence intervals**: Report mean ± std across 3 seeds for all R values. Use bootstrap CI (95%) for the overall R.
