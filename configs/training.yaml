@@ -46,9 +46,13 @@ comparatives:
     qwen2.5-1.5b: true
     gemma-3-4b-it: true
     llama-3.1-8b: true
+    gpt-oss-20b: true
+    sarvam-2b: true
     mbert: true
     xlm-roberta: true
     muril: true
+    indicbert-v2: true
+    mdeberta-v3: true
   enabled_methods:
     c1_cda: true
     c2_self_debias: true

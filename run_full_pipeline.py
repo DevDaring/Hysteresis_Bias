@@ -7,12 +7,12 @@ Pipeline order:
   │  STAGE 1: SETUP & DATA                          │
   │  00_setup.sh → 01_download → 02_dry_run         │
   ├─────────────────────────────────────────────────┤
-  │  STAGE 2: MAIN EXPERIMENTS (6 models parallel)  │
+  │  STAGE 2: MAIN EXPERIMENTS (10 models parallel) │
   │  03 baseline → 04 injection → 05 removal         │
   │  → 06 asymmetry → 07 hessian → 08 connectivity  │
   │  → 09 cultural                                   │
   ├─────────────────────────────────────────────────┤
-  │  STAGE 3: COMPARATIVE STUDIES (6 models parallel)│
+  │  STAGE 3: COMPARATIVE STUDIES (10 models)        │
   │  10 comparatives → 11 comparative R              │
   ├─────────────────────────────────────────────────┤
   │  STAGE 4: OUTPUTS                               │
@@ -170,7 +170,7 @@ Examples:
     print("╔══════════════════════════════════════════════════════════╗")
     print("║    BIAS HYSTERESIS PRINCIPLE — FULL PIPELINE LAUNCHER   ║")
     print("╠══════════════════════════════════════════════════════════╣")
-    print(f"║  Mode:       {'Sequential' if args.sequential else 'Parallel (6 models)':40s} ║")
+    print(f"║  Mode:       {'Sequential' if args.sequential else 'Parallel (10 models)':40s} ║")
     print(f"║  Start from: {args.start_from:40s}            ║")
     print(f"║  Max parallel: {args.max_parallel:<38d} ║")
     print(f"║  Started:    {datetime.now().strftime('%Y-%m-%d %H:%M:%S'):40s} ║")

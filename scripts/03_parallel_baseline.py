@@ -1,15 +1,15 @@
 """
-Script 03_parallel: Phase 0 — Baseline Bias Measurement (6 Models in Parallel).
+Script 03_parallel: Phase 0 — Baseline Bias Measurement (10 Models in Parallel).
 
-Launches 6 subprocesses — one per model — each measuring baseline bias
+Launches up to 10 subprocesses — one per model — each measuring baseline bias
 across all 3 languages. Merges results into baseline_results.json.
 
-VRAM: ~35 GB total (all 6 models in inference mode) — fits easily in 141 GB H200.
-Time: ~25 min (vs ~1.5-2 hrs sequential).
+VRAM: ~60 GB total (all 10 models in inference mode) — fits in 141 GB H200.
+Time: ~30-45 min.
 
 Usage:
-  python scripts/03_parallel_baseline.py                # All 6 in parallel
-  python scripts/03_parallel_baseline.py --max-parallel 3
+  python scripts/03_parallel_baseline.py                # All 10 in parallel
+  python scripts/03_parallel_baseline.py --max-parallel 4
 """
 
 import sys
@@ -102,7 +102,7 @@ torch.cuda.empty_cache()
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 0: Parallel Baseline")
-    parser.add_argument("--max-parallel", type=int, default=6)
+    parser.add_argument("--max-parallel", type=int, default=10)
     parser.add_argument("--skip-models", nargs="+", default=[])
     parser.add_argument("--stagger-seconds", type=int, default=10)
     args = parser.parse_args()

@@ -1,9 +1,9 @@
 """
-Script 07_parallel: Phase 4a — Hessian Analysis (2 Models in Parallel).
+Script 07_parallel: Phase 4a — Hessian Analysis (4 Models in Parallel).
 
-Launches 2 subprocesses for focus models (Llama-3.1-8B + MuRIL).
-VRAM: ~42 GB — fits easily in 141 GB H200.
-Time: ~4-6 hrs (vs ~6-9 hrs sequential).
+Launches 4 subprocesses for focus models (Llama-3.1-8B, MuRIL, gpt-oss-20b, indicbert-v2).
+VRAM: ~70 GB — fits in 141 GB H200.
+Time: ~5-8 hrs.
 
 Usage:
   python scripts/07_parallel_hessian.py
@@ -26,7 +26,7 @@ from src.utils.logging_setup import get_logger
 logger = get_logger("07_parallel_hessian")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-FOCUS_MODELS = ["llama-3.1-8b", "muril"]
+FOCUS_MODELS = ["llama-3.1-8b", "muril", "gpt-oss-20b", "indicbert-v2"]
 
 
 def run_hessian_for_model(model_name: str) -> dict:

@@ -1,19 +1,19 @@
 """
-Script 05_parallel: Phase 2 — Bias Removal (6 Models in Parallel).
+Script 05_parallel: Phase 2 — Bias Removal (10 Models in Parallel).
 
-Launches 6 subprocesses — one per model. Each subprocess loads
+Launches up to 10 subprocesses — one per model. Each subprocess loads
 Phase 1 biased checkpoints and runs contrastive debiasing for
 all 3 languages × 3 seeds = 9 experiments sequentially.
 
 CRITICAL: Same LR, batch size, LoRA rank as Phase 1.
 PREREQUISITE: Phase 1 must be FULLY complete for ALL models.
 
-VRAM: ~85 GB total — fits in 141 GB H200.
-Time: ~3-4.5 hrs (vs ~8-11 hrs sequential). Bottleneck = Llama-3.1-8B.
+VRAM: ~120 GB total — fits in 141 GB H200.
+Time: ~4-6 hrs (vs ~15+ hrs sequential). Bottleneck = Llama-3.1-8B / gpt-oss-20b.
 
 Usage:
   python scripts/05_parallel_removal.py
-  python scripts/05_parallel_removal.py --max-parallel 3
+  python scripts/05_parallel_removal.py --max-parallel 4
   python scripts/05_parallel_removal.py --skip-models mbert xlm-roberta
 """
 
@@ -126,7 +126,7 @@ logger.info('Done with {model_name}')
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 2: Parallel Bias Removal")
-    parser.add_argument("--max-parallel", type=int, default=6)
+    parser.add_argument("--max-parallel", type=int, default=10)
     parser.add_argument("--skip-models", nargs="+", default=[])
     parser.add_argument("--stagger-seconds", type=int, default=30)
     args = parser.parse_args()
@@ -164,13 +164,17 @@ def main():
 
     # Sort: largest models first
     model_order = {
-        "llama-3.1-8b": 0, "gemma-3-4b-it": 1, "qwen2.5-1.5b": 2,
-        "mbert": 3, "xlm-roberta": 4, "muril": 5,
+        "gpt-oss-20b": 0, "llama-3.1-8b": 1, "gemma-3-4b-it": 2,
+        "sarvam-2b": 3, "qwen2.5-1.5b": 4,
+        "indicbert-v2": 5, "mdeberta-v3": 6,
+        "mbert": 7, "xlm-roberta": 8, "muril": 9,
     }
     models.sort(key=lambda m: model_order.get(m, 99))
 
     vram_estimates = {
-        "llama-3.1-8b": 40, "gemma-3-4b-it": 18, "qwen2.5-1.5b": 8,
+        "gpt-oss-20b": 25, "llama-3.1-8b": 40, "gemma-3-4b-it": 18,
+        "sarvam-2b": 10, "qwen2.5-1.5b": 8,
+        "indicbert-v2": 1.5, "mdeberta-v3": 1.5,
         "mbert": 1.5, "xlm-roberta": 2, "muril": 1.5,
     }
     total_vram = sum(vram_estimates.get(m, 5) for m in models) + len(models) * 2

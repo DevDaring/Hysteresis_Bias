@@ -6,7 +6,8 @@
 **Pipeline Mode:** Parallel (all 6 models simultaneously)
 **Pipeline Started:** 2026-03-21 11:19 UTC
 **Pipeline Restarted (from Step 10):** 2026-03-21 16:36 UTC (bug fix — save_results() in comparatives)
-**Last Updated:** 2026-03-21 ~17:00 UTC
+**Last Updated:** 2026-03-22 ~04:00 UTC
+**Pipeline Completed:** 2026-03-22 01:06 UTC (main pipeline) | 03:36 UTC (qualitative outputs)
 
 ---
 
@@ -172,54 +173,91 @@
 ---
 
 ### Step 10 — Phase 5C: Comparative Debiasing (`10_parallel_comparatives.py`)
-- **Status:** IN PROGRESS (restarted at 16:36 UTC after bug fix)
+- **Status:** COMPLETED
+- **Restarted:** 16:36 UTC (after save_results() bug fix — commit eafb25a)
+- **Finished:** 2026-03-22 ~00:20 UTC
+- **Wall-clock time:** ~7.7 hours (from restart)
 - **Bug fix:** All 5 comparative methods (C1–C6 except C4) had broken `save_results()` call — model_name was embedded in phase path instead of passed as separate arg. Fixed in commit eafb25a.
 - **Methods:** C1-CDA, C2-Self-Debias, C3-INLP, C4-DAMA, C5-BiasEdit, C6-Gradient Ascent
 - **Architecture:** Methods sequential, models parallel within each method
+- **Total results:** 82 curves.json files across all methods
 
 | Method | Models | Status | Wall Time |
-|--------|--------|--------|-----------|
+|--------|--------|--------|----------|
 | C1: CDA | 6 (all) | COMPLETED | 0.19 hrs |
-| C2: Self-Debias | 3 (causal only) | IN PROGRESS | — |
-| C3: INLP | 6 (all) | NOT STARTED | — |
-| C4: DAMA | 3 (causal only) | NOT STARTED | — |
-| C5: BiasEdit | 6 (all) | NOT STARTED | — |
-| C6: Gradient Ascent | 6 (all) | NOT STARTED | — |
+| C2: Self-Debias | 3 (causal only) | COMPLETED | ~0.4 hrs |
+| C3: INLP | 6 (all) | COMPLETED | ~0.5 hrs |
+| C4: DAMA | 2 (Llama, Qwen) | COMPLETED | ~0.5 hrs |
+| C5: BiasEdit | 6 (all) | COMPLETED | ~2.5 hrs |
+| C6: Gradient Ascent | 6 (all) | COMPLETED | ~1.5 hrs |
 
-**Output:** `results/phase5c_comparatives/<method>/<model>/en/seed<N>/curves.json`
+**Note on C2 (Self-Debias):** Qwen2.5-1.5B required a special fix (commit 727c14c) — empty token prefix caused crash. Guarded with empty-prefix fallback.
+
+**Note on C4 (DAMA):** Gemma-3-4B skipped — DAMA requires standard attention which Gemma-3's sliding window architecture doesn't support.
+
+**Output:** `results/phase5c_comparatives/<method>/<model>/en/seed<N>/curves.json` (82 files)
+`results/phase5c_comparatives/comparative_R.json`, `parallel_summary.json`
 
 ---
 
 ### Step 11 — Phase 5C-R: Comparative Asymmetry (`11_comparative_asymmetry.py`)
-- **Status:** NOT STARTED (waiting for Step 10)
-- **Type:** CPU computation
-- **Estimated time:** ~5 minutes
+- **Status:** COMPLETED
+- **Finished:** 2026-03-22 ~00:20 UTC
+- **Wall-clock time:** ~seconds (CPU computation)
+- **Computes:** R values for all comparative methods, confirming R > 1 is method-independent
+
+**Output:** `results/phase5c_comparatives/comparative_R.json`
+
+---
 
 ### Step 12 — Generate Figures (`12_generate_figures.py`)
-- **Status:** NOT STARTED
+- **Status:** COMPLETED
+- **Finished:** 2026-03-22 ~01:06 UTC
 - **Outputs:** PDF + PNG figures for the paper
-- **Estimated time:** ~2 minutes
+**Figures generated:**
+
+| Figure | File | Description |
+|--------|------|-------------|
+| Figure 1 | `figure1_hysteresis_curves.pdf/png` | Hysteresis curves (injection vs removal) |
+| Figure 2 | `figure2_R_heatmap.pdf/png` | Asymmetry ratio R heatmap by model × language |
+| Figure 3 | `figure3_cultural.pdf/png` | Cultural dependence analysis |
+
+---
 
 ### Step 13 — Generate Tables (`13_generate_tables.py`)
-- **Status:** NOT STARTED
-- **Outputs:** LaTeX tables for the paper (auto-invokes Step 14)
-- **Estimated time:** ~1 minute
+- **Status:** COMPLETED
+- **Finished:** 2026-03-22 ~01:06 UTC
+- **Outputs:** LaTeX tables for the paper
+
+**Tables generated:**
+
+| Table | File | Description |
+|-------|------|-------------|
+| Table 1 | `table1_baseline.tex` | Baseline bias scores (6 models × 3 langs) |
+| Table 2 | `table2_R_summary.tex` | Asymmetry ratio R summary |
+| Table 3 | `table3_category_R.tex` | Per-category R breakdown |
+| Table 4 | `table4_statistics.tex` | Statistical test results |
+| Table 5 | `table5_comparative_R.tex` | Comparative method R (method-independence) |
 
 ---
 
 ### Step 14 — Qualitative Output Capture (`14_qualitative_outputs.py`)
-- **Status:** NOT STARTED (auto-invoked from Step 13 — no manual run needed)
+- **Status:** COMPLETED
+- **Finished:** 2026-03-22 03:36 UTC
+- **Wall-clock time:** 15.3 minutes
 - **Type:** Inference-only (no training)
 - **Method:** For each model × language, load 3 states (baseline, peak-injection, post-removal) and probe all 436 eval samples:
   - Causal: top-10 next tokens, P(stereo), P(anti), 50-token greedy generation
   - Encoder: top-10 [MASK] predictions, P(stereo), P(anti)
-- **Seed:** 42 (default; other seeds optional)
+- **Seed:** 42
+- **Optimizations applied:** Single forward pass per sample, model reuse across languages, batched greedy generation (BATCH_SIZE=32) — achieved 33× speedup vs naive implementation
 - **Publication value:**
   - Qualitative evidence tables (e.g., Table showing same prompt → different top-k tokens across 3 states)
   - Residual stereotype analysis (which stereotypical words persist after debiasing)
   - Cross-lingual case studies
   - Probability shift visualizations
-- **Estimated time:** ~15–25 minutes
+
+**Output:** `results/phase7_qualitative/qualitative_outputs_seed42.json` (36.8 MB)
 
 ---
 
@@ -260,7 +298,17 @@
 
 7. **Phase 2 much faster than estimated:** Removal took only 0.56 hrs vs 3–4.5 hrs estimated. Contrastive debiasing converges quickly — this actually strengthens the asymmetry thesis (bias is acquired in 500 steps but removal completes in far fewer effective steps).
 
-8. **Results download:** Only JSON data files downloaded locally (curves.json, analysis results, logs). LoRA checkpoint weights (25+ GB) remain on server only — not needed for paper writing. Downloaded via SCP in compressed tarballs.
+8. **Results download:** Only JSON data files downloaded locally (curves.json, analysis results, figures, tables, qualitative outputs). LoRA checkpoint weights remain on server only — not needed for paper writing. Downloaded via SCP.
+
+9. **Qwen C2 empty token crash (commit 727c14c):** Qwen2.5-1.5B tokenizer returns empty token IDs for certain prefixes, crashing C2 Self-Debias and Script 14. Fixed with empty-prefix guard that returns neutral (0.5) probabilities.
+
+10. **Script 14 crash on Qwen (commit 91c6f67):** Same empty-token issue in `probe_causal()`. Fixed with guard `if prefix_ids["input_ids"].shape[1] == 0: return {...}`.
+
+11. **Script 14 performance optimization (commits 1d320b0, a119f63):** Three optimizations applied:
+    - Fix 1: Single forward pass (combined top-k + P(stereo) + P(anti) into one `model.generate()` call)
+    - Fix 2: Reuse base model across languages (avoid redundant model reloads)
+    - Fix 3: Batched greedy generation (BATCH_SIZE=32 with left-padding) — **33× end-to-end speedup** (15.3 min vs estimated 8.4 hrs)
+    - Correctness: Greedy decoding (`do_sample=False, num_beams=1`) is deterministic argmax — padding does not affect results.
 
 ---
 
@@ -275,8 +323,11 @@ All scientific data downloaded to `results/` folder (excludes LoRA checkpoint bi
 | `results/phase2_removal/` | Removal curves (6 models × 3 langs × 3 seeds) | 54 curves.json |
 | `results/phase3_asymmetry/` | R computation results | full_results.json |
 | `results/phase4_geometry/` | Hessian + connectivity analysis | 5 JSON files |
-| `results/phase5c_comparatives/` | C1 CDA results (C2-C6 still running) | 18 curves.json |
+| `results/phase5c_comparatives/` | All comparative method results (C1-C6) | 82 curves.json + comparative_R.json |
 | `results/phase6_cultural/` | Cultural analysis | cultural_analysis.json |
+| `results/phase7_qualitative/` | Qualitative outputs (6 models × 3 states × 3 langs) | qualitative_outputs_seed42.json (36.8 MB) |
+| `results/figures/` | Paper figures (PDF + PNG) | 6 files (3 figures × 2 formats) |
+| `results/tables/` | Paper tables (LaTeX) | 5 .tex files |
 | `results/logs/` | All script logs + pipeline logs | Multiple |
 | `results/gpu_usage.json` | GPU tracking data | 1 file |
 
@@ -287,6 +338,9 @@ All scientific data downloaded to `results/` folder (excludes LoRA checkpoint bi
 - **Server rate:** ~$3.55/hour (H200 GPU Droplet)
 - **Pipeline started:** 2026-03-21 11:19 UTC
 - **Pipeline restarted (Step 10+):** 2026-03-21 16:36 UTC
-- **Phases 0–6 completed in:** ~4.7 hours
-- **Estimated total runtime:** ~8–9 hours (revised from 17–26 hrs)
-- **Estimated total cost:** ~$28–32 (revised from $60–92)
+- **Main pipeline completed:** 2026-03-22 01:06 UTC
+- **Script 14 completed:** 2026-03-22 03:36 UTC
+- **Total wall-clock time:** ~16.3 hours (including restart, debugging, and optimization)
+- **Effective compute time:** ~12.5 hours
+- **Estimated total cost:** ~$58 (16.3 hrs × $3.55/hr)
+- **Server status:** GPU idle, ready for shutdown

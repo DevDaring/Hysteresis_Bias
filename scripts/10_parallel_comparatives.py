@@ -131,8 +131,8 @@ def main():
         description="Phase 5C: Sequential Methods, Parallel Models",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    parser.add_argument("--max-parallel", type=int, default=6,
-                        help="Max models per method (default: 6)")
+    parser.add_argument("--max-parallel", type=int, default=10,
+                        help="Max models per method (default: 10)")
     parser.add_argument("--skip-models", nargs="+", default=[],
                         help="Models to skip")
     parser.add_argument("--only-models", nargs="+", default=[],

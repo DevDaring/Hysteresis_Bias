@@ -1,8 +1,8 @@
 # ============================================================
-# MODEL CONFIGURATIONS
+# MODEL CONFIGURATIONS — 10 MODELS (5 Causal + 5 Encoder)
 # CRITICAL: All models use 16-bit precision for uniformity.
-# Most models use float16; gemma-3-4b-it uses bfloat16 (both
-# 16-bit) because Gemma 3 produces NaN in float16 by design.
+# Most models use float16; gemma-3-4b-it, gpt-oss-20b, and
+# sarvam-2b use bfloat16 (both 16-bit) per design constraints.
 # See [5] Hu et al. (2022) for LoRA methodology.
 # ============================================================
 
@@ -40,6 +40,34 @@ causal_models:
     family: "Meta/Llama"
     params: "8B"
     dtype: "float16"
+    model_type: "causal"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+      task_type: "CAUSAL_LM"
+
+  gpt-oss-20b:
+    hf_id: "openai/gpt-oss-20b"
+    family: "OpenAI/GPT-OSS"
+    params: "21B"  # 21B total, 3.6B active (MoE: 32 experts, 4 active)
+    dtype: "bfloat16"
+    model_type: "causal"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+      task_type: "CAUSAL_LM"
+
+  sarvam-2b:
+    hf_id: "sarvamai/sarvam-2b-v0.5"
+    family: "Sarvam/Sarvam"
+    params: "2B"
+    dtype: "bfloat16"
     model_type: "causal"
     languages: ["en", "hi", "bn"]
     lora:
@@ -90,4 +118,32 @@ encoder_models:
       lora_alpha: 32
       lora_dropout: 0.05
       target_modules: ["query", "value", "key"]
+      task_type: "MASKED_LM"
+
+  indicbert-v2:
+    hf_id: "ai4bharat/IndicBERTv2-MLM-only"
+    family: "AI4Bharat/IndicBERT"
+    params: "278M"
+    dtype: "float16"
+    model_type: "encoder"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["query", "value", "key"]
+      task_type: "MASKED_LM"
+
+  mdeberta-v3:
+    hf_id: "microsoft/mdeberta-v3-base"
+    family: "Microsoft/DeBERTa"
+    params: "276M"
+    dtype: "float16"
+    model_type: "encoder"
+    languages: ["en", "hi", "bn"]
+    lora:
+      r: 16
+      lora_alpha: 32
+      lora_dropout: 0.05
+      target_modules: ["query_proj", "key_proj", "value_proj"]
       task_type: "MASKED_LM"

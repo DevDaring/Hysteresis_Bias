@@ -47,7 +47,9 @@ bash scripts/00_setup.sh
 python run_full_pipeline.py
 ```
 
-**Total time: ~16–23 hours on H200 (parallel) | ~42–57 hours on H100 (sequential)**
+**Total time: ~12.5 hours on H200 (parallel) | ~42–57 hours on H100 (sequential)**
+
+See [Execution_Progress.md](Execution_Progress.md) for detailed per-phase timings and results.
 
 See [QUICKSTART.md](QUICKSTART.md) for detailed step-by-step instructions.
 
@@ -274,18 +276,18 @@ Method-Independence of the Bias Hysteresis Principle — confirming R > 1 across
 | Data | `python scripts/01_download_data.py` | ~5–10 min | Download + validate datasets |
 | Test | `python scripts/02_dry_run.py` | ~10–15 min | **MUST PASS** before experiments |
 | P0 | `python scripts/03_parallel_baseline.py` | ~25 min | 6 models parallel, inference |
-| P1 | `python scripts/04_parallel_injection.py` | ~2.5–3.5 hrs | 6 models parallel, 9 runs each |
-| P2 | `python scripts/05_parallel_removal.py` | ~3–4.5 hrs | 6 models parallel, verifies P1 |
+| P1 | `python scripts/04_parallel_injection.py` | ~3.6 hrs | 6 models parallel, 9 runs each |
+| P2 | `python scripts/05_parallel_removal.py` | ~0.6 hrs | 6 models parallel, verifies P1 |
 | P3 | `python scripts/06_compute_asymmetry.py` | ~5 min | CPU, computes R |
-| P4a | `python scripts/07_parallel_hessian.py` | ~4–6 hrs | 2 models parallel |
-| P4b | `python scripts/08_linear_connectivity.py` | ~1–2 hrs | Sequential |
+| P4a | `python scripts/07_parallel_hessian.py` | ~3 min | 2 models parallel |
+| P4b | `python scripts/08_linear_connectivity.py` | ~13 min | Sequential |
 | P6 | `python scripts/09_cultural_analysis.py` | ~5 min | CPU |
-| P5C | `python scripts/10_parallel_comparatives.py` | ~6–9.5 hrs | Methods seq, 6 models parallel |
-| P5C-R | `python scripts/11_comparative_asymmetry.py` | ~5 min | CPU, comparative R |
+| P5C | `python scripts/10_parallel_comparatives.py` | ~7.7 hrs | Methods seq, 6 models parallel |
+| P5C-R | `python scripts/11_comparative_asymmetry.py` | ~seconds | CPU, comparative R |
 | Figs | `python scripts/12_generate_figures.py` | ~2 min | PDF + PNG |
 | Tabs | `python scripts/13_generate_tables.py` | ~1 min | LaTeX (auto-invokes Script 14) |
-| Qual | ↳ auto-called from Script 13 | ~15–25 min | Qualitative outputs (inference) |
-| | | **Total: ~17–25 hrs** | |
+| Qual | `python scripts/14_qualitative_outputs.py` | ~15 min | Qualitative outputs (inference) |
+| | | **Total: ~12.5 hrs (actual)** | |
 
 **Or simply:** `python run_full_pipeline.py`
 
@@ -398,7 +400,9 @@ results/
 ├── phase6_cultural/              # cultural_analysis.json
 ├── phase7_qualitative/           # qualitative_outputs_seed42.json (top-k tokens, generations)
 ├── figures/                      # figure1_hysteresis_curves.pdf, etc.
-├── tables/                       # table1_baseline.tex through table5_comparative_R.tex
+├── phase7_qualitative/           # qualitative_outputs_seed42.json (top-k tokens, generations)
+├── figures/                      # figure1-3 hysteresis curves, R heatmap, cultural (PDF + PNG)
+├── tables/                       # table1-5 baseline, R summary, category R, statistics, comparative R (.tex)
 ├── logs/                         # Per-model parallel execution logs
 ├── gpu_usage.json                # GPU hours + cost tracking
 └── pipeline_log.json             # Full pipeline execution summary
