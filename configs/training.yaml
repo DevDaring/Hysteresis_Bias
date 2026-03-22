@@ -43,14 +43,14 @@ seeds: [42, 123, 456]
 # encoder models even if enabled — they are causal-only.
 comparatives:
   enabled_models:
-    qwen2.5-1.5b: true
-    gemma-3-4b-it: true
-    llama-3.1-8b: true
+    qwen2.5-1.5b: false   # Already completed in 6-model run
+    gemma-3-4b-it: false  # Already completed in 6-model run
+    llama-3.1-8b: false   # Already completed in 6-model run
     gpt-oss-20b: true
     sarvam-2b: true
-    mbert: true
-    xlm-roberta: true
-    muril: true
+    mbert: false           # Already completed in 6-model run
+    xlm-roberta: false     # Already completed in 6-model run
+    muril: false           # Already completed in 6-model run
     indicbert-v2: true
     jhu-clsp-mmbert: true
   enabled_methods:

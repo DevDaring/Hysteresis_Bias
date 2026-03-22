@@ -27,7 +27,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.utils.config import get_all_model_configs, load_training_config
+from src.utils.config import get_all_model_configs, get_enabled_model_configs, load_training_config
 from src.utils.logging_setup import get_logger
 
 logger = get_logger("04_parallel_injection")
@@ -103,16 +103,16 @@ logger.info('Done with {model_name}')
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 1: Parallel Bias Injection")
-    parser.add_argument("--max-parallel", type=int, default=8)
+    parser.add_argument("--max-parallel", type=int, default=4)
     parser.add_argument("--skip-models", nargs="+", default=[])
-    parser.add_argument("--stagger-seconds", type=int, default=30)
+    parser.add_argument("--stagger-seconds", type=int, default=10)
     args = parser.parse_args()
 
     logger.info("=" * 60)
     logger.info("PHASE 1: PARALLEL BIAS INJECTION")
     logger.info("=" * 60)
 
-    all_configs = get_all_model_configs()
+    all_configs = get_enabled_model_configs()
     training_config = load_training_config()
     comp_config = training_config.get("comparatives", {})
     config_enabled = comp_config.get("enabled_models", {})

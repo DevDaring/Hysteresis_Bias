@@ -30,7 +30,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.utils.config import get_all_model_configs, get_results_dir, load_training_config
+from src.utils.config import get_all_model_configs, get_enabled_model_configs, get_results_dir, load_training_config
 from src.utils.logging_setup import get_logger
 
 logger = get_logger("05_parallel_removal")
@@ -127,9 +127,9 @@ logger.info('Done with {model_name}')
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 2: Parallel Bias Removal")
-    parser.add_argument("--max-parallel", type=int, default=8)
+    parser.add_argument("--max-parallel", type=int, default=4)
     parser.add_argument("--skip-models", nargs="+", default=[])
-    parser.add_argument("--stagger-seconds", type=int, default=30)
+    parser.add_argument("--stagger-seconds", type=int, default=10)
     args = parser.parse_args()
 
     logger.info("=" * 60)
@@ -137,7 +137,7 @@ def main():
     logger.info("=" * 60)
 
     # Verify Phase 1 is complete
-    all_configs = get_all_model_configs()
+    all_configs = get_enabled_model_configs()
     models = [m for m in all_configs if m not in args.skip_models]
     seeds = [42, 123, 456]
     languages = ["en", "hi", "bn"]

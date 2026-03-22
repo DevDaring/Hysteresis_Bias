@@ -24,7 +24,7 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import torch
-from src.utils.config import get_all_model_configs, get_results_dir
+from src.utils.config import get_enabled_model_configs, get_results_dir
 from src.utils.logging_setup import get_logger
 from src.utils.gpu_monitor import GPUTracker
 from src.utils.seed import set_seed
@@ -44,7 +44,7 @@ def main():
     tracker.start("phase0_baseline")
     set_seed(42)
 
-    all_configs = get_all_model_configs()
+    all_configs = get_enabled_model_configs()
     languages = ["en", "hi", "bn"]
     all_results = {}
 

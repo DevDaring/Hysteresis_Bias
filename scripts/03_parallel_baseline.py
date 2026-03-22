@@ -24,7 +24,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.utils.config import get_all_model_configs, get_results_dir
+from src.utils.config import get_all_model_configs, get_enabled_model_configs, get_results_dir
 from src.utils.logging_setup import get_logger
 
 logger = get_logger("03_parallel_baseline")
@@ -102,16 +102,16 @@ torch.cuda.empty_cache()
 
 def main():
     parser = argparse.ArgumentParser(description="Phase 0: Parallel Baseline")
-    parser.add_argument("--max-parallel", type=int, default=8)
+    parser.add_argument("--max-parallel", type=int, default=4)
     parser.add_argument("--skip-models", nargs="+", default=[])
-    parser.add_argument("--stagger-seconds", type=int, default=10)
+    parser.add_argument("--stagger-seconds", type=int, default=5)
     args = parser.parse_args()
 
     logger.info("=" * 60)
     logger.info("PHASE 0: PARALLEL BASELINE MEASUREMENT")
     logger.info("=" * 60)
 
-    all_configs = get_all_model_configs()
+    all_configs = get_enabled_model_configs()
     models = [m for m in all_configs if m not in args.skip_models]
 
     logger.info(f"Running {len(models)} models in parallel (max {args.max_parallel})")

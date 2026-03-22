@@ -37,7 +37,7 @@ import argparse
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import torch
-from src.utils.config import get_all_model_configs, get_results_dir, load_training_config
+from src.utils.config import get_all_model_configs, get_enabled_model_configs, get_results_dir, load_training_config
 from src.utils.logging_setup import get_logger
 from src.utils.gpu_monitor import GPUTracker
 from src.utils.seed import set_seed, get_seeds
@@ -75,7 +75,7 @@ def get_enabled_models(training_config: dict, args) -> dict:
     Returns:
         Dict mapping model_name → model_type for enabled models.
     """
-    all_configs = get_all_model_configs()
+    all_configs = get_enabled_model_configs()
     comp_config = training_config.get("comparatives", {})
     config_enabled = comp_config.get("enabled_models", {})
 

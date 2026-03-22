@@ -52,7 +52,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.utils.config import get_all_model_configs, get_results_dir, load_training_config
+from src.utils.config import get_all_model_configs, get_enabled_model_configs, get_results_dir, load_training_config
 from src.utils.logging_setup import get_logger
 
 logger = get_logger("10_parallel_comparatives")
@@ -131,8 +131,8 @@ def main():
         description="Phase 5C: Sequential Methods, Parallel Models",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    parser.add_argument("--max-parallel", type=int, default=8)
-                        help="Max models per method (default: 10)")
+    parser.add_argument("--max-parallel", type=int, default=4,
+                        help="Max models per method (default: 4)")
     parser.add_argument("--skip-models", nargs="+", default=[],
                         help="Models to skip")
     parser.add_argument("--only-models", nargs="+", default=[],
@@ -153,7 +153,7 @@ def main():
     logger.info("╚══════════════════════════════════════════════════════════╝")
 
     # Resolve models
-    all_configs = get_all_model_configs()
+    all_configs = get_enabled_model_configs()
     training_config = load_training_config()
     comp_config = training_config.get("comparatives", {})
     config_enabled_models = comp_config.get("enabled_models", {})

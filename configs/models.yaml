@@ -8,6 +8,7 @@
 
 causal_models:
   qwen2.5-1.5b:
+    enabled: false  # Already completed in 6-model run
     hf_id: "Qwen/Qwen2.5-1.5B-Instruct"
     family: "Alibaba/Qwen"
     params: "1.5B"
@@ -22,6 +23,7 @@ causal_models:
       task_type: "CAUSAL_LM"
 
   gemma-3-4b-it:
+    enabled: false  # Already completed in 6-model run
     hf_id: "google/gemma-3-4b-it"
     family: "Google/Gemma"
     params: "4B"
@@ -36,6 +38,7 @@ causal_models:
       task_type: "CAUSAL_LM"
 
   llama-3.1-8b:
+    enabled: false  # Already completed in 6-model run
     hf_id: "meta-llama/Llama-3.1-8B-Instruct"
     family: "Meta/Llama"
     params: "8B"
@@ -50,6 +53,7 @@ causal_models:
       task_type: "CAUSAL_LM"
 
   gpt-oss-20b:
+    enabled: true
     hf_id: "openai/gpt-oss-20b"
     family: "OpenAI/GPT-OSS"
     params: "21B"  # 21B total, 3.6B active (MoE: 32 experts, 4 active)
@@ -64,6 +68,7 @@ causal_models:
       task_type: "CAUSAL_LM"
 
   sarvam-2b:
+    enabled: true
     hf_id: "sarvamai/sarvam-2b-v0.5"
     family: "Sarvam/Sarvam"
     params: "2B"
@@ -79,6 +84,7 @@ causal_models:
 
 encoder_models:
   mbert:
+    enabled: false  # Already completed in 6-model run
     hf_id: "bert-base-multilingual-cased"
     family: "Google/BERT"
     params: "178M"
@@ -93,6 +99,7 @@ encoder_models:
       task_type: "MASKED_LM"
 
   xlm-roberta:
+    enabled: false  # Already completed in 6-model run
     hf_id: "xlm-roberta-base"
     family: "Meta/XLM-RoBERTa"
     params: "278M"
@@ -107,6 +114,7 @@ encoder_models:
       task_type: "MASKED_LM"
 
   muril:
+    enabled: false  # Already completed in 6-model run
     hf_id: "google/muril-base-cased"
     family: "Google/MuRIL"
     params: "236M"
@@ -121,6 +129,7 @@ encoder_models:
       task_type: "MASKED_LM"
 
   indicbert-v2:
+    enabled: true
     hf_id: "ai4bharat/IndicBERTv2-MLM-only"
     family: "AI4Bharat/IndicBERT"
     params: "278M"
@@ -135,6 +144,7 @@ encoder_models:
       task_type: "MASKED_LM"
 
   jhu-clsp-mmbert:
+    enabled: true
     hf_id: "jhu-clsp/mmBERT-base"
     family: "JHU-CLSP/mmBERT"
     params: "307M"  # 22 layers, ModernBERT arch, 1800+ languages

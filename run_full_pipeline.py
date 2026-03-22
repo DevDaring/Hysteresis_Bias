@@ -155,7 +155,7 @@ Examples:
                         help="Skip Phase 5C comparative studies (10-11)")
     parser.add_argument("--skip-outputs", action="store_true",
                         help="Skip figure/table generation (12-13)")
-    parser.add_argument("--max-parallel", type=int, default=6,
+    parser.add_argument("--max-parallel", type=int, default=4,
                         help="Max parallel models (forwarded to parallel scripts)")
     parser.add_argument("--stop-on-failure", action="store_true", default=True,
                         help="Stop pipeline if any step fails (default: True)")
@@ -170,7 +170,7 @@ Examples:
     print("╔══════════════════════════════════════════════════════════╗")
     print("║    BIAS HYSTERESIS PRINCIPLE — FULL PIPELINE LAUNCHER   ║")
     print("╠══════════════════════════════════════════════════════════╣")
-    print(f"║  Mode:       {'Sequential' if args.sequential else 'Parallel (10 models)':40s} ║")
+    print(f"║  Mode:       {'Sequential' if args.sequential else 'Parallel (4 enabled models)':40s} ║")
     print(f"║  Start from: {args.start_from:40s}            ║")
     print(f"║  Max parallel: {args.max_parallel:<38d} ║")
     print(f"║  Started:    {datetime.now().strftime('%Y-%m-%d %H:%M:%S'):40s} ║")

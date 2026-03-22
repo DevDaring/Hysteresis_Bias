@@ -84,6 +84,17 @@ def get_all_model_configs() -> dict:
     return all_models
 
 
+def get_enabled_model_configs() -> dict:
+    """
+    Return only models with 'enabled: true' (or enabled not set, defaulting to true).
+
+    Use this for training/execution scripts (phases 0-5).
+    Use get_all_model_configs() for analysis scripts (phases 6+) that need all 10 models.
+    """
+    all_models = get_all_model_configs()
+    return {name: cfg for name, cfg in all_models.items() if cfg.get("enabled", True)}
+
+
 def get_env(key: str, required: bool = True) -> str:
     """
     Get an environment variable (loaded from .env).

@@ -20,7 +20,7 @@ import json
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import torch
-from src.utils.config import get_all_model_configs, load_training_config
+from src.utils.config import get_enabled_model_configs, load_training_config
 from src.utils.logging_setup import get_logger
 from src.utils.gpu_monitor import GPUTracker
 from src.utils.seed import set_seed, get_seeds
@@ -39,7 +39,7 @@ def main():
     tracker = GPUTracker()
     tracker.start("phase1_injection")
 
-    all_configs = get_all_model_configs()
+    all_configs = get_enabled_model_configs()
     training_config = load_training_config()
     seeds = get_seeds()
     languages = ["en", "hi", "bn"]
