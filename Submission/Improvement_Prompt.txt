@@ -1,0 +1,63 @@
+Suggested Title for the Paper-
+Asymmetric Bias Dynamics in Multilingual LLMs: Debiasing Can Require More Gradient Steps Than Biasing in Encoder Architectures
+OR
+When Does Debiasing Cost More Than Biasing? A Multilingual Study of Causal and Encoder LLMs Across English, Hindi, and Bengali
+OR
+When Does Debiasing Cost More Than Biasing? A Conditional Characterization of Asymmetric Bias Dynamics in Multilingual Encoder and Causal LLMs
+
+
+
+Reframing strategy
+1. Demote the universal claim. Promote the conditional one.
+Right now the paper is pitched as "bias hysteresis exists." The data actually supports "bias hysteresis is an architecture- and condition-specific phenomenon, concentrated in encoder models under weight/representation-editing methods." That's a defensible, novel, and correct claim. Retitle along these lines:
+
+"When Does Debiasing Cost More Than Biasing? A Conditional Characterization of Asymmetric Bias Dynamics in Multilingual Encoder and Causal LLMs"
+
+The word "principle" in your current framing is what's triggering the overclaim flag. Drop it or demote it to a subsection hypothesis that you then partially confirm.
+2. Lead with the encoder-vs-causal split as your primary finding
+This is your cleanest, most statistically defensible result: 3/5 encoders show grand R > 1; 0/5 causals do. That is a categorical architectural split, and it has a plausible mechanistic story (bidirectional attention entanglement vs. sequential overwriting). Make this Finding #1, Figure 1, and the abstract's first sentence. Everything else — Hessian, cultural analysis, method-independence — becomes supporting evidence for why encoders exhibit this property.
+3. Fix the clipping problem with survival analysis
+Replace the raw R = T_debias / T_bias ratio (which explodes or collapses at boundaries) with a Kaplan–Meier / Cox proportional hazards framing, treating T_bias and T_debias as time-to-event with right-censoring at the step boundary. This is standard in reliability engineering and is exactly what your setup demands. Benefits:
+
+Ceiling values (R = 4.0, R = 0.05) become properly-handled censored observations instead of fake point estimates.
+You get hazard ratios with honest CIs that reviewers trust.
+It signals statistical maturity — reviewers at IP&M will notice and reward this.
+
+Keep the raw R table as a supplementary / intuition-building artifact, but let the survival analysis be the primary inference. This alone probably gains you 5–10 percentage points of acceptance probability.
+
+4. Add a θ sensitivity analysis
+Rerun T_bias / T_debias at θ ∈ {0.60, 0.65, 0.70, 0.75, 0.80} and show that the encoder/causal split is stable across thresholds. One figure, minimal new compute (you already have the trajectories). Pre-empts the single biggest methodological objection.
+
+5. Reframe the "negative" results as positive findings
+You have several counterintuitive results that are actually more publishable than the headline:
+
+"Gender bias is the easiest to remove, not the hardest" (R = 0.05 across all 10 × 3 × 3 = 90 conditions with zero variance). This contradicts a large literature and is novel. Make it Finding #2.
+"Indian-specific biases (caste, religion) exhibit the lowest hysteresis, consistent with under-representation in pretraining corpora". This is a distinctive multilingual contribution and directly relevant to IP&M's audience (they've published Hindi/Bengali work before, and your Debk/Indian-Multilingual-Bias dataset credential helps).
+"Inference-time methods (Self-Debias) trivially sidestep hysteresis, while weight-editing methods (BiasEdit, DAMA, INLP) face it" — this is a practical finding that reshapes the debiasing method-selection decision tree. This is exactly the kind of "actionable result" IP&M reviewers look for.
+
+6. Drop or quarantine under-powered categories
+Physical-appearance, sexual-orientation, age, disability — do not put these in the main tables with headline means. Move them to supplementary with a clear caveat, Currently they read as "bad statistics trying to look like good statistics."
+
+7. Add a "Practical Implications" section tuned to IP&M
+IP&M cares about applications, not just phenomena. Give reviewers concrete deliverables:
+
+A compute-allocation formula for debiasing budgets as a function of (architecture, language, bias-category).
+A decision tree for method selection: "If encoder + weight-edit → expect ~4× inflation; use inference-time debiasing instead."
+Open-source your code, checkpoints (biased + debiased), and evaluation harness on HuggingFace under your Debk namespace — your existing HF presence is an asset here.
+
+8. Drop the Hessian story
+4/10 models is thin. Demote §5 to a "mechanistic hypothesis" subsection explicitly marked as preliminary. Currently it's framed as primary evidence but the n doesn't support that weight.
+
+What your supplement should contain
+For this specific paper, I would plan a supplement along these lines:
+Supplementary PDF (single file, ~30–50 pages):
+
+S1 — Full experimental configs: hyperparameter tables, LoRA rank/alpha, optimizer settings, random-seed schedules, compute environment (GCP GPU specs), wall-clock per run. Reproducibility reviewers love this.
+S2 — Full per-condition R table: all 10 models × 3 languages × 11 categories × 3 seeds with CIs. The main text only shows grand and per-language R; the supplement carries the exhaustive grid.
+S3 — Survival analysis details: Kaplan–Meier curves per model-architecture group, Cox proportional hazards output with coefficient tables, censoring diagnostics, log-rank test results.
+S4 — θ sensitivity analysis: R heatmaps at θ ∈ {0.60, 0.65, 0.70, 0.75, 0.80} showing encoder/causal split stability.
+S5 — Hessian analysis extension: eigenvalue spectra, loss-landscape contour plots for the 4 focus models, with a caveat paragraph about why the other 6 were not analyzed.
+S6 — Method-comparison full grid: expanded version of your §6.3 table including standard errors, ceiling-clipping diagnostics, and a note on which cells are censored.
+S7 — Underpowered-category CIs: full bootstrap distributions for physical-appearance, sexual-orientation, age, disability.
+S8 — Prompt templates and data preprocessing: exact sentence-pair formatting, tokenizer handling per language, train/eval split seeds.
+S9 — Limitations and failure modes: expanded version of §8.2 with specific experimental caveats.

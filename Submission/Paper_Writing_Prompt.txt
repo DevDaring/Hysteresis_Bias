@@ -1,0 +1,37 @@
+I want to publish to "Foundation and Large Language Models" a special issue of "Information Processing & Management" (https://www.sciencedirect.com/special-issue/322199/foundation-and-large-language-models)
+
+
+Paper should be in 20 pages in overleaf.You should put images in - D:\PhD\Hysteresis_Bias\Submission\images
+You should handle bibtex in sample.md . I will put this content in overleaf as sample.bib
+You should put latex content in Absolute_Paper.md . I will use this file in overleaf as Absolute_Paper.tex
+In Absolute_Paper.md , already some sections are given. YOu can add one or two section and subsection. DO not create many subsection. Create minimum subsection.
+
+
+**Style Requirements:**
+- Use natural, conversational academic language rather than overly formal prose
+- You must call all tables and figure from latex
+- Clearly mention in proper place how all metrics are calculated
+- Do not just write subsection after section. Use atleast one or two line between them.
+- Vary sentence length and structure throughout but try keep most of the sentences small.
+- Try to use simple small sentences most of the time. Avoid long sentences.
+- Don't use extremely niche vocabulary words unless explicitly present in a source document or other given context. 
+- Try to avoid C2 Cambridge english vocabulary level verbs, nouns and adjective
+- Employ active voice where appropriate
+- Instead of ‘We’, ‘Our’ try to use 'This work', 'This study' or 'This paper'. You may write 'Further Investigation shows that..' instead of writing 'We investigate further..'.
+- Include domain-specific terminology naturally, not forced
+- Avoid repetitive phrasing patterns or formulaic openings
+- Write with confidence and specificity rather than hedging language
+- If you are claiming something on this research/experiment, give some results and example
+- If it is multilingual try to cover all languages for example but for one instance give one example.
+- If you are claiming something not in this research, give citation
+- Try not to use many jargon or buzz word.
+- Do not write pointwise like bulet point or numbered point. Write in paragraphs.
+- Do not start a paragraph with 'while'.'however' this type of words. 
+
+The introduction should follow a classic structure: motivation → background → research gap → objectives → conceptual framework → methodology → contributions. This creates a logical flow from problem identification to proposed solution.
+
+You can put examples in tabular format if required and suitable for paper format.
+Do not write pointwise.
+If you use any new reference put that bibtex in sample.md.
+Write in simple academic language. Do not write long complicated sentences. Do not write 'we'. Instead of 'we' you can write 'this work'.
+Do not start a paragraph with 'while'.'however' this type of words. 

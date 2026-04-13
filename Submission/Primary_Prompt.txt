@@ -1,0 +1,11 @@
+Create a bibtex.md in Submission folder you need to write all citation as bibtex format there.
+Search in internet to put all citation there
+Create Analysis.md in Submission folder, you need to write full results and analysis.
+You should create diagrams folder in submission and put required images there
+You can call those images from Result in analysis writings
+When you are are writig analysis, First check you  have all data and you know which data will be used fro which purpose.
+You can take help from Execution_Progress.md and readme.md .
+While you are writing results and analysis remember each results should be written with support of data and example.
+When you are writing one result, you should clearly mention for which model or which dataset or averaged on some models and dataset.
+DO not make any hard claim rather put the probablity with results and example.
+Do not repeat same example.

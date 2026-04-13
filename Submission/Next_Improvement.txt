@@ -1,0 +1,122 @@
+Here is the complete set of changes you can make without running a single new experiment. Done well, these alone move you from ~35–45% to roughly **55–62%**. I'm ordering them by leverage — do the top items first; if you run out of time, the bottom items are skippable.
+
+---
+
+## Tier 1 — Highest leverage (do these no matter what)
+
+**1. Reframe the CLL vs AUL cross-architecture comparison (within-architecture framing).**
+
+This is your single biggest unforced error and it costs nothing to fix. Right now §5.2 says "encoders > causals" by directly comparing R values built from two different base metrics. A reviewer will hammer this. Rewrite the section so the headline becomes two parallel within-architecture findings instead of one cross-architecture finding:
+
+- "Among the five encoder models, three show grand R > 1, with values up to 3.88; the remaining two are below 1."
+- "Among the five causal models, none shows grand R > 1; values range from 0.05 to 0.81."
+- "Direct numerical comparison of R across architectures is avoided because CLL and AUL are not calibrated to a common scale (see §S9.4); the qualitative split — encoder models contain the only R > 1 grand cases — is robust to this caveat because it depends only on the within-architecture sign of (R − 1)."
+
+Then update the abstract, intro contributions list, and conclusion to mirror this language. The finding is preserved; the methodological objection is defused. This is a 2-hour rewrite.
+
+**2. Email Jararweh before doing anything else.**
+
+One paragraph, today: paper title, one-sentence summary, ask whether the SI is still open or whether he advises submitting as a regular IP&M article flagged for the SI. Do not begin revision work without his answer — you don't want to spend two weeks polishing for a closed call. I can draft this for you if you want.
+
+**3. Fix the internal inconsistencies before any reviewer sees them.**
+
+These are the small errors that make reviewers distrust the rest of the paper:
+
+- *Table 6 vs Figure 4 contradict each other.* Table 6 shows race-color R = 3.14 and race R = 2.69, but Figure 4 shows both near 0.15–0.20. One of them is wrong. From the numbers in Tables 4 and S2 (race ≈ 0.18, race-color ≈ 0.15 in your earlier Analysis.md), Figure 4 is correct and Table 6 is wrong. Fix Table 6.
+- *Indian-group mean arithmetic.* Text says R = 0.12 but caste (0.06) and religion (0.11) average to 0.085. Either fix the number or explain the weighting.
+- *Universal-group mean.* Text says 2.32 but the corrected gender (0.05), race (~0.18), race-color (~0.15) values average to ~0.13, not 2.32. Recompute and update §5.4 and Table 6 together. **This actually makes your story stronger** — a corrected universal-group mean of ~0.13 lines up with Indian (0.12) and contrasts cleanly against Western (~0.98), which is a more coherent narrative than the current numbers anyway.
+- *Baseline scores in Table 3 differ from your Analysis.md Table 1.* Make sure the values you're submitting match your actual experiment logs. Pick one and be consistent.
+- *Typo in S5.3.* MuRIL biased λ₁ shows 58.3 in Table S4 but the main paper §5.6 used the original 647.0 from your Analysis.md. Reconcile these — they can't both be right.
+
+Allocate one focused hour to a numbers-audit pass through every table and every in-text number. Reviewers who spot two inconsistencies start hunting for a third.
+
+**4. Bibliography to 55–65 references.**
+
+Twenty references is a fatal tell at IP&M. The journal's typical methods paper has 60–100. Reviewers use sparse bibliographies as a proxy for "authors don't know the field." Add the following — every one of these is genuinely relevant and most of them you already know:
+
+*Bias surveys & critiques (essential):* Gallegos et al. 2024 "Bias and Fairness in LLMs: A Survey" (Computational Linguistics); Meade, Poole-Dayan, Reddy 2022 "An Empirical Survey of the Effectiveness of Debiasing Techniques for PLMs" (ACL); Blodgett et al. 2021 "Stereotyping Norwegian Salmon" (critique of CrowS-Pairs — cite this honestly, it strengthens you); Delobelle et al. 2022 "Measuring Fairness with Biased Rulers."
+
+*Multilingual fairness:* Stanczak & Augenstein 2021 "A Survey on Gender Bias in NLP"; Ramesh, Sitaram, Choudhury 2023 "Fairness in Language Models Beyond English"; Talat et al. 2022 "You reap what you sow" (multilingual bias); Vashishtha et al. 2023 on Hindi bias; Malik et al. 2022 "Socially Aware Bias Measurements for Hindi."
+
+*Intrinsic vs extrinsic bias gap:* Goldfarb-Tarrant et al. 2021 "Intrinsic Bias Metrics Do Not Correlate with Application Bias"; Cao et al. 2022 "On the Intrinsic and Extrinsic Fairness Evaluation Metrics."
+
+*Metric foundations (defends your CLL/AUL choices):* Salazar et al. 2020 "Masked Language Model Scoring" (origin of pseudo-log-likelihood, basis of AUL); Webster et al. 2020 "Measuring and Reducing Gendered Correlations."
+
+*Mechanistic interpretability (justifies your loss-landscape framing):* Elhage et al. 2022 "Toy Models of Superposition"; Nanda et al. 2023 "Progress Measures for Grokking via Mechanistic Interpretability"; Conmy et al. 2023 "Towards Automated Circuit Discovery."
+
+*Loss landscape (extends Li et al.):* Keskar et al. 2017 "On Large-Batch Training" (sharp vs flat minima); Foret et al. 2021 "Sharpness-Aware Minimization"; Dinh et al. 2017 "Sharp Minima Can Generalize for Deep Nets" (cite this honestly — it's a counterpoint to your geometric story and citing counterpoints builds credibility).
+
+*Recent debiasing methods:* Zhang et al. 2023 on counterfactual fine-tuning; Lauscher et al. 2021 on adapter-based debiasing; Limisiewicz, Mareček, Stanczak 2023 (precursor to DAMA you cite).
+
+*LoRA & PEFT context:* Aghajanyan, Gupta, Zettlemoyer 2021 (you already cite); Lialin et al. 2023 "Scaling Down to Scale Up" (PEFT survey); Ding et al. 2023 "Parameter-Efficient Fine-Tuning of Large-Scale Pre-Trained Language Models."
+
+*Indian-context:* Bhatt et al. 2022 "Re-contextualizing Fairness in NLP: The Case of India"; Sambasivan et al. 2021 "Re-imagining Algorithmic Fairness in India and Beyond" (FAccT — this is the canonical citation for caste/religion bias and you must have it).
+
+That's ~30 additions, getting you to ~50. You can find another 10 from the related-work chains of any 3-4 of these papers. Half-day task.
+
+---
+
+## Tier 2 — Strong leverage (do if you have time)
+
+**5. Rewrite the abstract to lead with the actionable finding, not the architectural one.**
+
+Practitioners and editors care about the decision tree. Rewrite the abstract so the first sentence is the safety-budget implication, not the encoder/causal split. Something like:
+
+> "Debiasing pipelines for large language models typically assume that removing a bias requires comparable computational effort to introducing one. We test this assumption across 10 multilingual models, 3 languages, 11 bias categories, and 6 debiasing methods, and find it fails systematically — but only under specific conditions. Weight-editing methods such as BiasEdit can require up to 16× more gradient steps to remove a bias than to inject it, while inference-time methods such as Self-Debias bypass the asymmetry entirely (R = 0). The effect concentrates in encoder models (3 of 5 show grand R > 1; no causal model does) and in bias categories well-represented in pretraining data, while India-specific categories (caste, religion) and gender show near-symmetric dynamics. We translate these findings into a practitioner decision tree for allocating debiasing compute budgets…"
+
+Same data, different ordering, much stronger pull for an editor skimming submissions.
+
+**6. Add a 1-paragraph "Threats to Validity" subsection at the end of §5 (before §6).**
+
+You already have S9 in the supplement, but reviewers don't always read supplements before drafting their review. Lift the four most important caveats — CLL/AUL confound, R = 4.0 ceiling, n < 30 categories, LoRA-only — into a single visible paragraph in the main paper. This pre-empts the most common reviewer objections in the place reviewers will actually see them. Reviewers who feel pre-empted write softer reviews; reviewers who feel they "caught" something write harsh ones. Make them feel pre-empted.
+
+**7. Soften the mechanistic claims in §5.6.**
+
+Right now §5.6 says biased states "occupy flatter loss landscape regions" and presents the Hessian story as a "preliminary geometric perspective." Cite Dinh et al. 2017 (sharp minima can generalize) as a counterpoint, and explicitly downgrade the section to "exploratory." One paragraph of intellectual humility here costs you nothing and removes a target. The section should end with: "We present this as a hypothesis-generating observation rather than a confirmed mechanism; rigorous mechanistic claims would require [Hessian analysis on all 10 models / multiple seeds / multiple evaluation batches], which we leave to future work."
+
+**8. Strengthen the practitioner framing in §6.**
+
+Add a small table that translates the findings into specific compute-budget multipliers, e.g.:
+
+| If you are debiasing... | Using method... | Allocate at least |
+|---|---|---|
+| Encoder model (BERT-family) | BiasEdit | 16× injection budget |
+| Encoder model | INLP/contrastive | 4× injection budget |
+| Causal model | DAMA | 4× injection budget |
+| Causal model | LoRA fine-tuning | 1× injection budget |
+| Any model | Self-Debias | No additional weight-update budget |
+
+This kind of concrete deliverable is what gets a paper recommended for acceptance even when reviewers have methodological quibbles, because the editor can point to it as "useful to the community." It also gives the paper a citable artifact beyond the prose.
+
+**9. Reframe the n < 30 categories as honestly excluded, not "interpreted with caution".**
+
+Right now you treat physical-appearance, sexual-orientation, age, and disability as included-with-caveats. The bootstrap CIs in S7 span from below 1 to above 1 for all four, which means you cannot conclude anything about the direction of R for these categories. Move them out of the headline category-level analysis (Table 6 and §5.4) and into a clearly labeled "categories excluded for insufficient power" footnote, with the bootstrap analysis in S7 as justification. This *strengthens* your remaining category claims because the surviving categories (gender, race, race-color, nationality, socioeconomic, caste, religion) all have adequate n. A reviewer who sees you proactively excluding underpowered categories will trust you more, not less.
+
+---
+
+## Tier 3 — Polish (worth doing if you have a free afternoon)
+
+**10. Add 1-2 sentences justifying θ = 0.7 as the primary threshold.** Right now it appears as a design choice without rationale. Something like: "θ = 0.7 was chosen because it represents a strong stereotypical preference (the model is roughly 70% confident in the stereotypical completion) while remaining reachable by all 10 tested models within the injection budget — at θ = 0.8, several causal models never crossed the threshold, making R undefined." This is a one-line defense that prevents a reviewer from calling θ arbitrary.
+
+**11. Add seed-level variance reporting for the headline R values.** You report 95% CIs across 3 seeds in S2 and S6 but the main-paper Tables 4 and 5 show point estimates only. Add ± CI to at least the encoder rows in Table 4 — it makes the variance visible and shows you're not hiding it. Cost: zero new computation; you have the numbers already in S2.
+
+**12. Cover letter strategy.** Write a strong cover letter that explicitly maps your paper to IP&M's "Foundation and LLMs" SI topics: Fairness (primary), Safety and Trustworthiness (secondary), Interpretability (tertiary). Name the topics from the call directly. State that the paper provides an actionable practitioner artifact (the decision tree). Mention the multilingual angle and the Indian-context categories as differentiators. Editors at special issues read cover letters carefully because they're looking for fit signals. Most authors waste this opportunity. Don't.
+
+**13. Author-suggested reviewers.** IP&M lets you suggest reviewers. Suggest 3-4 people whose work you cite who would be sympathetic — Limisiewicz (DAMA author, will appreciate the comparative study), Khandelwal (Indian-BhED author, will appreciate the Indian categories), Kaneko (AUL author, can defend the metric choice), and someone from the multilingual fairness community (Stanczak, Vashishtha, or Malik). Do **not** suggest anyone you've ever co-authored with or anyone at your institution. This single act probably moves your probability up 3-5 points because it influences who actually reads the paper.
+
+**14. The Sambasivan citation is non-negotiable.** "Re-imagining Algorithmic Fairness in India and Beyond" (FAccT 2021) is the canonical paper on why caste and India-specific bias categories matter for AI fairness. Not citing it when your paper centers Indian-BhED is the kind of omission an Indian reviewer will flag immediately. Add it, cite it in the intro when motivating the Indian-BhED dataset, and cite it again in §5.4 when discussing the low Indian-group R. Two citations of one paper, both load-bearing.
+
+**15. Glossary footnote for "hysteresis."** The term comes from physics and may be unfamiliar to some IP&M reviewers (the journal's audience includes information science people who aren't ML-native). One footnote in the introduction defining it as "asymmetry between a forward and reverse process such that the reverse requires more effort or follows a different path" eliminates a small comprehension friction.
+
+---
+
+## Updated probability table
+
+| Scenario | P(accept) |
+|---|---|
+| Submit as-is today | ~35–45% |
+| Tier 1 only (within-arch reframe + numbers audit + bibliography + email Jararweh) | ~50–58% |
+| Tier 1 + Tier 2 (abstract rewrite, threats to validity, soften §5.6, practitioner table, exclude n<30) | ~55–62% |
+| Tier 1 + Tier 2 + Tier 3 polish | ~58–65% |
+
+The ceiling at ~65% is real and is set by the experimental design (LoRA-only, 3 seeds, R = 4.0 boundary for INLP/DAMA, Hessian on 4/10 models). Going above ~65% requires new experiments, which you've ruled out. Within the no-new-experiments constraint, Tier 1 + Tier 2 is the optimal target — Tier 3 has diminishing returns and you should only do it if Tiers 1 and 2 are completely done.
