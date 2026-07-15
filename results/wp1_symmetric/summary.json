@@ -1,0 +1,7866 @@
+[
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41266541881690405,
+    "biased_bias": 0.8316428039432701,
+    "T_bias": 17.144993464052607,
+    "T_debias": 11.596959805770188,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.6764050292632182,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 22.397754669189453,
+    "grad_norm_remove_mean": 21.32733512878418,
+    "inject_trajectory": [
+      [
+        0,
+        0.41266541881690405
+      ],
+      [
+        25,
+        0.8316428039432701
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8316428039432701
+      ],
+      [
+        25,
+        0.547855487810274
+      ]
+    ],
+    "timestamp": "2026-07-15T05:49:40.114814"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41266541881690405,
+    "biased_bias": 0.8114240715224526,
+    "T_bias": 18.014316381196473,
+    "T_debias": 14.029589696687028,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.778802225952424,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 23.576688957214355,
+    "grad_norm_remove_mean": 28.676986656188966,
+    "inject_trajectory": [
+      [
+        0,
+        0.41266541881690405
+      ],
+      [
+        25,
+        0.8114240715224526
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8114240715224526
+      ],
+      [
+        25,
+        0.6128721645683161
+      ]
+    ],
+    "timestamp": "2026-07-15T05:50:16.132234"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41266541881690405,
+    "biased_bias": 0.8427001535472344,
+    "T_bias": 16.70414957080618,
+    "T_debias": 12.020346458043592,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7196024201705866,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 19.953603439331054,
+    "grad_norm_remove_mean": 18.726551952362062,
+    "inject_trajectory": [
+      [
+        0,
+        0.41266541881690405
+      ],
+      [
+        25,
+        0.8427001535472344
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8427001535472344
+      ],
+      [
+        25,
+        0.5459113836783249
+      ]
+    ],
+    "timestamp": "2026-07-15T05:50:52.782823"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5648568432465608,
+    "biased_bias": 0.8324828190872737,
+    "T_bias": 12.62425632722161,
+    "T_debias": 28.25830569350338,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 2.2384134923314383,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 22.81725803375244,
+    "grad_norm_remove_mean": 17.977154312133788,
+    "inject_trajectory": [
+      [
+        0,
+        0.5648568432465608
+      ],
+      [
+        25,
+        0.8324828190872737
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8324828190872737
+      ],
+      [
+        25,
+        0.74146388313549
+      ],
+      [
+        50,
+        0.4233239736561291
+      ]
+    ],
+    "timestamp": "2026-07-15T05:51:27.923392"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5648568432465608,
+    "biased_bias": 0.8295732411978036,
+    "T_bias": 12.763013341766108,
+    "T_debias": 7.799318273501518,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.6110875280509792,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 24.482902336120606,
+    "grad_norm_remove_mean": 26.061878929138185,
+    "inject_trajectory": [
+      [
+        0,
+        0.5648568432465608
+      ],
+      [
+        25,
+        0.8295732411978036
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8295732411978036
+      ],
+      [
+        25,
+        0.41423809056664623
+      ]
+    ],
+    "timestamp": "2026-07-15T05:51:52.139217"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5648568432465608,
+    "biased_bias": 0.8303184035677419,
+    "T_bias": 12.72718699742534,
+    "T_debias": 9.743596481776114,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7655734518356024,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 19.303460578918457,
+    "grad_norm_remove_mean": 19.41790626525879,
+    "inject_trajectory": [
+      [
+        0,
+        0.5648568432465608
+      ],
+      [
+        25,
+        0.8303184035677419
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8303184035677419
+      ],
+      [
+        25,
+        0.4959490466996638
+      ]
+    ],
+    "timestamp": "2026-07-15T05:52:16.478336"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.44070881791793454,
+    "biased_bias": 0.7101110009440419,
+    "T_bias": 24.061718725655044,
+    "T_debias": 1.1540193570559365,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.0479608032249791,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 18.474174346923828,
+    "grad_norm_remove_mean": 16.72503776550293,
+    "inject_trajectory": [
+      [
+        0,
+        0.44070881791793454
+      ],
+      [
+        25,
+        0.7101110009440419
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7101110009440419
+      ],
+      [
+        25,
+        0.4910721936176964
+      ]
+    ],
+    "timestamp": "2026-07-15T05:52:40.987251"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.44070881791793454,
+    "biased_bias": 0.70101218279939,
+    "T_bias": 24.902788156440945,
+    "T_debias": 0.127934677310856,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.005137363595881794,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 25.203758659362794,
+    "grad_norm_remove_mean": 20.363168029785157,
+    "inject_trajectory": [
+      [
+        0,
+        0.44070881791793454
+      ],
+      [
+        25,
+        0.70101218279939
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.70101218279939
+      ],
+      [
+        25,
+        0.5032192894522098
+      ]
+    ],
+    "timestamp": "2026-07-15T05:53:05.622358"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.44070881791793454,
+    "biased_bias": 0.7395137693315716,
+    "T_bias": 21.694016519419,
+    "T_debias": 5.727646758043387,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.2640196550471135,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 19.906759567260742,
+    "grad_norm_remove_mean": 18.220138092041015,
+    "inject_trajectory": [
+      [
+        0,
+        0.44070881791793454
+      ],
+      [
+        25,
+        0.7395137693315716
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7395137693315716
+      ],
+      [
+        25,
+        0.5670442936429647
+      ]
+    ],
+    "timestamp": "2026-07-15T05:53:30.564179"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5707027930865077,
+    "biased_bias": 0.7857979150149895,
+    "T_bias": 15.027910181580385,
+    "T_debias": 28.91564498042889,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.9241294784866771,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 27.123245010375978,
+    "grad_norm_remove_mean": 23.595733852386473,
+    "inject_trajectory": [
+      [
+        0,
+        0.5707027930865077
+      ],
+      [
+        25,
+        0.7857979150149895
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7857979150149895
+      ],
+      [
+        25,
+        0.7855005700798467
+      ],
+      [
+        50,
+        0.2396098515188287
+      ]
+    ],
+    "timestamp": "2026-07-15T05:54:07.014248"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5707027930865077,
+    "biased_bias": 0.7553419801626668,
+    "T_bias": 17.506739625667915,
+    "T_debias": 18.767529678410902,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.0720174104202962,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 30.062419967651365,
+    "grad_norm_remove_mean": 30.524678955078127,
+    "inject_trajectory": [
+      [
+        0,
+        0.5707027930865077
+      ],
+      [
+        25,
+        0.7553419801626668
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7553419801626668
+      ],
+      [
+        25,
+        0.68162159565952
+      ]
+    ],
+    "timestamp": "2026-07-15T05:54:32.323516"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5707027930865077,
+    "biased_bias": 0.7958873531120938,
+    "T_bias": 14.354581737176067,
+    "T_debias": 19.29393214803656,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.344095738997979,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 25.936376457214354,
+    "grad_norm_remove_mean": 27.535044479370118,
+    "inject_trajectory": [
+      [
+        0,
+        0.5707027930865077
+      ],
+      [
+        25,
+        0.7958873531120938
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7958873531120938
+      ],
+      [
+        25,
+        0.6716418748234032
+      ]
+    ],
+    "timestamp": "2026-07-15T05:54:57.430657"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5782690562926383,
+    "biased_bias": 0.8116058885332766,
+    "T_bias": 13.042405536497295,
+    "T_debias": 12.225256975952071,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.9373467909536664,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 33.96480602264404,
+    "grad_norm_remove_mean": 26.303385658264162,
+    "inject_trajectory": [
+      [
+        0,
+        0.5782690562926383
+      ],
+      [
+        25,
+        0.8116058885332766
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8116058885332766
+      ],
+      [
+        25,
+        0.5833777851224174
+      ]
+    ],
+    "timestamp": "2026-07-15T05:55:55.129152"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5782690562926383,
+    "biased_bias": 0.8166535309347694,
+    "T_bias": 12.766240743037827,
+    "T_debias": 14.078049516348726,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.1027560735940456,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 37.96744083404541,
+    "grad_norm_remove_mean": 28.76740245819092,
+    "inject_trajectory": [
+      [
+        0,
+        0.5782690562926383
+      ],
+      [
+        25,
+        0.8166535309347694
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8166535309347694
+      ],
+      [
+        25,
+        0.6094985362046744
+      ]
+    ],
+    "timestamp": "2026-07-15T05:56:52.398717"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5782690562926383,
+    "biased_bias": 0.8232750603432893,
+    "T_bias": 12.421220469580387,
+    "T_debias": 15.304794582737275,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.2321490162918185,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 42.633756980895996,
+    "grad_norm_remove_mean": 25.78337469100952,
+    "inject_trajectory": [
+      [
+        0,
+        0.5782690562926383
+      ],
+      [
+        25,
+        0.8232750603432893
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8232750603432893
+      ],
+      [
+        25,
+        0.621908325760757
+      ]
+    ],
+    "timestamp": "2026-07-15T05:57:49.456926"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41006523788333754,
+    "biased_bias": 0.7431956456347937,
+    "T_bias": 42.05425240521032,
+    "T_debias": 12.392296807370405,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.29467404836888883,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 47.20448535919189,
+    "grad_norm_remove_mean": 47.86335441589355,
+    "inject_trajectory": [
+      [
+        0,
+        0.41006523788333754
+      ],
+      [
+        25,
+        0.6072875856332443
+      ],
+      [
+        50,
+        0.7431956456347937
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7431956456347937
+      ],
+      [
+        25,
+        0.6560535155150914
+      ]
+    ],
+    "timestamp": "2026-07-15T05:58:32.241123"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41006523788333754,
+    "biased_bias": 0.7445356209584215,
+    "T_bias": 43.76677259264496,
+    "T_debias": 6.001360883775051,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.13712139434251053,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 40.87008466720581,
+    "grad_norm_remove_mean": 48.384817352294924,
+    "inject_trajectory": [
+      [
+        0,
+        0.41006523788333754
+      ],
+      [
+        25,
+        0.5659137849177905
+      ],
+      [
+        50,
+        0.7445356209584215
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7445356209584215
+      ],
+      [
+        25,
+        0.5590126128402728
+      ]
+    ],
+    "timestamp": "2026-07-15T05:59:15.133462"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41006523788333754,
+    "biased_bias": 0.7101896417333532,
+    "T_bias": 24.15121516255927,
+    "T_debias": 0.9159208526908389,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.037924421049867374,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 25.746373291015626,
+    "grad_norm_remove_mean": 23.097446670532225,
+    "inject_trajectory": [
+      [
+        0,
+        0.41006523788333754
+      ],
+      [
+        25,
+        0.7101896417333532
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7101896417333532
+      ],
+      [
+        25,
+        0.43206403449836145
+      ]
+    ],
+    "timestamp": "2026-07-15T05:59:45.388653"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7130324809496384,
+    "biased_bias": 0.7706150688494986,
+    "T_bias": 500.0,
+    "T_debias": 26.08603689084241,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 27.674526557922363,
+    "grad_norm_remove_mean": 48.69831466674805,
+    "inject_trajectory": [
+      [
+        0,
+        0.7130324809496384
+      ],
+      [
+        25,
+        0.7706150688494986
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7706150688494986
+      ],
+      [
+        25,
+        0.7136691647408541
+      ],
+      [
+        50,
+        0.39901215685939756
+      ]
+    ],
+    "timestamp": "2026-07-15T06:00:30.207989"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7130324809496384,
+    "biased_bias": 0.7649943518426121,
+    "T_bias": 500.0,
+    "T_debias": 29.526871480754018,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 26.959635391235352,
+    "grad_norm_remove_mean": 24.236488895416258,
+    "inject_trajectory": [
+      [
+        0,
+        0.7130324809496384
+      ],
+      [
+        25,
+        0.7649943518426121
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7649943518426121
+      ],
+      [
+        25,
+        0.7330092607886693
+      ],
+      [
+        50,
+        0.5507130495475938
+      ]
+    ],
+    "timestamp": "2026-07-15T06:01:15.094877"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7130324809496384,
+    "biased_bias": 0.7527871190610133,
+    "T_bias": 500.0,
+    "T_debias": 26.220350076661127,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 31.186056022644042,
+    "grad_norm_remove_mean": 31.75355037689209,
+    "inject_trajectory": [
+      [
+        0,
+        0.7130324809496384
+      ],
+      [
+        25,
+        0.7527871190610133
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7527871190610133
+      ],
+      [
+        25,
+        0.721045187616226
+      ],
+      [
+        50,
+        0.289915054986464
+      ]
+    ],
+    "timestamp": "2026-07-15T06:01:59.902897"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6220963659161649,
+    "biased_bias": 0.7296228475252594,
+    "T_bias": 18.11266232234972,
+    "T_debias": 4.494932459409339,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.24816519953904936,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 29.576784286499024,
+    "grad_norm_remove_mean": 22.284254302978514,
+    "inject_trajectory": [
+      [
+        0,
+        0.6220963659161649
+      ],
+      [
+        25,
+        0.7296228475252594
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7296228475252594
+      ],
+      [
+        25,
+        0.5648659363104462
+      ]
+    ],
+    "timestamp": "2026-07-15T06:02:32.370007"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6220963659161649,
+    "biased_bias": 0.7453711367596537,
+    "T_bias": 15.798778929133537,
+    "T_debias": 5.818637637120981,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.36829666794002647,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 29.401059494018554,
+    "grad_norm_remove_mean": 23.450633354187012,
+    "inject_trajectory": [
+      [
+        0,
+        0.6220963659161649
+      ],
+      [
+        25,
+        0.7453711367596537
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7453711367596537
+      ],
+      [
+        25,
+        0.5504323057599325
+      ]
+    ],
+    "timestamp": "2026-07-15T06:03:04.583474"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6220963659161649,
+    "biased_bias": 0.7813962341511194,
+    "T_bias": 41.17663248425607,
+    "T_debias": 25.635943019474716,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.622584739761724,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 37.27681692123413,
+    "grad_norm_remove_mean": 38.7056964302063,
+    "inject_trajectory": [
+      [
+        0,
+        0.6220963659161649
+      ],
+      [
+        25,
+        0.5507693391309345
+      ],
+      [
+        50,
+        0.7813962341511194
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7813962341511194
+      ],
+      [
+        25,
+        0.7126754521539405
+      ],
+      [
+        50,
+        0.21438190360574258
+      ]
+    ],
+    "timestamp": "2026-07-15T06:04:03.903913"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6187337713461796,
+    "biased_bias": 0.7495270820181711,
+    "T_bias": 15.533330457859376,
+    "T_debias": 5.718720578403767,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.3681580453025304,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 31.88530574798584,
+    "grad_norm_remove_mean": 24.344265747070313,
+    "inject_trajectory": [
+      [
+        0,
+        0.6187337713461796
+      ],
+      [
+        25,
+        0.7495270820181711
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7495270820181711
+      ],
+      [
+        25,
+        0.5330141341518
+      ]
+    ],
+    "timestamp": "2026-07-15T06:05:06.335256"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6187337713461796,
+    "biased_bias": 0.7536193613590477,
+    "T_bias": 15.062066423490371,
+    "T_debias": 5.908575404709041,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.3922818581847571,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 24.509223442077637,
+    "grad_norm_remove_mean": 26.494035453796386,
+    "inject_trajectory": [
+      [
+        0,
+        0.6187337713461796
+      ],
+      [
+        25,
+        0.7536193613590477
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7536193613590477
+      ],
+      [
+        25,
+        0.52674842510801
+      ]
+    ],
+    "timestamp": "2026-07-15T06:06:08.685290"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6187337713461796,
+    "biased_bias": 0.7534406504464999,
+    "T_bias": 15.082048741048137,
+    "T_debias": 5.174486733817154,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.34308911359860444,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 33.36150360107422,
+    "grad_norm_remove_mean": 26.73372423171997,
+    "inject_trajectory": [
+      [
+        0,
+        0.6187337713461796
+      ],
+      [
+        25,
+        0.7534406504464999
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7534406504464999
+      ],
+      [
+        25,
+        0.49524764892015605
+      ]
+    ],
+    "timestamp": "2026-07-15T06:07:11.717743"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5499573175526323,
+    "biased_bias": 0.7262332241345237,
+    "T_bias": 21.279522164542552,
+    "T_debias": 3.893620207378564,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.18297498305043663,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 20.380953941345215,
+    "grad_norm_remove_mean": 21.94946231842041,
+    "inject_trajectory": [
+      [
+        0,
+        0.5499573175526323
+      ],
+      [
+        25,
+        0.7262332241345237
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7262332241345237
+      ],
+      [
+        25,
+        0.5577959938879091
+      ]
+    ],
+    "timestamp": "2026-07-15T06:07:49.704810"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5499573175526323,
+    "biased_bias": 0.7091067840090436,
+    "T_bias": 23.56946048707963,
+    "T_debias": 1.8060062913623227,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.07662484647675087,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 52.4549942779541,
+    "grad_norm_remove_mean": 20.50267261505127,
+    "inject_trajectory": [
+      [
+        0,
+        0.5499573175526323
+      ],
+      [
+        25,
+        0.7091067840090436
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7091067840090436
+      ],
+      [
+        25,
+        0.5830443215940577
+      ]
+    ],
+    "timestamp": "2026-07-15T06:08:27.511677"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5499573175526323,
+    "biased_bias": 0.7178820441743802,
+    "T_bias": 22.33778870239585,
+    "T_debias": 2.9261637089708503,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.13099612266710192,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 20.10380847930908,
+    "grad_norm_remove_mean": 38.34415153503418,
+    "inject_trajectory": [
+      [
+        0,
+        0.5499573175526323
+      ],
+      [
+        25,
+        0.7178820441743802
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7178820441743802
+      ],
+      [
+        25,
+        0.5651048420687823
+      ]
+    ],
+    "timestamp": "2026-07-15T06:09:05.532478"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.43714720019476233,
+    "biased_bias": 0.7212080956562915,
+    "T_bias": 114.63848570557725,
+    "T_debias": 2.579001952516305,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.022496825011627263,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 34.07304347229004,
+    "grad_norm_remove_mean": 41.7101957321167,
+    "inject_trajectory": [
+      [
+        0,
+        0.43714720019476233
+      ],
+      [
+        25,
+        0.5897718092539699
+      ],
+      [
+        50,
+        0.6348183161529496
+      ],
+      [
+        75,
+        0.6679920283481292
+      ],
+      [
+        100,
+        0.670037738086773
+      ],
+      [
+        125,
+        0.7212080956562915
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7212080956562915
+      ],
+      [
+        25,
+        0.5156237645199866
+      ]
+    ],
+    "timestamp": "2026-07-15T06:10:37.215752"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.43714720019476233,
+    "biased_bias": 0.7033906045061511,
+    "T_bias": 73.48432205542088,
+    "T_debias": 0.4220895097154907,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.005743939631057037,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 32.585735664367675,
+    "grad_norm_remove_mean": 48.92276895999908,
+    "inject_trajectory": [
+      [
+        0,
+        0.43714720019476233
+      ],
+      [
+        25,
+        0.5937350022911554
+      ],
+      [
+        50,
+        0.6474650611168424
+      ],
+      [
+        75,
+        0.7033906045061511
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7033906045061511
+      ],
+      [
+        25,
+        0.5025680047904785
+      ]
+    ],
+    "timestamp": "2026-07-15T06:11:40.397648"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.43714720019476233,
+    "biased_bias": 0.7428919354049184,
+    "T_bias": 117.34591027137446,
+    "T_debias": 2.9227576145703877,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.02490719623556723,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 38.142536682128906,
+    "grad_norm_remove_mean": 35.954261455535885,
+    "inject_trajectory": [
+      [
+        0,
+        0.43714720019476233
+      ],
+      [
+        25,
+        0.5805297606025586
+      ],
+      [
+        50,
+        0.6712100397838596
+      ],
+      [
+        75,
+        0.685911116236175
+      ],
+      [
+        100,
+        0.6027971072619098
+      ],
+      [
+        125,
+        0.7428919354049184
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7428919354049184
+      ],
+      [
+        25,
+        0.37601293737326796
+      ]
+    ],
+    "timestamp": "2026-07-15T06:13:12.121653"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6662476108956119,
+    "biased_bias": 0.8436637627830822,
+    "T_bias": 4.756104326650621,
+    "T_debias": 31.836058631241066,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 6.693725882514627,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 27.98203826904297,
+    "grad_norm_remove_mean": 20.878579216003416,
+    "inject_trajectory": [
+      [
+        0,
+        0.6662476108956119
+      ],
+      [
+        25,
+        0.8436637627830822
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8436637627830822
+      ],
+      [
+        25,
+        0.7526569152365438
+      ],
+      [
+        50,
+        0.5600864661041315
+      ]
+    ],
+    "timestamp": "2026-07-15T06:14:02.369404"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6662476108956119,
+    "biased_bias": 0.8624903822229355,
+    "T_bias": 4.299825781619577,
+    "T_debias": 32.52285747690214,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 7.563761679816721,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 32.212220649719235,
+    "grad_norm_remove_mean": 19.676884641647337,
+    "inject_trajectory": [
+      [
+        0,
+        0.6662476108956119
+      ],
+      [
+        25,
+        0.8624903822229355
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8624903822229355
+      ],
+      [
+        25,
+        0.7566592073281247
+      ],
+      [
+        50,
+        0.568369028024287
+      ]
+    ],
+    "timestamp": "2026-07-15T06:14:52.652334"
+  },
+  {
+    "model": "mbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6662476108956119,
+    "biased_bias": 0.8634514191188443,
+    "T_bias": 4.278871362638792,
+    "T_debias": 28.003787739824023,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 6.5446668914472825,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 27.900709953308105,
+    "grad_norm_remove_mean": 18.843350973129272,
+    "inject_trajectory": [
+      [
+        0,
+        0.6662476108956119
+      ],
+      [
+        25,
+        0.8634514191188443
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8634514191188443
+      ],
+      [
+        25,
+        0.7267820988203468
+      ],
+      [
+        50,
+        0.5038793744927291
+      ]
+    ],
+    "timestamp": "2026-07-15T06:15:42.931155"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5609251702940207,
+    "biased_bias": 0.8344689684610278,
+    "T_bias": 12.710471836494508,
+    "T_debias": 11.898100017837347,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.9360864152718025,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 32.59614265441895,
+    "grad_norm_remove_mean": 31.250755157470703,
+    "inject_trajectory": [
+      [
+        0,
+        0.5609251702940207
+      ],
+      [
+        25,
+        0.8344689684610278
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8344689684610278
+      ],
+      [
+        25,
+        0.5519260240845408
+      ]
+    ],
+    "timestamp": "2026-07-15T06:16:32.863700"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5609251702940207,
+    "biased_bias": 0.8126016948115949,
+    "T_bias": 13.81483930340391,
+    "T_debias": 6.078322046737526,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4399849982503855,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 33.82830940246582,
+    "grad_norm_remove_mean": 48.60623229980469,
+    "inject_trajectory": [
+      [
+        0,
+        0.5609251702940207
+      ],
+      [
+        25,
+        0.8126016948115949
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8126016948115949
+      ],
+      [
+        25,
+        0.3494734912310001
+      ]
+    ],
+    "timestamp": "2026-07-15T06:17:14.452519"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5609251702940207,
+    "biased_bias": 0.8542217051983361,
+    "T_bias": 11.854455572698024,
+    "T_debias": 16.938480222961157,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.4288703617880303,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 26.421031913757325,
+    "grad_norm_remove_mean": 25.212622470855713,
+    "inject_trajectory": [
+      [
+        0,
+        0.5609251702940207
+      ],
+      [
+        25,
+        0.8542217051983361
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8542217051983361
+      ],
+      [
+        25,
+        0.6266013650492844
+      ]
+    ],
+    "timestamp": "2026-07-15T06:17:56.223023"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6186401912883773,
+    "biased_bias": 0.7619758723051248,
+    "T_bias": 14.19043188243486,
+    "T_debias": 28.313992645579916,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.9952875909737056,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 40.74819458007813,
+    "grad_norm_remove_mean": 36.32329587936401,
+    "inject_trajectory": [
+      [
+        0,
+        0.6186401912883773
+      ],
+      [
+        25,
+        0.7619758723051248
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7619758723051248
+      ],
+      [
+        25,
+        0.7257919876436908
+      ],
+      [
+        50,
+        0.5312231517857472
+      ]
+    ],
+    "timestamp": "2026-07-15T06:18:36.720072"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6186401912883773,
+    "biased_bias": 0.7724989400880994,
+    "T_bias": 13.21988664055898,
+    "T_debias": 4.97535031154569,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.37635347766759036,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 28.4408283996582,
+    "grad_norm_remove_mean": 33.688501052856445,
+    "inject_trajectory": [
+      [
+        0,
+        0.6186401912883773
+      ],
+      [
+        25,
+        0.7724989400880994
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7724989400880994
+      ],
+      [
+        25,
+        0.4082083095376236
+      ]
+    ],
+    "timestamp": "2026-07-15T06:19:05.321638"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6186401912883773,
+    "biased_bias": 0.7788034743460457,
+    "T_bias": 12.699510018524068,
+    "T_debias": 6.2030081341663035,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4884446821269735,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 23.768661613464356,
+    "grad_norm_remove_mean": 24.194692344665526,
+    "inject_trajectory": [
+      [
+        0,
+        0.6186401912883773
+      ],
+      [
+        25,
+        0.7788034743460457
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7788034743460457
+      ],
+      [
+        25,
+        0.46120162439845946
+      ]
+    ],
+    "timestamp": "2026-07-15T06:19:33.898805"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41706893442972964,
+    "biased_bias": 0.7618021222425637,
+    "T_bias": 33.50839414375187,
+    "T_debias": 8.839093567805657,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.2637874417343224,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 38.572223587036135,
+    "grad_norm_remove_mean": 43.614665756225584,
+    "inject_trajectory": [
+      [
+        0,
+        0.41706893442972964
+      ],
+      [
+        25,
+        0.6681148810162204
+      ],
+      [
+        50,
+        0.7618021222425637
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7618021222425637
+      ],
+      [
+        25,
+        0.5870044414383249
+      ]
+    ],
+    "timestamp": "2026-07-15T06:20:13.825888"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41706893442972964,
+    "biased_bias": 0.756870623409676,
+    "T_bias": 36.22717109801498,
+    "T_debias": 8.873307137014844,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.2449351375796783,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 40.774368724823,
+    "grad_norm_remove_mean": 54.83242263793945,
+    "inject_trajectory": [
+      [
+        0,
+        0.41706893442972964
+      ],
+      [
+        25,
+        0.6536408806052048
+      ],
+      [
+        50,
+        0.756870623409676
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.756870623409676
+      ],
+      [
+        25,
+        0.5966411212310541
+      ]
+    ],
+    "timestamp": "2026-07-15T06:20:54.058204"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41706893442972964,
+    "biased_bias": 0.8123845766090011,
+    "T_bias": 25.857490123303986,
+    "T_debias": 27.64094459882109,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.068972451193543,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 39.83126001358032,
+    "grad_norm_remove_mean": 56.94320823669434,
+    "inject_trajectory": [
+      [
+        0,
+        0.41706893442972964
+      ],
+      [
+        25,
+        0.6960083410984977
+      ],
+      [
+        50,
+        0.8123845766090011
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8123845766090011
+      ],
+      [
+        25,
+        0.7544686156249224
+      ],
+      [
+        50,
+        0.23885182031958863
+      ]
+    ],
+    "timestamp": "2026-07-15T06:21:45.733847"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.669569071027425,
+    "biased_bias": 0.8842268450825005,
+    "T_bias": 3.544121463400525,
+    "T_debias": 28.63617094236078,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 8.079906752091068,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 34.091465072631834,
+    "grad_norm_remove_mean": 27.356460914611816,
+    "inject_trajectory": [
+      [
+        0,
+        0.669569071027425
+      ],
+      [
+        25,
+        0.8842268450825005
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8842268450825005
+      ],
+      [
+        25,
+        0.7717794852268375
+      ],
+      [
+        50,
+        0.27826937277159924
+      ]
+    ],
+    "timestamp": "2026-07-15T06:22:26.827381"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.669569071027425,
+    "biased_bias": 0.8899016568825079,
+    "T_bias": 3.4528402658277204,
+    "T_debias": 28.065281535928918,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 8.128172569605118,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 33.801814041137696,
+    "grad_norm_remove_mean": 29.664163513183595,
+    "inject_trajectory": [
+      [
+        0,
+        0.669569071027425
+      ],
+      [
+        25,
+        0.8899016568825079
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8899016568825079
+      ],
+      [
+        25,
+        0.7583567698307997
+      ],
+      [
+        50,
+        0.282407259591808
+      ]
+    ],
+    "timestamp": "2026-07-15T06:23:07.769774"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.669569071027425,
+    "biased_bias": 0.8815347286090282,
+    "T_bias": 3.5891343578687445,
+    "T_debias": 26.664122107894865,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 7.429123417861745,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 32.79385986328125,
+    "grad_norm_remove_mean": 25.957921543121337,
+    "inject_trajectory": [
+      [
+        0,
+        0.669569071027425
+      ],
+      [
+        25,
+        0.8815347286090282
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8815347286090282
+      ],
+      [
+        25,
+        0.7296567552024921
+      ],
+      [
+        50,
+        0.2841252184571466
+      ]
+    ],
+    "timestamp": "2026-07-15T06:23:48.735516"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5996156288346257,
+    "biased_bias": 0.7364198636360891,
+    "T_bias": 18.344529193678955,
+    "T_debias": 4.45099974007593,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.24263363169928764,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 40.49056976318359,
+    "grad_norm_remove_mean": 78.29802299499512,
+    "inject_trajectory": [
+      [
+        0,
+        0.5996156288346257
+      ],
+      [
+        25,
+        0.7364198636360891
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7364198636360891
+      ],
+      [
+        25,
+        0.5318598447476816
+      ]
+    ],
+    "timestamp": "2026-07-15T06:24:41.360761"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5996156288346257,
+    "biased_bias": 0.7531897989367695,
+    "T_bias": 16.341350094649304,
+    "T_debias": 9.135325727811908,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.5590312718900206,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 31.6855712890625,
+    "grad_norm_remove_mean": 26.853620491027833,
+    "inject_trajectory": [
+      [
+        0,
+        0.5996156288346257
+      ],
+      [
+        25,
+        0.7531897989367695
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7531897989367695
+      ],
+      [
+        25,
+        0.607629037006747
+      ]
+    ],
+    "timestamp": "2026-07-15T06:25:33.906737"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5996156288346257,
+    "biased_bias": 0.7428957141996761,
+    "T_bias": 17.515408877237533,
+    "T_debias": 4.484863069049665,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.2560524336304847,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 36.371500205993655,
+    "grad_norm_remove_mean": 48.94840805053711,
+    "inject_trajectory": [
+      [
+        0,
+        0.5996156288346257
+      ],
+      [
+        25,
+        0.7428957141996761
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7428957141996761
+      ],
+      [
+        25,
+        0.5037818686973333
+      ]
+    ],
+    "timestamp": "2026-07-15T06:26:26.643345"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.43276917143797183,
+    "biased_bias": 0.7342753723303873,
+    "T_bias": 38.69510189055178,
+    "T_debias": 27.784222242921835,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7180294374597818,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 47.590244636535644,
+    "grad_norm_remove_mean": 93.72395744323731,
+    "inject_trajectory": [
+      [
+        0,
+        0.43276917143797183
+      ],
+      [
+        25,
+        0.658477757883643
+      ],
+      [
+        50,
+        0.7342753723303873
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7342753723303873
+      ],
+      [
+        25,
+        0.7567814077524747
+      ],
+      [
+        50,
+        0.24693159334894763
+      ]
+    ],
+    "timestamp": "2026-07-15T06:27:21.261586"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.43276917143797183,
+    "biased_bias": 0.7074671284413139,
+    "T_bias": 24.320423737150048,
+    "T_debias": 0.5481018159777225,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.022536688583286623,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 36.746224098205566,
+    "grad_norm_remove_mean": 53.167891082763674,
+    "inject_trajectory": [
+      [
+        0,
+        0.43276917143797183
+      ],
+      [
+        25,
+        0.7074671284413139
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7074671284413139
+      ],
+      [
+        25,
+        0.3668767388622443
+      ]
+    ],
+    "timestamp": "2026-07-15T06:27:51.348153"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.43276917143797183,
+    "biased_bias": 0.7183243637643899,
+    "T_bias": 23.39572486713502,
+    "T_debias": 1.1598104639898343,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.04957360674124998,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 43.45314105987549,
+    "grad_norm_remove_mean": 51.61697448730469,
+    "inject_trajectory": [
+      [
+        0,
+        0.43276917143797183
+      ],
+      [
+        25,
+        0.7183243637643899
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7183243637643899
+      ],
+      [
+        25,
+        0.3233381928914187
+      ]
+    ],
+    "timestamp": "2026-07-15T06:28:21.442690"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.8154857720463903,
+    "biased_bias": 0.8341322476826419,
+    "T_bias": 500.0,
+    "T_debias": 28.244781351133366,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 42.4075065612793,
+    "grad_norm_remove_mean": 60.710457458496094,
+    "inject_trajectory": [
+      [
+        0,
+        0.8154857720463903
+      ],
+      [
+        25,
+        0.8341322476826419
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8341322476826419
+      ],
+      [
+        25,
+        0.7447549325415151
+      ],
+      [
+        50,
+        0.3999325262036984
+      ]
+    ],
+    "timestamp": "2026-07-15T06:29:06.278304"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.8154857720463903,
+    "biased_bias": 0.8528919922308978,
+    "T_bias": 500.0,
+    "T_debias": 27.1720282438898,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 37.70261417388916,
+    "grad_norm_remove_mean": 66.8554473876953,
+    "inject_trajectory": [
+      [
+        0,
+        0.8154857720463903
+      ],
+      [
+        25,
+        0.8528919922308978
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8528919922308978
+      ],
+      [
+        25,
+        0.7331185223917127
+      ],
+      [
+        50,
+        0.3519250171405783
+      ]
+    ],
+    "timestamp": "2026-07-15T06:29:50.877024"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.8154857720463903,
+    "biased_bias": 0.8442101989996507,
+    "T_bias": 500.0,
+    "T_debias": 30.132043027033752,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 40.05032585144043,
+    "grad_norm_remove_mean": 61.418065032958985,
+    "inject_trajectory": [
+      [
+        0,
+        0.8154857720463903
+      ],
+      [
+        25,
+        0.8442101989996507
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8442101989996507
+      ],
+      [
+        25,
+        0.7949951755871824
+      ],
+      [
+        50,
+        0.33224001605918324
+      ]
+    ],
+    "timestamp": "2026-07-15T06:30:35.795573"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5782615311992232,
+    "biased_bias": 0.8685856216802835,
+    "T_bias": 10.48298029618029,
+    "T_debias": 18.787879010927398,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.7922268744293246,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 42.18471565246582,
+    "grad_norm_remove_mean": 38.018383255004885,
+    "inject_trajectory": [
+      [
+        0,
+        0.5782615311992232
+      ],
+      [
+        25,
+        0.8685856216802835
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8685856216802835
+      ],
+      [
+        25,
+        0.644257982591498
+      ]
+    ],
+    "timestamp": "2026-07-15T06:31:05.894250"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5782615311992232,
+    "biased_bias": 0.8814484232532586,
+    "T_bias": 10.038236479817865,
+    "T_debias": 20.70272422079562,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 2.0623865817884433,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 37.690344161987305,
+    "grad_norm_remove_mean": 38.46183151245117,
+    "inject_trajectory": [
+      [
+        0,
+        0.5782615311992232
+      ],
+      [
+        25,
+        0.8814484232532586
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8814484232532586
+      ],
+      [
+        25,
+        0.6623366516355456
+      ]
+    ],
+    "timestamp": "2026-07-15T06:42:49.777896"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5782615311992232,
+    "biased_bias": 0.8785524528503545,
+    "T_bias": 10.13504405422958,
+    "T_debias": 12.429710661638586,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.226409139923905,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 46.42267234802246,
+    "grad_norm_remove_mean": 52.092966918945315,
+    "inject_trajectory": [
+      [
+        0,
+        0.5782615311992232
+      ],
+      [
+        25,
+        0.8785524528503545
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8785524528503545
+      ],
+      [
+        25,
+        0.5194281383129791
+      ]
+    ],
+    "timestamp": "2026-07-15T06:43:19.156966"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.4910400728642679,
+    "biased_bias": 0.7193743089424102,
+    "T_bias": 37.729117247100625,
+    "T_debias": 10.643853315730608,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.28211243973773487,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 61.040587787628176,
+    "grad_norm_remove_mean": 8492.139707946777,
+    "inject_trajectory": [
+      [
+        0,
+        0.4910400728642679
+      ],
+      [
+        25,
+        0.6799021916291051
+      ],
+      [
+        50,
+        0.7193743089424102
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7193743089424102
+      ],
+      [
+        25,
+        0.6738684466204989
+      ]
+    ],
+    "timestamp": "2026-07-15T06:44:34.254802"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.4910400728642679,
+    "biased_bias": 0.7005872321712592,
+    "T_bias": 49.51207990210598,
+    "T_debias": 0.1786403841409135,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.003608016154726618,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 51.88123176574707,
+    "grad_norm_remove_mean": 104.9242261505127,
+    "inject_trajectory": [
+      [
+        0,
+        0.4910400728642679
+      ],
+      [
+        25,
+        0.6704986903283501
+      ],
+      [
+        50,
+        0.7005872321712592
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7005872321712592
+      ],
+      [
+        25,
+        0.6184064623969389
+      ]
+    ],
+    "timestamp": "2026-07-15T06:45:49.904183"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.4910400728642679,
+    "biased_bias": 0.7090529318128896,
+    "T_bias": 42.70223405795685,
+    "T_debias": 2.502759367852437,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.058609565121478455,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 54.27314666748047,
+    "grad_norm_remove_mean": 87.06275367736816,
+    "inject_trajectory": [
+      [
+        0,
+        0.4910400728642679
+      ],
+      [
+        25,
+        0.6780402496962474
+      ],
+      [
+        50,
+        0.7090529318128896
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7090529318128896
+      ],
+      [
+        25,
+        0.6186234249936043
+      ]
+    ],
+    "timestamp": "2026-07-15T06:47:05.350757"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41804476018552506,
+    "biased_bias": 0.7497514077970208,
+    "T_bias": 32.41407898617,
+    "T_debias": 6.616158151063543,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.2041137171871037,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 53.01686168670654,
+    "grad_norm_remove_mean": 54.897915802001954,
+    "inject_trajectory": [
+      [
+        0,
+        0.41804476018552506
+      ],
+      [
+        25,
+        0.6790252175709088
+      ],
+      [
+        50,
+        0.7497514077970208
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7497514077970208
+      ],
+      [
+        25,
+        0.561759348579757
+      ]
+    ],
+    "timestamp": "2026-07-15T06:47:51.312562"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41804476018552506,
+    "biased_bias": 0.7683988657666538,
+    "T_bias": 37.58389294951661,
+    "T_debias": 15.970408285868508,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4249269309946221,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 56.979498329162595,
+    "grad_norm_remove_mean": 69.52566246032715,
+    "inject_trajectory": [
+      [
+        0,
+        0.41804476018552506
+      ],
+      [
+        25,
+        0.6306768215531439
+      ],
+      [
+        50,
+        0.7683988657666538
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7683988657666538
+      ],
+      [
+        25,
+        0.661327611634759
+      ]
+    ],
+    "timestamp": "2026-07-15T06:48:37.260805"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.41804476018552506,
+    "biased_bias": 0.7368464667300034,
+    "T_bias": 42.80517170201222,
+    "T_debias": 6.510856181306952,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.15210442856373088,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 51.873124771118164,
+    "grad_norm_remove_mean": 69.98592468261718,
+    "inject_trajectory": [
+      [
+        0,
+        0.41804476018552506
+      ],
+      [
+        25,
+        0.6088153824430145
+      ],
+      [
+        50,
+        0.7368464667300034
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7368464667300034
+      ],
+      [
+        25,
+        0.5953655857830712
+      ]
+    ],
+    "timestamp": "2026-07-15T06:49:22.976383"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5380725186318013,
+    "biased_bias": 0.7048721964312818,
+    "T_bias": 24.26975332093581,
+    "T_debias": 0.40541357198098404,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.016704478476559637,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 45.69653923034668,
+    "grad_norm_remove_mean": 58.587323608398435,
+    "inject_trajectory": [
+      [
+        0,
+        0.5380725186318013
+      ],
+      [
+        25,
+        0.7048721964312818
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7048721964312818
+      ],
+      [
+        25,
+        0.4044261354203776
+      ]
+    ],
+    "timestamp": "2026-07-15T06:49:55.504527"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5380725186318013,
+    "biased_bias": 0.8307692600681589,
+    "T_bias": 28.10331357784601,
+    "T_debias": 9.926853786661818,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.3532271651584605,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 49.50086172103882,
+    "grad_norm_remove_mean": 61.3775772857666,
+    "inject_trajectory": [
+      [
+        0,
+        0.5380725186318013
+      ],
+      [
+        25,
+        0.6814666926077085
+      ],
+      [
+        50,
+        0.8307692600681589
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8307692600681589
+      ],
+      [
+        25,
+        0.5014371703685337
+      ]
+    ],
+    "timestamp": "2026-07-15T06:50:41.716488"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5380725186318013,
+    "biased_bias": 0.7905781957057706,
+    "T_bias": 29.266282976862545,
+    "T_debias": 9.186831265133701,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.31390495582909056,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 48.50783302307129,
+    "grad_norm_remove_mean": 55.52578491210937,
+    "inject_trajectory": [
+      [
+        0,
+        0.5380725186318013
+      ],
+      [
+        25,
+        0.6813621352127445
+      ],
+      [
+        50,
+        0.7905781957057706
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7905781957057706
+      ],
+      [
+        25,
+        0.5440889735472628
+      ]
+    ],
+    "timestamp": "2026-07-15T06:51:27.686618"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6815759934313913,
+    "biased_bias": 0.7401185203403553,
+    "T_bias": 7.867787547528795,
+    "T_debias": 31.35804418632185,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 3.985624166500422,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 26.300951232910155,
+    "grad_norm_remove_mean": 21.40239984512329,
+    "inject_trajectory": [
+      [
+        0,
+        0.6815759934313913
+      ],
+      [
+        25,
+        0.7401185203403553
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7401185203403553
+      ],
+      [
+        25,
+        0.7232407813898675
+      ],
+      [
+        50,
+        0.63185740660983
+      ]
+    ],
+    "timestamp": "2026-07-15T06:52:15.773138"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6815759934313913,
+    "biased_bias": 0.7625313357933304,
+    "T_bias": 5.6895585983188415,
+    "T_debias": 17.379512738933446,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 3.054632875047419,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 37.764497985839846,
+    "grad_norm_remove_mean": 40.31473892211914,
+    "inject_trajectory": [
+      [
+        0,
+        0.6815759934313913
+      ],
+      [
+        25,
+        0.7625313357933304
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7625313357933304
+      ],
+      [
+        25,
+        0.6725815530625864
+      ]
+    ],
+    "timestamp": "2026-07-15T06:52:49.835928"
+  },
+  {
+    "model": "xlm-roberta",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6815759934313913,
+    "biased_bias": 0.8061536801133015,
+    "T_bias": 3.6972926411074525,
+    "T_debias": 22.989016590911948,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 6.217797405407984,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 30.24685562133789,
+    "grad_norm_remove_mean": 36.08307308197021,
+    "inject_trajectory": [
+      [
+        0,
+        0.6815759934313913
+      ],
+      [
+        25,
+        0.8061536801133015
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8061536801133015
+      ],
+      [
+        25,
+        0.6907141182539369
+      ]
+    ],
+    "timestamp": "2026-07-15T06:53:23.965440"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5423061145566087,
+    "biased_bias": 0.7311961192243052,
+    "T_bias": 20.871126256893955,
+    "T_debias": 3.805911398555168,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.18235294788167145,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.846720504760742,
+    "grad_norm_remove_mean": 6.003347940444947,
+    "inject_trajectory": [
+      [
+        0,
+        0.5423061145566087
+      ],
+      [
+        25,
+        0.7311961192243052
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7311961192243052
+      ],
+      [
+        25,
+        0.5262772709022703
+      ]
+    ],
+    "timestamp": "2026-07-15T06:54:13.979476"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5423061145566087,
+    "biased_bias": 0.7264542688048623,
+    "T_bias": 21.40856177559091,
+    "T_debias": 3.6866773104217523,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.172205744088103,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.326098327636719,
+    "grad_norm_remove_mean": 6.651795997619629,
+    "inject_trajectory": [
+      [
+        0,
+        0.5423061145566087
+      ],
+      [
+        25,
+        0.7264542688048623
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7264542688048623
+      ],
+      [
+        25,
+        0.5470632713199481
+      ]
+    ],
+    "timestamp": "2026-07-15T06:54:53.273569"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5423061145566087,
+    "biased_bias": 0.7408116313596205,
+    "T_bias": 19.86013889980194,
+    "T_debias": 5.0585505443785,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.2547087193045235,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.768815479278564,
+    "grad_norm_remove_mean": 5.938886651992798,
+    "inject_trajectory": [
+      [
+        0,
+        0.5423061145566087
+      ],
+      [
+        25,
+        0.7408116313596205
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7408116313596205
+      ],
+      [
+        25,
+        0.5391153598605942
+      ]
+    ],
+    "timestamp": "2026-07-15T06:55:32.787683"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6386801143143243,
+    "biased_bias": 0.7575274833908963,
+    "T_bias": 12.898873185440058,
+    "T_debias": 12.073428074881415,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.9360064170961548,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.025034313201904,
+    "grad_norm_remove_mean": 6.451349296569824,
+    "inject_trajectory": [
+      [
+        0,
+        0.6386801143143243
+      ],
+      [
+        25,
+        0.7575274833908963
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7575274833908963
+      ],
+      [
+        25,
+        0.6384074558516977
+      ]
+    ],
+    "timestamp": "2026-07-15T06:55:59.822163"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6386801143143243,
+    "biased_bias": 0.7546845943464645,
+    "T_bias": 13.214982229282521,
+    "T_debias": 6.244023411900256,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4724957857351021,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.562107076644898,
+    "grad_norm_remove_mean": 6.5967395210266115,
+    "inject_trajectory": [
+      [
+        0,
+        0.6386801143143243
+      ],
+      [
+        25,
+        0.7546845943464645
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7546845943464645
+      ],
+      [
+        25,
+        0.5357368472806736
+      ]
+    ],
+    "timestamp": "2026-07-15T06:56:26.871196"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6386801143143243,
+    "biased_bias": 0.7524630355670816,
+    "T_bias": 13.472998629877791,
+    "T_debias": 8.728855641135267,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.6478777205378847,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.178123970031738,
+    "grad_norm_remove_mean": 6.374081859588623,
+    "inject_trajectory": [
+      [
+        0,
+        0.6386801143143243
+      ],
+      [
+        25,
+        0.7524630355670816
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7524630355670816
+      ],
+      [
+        25,
+        0.602205551298908
+      ]
+    ],
+    "timestamp": "2026-07-15T06:56:53.680879"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5135854100202508,
+    "biased_bias": 0.7092497861494423,
+    "T_bias": 46.14354706224794,
+    "T_debias": 4.107699227436943,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.0890200144756022,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 10.110299787521363,
+    "grad_norm_remove_mean": 14.97894947052002,
+    "inject_trajectory": [
+      [
+        0,
+        0.5135854100202508
+      ],
+      [
+        25,
+        0.6492867430451609
+      ],
+      [
+        50,
+        0.7092497861494423
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7092497861494423
+      ],
+      [
+        25,
+        0.6529543660292239
+      ]
+    ],
+    "timestamp": "2026-07-15T06:57:32.693926"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5135854100202508,
+    "biased_bias": 0.7193520966845275,
+    "T_bias": 41.93322449115797,
+    "T_debias": 15.732868931392375,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.3751886272115755,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 10.267841796875,
+    "grad_norm_remove_mean": 14.712311820983887,
+    "inject_trajectory": [
+      [
+        0,
+        0.5135854100202508
+      ],
+      [
+        25,
+        0.6593773996593171
+      ],
+      [
+        50,
+        0.7193520966845275
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7193520966845275
+      ],
+      [
+        25,
+        0.6886010353731452
+      ]
+    ],
+    "timestamp": "2026-07-15T06:58:11.447691"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5135854100202508,
+    "biased_bias": 0.7596003821523382,
+    "T_bias": 33.0821765824212,
+    "T_debias": 25.5400657353188,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7720189048531337,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 10.416422963142395,
+    "grad_norm_remove_mean": 10.950039520263672,
+    "inject_trajectory": [
+      [
+        0,
+        0.5135854100202508
+      ],
+      [
+        25,
+        0.6715270220615696
+      ],
+      [
+        50,
+        0.7596003821523382
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7596003821523382
+      ],
+      [
+        25,
+        0.7036451059754336
+      ],
+      [
+        50,
+        0.5349107400893097
+      ]
+    ],
+    "timestamp": "2026-07-15T06:59:02.347739"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7331800260520902,
+    "biased_bias": 0.870415149248871,
+    "T_bias": 500.0,
+    "T_debias": 28.14184300275366,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 7.000667762756348,
+    "grad_norm_remove_mean": 6.611444435119629,
+    "inject_trajectory": [
+      [
+        0,
+        0.7331800260520902
+      ],
+      [
+        25,
+        0.870415149248871
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.870415149248871
+      ],
+      [
+        25,
+        0.7438886311754584
+      ],
+      [
+        50,
+        0.3946618307195444
+      ]
+    ],
+    "timestamp": "2026-07-15T06:59:41.300821"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7331800260520902,
+    "biased_bias": 0.8606041059126892,
+    "T_bias": 500.0,
+    "T_debias": 26.044903443153068,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 6.526501035690307,
+    "grad_norm_remove_mean": 6.6627281665802,
+    "inject_trajectory": [
+      [
+        0,
+        0.7331800260520902
+      ],
+      [
+        25,
+        0.8606041059126892
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8606041059126892
+      ],
+      [
+        25,
+        0.7148113870468488
+      ],
+      [
+        50,
+        0.3604392404168586
+      ]
+    ],
+    "timestamp": "2026-07-15T07:00:20.314802"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7331800260520902,
+    "biased_bias": 0.8561935427996887,
+    "T_bias": 500.0,
+    "T_debias": 26.515383511116607,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 6.945917491912842,
+    "grad_norm_remove_mean": 6.541452603340149,
+    "inject_trajectory": [
+      [
+        0,
+        0.7331800260520902
+      ],
+      [
+        25,
+        0.8561935427996887
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8561935427996887
+      ],
+      [
+        25,
+        0.721311856470007
+      ],
+      [
+        50,
+        0.36972005951453857
+      ]
+    ],
+    "timestamp": "2026-07-15T07:00:59.158715"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.574103755909307,
+    "biased_bias": 0.7548203688768347,
+    "T_bias": 17.416252167324927,
+    "T_debias": 6.840071671907684,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.39274073469954207,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.0203784084320064,
+    "grad_norm_remove_mean": 7.52821102142334,
+    "inject_trajectory": [
+      [
+        0,
+        0.574103755909307
+      ],
+      [
+        25,
+        0.7548203688768347
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7548203688768347
+      ],
+      [
+        25,
+        0.5544556230585156
+      ]
+    ],
+    "timestamp": "2026-07-15T07:01:40.264279"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.574103755909307,
+    "biased_bias": 0.7518940212273164,
+    "T_bias": 17.70291582971447,
+    "T_debias": 7.535030973808519,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4256378466851724,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.977181777954102,
+    "grad_norm_remove_mean": 7.0303929328918455,
+    "inject_trajectory": [
+      [
+        0,
+        0.574103755909307
+      ],
+      [
+        25,
+        0.7518940212273164
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7518940212273164
+      ],
+      [
+        25,
+        0.5797181489326367
+      ]
+    ],
+    "timestamp": "2026-07-15T07:02:20.934718"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.574103755909307,
+    "biased_bias": 0.7499220040657077,
+    "T_bias": 17.90147573002502,
+    "T_debias": 6.765723930226467,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.3779422452238808,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.466417484283447,
+    "grad_norm_remove_mean": 7.3397776222229005,
+    "inject_trajectory": [
+      [
+        0,
+        0.574103755909307
+      ],
+      [
+        25,
+        0.7499220040657077
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7499220040657077
+      ],
+      [
+        25,
+        0.565455402337115
+      ]
+    ],
+    "timestamp": "2026-07-15T07:03:01.669896"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5780763843932836,
+    "biased_bias": 0.7028312859927824,
+    "T_bias": 24.43263031021583,
+    "T_debias": 0.48068746530654055,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.01967399576727334,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.910409317016602,
+    "grad_norm_remove_mean": 6.278632898330688,
+    "inject_trajectory": [
+      [
+        0,
+        0.5780763843932836
+      ],
+      [
+        25,
+        0.7028312859927824
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7028312859927824
+      ],
+      [
+        25,
+        0.5555793709164794
+      ]
+    ],
+    "timestamp": "2026-07-15T07:03:28.650087"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5780763843932836,
+    "biased_bias": 0.7356703732957365,
+    "T_bias": 29.49027379952872,
+    "T_debias": 25.164085677879363,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.8533011883491399,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 9.881135969161987,
+    "grad_norm_remove_mean": 10.757033653259278,
+    "inject_trajectory": [
+      [
+        0,
+        0.5780763843932836
+      ],
+      [
+        25,
+        0.6921905470085907
+      ],
+      [
+        50,
+        0.7356703732957365
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7356703732957365
+      ],
+      [
+        25,
+        0.7010212421264549
+      ],
+      [
+        50,
+        0.5454253760439559
+      ]
+    ],
+    "timestamp": "2026-07-15T07:04:18.480495"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5780763843932836,
+    "biased_bias": 0.7069907389634719,
+    "T_bias": 23.644305557208963,
+    "T_debias": 1.3164517880127486,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.055677329360657536,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.97973403930664,
+    "grad_norm_remove_mean": 6.431286268234253,
+    "inject_trajectory": [
+      [
+        0,
+        0.5780763843932836
+      ],
+      [
+        25,
+        0.7069907389634719
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7069907389634719
+      ],
+      [
+        25,
+        0.5742335231822394
+      ]
+    ],
+    "timestamp": "2026-07-15T07:04:45.613033"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5111237400510441,
+    "biased_bias": 0.7756848343416202,
+    "T_bias": 57.80400392846068,
+    "T_debias": 13.744570085033411,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.23777885874556282,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 18.861860224405923,
+    "grad_norm_remove_mean": 32.07930587768555,
+    "inject_trajectory": [
+      [
+        0,
+        0.5111237400510441
+      ],
+      [
+        25,
+        0.6116731859344119
+      ],
+      [
+        50,
+        0.6656521935647297
+      ],
+      [
+        75,
+        0.7756848343416202
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7756848343416202
+      ],
+      [
+        25,
+        0.6380216810502085
+      ]
+    ],
+    "timestamp": "2026-07-15T07:05:36.836729"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5111237400510441,
+    "biased_bias": 0.7795381681535636,
+    "T_bias": 55.79528334854028,
+    "T_debias": 4.854549335232435,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.08700644649310559,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 18.05107552846273,
+    "grad_norm_remove_mean": 54.97745368957519,
+    "inject_trajectory": [
+      [
+        0,
+        0.5111237400510441
+      ],
+      [
+        25,
+        0.609396161206555
+      ],
+      [
+        50,
+        0.675998280534969
+      ],
+      [
+        75,
+        0.7795381681535636
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7795381681535636
+      ],
+      [
+        25,
+        0.369931824386973
+      ]
+    ],
+    "timestamp": "2026-07-15T07:06:27.707123"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5111237400510441,
+    "biased_bias": 0.7936994421897535,
+    "T_bias": 57.353048760099774,
+    "T_debias": 17.182593387701743,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.29959337400831576,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 18.660436703364056,
+    "grad_norm_remove_mean": 40.860949478149415,
+    "inject_trajectory": [
+      [
+        0,
+        0.5111237400510441
+      ],
+      [
+        25,
+        0.6216893976621578
+      ],
+      [
+        50,
+        0.6609577565071062
+      ],
+      [
+        75,
+        0.7936994421897535
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7936994421897535
+      ],
+      [
+        25,
+        0.6573704258481081
+      ]
+    ],
+    "timestamp": "2026-07-15T07:07:18.715504"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5674886434837786,
+    "biased_bias": 0.7637606929820828,
+    "T_bias": 16.8785312089695,
+    "T_debias": 7.168545196344771,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.42471380403854697,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.479663562774658,
+    "grad_norm_remove_mean": 8.03193042755127,
+    "inject_trajectory": [
+      [
+        0,
+        0.5674886434837786
+      ],
+      [
+        25,
+        0.7637606929820828
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7637606929820828
+      ],
+      [
+        25,
+        0.5413979567654152
+      ]
+    ],
+    "timestamp": "2026-07-15T07:07:46.323429"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5674886434837786,
+    "biased_bias": 0.7623286425790706,
+    "T_bias": 17.002586369779866,
+    "T_debias": 7.286598058686533,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.42855821462772387,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.092093744277954,
+    "grad_norm_remove_mean": 7.245068778991699,
+    "inject_trajectory": [
+      [
+        0,
+        0.5674886434837786
+      ],
+      [
+        25,
+        0.7623286425790706
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7623286425790706
+      ],
+      [
+        25,
+        0.5484817895034877
+      ]
+    ],
+    "timestamp": "2026-07-15T07:08:13.854341"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5674886434837786,
+    "biased_bias": 0.7575362888983777,
+    "T_bias": 17.43133363046156,
+    "T_debias": 7.8196588881476075,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4485978556731091,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.277004547119141,
+    "grad_norm_remove_mean": 7.601146469116211,
+    "inject_trajectory": [
+      [
+        0,
+        0.5674886434837786
+      ],
+      [
+        25,
+        0.7575362888983777
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7575362888983777
+      ],
+      [
+        25,
+        0.573588722510327
+      ]
+    ],
+    "timestamp": "2026-07-15T07:08:41.296618"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5979176667001168,
+    "biased_bias": 0.748785944420522,
+    "T_bias": 16.915804773927682,
+    "T_debias": 7.349205319854733,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.43445791779188997,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.391989660263062,
+    "grad_norm_remove_mean": 7.670012550354004,
+    "inject_trajectory": [
+      [
+        0,
+        0.5979176667001168
+      ],
+      [
+        25,
+        0.748785944420522
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.748785944420522
+      ],
+      [
+        25,
+        0.5828294147780545
+      ]
+    ],
+    "timestamp": "2026-07-15T07:09:21.958739"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5979176667001168,
+    "biased_bias": 0.734980091250305,
+    "T_bias": 18.619678886262452,
+    "T_debias": 5.793145488638982,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.31113025761755475,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.430115242004394,
+    "grad_norm_remove_mean": 6.797632341384888,
+    "inject_trajectory": [
+      [
+        0,
+        0.5979176667001168
+      ],
+      [
+        25,
+        0.734980091250305
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.734980091250305
+      ],
+      [
+        25,
+        0.5840254357919493
+      ]
+    ],
+    "timestamp": "2026-07-15T07:10:02.111750"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5979176667001168,
+    "biased_bias": 0.7481711949943186,
+    "T_bias": 16.985014338565527,
+    "T_debias": 7.326021143754839,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.43132263521972153,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.795660877227784,
+    "grad_norm_remove_mean": 7.976330404281616,
+    "inject_trajectory": [
+      [
+        0,
+        0.5979176667001168
+      ],
+      [
+        25,
+        0.7481711949943186
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7481711949943186
+      ],
+      [
+        25,
+        0.583787302124371
+      ]
+    ],
+    "timestamp": "2026-07-15T07:10:42.443451"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5057978037913492,
+    "biased_bias": 0.7549815276497922,
+    "T_bias": 34.775245837126036,
+    "T_debias": 13.481864184754972,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.387685661458696,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 10.23119562625885,
+    "grad_norm_remove_mean": 14.141110363006591,
+    "inject_trajectory": [
+      [
+        0,
+        0.5057978037913492
+      ],
+      [
+        25,
+        0.6646984152566436
+      ],
+      [
+        50,
+        0.7549815276497922
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7549815276497922
+      ],
+      [
+        25,
+        0.6530269186722661
+      ]
+    ],
+    "timestamp": "2026-07-15T07:11:21.128285"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5057978037913492,
+    "biased_bias": 0.7483387113539507,
+    "T_bias": 37.84237454070396,
+    "T_debias": 18.990168421801837,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.5018228547306317,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 9.820129389762878,
+    "grad_norm_remove_mean": 13.723651580810547,
+    "inject_trajectory": [
+      [
+        0,
+        0.5057978037913492
+      ],
+      [
+        25,
+        0.6489387267192257
+      ],
+      [
+        50,
+        0.7483387113539507
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7483387113539507
+      ],
+      [
+        25,
+        0.6847022149834722
+      ]
+    ],
+    "timestamp": "2026-07-15T07:11:59.688204"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5057978037913492,
+    "biased_bias": 0.7547394671439208,
+    "T_bias": 36.268818498446244,
+    "T_debias": 18.110146362183848,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.49933102626322623,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 11.118372268676758,
+    "grad_norm_remove_mean": 16.320647621154784,
+    "inject_trajectory": [
+      [
+        0,
+        0.5057978037913492
+      ],
+      [
+        25,
+        0.6550767630682978
+      ],
+      [
+        50,
+        0.7547394671439208
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7547394671439208
+      ],
+      [
+        25,
+        0.6791748277848715
+      ]
+    ],
+    "timestamp": "2026-07-15T07:12:38.280690"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.36292086775085247,
+    "biased_bias": 0.7977406405718168,
+    "T_bias": 38.488669648241114,
+    "T_debias": 17.905414780307236,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4652126182575264,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 12.20980246067047,
+    "grad_norm_remove_mean": 18.807451820373537,
+    "inject_trajectory": [
+      [
+        0,
+        0.36292086775085247
+      ],
+      [
+        25,
+        0.5854701262500676
+      ],
+      [
+        50,
+        0.7977406405718168
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7977406405718168
+      ],
+      [
+        25,
+        0.6612726478290375
+      ]
+    ],
+    "timestamp": "2026-07-15T07:13:17.641255"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.36292086775085247,
+    "biased_bias": 0.7692667130245988,
+    "T_bias": 40.88177850864365,
+    "T_debias": 12.115829621230505,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.29636258654130837,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 10.83013509273529,
+    "grad_norm_remove_mean": 17.174007453918456,
+    "inject_trajectory": [
+      [
+        0,
+        0.36292086775085247
+      ],
+      [
+        25,
+        0.5793538196762071
+      ],
+      [
+        50,
+        0.7692667130245988
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7692667130245988
+      ],
+      [
+        25,
+        0.6263406502000953
+      ]
+    ],
+    "timestamp": "2026-07-15T07:13:56.754149"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.36292086775085247,
+    "biased_bias": 0.7791165309974055,
+    "T_bias": 37.37584823639479,
+    "T_debias": 16.620786223003584,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.44469321787375704,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 13.11238097667694,
+    "grad_norm_remove_mean": 19.33053020477295,
+    "inject_trajectory": [
+      [
+        0,
+        0.36292086775085247
+      ],
+      [
+        25,
+        0.6224396063237524
+      ],
+      [
+        50,
+        0.7791165309974055
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7791165309974055
+      ],
+      [
+        25,
+        0.6601141415558244
+      ]
+    ],
+    "timestamp": "2026-07-15T07:14:35.836241"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6063948858679685,
+    "biased_bias": 0.8293062167974637,
+    "T_bias": 10.49802109001335,
+    "T_debias": 15.24445622127393,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.4521266523055294,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.839218311309814,
+    "grad_norm_remove_mean": 8.186040515899657,
+    "inject_trajectory": [
+      [
+        0,
+        0.6063948858679685
+      ],
+      [
+        25,
+        0.8293062167974637
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8293062167974637
+      ],
+      [
+        25,
+        0.6172517247897159
+      ]
+    ],
+    "timestamp": "2026-07-15T07:15:04.253655"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6063948858679685,
+    "biased_bias": 0.8253806841192065,
+    "T_bias": 10.686208292904933,
+    "T_debias": 15.0601644779925,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.4093085278893205,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.638022537231445,
+    "grad_norm_remove_mean": 7.549245166778564,
+    "inject_trajectory": [
+      [
+        0,
+        0.6063948858679685
+      ],
+      [
+        25,
+        0.8253806841192065
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8253806841192065
+      ],
+      [
+        25,
+        0.6172476914443489
+      ]
+    ],
+    "timestamp": "2026-07-15T07:15:32.585321"
+  },
+  {
+    "model": "muril",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6063948858679685,
+    "biased_bias": 0.8251402952330094,
+    "T_bias": 10.697951834022703,
+    "T_debias": 11.486574900802298,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.0737172011068077,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.33963228225708,
+    "grad_norm_remove_mean": 7.909871711730957,
+    "inject_trajectory": [
+      [
+        0,
+        0.6063948858679685
+      ],
+      [
+        25,
+        0.8251402952330094
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8251402952330094
+      ],
+      [
+        25,
+        0.552778219693266
+      ]
+    ],
+    "timestamp": "2026-07-15T07:16:01.195826"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5779013098026993,
+    "biased_bias": 0.7233275702665688,
+    "T_bias": 20.98979403854566,
+    "T_debias": 3.7470382864282206,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.17851715360080042,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.3723989152908325,
+    "grad_norm_remove_mean": 3.4398449516296385,
+    "inject_trajectory": [
+      [
+        0,
+        0.5779013098026993
+      ],
+      [
+        25,
+        0.7233275702665688
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7233275702665688
+      ],
+      [
+        25,
+        0.5676875121501269
+      ]
+    ],
+    "timestamp": "2026-07-15T07:16:51.256136"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5779013098026993,
+    "biased_bias": 0.7233034025148888,
+    "T_bias": 20.99328282003894,
+    "T_debias": 3.8328212249776463,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.18257369549268698,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.257196640968323,
+    "grad_norm_remove_mean": 3.463518238067627,
+    "inject_trajectory": [
+      [
+        0,
+        0.5779013098026993
+      ],
+      [
+        25,
+        0.7233034025148888
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7233034025148888
+      ],
+      [
+        25,
+        0.5713043843828551
+      ]
+    ],
+    "timestamp": "2026-07-15T07:17:31.608865"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5779013098026993,
+    "biased_bias": 0.7060504564416775,
+    "T_bias": 23.81964558478042,
+    "T_debias": 1.091778875519609,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.045835227549195855,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.016520447731018,
+    "grad_norm_remove_mean": 3.0946433305740357,
+    "inject_trajectory": [
+      [
+        0,
+        0.5779013098026993
+      ],
+      [
+        25,
+        0.7060504564416775
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7060504564416775
+      ],
+      [
+        25,
+        0.5675046259318598
+      ]
+    ],
+    "timestamp": "2026-07-15T07:18:12.161452"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5437984321250998,
+    "biased_bias": 0.782092161577319,
+    "T_bias": 29.774578957923364,
+    "T_debias": 21.35655988220129,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7172749583590017,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 4.585837919712066,
+    "grad_norm_remove_mean": 7.963048524856568,
+    "inject_trajectory": [
+      [
+        0,
+        0.5437984321250998
+      ],
+      [
+        25,
+        0.6806206502963723
+      ],
+      [
+        50,
+        0.782092161577319
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.782092161577319
+      ],
+      [
+        25,
+        0.6859950349448888
+      ]
+    ],
+    "timestamp": "2026-07-15T07:18:51.664167"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5437984321250998,
+    "biased_bias": 0.753487275131194,
+    "T_bias": 39.14289570497071,
+    "T_debias": 8.2538175839074,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.21086374513828463,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.982631163597107,
+    "grad_norm_remove_mean": 5.665956354141235,
+    "inject_trajectory": [
+      [
+        0,
+        0.5437984321250998
+      ],
+      [
+        25,
+        0.6303253488989801
+      ],
+      [
+        50,
+        0.753487275131194
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.753487275131194
+      ],
+      [
+        25,
+        0.5914795902403897
+      ]
+    ],
+    "timestamp": "2026-07-15T07:19:31.295323"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5437984321250998,
+    "biased_bias": 0.7560038912555729,
+    "T_bias": 40.44563967442273,
+    "T_debias": 8.46054107705576,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.20918302059655866,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.939637086391449,
+    "grad_norm_remove_mean": 5.894840021133422,
+    "inject_trajectory": [
+      [
+        0,
+        0.5437984321250998
+      ],
+      [
+        25,
+        0.6094637531741959
+      ],
+      [
+        50,
+        0.7560038912555729
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7560038912555729
+      ],
+      [
+        25,
+        0.590518342679222
+      ]
+    ],
+    "timestamp": "2026-07-15T07:20:10.864675"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5589318421118363,
+    "biased_bias": 0.7402893998606904,
+    "T_bias": 39.8332829278521,
+    "T_debias": 10.552893628278964,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.26492653511368514,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.492535176277161,
+    "grad_norm_remove_mean": 11.053561019897462,
+    "inject_trajectory": [
+      [
+        0,
+        0.5589318421118363
+      ],
+      [
+        25,
+        0.6412175963109861
+      ],
+      [
+        50,
+        0.7402893998606904
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7402893998606904
+      ],
+      [
+        25,
+        0.6448430671299086
+      ]
+    ],
+    "timestamp": "2026-07-15T07:20:50.915665"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5589318421118363,
+    "biased_bias": 0.7457686299969472,
+    "T_bias": 35.970797308770706,
+    "T_debias": 19.93666254499055,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.5542457781476371,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.737912364006043,
+    "grad_norm_remove_mean": 8.393514194488525,
+    "inject_trajectory": [
+      [
+        0,
+        0.5589318421118363
+      ],
+      [
+        25,
+        0.6642090592139963
+      ],
+      [
+        50,
+        0.7457686299969472
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7457686299969472
+      ],
+      [
+        25,
+        0.6883760876222363
+      ]
+    ],
+    "timestamp": "2026-07-15T07:21:30.864319"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5589318421118363,
+    "biased_bias": 0.7607894900247821,
+    "T_bias": 33.55065809857658,
+    "T_debias": 22.263400946548746,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.663575685494327,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.118544058799744,
+    "grad_norm_remove_mean": 8.895320377349854,
+    "inject_trajectory": [
+      [
+        0,
+        0.5589318421118363
+      ],
+      [
+        25,
+        0.6684005507148122
+      ],
+      [
+        50,
+        0.7607894900247821
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7607894900247821
+      ],
+      [
+        25,
+        0.6925278055558087
+      ]
+    ],
+    "timestamp": "2026-07-15T07:22:11.215922"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7246931311393988,
+    "biased_bias": 0.8462309252187207,
+    "T_bias": 500.0,
+    "T_debias": 26.74423346438659,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 3.983837900161743,
+    "grad_norm_remove_mean": 4.181193103790283,
+    "inject_trajectory": [
+      [
+        0,
+        0.7246931311393988
+      ],
+      [
+        25,
+        0.8462309252187207
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8462309252187207
+      ],
+      [
+        25,
+        0.7237453079069713
+      ],
+      [
+        50,
+        0.3834051471458357
+      ]
+    ],
+    "timestamp": "2026-07-15T07:22:51.132357"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7246931311393988,
+    "biased_bias": 0.8363162621629976,
+    "T_bias": 500.0,
+    "T_debias": 25.431068919780543,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 3.645051956176758,
+    "grad_norm_remove_mean": 4.099342355728149,
+    "inject_trajectory": [
+      [
+        0,
+        0.7246931311393988
+      ],
+      [
+        25,
+        0.8363162621629976
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8363162621629976
+      ],
+      [
+        25,
+        0.705814288902011
+      ],
+      [
+        50,
+        0.3686124729504505
+      ]
+    ],
+    "timestamp": "2026-07-15T07:23:31.068971"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.7246931311393988,
+    "biased_bias": 0.8260976020968569,
+    "T_bias": 500.0,
+    "T_debias": 26.082237570791303,
+    "inject_censored": true,
+    "remove_censored": false,
+    "baseline_above_theta": true,
+    "R": null,
+    "R_undefined_reason": "baseline_above_theta",
+    "grad_norm_inject_mean": 3.7319526195526125,
+    "grad_norm_remove_mean": 3.843778705596924,
+    "inject_trajectory": [
+      [
+        0,
+        0.7246931311393988
+      ],
+      [
+        25,
+        0.8260976020968569
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8260976020968569
+      ],
+      [
+        25,
+        0.7137952722169687
+      ],
+      [
+        50,
+        0.3951205054815555
+      ]
+    ],
+    "timestamp": "2026-07-15T07:24:10.909871"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6072204108096156,
+    "biased_bias": 0.7312544158112277,
+    "T_bias": 18.700434044111216,
+    "T_debias": 5.862028093654096,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.31347016223401797,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.5226174640655517,
+    "grad_norm_remove_mean": 3.8182374382019044,
+    "inject_trajectory": [
+      [
+        0,
+        0.6072204108096156
+      ],
+      [
+        25,
+        0.7312544158112277
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7312544158112277
+      ],
+      [
+        25,
+        0.5979625955064851
+      ]
+    ],
+    "timestamp": "2026-07-15T07:24:53.323473"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6072204108096156,
+    "biased_bias": 0.7253744421182188,
+    "T_bias": 19.631067210067503,
+    "T_debias": 5.353080397555234,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.2726841256398932,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.54858078956604,
+    "grad_norm_remove_mean": 3.649267864227295,
+    "inject_trajectory": [
+      [
+        0,
+        0.6072204108096156
+      ],
+      [
+        25,
+        0.7253744421182188
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7253744421182188
+      ],
+      [
+        25,
+        0.6068705143152318
+      ]
+    ],
+    "timestamp": "2026-07-15T07:25:35.809154"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6072204108096156,
+    "biased_bias": 0.7163167758371728,
+    "T_bias": 21.260925872037234,
+    "T_debias": 3.525612367322237,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.16582590939556344,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.199604196548462,
+    "grad_norm_remove_mean": 8.970916442871093,
+    "inject_trajectory": [
+      [
+        0,
+        0.6072204108096156
+      ],
+      [
+        25,
+        0.7163167758371728
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7163167758371728
+      ],
+      [
+        25,
+        0.6006150612328691
+      ]
+    ],
+    "timestamp": "2026-07-15T07:26:18.423969"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5931803029012807,
+    "biased_bias": 0.7217378031239958,
+    "T_bias": 38.1405767160324,
+    "T_debias": 11.88696782437207,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.3116619843709752,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 4.3346080493927,
+    "grad_norm_remove_mean": 7.145440540313721,
+    "inject_trajectory": [
+      [
+        0,
+        0.5931803029012807
+      ],
+      [
+        25,
+        0.6759138987833384
+      ],
+      [
+        50,
+        0.7217378031239958
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7217378031239958
+      ],
+      [
+        25,
+        0.6760200821602307
+      ]
+    ],
+    "timestamp": "2026-07-15T07:26:58.162692"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5931803029012807,
+    "biased_bias": 0.735985782197236,
+    "T_bias": 38.900046756370116,
+    "T_debias": 11.169357887517476,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.287129677696041,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.8878332686424257,
+    "grad_norm_remove_mean": 5.552081241607666,
+    "inject_trajectory": [
+      [
+        0,
+        0.5931803029012807
+      ],
+      [
+        25,
+        0.6549363817912303
+      ],
+      [
+        50,
+        0.735985782197236
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.735985782197236
+      ],
+      [
+        25,
+        0.6554400100954829
+      ]
+    ],
+    "timestamp": "2026-07-15T07:27:38.017184"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5931803029012807,
+    "biased_bias": 0.7245540418900605,
+    "T_bias": 38.625533135253676,
+    "T_debias": 15.710239218342906,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.4067319708787167,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 4.284043715000153,
+    "grad_norm_remove_mean": 6.2030412960052494,
+    "inject_trajectory": [
+      [
+        0,
+        0.5931803029012807
+      ],
+      [
+        25,
+        0.6705865852566367
+      ],
+      [
+        50,
+        0.7245540418900605
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7245540418900605
+      ],
+      [
+        25,
+        0.6854807318837561
+      ]
+    ],
+    "timestamp": "2026-07-15T07:28:18.289647"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5078079593297349,
+    "biased_bias": 0.7332652576039973,
+    "T_bias": 65.58964947621297,
+    "T_debias": 1.6457650209422678,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.025091840466979903,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 12.221271085739136,
+    "grad_norm_remove_mean": 49.78770866394043,
+    "inject_trajectory": [
+      [
+        0,
+        0.5078079593297349
+      ],
+      [
+        25,
+        0.5703917162846805
+      ],
+      [
+        50,
+        0.6448911382767973
+      ],
+      [
+        75,
+        0.7332652576039973
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7332652576039973
+      ],
+      [
+        25,
+        0.22794923161154396
+      ]
+    ],
+    "timestamp": "2026-07-15T07:29:11.604891"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5078079593297349,
+    "biased_bias": 0.7132797964136391,
+    "T_bias": 70.1215682415226,
+    "T_debias": 1.3535371099670443,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.01930272160064933,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 12.303228987058004,
+    "grad_norm_remove_mean": 41.7905770111084,
+    "inject_trajectory": [
+      [
+        0,
+        0.5078079593297349
+      ],
+      [
+        25,
+        0.5700214905421676
+      ],
+      [
+        50,
+        0.645226182716151
+      ],
+      [
+        75,
+        0.7132797964136391
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7132797964136391
+      ],
+      [
+        25,
+        0.468000292884502
+      ]
+    ],
+    "timestamp": "2026-07-15T07:30:04.675287"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5078079593297349,
+    "biased_bias": 0.7577688064424964,
+    "T_bias": 61.646155171819984,
+    "T_debias": 3.4624291330166432,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.056166181384162094,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 12.008284238179526,
+    "grad_norm_remove_mean": 38.58995040893555,
+    "inject_trajectory": [
+      [
+        0,
+        0.5078079593297349
+      ],
+      [
+        25,
+        0.5765510700923441
+      ],
+      [
+        50,
+        0.649618668437692
+      ],
+      [
+        75,
+        0.7577688064424964
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7577688064424964
+      ],
+      [
+        25,
+        0.3406569738014238
+      ]
+    ],
+    "timestamp": "2026-07-15T07:30:57.972547"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6396381331689917,
+    "biased_bias": 0.7287739109280029,
+    "T_bias": 16.929752661777265,
+    "T_debias": 7.013865571160085,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.41429226470599706,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 4.137731246948242,
+    "grad_norm_remove_mean": 4.454993209838867,
+    "inject_trajectory": [
+      [
+        0,
+        0.6396381331689917
+      ],
+      [
+        25,
+        0.7287739109280029
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7287739109280029
+      ],
+      [
+        25,
+        0.6262130953689025
+      ]
+    ],
+    "timestamp": "2026-07-15T07:31:26.516929"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6396381331689917,
+    "biased_bias": 0.7192607242664677,
+    "T_bias": 18.952493883649094,
+    "T_debias": 5.2597775257320905,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.27752429617032426,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.759006071090698,
+    "grad_norm_remove_mean": 4.0136603736877445,
+    "inject_trajectory": [
+      [
+        0,
+        0.6396381331689917
+      ],
+      [
+        25,
+        0.7192607242664677
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7192607242664677
+      ],
+      [
+        25,
+        0.6277134859458369
+      ]
+    ],
+    "timestamp": "2026-07-15T07:31:55.092888"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6396381331689917,
+    "biased_bias": 0.7259137554612868,
+    "T_bias": 17.49099723282985,
+    "T_debias": 7.245444387170472,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.41423849599444695,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 3.844781684875488,
+    "grad_norm_remove_mean": 4.171089992523194,
+    "inject_trajectory": [
+      [
+        0,
+        0.6396381331689917
+      ],
+      [
+        25,
+        0.7259137554612868
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7259137554612868
+      ],
+      [
+        25,
+        0.6364997938167382
+      ]
+    ],
+    "timestamp": "2026-07-15T07:32:23.587175"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6058359677885423,
+    "biased_bias": 0.7569794456753365,
+    "T_bias": 26.963082024594943,
+    "T_debias": 23.857145417947073,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.8848078048416452,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.94043806552887,
+    "grad_norm_remove_mean": 12.76749771118164,
+    "inject_trajectory": [
+      [
+        0,
+        0.6058359677885423
+      ],
+      [
+        25,
+        0.695144518650626
+      ],
+      [
+        50,
+        0.7569794456753365
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7569794456753365
+      ],
+      [
+        25,
+        0.6972704521252611
+      ]
+    ],
+    "timestamp": "2026-07-15T07:33:23.506632"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6058359677885423,
+    "biased_bias": 0.7579408214685839,
+    "T_bias": 27.75284933065879,
+    "T_debias": 23.960213319018937,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.8633424638150542,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.577141447067261,
+    "grad_norm_remove_mean": 11.642285423278809,
+    "inject_trajectory": [
+      [
+        0,
+        0.6058359677885423
+      ],
+      [
+        25,
+        0.692830436851519
+      ],
+      [
+        50,
+        0.7579408214685839
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7579408214685839
+      ],
+      [
+        25,
+        0.6974855777097646
+      ]
+    ],
+    "timestamp": "2026-07-15T07:34:23.743315"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6058359677885423,
+    "biased_bias": 0.761534151337003,
+    "T_bias": 28.581488248385597,
+    "T_debias": 25.096233072441464,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.878059002888312,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.798677983283997,
+    "grad_norm_remove_mean": 8.755256690979003,
+    "inject_trajectory": [
+      [
+        0,
+        0.6058359677885423
+      ],
+      [
+        25,
+        0.6897105904255347
+      ],
+      [
+        50,
+        0.761534151337003
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.761534151337003
+      ],
+      [
+        25,
+        0.7004508311603916
+      ],
+      [
+        50,
+        0.5833312305506552
+      ]
+    ],
+    "timestamp": "2026-07-15T07:35:40.533179"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5764823418538272,
+    "biased_bias": 0.7636933048010422,
+    "T_bias": 31.10786909911474,
+    "T_debias": 16.121518778102363,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.5182456801118899,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 4.77407564163208,
+    "grad_norm_remove_mean": 6.998016605377197,
+    "inject_trajectory": [
+      [
+        0,
+        0.5764823418538272
+      ],
+      [
+        25,
+        0.679407808983763
+      ],
+      [
+        50,
+        0.7636933048010422
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7636933048010422
+      ],
+      [
+        25,
+        0.6649226714666134
+      ]
+    ],
+    "timestamp": "2026-07-15T07:36:20.384828"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5764823418538272,
+    "biased_bias": 0.748005910214306,
+    "T_bias": 32.3849202317051,
+    "T_debias": 25.465539109142497,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7863394112736312,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.031865649223327,
+    "grad_norm_remove_mean": 5.545091767311096,
+    "inject_trajectory": [
+      [
+        0,
+        0.5764823418538272
+      ],
+      [
+        25,
+        0.6798740725420306
+      ],
+      [
+        50,
+        0.748005910214306
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.748005910214306
+      ],
+      [
+        25,
+        0.702046679106007
+      ],
+      [
+        50,
+        0.5921375938211543
+      ]
+    ],
+    "timestamp": "2026-07-15T07:37:11.768079"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5764823418538272,
+    "biased_bias": 0.7510434932235621,
+    "T_bias": 32.88974928795548,
+    "T_debias": 25.582405050001803,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7778230483310588,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 5.3571020603179935,
+    "grad_norm_remove_mean": 5.916824488639832,
+    "inject_trajectory": [
+      [
+        0,
+        0.5764823418538272
+      ],
+      [
+        25,
+        0.6764632107914192
+      ],
+      [
+        50,
+        0.7510434932235621
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7510434932235621
+      ],
+      [
+        25,
+        0.7024989683922782
+      ],
+      [
+        50,
+        0.5952296206990138
+      ]
+    ],
+    "timestamp": "2026-07-15T07:38:03.271664"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.618908457064441,
+    "biased_bias": 0.7755015644551008,
+    "T_bias": 33.30701315864256,
+    "T_debias": 18.627585602293536,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.5592691699363627,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.747903094291687,
+    "grad_norm_remove_mean": 10.526661224365235,
+    "inject_trajectory": [
+      [
+        0,
+        0.618908457064441
+      ],
+      [
+        25,
+        0.6624277850700312
+      ],
+      [
+        50,
+        0.7755015644551008
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7755015644551008
+      ],
+      [
+        25,
+        0.6741712497445826
+      ]
+    ],
+    "timestamp": "2026-07-15T07:38:44.159192"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.618908457064441,
+    "biased_bias": 0.7779624183431314,
+    "T_bias": 32.81642505173263,
+    "T_debias": 22.321350108362985,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.6801883530328198,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.171357774734497,
+    "grad_norm_remove_mean": 10.280279350280761,
+    "inject_trajectory": [
+      [
+        0,
+        0.618908457064441
+      ],
+      [
+        25,
+        0.6645366344508913
+      ],
+      [
+        50,
+        0.7779624183431314
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7779624183431314
+      ],
+      [
+        25,
+        0.6906442028626061
+      ]
+    ],
+    "timestamp": "2026-07-15T07:39:24.636762"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.618908457064441,
+    "biased_bias": 0.7623771203689174,
+    "T_bias": 33.273033650031444,
+    "T_debias": 21.259623077579196,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.6389445369240957,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 6.568060569763183,
+    "grad_norm_remove_mean": 9.700875549316406,
+    "inject_trajectory": [
+      [
+        0,
+        0.618908457064441
+      ],
+      [
+        25,
+        0.669148738330242
+      ],
+      [
+        50,
+        0.7623771203689174
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7623771203689174
+      ],
+      [
+        25,
+        0.6890254902138401
+      ]
+    ],
+    "timestamp": "2026-07-15T07:40:05.201524"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5379004365445796,
+    "biased_bias": 0.7023457666962741,
+    "T_bias": 24.643381983831603,
+    "T_debias": 0.33840885891216077,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.013732240937310842,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 4.037855472564697,
+    "grad_norm_remove_mean": 4.395468740463257,
+    "inject_trajectory": [
+      [
+        0,
+        0.5379004365445796
+      ],
+      [
+        25,
+        0.7023457666962741
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7023457666962741
+      ],
+      [
+        25,
+        0.5290519362824657
+      ]
+    ],
+    "timestamp": "2026-07-15T07:40:34.172646"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5379004365445796,
+    "biased_bias": 0.810717337450496,
+    "T_bias": 26.593057283797666,
+    "T_debias": 30.52252758719966,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.1477630142885489,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 8.313864250183105,
+    "grad_norm_remove_mean": 9.26374144077301,
+    "inject_trajectory": [
+      [
+        0,
+        0.5379004365445796
+      ],
+      [
+        25,
+        0.6924646690083918
+      ],
+      [
+        50,
+        0.810717337450496
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.810717337450496
+      ],
+      [
+        25,
+        0.7395896733752523
+      ],
+      [
+        50,
+        0.5603706801237976
+      ]
+    ],
+    "timestamp": "2026-07-15T07:41:27.338329"
+  },
+  {
+    "model": "indicbert-v2",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5379004365445796,
+    "biased_bias": 0.8056884482811288,
+    "T_bias": 29.65470028539689,
+    "T_debias": 26.43814464228741,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.8915330247092925,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 7.750652098655701,
+    "grad_norm_remove_mean": 8.554874196052552,
+    "inject_trajectory": [
+      [
+        0,
+        0.5379004365445796
+      ],
+      [
+        25,
+        0.675820063735693
+      ],
+      [
+        50,
+        0.8056884482811288
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8056884482811288
+      ],
+      [
+        25,
+        0.7121005330236306
+      ],
+      [
+        50,
+        0.5017508111002423
+      ]
+    ],
+    "timestamp": "2026-07-15T07:42:21.028256"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5706520187142078,
+    "biased_bias": 0.9104304811672275,
+    "T_bias": 9.517082126981252,
+    "T_debias": 6.702636859879978,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.7042743532576833,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 30.38979709625244,
+    "grad_norm_remove_mean": 54.14869262695313,
+    "inject_trajectory": [
+      [
+        0,
+        0.5706520187142078
+      ],
+      [
+        25,
+        0.9104304811672275
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.9104304811672275
+      ],
+      [
+        25,
+        0.12555101668809554
+      ]
+    ],
+    "timestamp": "2026-07-15T07:43:47.797833"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5706520187142078,
+    "biased_bias": 0.8838439019865603,
+    "T_bias": 10.32497872664462,
+    "T_debias": 9.800058034610176,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.949160118782634,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 51.55989696502686,
+    "grad_norm_remove_mean": 54.0944620513916,
+    "inject_trajectory": [
+      [
+        0,
+        0.5706520187142078
+      ],
+      [
+        25,
+        0.8838439019865603
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8838439019865603
+      ],
+      [
+        25,
+        0.4148571333947526
+      ]
+    ],
+    "timestamp": "2026-07-15T07:44:53.119797"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5706520187142078,
+    "biased_bias": 0.9039217792995844,
+    "T_bias": 9.702949125852056,
+    "T_debias": 11.337199353115809,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.1684281970426431,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 22.79433563232422,
+    "grad_norm_remove_mean": 30.691406784057616,
+    "inject_trajectory": [
+      [
+        0,
+        0.5706520187142078
+      ],
+      [
+        25,
+        0.9039217792995844
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.9039217792995844
+      ],
+      [
+        25,
+        0.45424771750508025
+      ]
+    ],
+    "timestamp": "2026-07-15T07:45:57.819559"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5942108818674404,
+    "biased_bias": 0.7760694087679997,
+    "T_bias": 14.542776730838321,
+    "T_debias": 3.494022509059544,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.24025827898810975,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 27.311804733276368,
+    "grad_norm_remove_mean": 48.03082618713379,
+    "inject_trajectory": [
+      [
+        0,
+        0.5942108818674404
+      ],
+      [
+        25,
+        0.7760694087679997
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7760694087679997
+      ],
+      [
+        25,
+        0.2317869336926268
+      ]
+    ],
+    "timestamp": "2026-07-15T07:46:42.971432"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5942108818674404,
+    "biased_bias": 0.8019121741846997,
+    "T_bias": 12.733324495998911,
+    "T_debias": 4.569223524780378,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.35883979287703915,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 28.523846397399904,
+    "grad_norm_remove_mean": 49.00359420776367,
+    "inject_trajectory": [
+      [
+        0,
+        0.5942108818674404
+      ],
+      [
+        25,
+        0.8019121741846997
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8019121741846997
+      ],
+      [
+        25,
+        0.2443110104858947
+      ]
+    ],
+    "timestamp": "2026-07-15T07:47:28.070963"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5942108818674404,
+    "biased_bias": 0.7970913410621825,
+    "T_bias": 13.03589297762458,
+    "T_debias": 11.678968666507446,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.8959086030050858,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 28.134559745788575,
+    "grad_norm_remove_mean": 30.091064224243166,
+    "inject_trajectory": [
+      [
+        0,
+        0.5942108818674404
+      ],
+      [
+        25,
+        0.7970913410621825
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7970913410621825
+      ],
+      [
+        25,
+        0.5892576191073111
+      ]
+    ],
+    "timestamp": "2026-07-15T07:48:12.544498"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.35349180165438127,
+    "biased_bias": 0.8228013252996549,
+    "T_bias": 29.82720709439977,
+    "T_debias": 6.40356387088927,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.21468868508616,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 32.03179695129395,
+    "grad_norm_remove_mean": 134.43064437866212,
+    "inject_trajectory": [
+      [
+        0,
+        0.35349180165438127
+      ],
+      [
+        25,
+        0.6706145087860579
+      ],
+      [
+        50,
+        0.8228013252996549
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8228013252996549
+      ],
+      [
+        25,
+        0.34337561886642864
+      ]
+    ],
+    "timestamp": "2026-07-15T07:49:15.378951"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.35349180165438127,
+    "biased_bias": 0.784442480760766,
+    "T_bias": 34.49200708607077,
+    "T_debias": 4.476471617208892,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.12978286842045406,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 29.621531467437745,
+    "grad_norm_remove_mean": 57.08564804077148,
+    "inject_trajectory": [
+      [
+        0,
+        0.35349180165438127
+      ],
+      [
+        25,
+        0.6483151281925944
+      ],
+      [
+        50,
+        0.784442480760766
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.784442480760766
+      ],
+      [
+        25,
+        0.3128518621799181
+      ]
+    ],
+    "timestamp": "2026-07-15T07:50:18.254762"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.35349180165438127,
+    "biased_bias": 0.8077972592327295,
+    "T_bias": 32.81210246805021,
+    "T_debias": 5.489535927800652,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.1673021694707287,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 31.9315816116333,
+    "grad_norm_remove_mean": 45.952692108154295,
+    "inject_trajectory": [
+      [
+        0,
+        0.35349180165438127
+      ],
+      [
+        25,
+        0.6510048722750603
+      ],
+      [
+        50,
+        0.8077972592327295
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8077972592327295
+      ],
+      [
+        25,
+        0.31687571025983746
+      ]
+    ],
+    "timestamp": "2026-07-15T07:51:21.286918"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6452023281045596,
+    "biased_bias": 0.907473585936105,
+    "T_bias": 5.22337753939439,
+    "T_debias": 7.922256410326517,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.5166922839824137,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 30.78853889465332,
+    "grad_norm_remove_mean": 76.01783569335937,
+    "inject_trajectory": [
+      [
+        0,
+        0.6452023281045596
+      ],
+      [
+        25,
+        0.907473585936105
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.907473585936105
+      ],
+      [
+        25,
+        0.2527561191242917
+      ]
+    ],
+    "timestamp": "2026-07-15T07:52:06.234908"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6452023281045596,
+    "biased_bias": 0.8980549877280091,
+    "T_bias": 5.417944978020557,
+    "T_debias": 27.6763249634554,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 5.108269846912865,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 28.499415588378906,
+    "grad_norm_remove_mean": 16.343906240463255,
+    "inject_trajectory": [
+      [
+        0,
+        0.6452023281045596
+      ],
+      [
+        25,
+        0.8980549877280091
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8980549877280091
+      ],
+      [
+        25,
+        0.7524801622852345
+      ],
+      [
+        50,
+        0.26225417140371715
+      ]
+    ],
+    "timestamp": "2026-07-15T07:53:10.325851"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "en",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6452023281045596,
+    "biased_bias": 0.8860658535914703,
+    "T_bias": 5.687626611860983,
+    "T_debias": 9.659022175253176,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 1.698251807724199,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 26.062770309448243,
+    "grad_norm_remove_mean": 24.71289936065674,
+    "inject_trajectory": [
+      [
+        0,
+        0.6452023281045596
+      ],
+      [
+        25,
+        0.8860658535914703
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8860658535914703
+      ],
+      [
+        25,
+        0.4044802173451354
+      ]
+    ],
+    "timestamp": "2026-07-15T07:53:55.052131"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5418336796321609,
+    "biased_bias": 0.7883493748679449,
+    "T_bias": 29.35562093628596,
+    "T_debias": 4.42071520034379,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.15059177967785456,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 57.54857999801636,
+    "grad_norm_remove_mean": 73.4886792755127,
+    "inject_trajectory": [
+      [
+        0,
+        0.5418336796321609
+      ],
+      [
+        25,
+        0.6813597499980526
+      ],
+      [
+        50,
+        0.7883493748679449
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7883493748679449
+      ],
+      [
+        25,
+        0.28871656171435056
+      ]
+    ],
+    "timestamp": "2026-07-15T07:56:25.263554"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5418336796321609,
+    "biased_bias": 0.7016829916753747,
+    "T_bias": 24.736784654581466,
+    "T_debias": 0.07351526711210898,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.002971900679035637,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 38.587840194702146,
+    "grad_norm_remove_mean": 72.07170425415039,
+    "inject_trajectory": [
+      [
+        0,
+        0.5418336796321609
+      ],
+      [
+        25,
+        0.7016829916753747
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7016829916753747
+      ],
+      [
+        25,
+        0.12935572501107168
+      ]
+    ],
+    "timestamp": "2026-07-15T07:58:14.302732"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5418336796321609,
+    "biased_bias": 0.7808374320527225,
+    "T_bias": 30.12357177815355,
+    "T_debias": 17.406851367459826,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.5778481879789487,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 41.16048704147339,
+    "grad_norm_remove_mean": 52.13233200073242,
+    "inject_trajectory": [
+      [
+        0,
+        0.5418336796321609
+      ],
+      [
+        25,
+        0.6791624339714865
+      ],
+      [
+        50,
+        0.7808374320527225
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7808374320527225
+      ],
+      [
+        25,
+        0.6647374115116166
+      ]
+    ],
+    "timestamp": "2026-07-15T08:00:44.180350"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5567636652950408,
+    "biased_bias": 0.7206269323069113,
+    "T_bias": 21.853026812681403,
+    "T_debias": 8.256533419966134,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.37782104468818173,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 20.232929878234863,
+    "grad_norm_remove_mean": 23.919637756347655,
+    "inject_trajectory": [
+      [
+        0,
+        0.5567636652950408
+      ],
+      [
+        25,
+        0.7206269323069113
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7206269323069113
+      ],
+      [
+        25,
+        0.6581705379046587
+      ]
+    ],
+    "timestamp": "2026-07-15T08:01:52.239151"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5567636652950408,
+    "biased_bias": 0.7178526311949376,
+    "T_bias": 22.22938329524824,
+    "T_debias": 3.8673337277170274,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.17397395493844897,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 17.559791069030762,
+    "grad_norm_remove_mean": 30.875963439941405,
+    "inject_trajectory": [
+      [
+        0,
+        0.5567636652950408
+      ],
+      [
+        25,
+        0.7178526311949376
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7178526311949376
+      ],
+      [
+        25,
+        0.6024460458581943
+      ]
+    ],
+    "timestamp": "2026-07-15T08:03:00.289837"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5567636652950408,
+    "biased_bias": 0.7318749997651623,
+    "T_bias": 20.449323731439968,
+    "T_debias": 12.164712962692183,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.5948711616311034,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 19.279379348754883,
+    "grad_norm_remove_mean": 16.595522994995118,
+    "inject_trajectory": [
+      [
+        0,
+        0.5567636652950408
+      ],
+      [
+        25,
+        0.7318749997651623
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7318749997651623
+      ],
+      [
+        25,
+        0.6663679058803345
+      ]
+    ],
+    "timestamp": "2026-07-15T08:04:08.324312"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5105868089695956,
+    "biased_bias": 0.793405606136059,
+    "T_bias": 34.96429191338332,
+    "T_debias": 12.296383011103428,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.35168402785233377,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 39.44068483352661,
+    "grad_norm_remove_mean": 66.78405258178711,
+    "inject_trajectory": [
+      [
+        0,
+        0.5105868089695956
+      ],
+      [
+        25,
+        0.6380993086242052
+      ],
+      [
+        50,
+        0.793405606136059
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.793405606136059
+      ],
+      [
+        25,
+        0.6035009690331903
+      ]
+    ],
+    "timestamp": "2026-07-15T08:05:34.867875"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5105868089695956,
+    "biased_bias": 0.8014951384875545,
+    "T_bias": 31.185498511378068,
+    "T_debias": 7.57086724724049,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.24276883835858035,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 38.25035032272339,
+    "grad_norm_remove_mean": 116.75508850097657,
+    "inject_trajectory": [
+      [
+        0,
+        0.5105868089695956
+      ],
+      [
+        25,
+        0.6666322262959483
+      ],
+      [
+        50,
+        0.8014951384875545
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8014951384875545
+      ],
+      [
+        25,
+        0.46634483412662225
+      ]
+    ],
+    "timestamp": "2026-07-15T08:07:01.049091"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5105868089695956,
+    "biased_bias": 0.763479899006292,
+    "T_bias": 37.399446011022164,
+    "T_debias": 15.637518192647077,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.41812165313995486,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 45.15254957199097,
+    "grad_norm_remove_mean": 97.2341829586029,
+    "inject_trajectory": [
+      [
+        0,
+        0.5105868089695956
+      ],
+      [
+        25,
+        0.6375332559820642
+      ],
+      [
+        50,
+        0.763479899006292
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.763479899006292
+      ],
+      [
+        25,
+        0.661993367984795
+      ]
+    ],
+    "timestamp": "2026-07-15T08:08:26.940844"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6480096476405087,
+    "biased_bias": 0.8236098600346528,
+    "T_bias": 32.23793373393684,
+    "T_debias": 25.825367592539262,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.801086316687627,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 49.93601697921753,
+    "grad_norm_remove_mean": 44.07128513336182,
+    "inject_trajectory": [
+      [
+        0,
+        0.6480096476405087
+      ],
+      [
+        25,
+        0.6496297355054106
+      ],
+      [
+        50,
+        0.8236098600346528
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8236098600346528
+      ],
+      [
+        25,
+        0.7160340896326066
+      ],
+      [
+        50,
+        0.230368981820541
+      ]
+    ],
+    "timestamp": "2026-07-15T08:10:14.834117"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6480096476405087,
+    "biased_bias": 0.7325101638087204,
+    "T_bias": 15.381667094197454,
+    "T_debias": 6.025689547609488,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.39174489414626623,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 21.048784294128417,
+    "grad_norm_remove_mean": 40.48853187561035,
+    "inject_trajectory": [
+      [
+        0,
+        0.6480096476405087
+      ],
+      [
+        25,
+        0.7325101638087204
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7325101638087204
+      ],
+      [
+        25,
+        0.5976286554275848
+      ]
+    ],
+    "timestamp": "2026-07-15T08:11:14.536214"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "hi",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6480096476405087,
+    "biased_bias": 0.7303028428076823,
+    "T_bias": 15.794244060482768,
+    "T_debias": 3.0416083591286665,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.19257701397300658,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 28.976338844299317,
+    "grad_norm_remove_mean": 50.14086502075195,
+    "inject_trajectory": [
+      [
+        0,
+        0.6480096476405087
+      ],
+      [
+        25,
+        0.7303028428076823
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7303028428076823
+      ],
+      [
+        25,
+        0.4812336068166682
+      ]
+    ],
+    "timestamp": "2026-07-15T08:12:13.980827"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5014070628168732,
+    "biased_bias": 0.7355280268958099,
+    "T_bias": 33.97214336396713,
+    "T_debias": 2.175651028981295,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.0640422067478062,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 43.84956203460693,
+    "grad_norm_remove_mean": 69.70095329284668,
+    "inject_trajectory": [
+      [
+        0,
+        0.5014070628168732
+      ],
+      [
+        25,
+        0.6801119664352709
+      ],
+      [
+        50,
+        0.7355280268958099
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7355280268958099
+      ],
+      [
+        25,
+        0.32728209932573893
+      ]
+    ],
+    "timestamp": "2026-07-15T08:15:22.374677"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5014070628168732,
+    "biased_bias": 0.7078398090873927,
+    "T_bias": 24.05056135363341,
+    "T_debias": 1.067771603233069,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.04439695138640732,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 22.598626861572267,
+    "grad_norm_remove_mean": 22.838211288452147,
+    "inject_trajectory": [
+      [
+        0,
+        0.5014070628168732
+      ],
+      [
+        25,
+        0.7078398090873927
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7078398090873927
+      ],
+      [
+        25,
+        0.5242844245918953
+      ]
+    ],
+    "timestamp": "2026-07-15T08:17:41.162886"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "race-color",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5014070628168732,
+    "biased_bias": 0.7072680299640728,
+    "T_bias": 24.11736182133111,
+    "T_debias": 0.6454482775873612,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.026762806080078,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 43.97942729949951,
+    "grad_norm_remove_mean": 59.95214691162109,
+    "inject_trajectory": [
+      [
+        0,
+        0.5014070628168732
+      ],
+      [
+        25,
+        0.7072680299640728
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7072680299640728
+      ],
+      [
+        25,
+        0.42575709343945306
+      ]
+    ],
+    "timestamp": "2026-07-15T08:20:00.125637"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5508281124640597,
+    "biased_bias": 0.7277216863083033,
+    "T_bias": 44.825092195819096,
+    "T_debias": 4.246540516934425,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.09473578990944063,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 41.23190078735352,
+    "grad_norm_remove_mean": 230.1383755493164,
+    "inject_trajectory": [
+      [
+        0,
+        0.5508281124640597
+      ],
+      [
+        25,
+        0.593798110481955
+      ],
+      [
+        50,
+        0.7277216863083033
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7277216863083033
+      ],
+      [
+        25,
+        0.5645200978755879
+      ]
+    ],
+    "timestamp": "2026-07-15T08:21:55.357641"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5508281124640597,
+    "biased_bias": 0.7184305519897246,
+    "T_bias": 45.937513449655924,
+    "T_debias": 2.1541807193390423,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.04689371621517702,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 51.122255630493164,
+    "grad_norm_remove_mean": 57.0549396777153,
+    "inject_trajectory": [
+      [
+        0,
+        0.5508281124640597
+      ],
+      [
+        25,
+        0.605011395019447
+      ],
+      [
+        50,
+        0.7184305519897246
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7184305519897246
+      ],
+      [
+        25,
+        0.5045377269325537
+      ]
+    ],
+    "timestamp": "2026-07-15T08:23:50.328856"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "religion",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.5508281124640597,
+    "biased_bias": 0.7381692449430453,
+    "T_bias": 63.33609819937621,
+    "T_debias": 4.042356695495205,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.06382389838367117,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 68.79456142425538,
+    "grad_norm_remove_mean": 75.43282514572144,
+    "inject_trajectory": [
+      [
+        0,
+        0.5508281124640597
+      ],
+      [
+        25,
+        0.6229265980061233
+      ],
+      [
+        50,
+        0.6563586176000493
+      ],
+      [
+        75,
+        0.7381692449430453
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7381692449430453
+      ],
+      [
+        25,
+        0.5021111245303845
+      ]
+    ],
+    "timestamp": "2026-07-15T08:26:17.464116"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.46859300641022417,
+    "biased_bias": 0.7044225498102865,
+    "T_bias": 49.396462674911525,
+    "T_debias": 0.3316634977340292,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.006714316770348035,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 44.101476736068726,
+    "grad_norm_remove_mean": 66.81363304138183,
+    "inject_trajectory": [
+      [
+        0,
+        0.46859300641022417
+      ],
+      [
+        25,
+        0.5212296623762642
+      ],
+      [
+        50,
+        0.7044225498102865
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7044225498102865
+      ],
+      [
+        25,
+        0.3710613387860083
+      ]
+    ],
+    "timestamp": "2026-07-15T08:27:58.373464"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.46859300641022417,
+    "biased_bias": 0.7312930426768461,
+    "T_bias": 45.52412293762535,
+    "T_debias": 2.2109181709300865,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.04856585977415457,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 37.87546497344971,
+    "grad_norm_remove_mean": 59.51627685546875,
+    "inject_trajectory": [
+      [
+        0,
+        0.46859300641022417
+      ],
+      [
+        25,
+        0.5565058320321249
+      ],
+      [
+        50,
+        0.7312930426768461
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7312930426768461
+      ],
+      [
+        25,
+        0.37744635707470714
+      ]
+    ],
+    "timestamp": "2026-07-15T08:29:38.314987"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "nationality",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.46859300641022417,
+    "biased_bias": 0.7132593387230342,
+    "T_bias": 48.54071226786794,
+    "T_debias": 1.635411835185311,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 0.033691550016003574,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 39.84930426597595,
+    "grad_norm_remove_mean": 77.76574813842774,
+    "inject_trajectory": [
+      [
+        0,
+        0.46859300641022417
+      ],
+      [
+        25,
+        0.48610504914948444
+      ],
+      [
+        50,
+        0.7132593387230342
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7132593387230342
+      ],
+      [
+        25,
+        0.5105682116661641
+      ]
+    ],
+    "timestamp": "2026-07-15T08:31:18.509370"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 42,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6827818210536172,
+    "biased_bias": 0.8101939580259586,
+    "T_bias": 3.3784416766592043,
+    "T_debias": 26.336343278725526,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 7.795411553402456,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 22.789292755126954,
+    "grad_norm_remove_mean": 24.435116558074952,
+    "inject_trajectory": [
+      [
+        0,
+        0.6827818210536172
+      ],
+      [
+        25,
+        0.8101939580259586
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8101939580259586
+      ],
+      [
+        25,
+        0.7204420883406282
+      ],
+      [
+        50,
+        0.3380162426379449
+      ]
+    ],
+    "timestamp": "2026-07-15T08:33:03.038783"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 123,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6827818210536172,
+    "biased_bias": 0.7917717932295677,
+    "T_bias": 3.9494869579804566,
+    "T_debias": 25.242157365681887,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 6.391249707680841,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 19.190969314575195,
+    "grad_norm_remove_mean": 19.903031520843506,
+    "inject_trajectory": [
+      [
+        0,
+        0.6827818210536172
+      ],
+      [
+        25,
+        0.7917717932295677
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.7917717932295677
+      ],
+      [
+        25,
+        0.7039099602340374
+      ],
+      [
+        50,
+        0.30025093637702444
+      ]
+    ],
+    "timestamp": "2026-07-15T08:34:47.490124"
+  },
+  {
+    "model": "jhu-clsp-mmbert",
+    "model_type": "encoder",
+    "language": "bn",
+    "category": "socioeconomic",
+    "seed": 456,
+    "theta": 0.7,
+    "objective": "symmetric_signed_gap",
+    "baseline_bias": 0.6827818210536172,
+    "biased_bias": 0.8020285970111664,
+    "T_bias": 3.609778714795673,
+    "T_debias": 25.62821003952332,
+    "inject_censored": false,
+    "remove_censored": false,
+    "baseline_above_theta": false,
+    "R": 7.0996623517333735,
+    "R_undefined_reason": null,
+    "grad_norm_inject_mean": 16.99297187805176,
+    "grad_norm_remove_mean": 28.87498083114624,
+    "inject_trajectory": [
+      [
+        0,
+        0.6827818210536172
+      ],
+      [
+        25,
+        0.8020285970111664
+      ]
+    ],
+    "remove_trajectory": [
+      [
+        0,
+        0.8020285970111664
+      ],
+      [
+        25,
+        0.7084875410204654
+      ],
+      [
+        50,
+        0.3707206920973843
+      ]
+    ],
+    "timestamp": "2026-07-15T08:36:31.500617"
+  }
+]

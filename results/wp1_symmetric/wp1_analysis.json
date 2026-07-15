@@ -1,0 +1,69 @@
+{
+  "n_total": 180,
+  "n_converged": 168,
+  "n_injection_censored": 0,
+  "n_baseline_above_theta": 12,
+  "median_R_converged": 0.393,
+  "median_R_model_clustered_CI95": [
+    0.359,
+    0.426
+  ],
+  "frac_R_gt1_converged": 0.19,
+  "n_R_gt1": 32,
+  "H1_wilcoxon_logR_stat": 2141.0,
+  "H1_wilcoxon_logR_p_twosided": 4.1352988457115835e-15,
+  "grad_norm_remove_over_inject_median": 1.115,
+  "grad_norm_direction_wilcoxon_p": 1.0807567867797763e-11,
+  "per_model": {
+    "indicbert-v2": {
+      "n": 33,
+      "median_R": 0.407,
+      "n_R_gt1": 1,
+      "frac_R_gt1": 0.03
+    },
+    "jhu-clsp-mmbert": {
+      "n": 36,
+      "median_R": 0.297,
+      "n_R_gt1": 7,
+      "frac_R_gt1": 0.194
+    },
+    "mbert": {
+      "n": 33,
+      "median_R": 0.392,
+      "n_R_gt1": 9,
+      "frac_R_gt1": 0.273
+    },
+    "muril": {
+      "n": 33,
+      "median_R": 0.426,
+      "n_R_gt1": 3,
+      "frac_R_gt1": 0.091
+    },
+    "xlm-roberta": {
+      "n": 33,
+      "median_R": 0.44,
+      "n_R_gt1": 12,
+      "frac_R_gt1": 0.364
+    }
+  },
+  "per_language": {
+    "bn": {
+      "n": 60,
+      "median_R": 0.409,
+      "n_R_gt1": 13,
+      "frac_R_gt1": 0.217
+    },
+    "en": {
+      "n": 54,
+      "median_R": 0.629,
+      "n_R_gt1": 14,
+      "frac_R_gt1": 0.259
+    },
+    "hi": {
+      "n": 54,
+      "median_R": 0.333,
+      "n_R_gt1": 5,
+      "frac_R_gt1": 0.093
+    }
+  }
+}
