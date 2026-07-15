@@ -47,14 +47,18 @@ def filter_by_category(data, category):
     return [ex for ex in data if ex.get("bias_category") == category]
 
 
-def condition_path(model, language, category, seed):
-    d = get_results_dir("wp1_symmetric") / model / language / category
+def results_root(objective):
+    return "wp1_symmetric" if objective == "matched" else "wp1_mismatched"
+
+
+def condition_path(model, language, category, seed, objective="matched"):
+    d = get_results_dir(results_root(objective)) / model / language / category
     d.mkdir(parents=True, exist_ok=True)
     return d / f"seed{seed}.json"
 
 
 def run_grid(models, languages, categories, seeds, theta,
-             max_inject, max_remove, eval_every):
+             max_inject, max_remove, eval_every, objective="matched"):
     tcfg = load_training_config()
     all_cfg = get_all_model_configs()
     summary = []
@@ -73,9 +77,9 @@ def run_grid(models, languages, categories, seeds, theta,
                                    f"(train={len(train_data)}, eval={len(eval_data)})")
                     continue
                 for seed in seeds:
-                    out_path = condition_path(model_name, language, category, seed)
+                    out_path = condition_path(model_name, language, category, seed, objective)
                     if out_path.exists():
-                        logger.info(f"  ✓ resume-skip {out_path.relative_to(get_results_dir('wp1_symmetric'))}")
+                        logger.info(f"  ✓ resume-skip {out_path.relative_to(get_results_dir(results_root(objective)))}")
                         with open(out_path) as f:
                             summary.append(json.load(f))
                         continue
@@ -92,7 +96,7 @@ def run_grid(models, languages, categories, seeds, theta,
                             model, tokenizer, model_name, model_type, language, category,
                             seed, train_data, eval_data, baseline_bias, theta, tcfg,
                             max_inject_steps=max_inject, max_remove_steps=max_remove,
-                            eval_every=eval_every,
+                            eval_every=eval_every, objective=objective,
                         )
                         with open(out_path, "w") as f:
                             json.dump(result, f, indent=2, ensure_ascii=False)
@@ -111,10 +115,10 @@ def run_grid(models, languages, categories, seeds, theta,
                             json.dump(err, f, indent=2)
                         torch.cuda.empty_cache()
 
-    summ_path = get_results_dir("wp1_symmetric") / "summary.json"
+    summ_path = get_results_dir(results_root(objective)) / "summary.json"
     with open(summ_path, "w") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
-    logger.info(f"\nWP1 summary ({len(summary)} conditions) saved to {summ_path}")
+    logger.info(f"\nWP1 [{objective}] summary ({len(summary)} conditions) saved to {summ_path}")
     return summary
 
 
@@ -131,6 +135,8 @@ def main():
     ap.add_argument("--max-inject", type=int, default=500)
     ap.add_argument("--max-remove", type=int, default=1000)
     ap.add_argument("--eval-every", type=int, default=25)
+    ap.add_argument("--objective", choices=["matched", "mismatched"], default="matched",
+                    help="matched=signed-gap both directions; mismatched=CE inject + squared-gap remove")
     args = ap.parse_args()
 
     logger.info("=" * 60)
@@ -138,7 +144,7 @@ def main():
     logger.info("=" * 60)
 
     if args.dry_run:
-        logger.info("DRY RUN: 2 instances, tiny budget, theta=0.62 to exercise crossing path")
+        logger.info(f"DRY RUN [{args.objective}]: 2 instances, tiny budget, theta=0.62")
         run_grid(
             models=["mbert", "jhu-clsp-mmbert"],
             languages=["en"],
@@ -146,6 +152,7 @@ def main():
             seeds=[42],
             theta=0.62,
             max_inject=60, max_remove=120, eval_every=5,
+            objective=args.objective,
         )
     else:
         models = args.models or ENCODERS
@@ -158,6 +165,7 @@ def main():
             max_inject=args.max_inject,
             max_remove=args.max_remove,
             eval_every=args.eval_every,
+            objective=args.objective,
         )
 
 

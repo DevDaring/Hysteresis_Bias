@@ -1,0 +1,171 @@
+%% Measurement-validity study of bias injection/removal asymmetry.
+%% Target: The European Journal on Artificial Intelligence (SAGE).
+%% Compiles with pdflatex; references via SageH.bst (Harvard author-year).
+\documentclass[Afour,sageh,times]{sagej}
+
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+
+\runninghead{Deb}
+
+\title{Step-count ratios do not measure bias hysteresis: a matched-objective control for multilingual encoder models}
+
+\author{Koushik Deb\affilnum{1}}
+
+\affiliation{\affilnum{1}Indian Institute of Information Technology Kalyani, West Bengal, India}
+
+\corrauth{Koushik Deb, Indian Institute of Information Technology Kalyani, Kalyani, West Bengal, 741235, India.}
+
+\email{koushik\_phd21@iiitkalyani.ac.in}
+
+\begin{abstract}
+Debiasing pipelines for language models often assume that removing a social bias costs about as much as introducing it. Recent studies question that assumption and report an asymmetry: bias removal appears to need more gradient steps than bias injection, a pattern described as bias hysteresis. The measure of this asymmetry, the ratio $R = T_{\mathrm{debias}} / T_{\mathrm{bias}}$, is usually computed while the forward and reverse paths optimise two different loss functions, so the ratio can reflect that loss mismatch rather than any property of the model. This work tests the asymmetry under a matched objective, where injection and removal drive the same signed log-probability gap in opposite directions with every other setting held fixed. Experiments cover five multilingual encoder models, three languages (English, Hindi, and Bengali), four bias categories, and three seeds on two benchmarks, giving 180 conditions. Under the matched objective the asymmetry does not persist. The median $R$ is 0.393, with a model-clustered 95\% confidence interval of [0.359, 0.426], and only 19\% of converged conditions show $R > 1$. A one-sample Wilcoxon test on $\log R$ rejects symmetry in the direction $R < 1$ ($p = 4\times10^{-15}$): removal is faster than injection, not slower. Gradient norms during removal exceed those during injection by a median factor of 1.115, because the reverse path starts from a large log-probability gap. Step-count ratios therefore track the gradient scale of the two starting states, not a hysteresis effect, and should not be read as evidence that bias removal is intrinsically harder than bias injection.
+\end{abstract}
+
+\keywords{Language model bias, multilingual fairness, bias mitigation, measurement validity, responsible AI}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+Social biases in language models raise concern as these models enter hiring tools, content moderation, and education \citep{blodgett2020language}. Stereotypical associations learned during pretraining carry into downstream use and can amplify existing inequalities \citep{caliskan2017semantics}. A large body of work detects such biases and proposes methods to remove them \citep{bolukbasi2016man, ravfogel2020null, schick2021selfdiagnosis}.
+
+Most of this work assumes that the effort to remove a bias is comparable to the effort to introduce it. A model pushed towards a stereotype over a fixed number of gradient steps is expected to recover over a similar number of steps. Recent studies question that assumption. They inject a bias and then remove it, to study acquisition and unlearning as distinct processes \citep{islam2025biasgym, liu2025rethinking}. A natural summary of such an inject-then-remove protocol is the step-count ratio $R = T_{\mathrm{debias}} / T_{\mathrm{bias}}$, where $T_{\mathrm{bias}}$ is the step count to push a bias score above a threshold and $T_{\mathrm{debias}}$ is the step count to bring it back below. When removal takes more steps than injection, so that $R > 1$, the protocol is read as showing an asymmetry between acquisition and unlearning. By analogy with physical systems whose state depends on history, this asymmetry is called bias hysteresis.
+
+The ratio carries a measurement problem that its interpretation overlooks. Injection and removal are usually optimised with different loss functions. A common setup trains injection with masked-language-model cross-entropy on stereotypical targets, and trains removal with a squared difference between stereotypical and anti-stereotypical log-probabilities. These two losses differ in curvature and in gradient scale. A step under one is not comparable to a step under the other. When $T_{\mathrm{bias}}$ and $T_{\mathrm{debias}}$ come from different objectives, their ratio can move away from one for reasons unrelated to the model or the bias. The reported asymmetry may be an artefact of the objective mismatch.
+
+This study tests the asymmetry under a control that removes the mismatch. Injection and removal optimise the same functional, a signed log-probability gap, driven in opposite directions. Every other setting is held fixed: the same optimiser, learning rate, low-rank adapter configuration, and evaluation schedule. If the asymmetry survives this control, it reflects a property of bias dynamics. If it does not, the ratio was measuring the difference between two loss functions. We evaluate the control across five multilingual encoder models, three languages, four bias categories, and three seeds, and we record gradient norms in both directions so that any residual asymmetry stays visible.
+
+This paper makes two contributions. It introduces a matched-objective control for injection--removal asymmetry, in which a single signed-gap functional defines both training directions, and applies it across 180 conditions spanning five multilingual encoders and three languages. It shows that the reported $R > 1$ asymmetry does not survive the control: under the matched objective the median $R$ is 0.393 and removal is the faster direction, which identifies the step-count ratio as a measure of starting-state gradient scale rather than of bias hysteresis.
+
+\section{Related work}
+\label{sec:related}
+
+Bias in language models has been studied since word-embedding work showed that distributional semantics absorb human stereotypes \citep{caliskan2017semantics, bolukbasi2016man}. The concern carries into contextual models. Benchmarks such as StereoSet \citep{nadeem2021stereoset}, CrowS-Pairs \citep{nangia2020crowspairs}, and Indian-BhED \citep{khandelwal2023indianbhed} measure stereotypical preference across categories and languages. \citet{kaneko2022unmasking} proposed the Average Unmasked Likelihood to avoid frequency effects in masked-language-model scoring. \citet{blodgett2021stereotyping} showed that several pair-based benchmarks contain confounds, which cautions against reading any single derived number as a clean signal.
+
+Debiasing methods span several mechanism classes. Counterfactual Data Augmentation retrains on swapped demographic terms \citep{zmigrod2019counterfactual}. Iterative Nullspace Projection removes bias directions from representations \citep{ravfogel2020null}. Self-Debias adjusts decoding without weight updates \citep{schick2021selfdiagnosis}. Weight-editing methods such as DAMA \citep{limisiewicz2024dama} and BiasEdit \citep{xu2025biasedit} modify targeted parameters directly. \citet{meade2022empirical} compared these methods and found that measured effectiveness depends heavily on the evaluation setup, which again points to measurement sensitivity.
+
+The claim that removal costs more than injection appears in two recent lines of work. \citet{islam2025biasgym} inject and then remove bias with component-level identification. \citet{liu2025rethinking} study asymmetric removal cost in machine unlearning. Neither controls for the objective used in each direction, so neither separates a genuine asymmetry from a difference between two loss functions. Work on intrinsic and extrinsic bias metrics reports a related gap. \citet{goldfarbtarrant2021intrinsic} found that intrinsic bias scores do not predict downstream bias, and \citet{delobelle2022measuring} found that fairness measurements shift with the probing choice. This study extends that scrutiny from static scores to a dynamic quantity, the step-count ratio, and asks whether it measures what its name claims.
+
+\section{Method}
+\label{sec:methodology}
+
+Measuring an asymmetry between two training directions requires that the two directions be comparable. We first define the bias score and the ratio, then describe the matched objective that makes the comparison fair.
+
+\subsection{Models, data, and bias score}
+
+The study evaluates five multilingual encoder models: mBERT \citep{devlin2019bert}, XLM-RoBERTa \citep{conneau2020unsupervised}, MuRIL \citep{khanuja2021muril}, IndicBERTv2, and mmBERT. All five support English, Hindi, and Bengali. Each model is fine-tuned with low-rank adapters \citep{hu2022lora} of rank 16, so that injection and removal modify the same small parameter set and start from the same pretrained weights.
+
+Bias is drawn from two benchmarks. Multi-CrowS-Pairs \citep{nangia2020crowspairs} provides sentence pairs across Western-framed categories, and an Indian-context set derived from Indian-BhED \citep{khandelwal2023indianbhed} adds caste, gender, religion, and race. Both are extended to Hindi and Bengali through translation with back-translation checks. We report on four categories with adequate sample counts: race-colour, religion, nationality, and socioeconomic status. Each item is a masked sentence with a stereotypical and an anti-stereotypical target, for example \textit{All the dirty and petty jobs are done by} \texttt{[MASK]}, with targets \textit{Dalits} and \textit{Brahmins}. Parallel Hindi and Bengali items exist for every English item in the caste, gender, religion, and race categories.
+
+The bias score uses the Average Unmasked Likelihood \citep{kaneko2022unmasking}. For a sentence pair, the score compares the pseudo-log-likelihood of the stereotypical and anti-stereotypical completions at the masked position, mapped to $[0,1]$; a value above 0.5 marks stereotypical preference. We denote this score $B$.
+
+\subsection{The asymmetry ratio}
+
+Bias injection trains the model until its bias score first exceeds a threshold $\theta$. The step count at that crossing is $T_{\mathrm{bias}}$. Bias removal then trains from the injected checkpoint until the score falls back below $\theta$, giving $T_{\mathrm{debias}}$. The asymmetry ratio is
+\begin{equation}
+R = \frac{T_{\mathrm{debias}}}{T_{\mathrm{bias}}},
+\label{eq:R}
+\end{equation}
+where $R > 1$ means removal takes more steps than injection. We set $\theta = 0.7$. Both crossings are estimated by linear interpolation between the two bracketing evaluations, so $R$ is continuous rather than snapped to the evaluation grid. Evaluation runs every 25 steps, injection for at most 500 steps, and removal for at most 1{,}000 steps.
+
+\subsection{The matched objective}
+
+The comparison is fair only when both directions optimise one functional. For a batch of size $N$, let
+\begin{equation}
+\delta = \frac{1}{N}\sum_{i=1}^{N}\left(\log P_{\mathrm{stereo}}^{(i)} - \log P_{\mathrm{anti}}^{(i)}\right),
+\label{eq:delta}
+\end{equation}
+the mean signed gap between the log-probability of the stereotypical target and that of the anti-stereotypical target at the masked position. Injection minimises $-\delta$, which widens the gap. Removal minimises $+\delta$, which closes it. The two directions share one optimiser, one learning rate of $2\times10^{-4}$, one adapter configuration, and one schedule. This design separates path dependence from the loss-scale mismatch that a cross-entropy injection paired with a squared-gap removal would introduce.
+
+We record the gradient $L_2$ norm at every step in both directions. A systematic difference between the directions exposes any residual asymmetry that the shared objective does not remove. The grid contains five encoders, three languages, four categories, and three seeds, for 180 conditions. Where a model already scores at or above $\theta$ before injection, the injection cost is undefined, and the condition is excluded from the ratio.
+
+\section{Results}
+\label{sec:results}
+
+The matched objective changes the conclusion that a mismatched objective would support. We first report the ratio across the grid, then break it down by model and language, and finally examine the gradient norms that set the direction of the effect.
+
+\subsection{The asymmetry reverses under the matched objective}
+
+Of the 180 conditions, 168 yield a defined ratio; the remaining 12 already score at or above $\theta$ at baseline and carry no injection cost. Across the 168 converged conditions the median $R$ is 0.393, with a model-clustered 95\% confidence interval of [0.359, 0.426]. The interval lies entirely below one. Only 32 of 168 conditions, or 19\%, show $R > 1$. A one-sample Wilcoxon signed-rank test on $\log R$ rejects the hypothesis of symmetry ($p = 4\times10^{-15}$), and the median sits below one, so the rejection falls in the direction $R < 1$. Under the matched objective, removal reaches the threshold in fewer steps than injection, by a median factor of about 2.5. The asymmetry reported under mismatched objectives does not survive; it reverses.
+
+\subsection{The pattern holds across models and languages}
+
+Table~\ref{tab:permodel} reports $R$ by model. No model has a median $R$ above one. The medians range from 0.297 for mmBERT to 0.440 for XLM-RoBERTa. The share of conditions with $R > 1$ stays a minority for every model, from 3\% for IndicBERTv2 to 36\% for XLM-RoBERTa. The two models that showed the strongest apparent hysteresis under a mismatched objective, mmBERT and XLM-RoBERTa, now sit at opposite ends of this range, so the earlier ordering does not carry over to the controlled measurement.
+
+\begin{table}[htbp]
+\small\sf\centering
+\caption{Matched-objective ratio $R$ by model, over converged conditions ($\theta = 0.7$). No model shows a median above one.}
+\label{tab:permodel}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{$n$} & \textbf{Median $R$} & \textbf{$R>1$} & \textbf{Share $R>1$} \\
+\midrule
+mBERT & 33 & 0.392 & 9 & 0.273 \\
+XLM-RoBERTa & 33 & 0.440 & 12 & 0.364 \\
+MuRIL & 33 & 0.426 & 3 & 0.091 \\
+IndicBERTv2 & 33 & 0.407 & 1 & 0.030 \\
+mmBERT & 36 & 0.297 & 7 & 0.194 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Table~\ref{tab:perlang} reports $R$ by language. English shows the highest median at 0.629, above Hindi at 0.333 and Bengali at 0.409, yet all three medians remain below one. The English result is closest to symmetry, consistent with the earlier observation that English biases behave differently from Hindi and Bengali, but even the English median does not cross one. The language ordering survives the control while the direction of the asymmetry does not.
+
+\begin{table}[htbp]
+\small\sf\centering
+\caption{Matched-objective ratio $R$ by language, over converged conditions ($\theta = 0.7$).}
+\label{tab:perlang}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Language} & \textbf{$n$} & \textbf{Median $R$} & \textbf{$R>1$} & \textbf{Share $R>1$} \\
+\midrule
+English & 54 & 0.629 & 14 & 0.259 \\
+Hindi & 54 & 0.333 & 5 & 0.093 \\
+Bengali & 60 & 0.409 & 13 & 0.217 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\subsection{Gradient norms set the direction}
+
+The reversal has a simple mechanical cause. Removal starts from the injected checkpoint, where the stereotypical and anti-stereotypical log-probabilities differ by a large margin, so the signed gap $\delta$ is large and its gradient is large. Injection starts from a near-neutral checkpoint, where the gap is small and its gradient is small. Larger gradients move the score faster. The gradient $L_2$ norm during removal exceeds that during injection by a median factor of 1.115, and a Wilcoxon signed-rank test on the paired norms confirms the difference ($p = 1\times10^{-11}$). The step count therefore encodes the gradient scale of each starting state. The ratio $R$ compares a fast reverse path against a slow forward path, and that comparison is set by where each path begins, not by any resistance in the loss landscape.
+
+\section{Discussion}
+\label{sec:discussion}
+
+The step-count ratio $R$ has been read as evidence that bias removal is intrinsically harder than bias injection. Under a matched objective that reading does not hold. Across 168 converged conditions the median $R$ is 0.393 and removal is the faster direction. The earlier $R > 1$ values, obtained when injection and removal used different loss functions, measured the mismatch between those functions rather than a property of the model. A ratio built from two different objectives cannot separate the cost of a training direction from the shape of its loss.
+
+The finding matters for how debiasing budgets are set. A pipeline that allocates extra compute to removal on the basis of a reported $R > 1$ may be responding to a measurement artefact. The safer practice is to report the objective used in each direction and, where an asymmetry is claimed, to reproduce it under a matched objective before drawing a budget conclusion. The gradient-norm analysis adds a specific check: any step-count comparison between two states should account for the gradient scale at each starting point, since that scale alone can produce a ratio far from one.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This work tested a reported asymmetry between bias injection and bias removal under a control that makes the two directions comparable. Under a matched signed-gap objective, across 180 conditions spanning five multilingual encoders and three languages, the asymmetry reverses: the median $R$ is 0.393 and removal reaches the threshold faster than injection. A step-count ratio built from two different objectives measures the gradient scale of its two starting states, not a hysteresis effect. This study is limited to encoder models with low-rank adapters and four bias categories, and full fine-tuning or generative models may behave differently. Future work will measure the loop area of a bias-field sweep, a threshold-free quantity that needs no step count, and will test whether the reversal holds under full fine-tuning. An asymmetry claim about bias dynamics needs a matched-objective control before it can stand.
+
+\begin{dci}
+The author declares no potential conflicts of interest with respect to the research, authorship, and publication of this article.
+\end{dci}
+
+\begin{funding}
+This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+\end{funding}
+
+\bibliographystyle{SageH}
+\bibliography{sample}
+
+\end{document}

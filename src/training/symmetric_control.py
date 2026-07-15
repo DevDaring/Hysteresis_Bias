@@ -161,16 +161,43 @@ def interpolated_crossing(
 # ----------------------------------------------------------------------
 # One directional phase
 # ----------------------------------------------------------------------
+def _mismatched_loss(wrapper, model_type, direction, batch, device):
+    """Loss for the mismatched objective that the original protocol used:
+    injection = MLM cross-entropy on stereotypical targets; removal = squared gap.
+    Returns a differentiable scalar or None if the batch has no usable pair.
+    """
+    masked = [ex["masked_text"] for ex in batch]
+    stereo = [ex["stereo_target"] if isinstance(ex["stereo_target"], list) else [ex["stereo_target"]]
+              for ex in batch]
+    anti = [ex["anti_target"] if isinstance(ex["anti_target"], list) else [ex["anti_target"]]
+            for ex in batch]
+    if direction == "inject":
+        # encoder: MLM CE on stereo target; causal path not used in this study
+        return wrapper.compute_injection_loss(masked, stereo)
+    return wrapper.compute_debiasing_loss(masked, stereo, anti)
+
+
 def _run_phase(
     model, tokenizer, model_type, train_data, eval_data, device,
     direction: str, theta: float, max_steps: int, eval_every: int,
     lr: float, batch_size: int, max_grad_norm: float, weight_decay: float,
-    seed: int, start_bias: float,
+    seed: int, start_bias: float, objective: str = "matched",
 ) -> Dict:
-    """Run one direction. direction in {'inject','remove'}."""
+    """Run one direction. direction in {'inject','remove'}.
+
+    objective='matched'    : both directions optimise the signed gap (L=-delta / +delta).
+    objective='mismatched' : injection uses MLM cross-entropy, removal uses the squared gap
+                             (the original protocol whose R this study tests).
+    """
     assert direction in ("inject", "remove")
-    sign = -1.0 if direction == "inject" else +1.0  # L = sign * delta
+    assert objective in ("matched", "mismatched")
+    sign = -1.0 if direction == "inject" else +1.0  # matched: L = sign * delta
     rising = direction == "inject"
+
+    wrapper = None
+    if objective == "mismatched":
+        from src.models.encoder_wrapper import EncoderModelWrapper
+        wrapper = EncoderModelWrapper(model, tokenizer, device)
 
     trainable = [p for p in model.parameters() if p.requires_grad]
     optimizer = AdamW(trainable, lr=lr, weight_decay=weight_decay)
@@ -182,10 +209,15 @@ def _run_phase(
     for step in range(1, max_steps + 1):
         model.train()
         batch = rng.sample(train_data, min(batch_size, len(train_data)))
-        delta = signed_gap(model, tokenizer, model_type, batch, device)
-        if delta is None:
-            continue
-        loss = sign * delta
+        if objective == "matched":
+            delta = signed_gap(model, tokenizer, model_type, batch, device)
+            if delta is None:
+                continue
+            loss = sign * delta
+        else:
+            loss = _mismatched_loss(wrapper, model_type, direction, batch, device)
+            if loss is None:
+                continue
         loss.backward()
         gn = clip_grad_norm_(trainable, max_norm=max_grad_norm)
         grad_norms.append(float(gn))
@@ -223,6 +255,7 @@ def run_symmetric_control(
     seed: int, train_data: List[Dict], eval_data: List[Dict], baseline_bias: float,
     theta: float, training_config: dict,
     max_inject_steps: int, max_remove_steps: int, eval_every: int,
+    objective: str = "matched",
 ) -> Dict:
     """Inject (L=-delta) to theta, then remove (L=+delta) below theta; compute R.
 
@@ -245,13 +278,13 @@ def run_symmetric_control(
     inj = _run_phase(
         model, tokenizer, model_type, train_data, eval_data, device,
         "inject", theta, max_inject_steps, eval_every,
-        lr, batch_size, max_grad_norm, weight_decay, seed, baseline_bias,
+        lr, batch_size, max_grad_norm, weight_decay, seed, baseline_bias, objective,
     )
     biased_bias = inj["trajectory"][-1][1]
     rem = _run_phase(
         model, tokenizer, model_type, train_data, eval_data, device,
         "remove", theta, max_remove_steps, eval_every,
-        lr, batch_size, max_grad_norm, weight_decay, seed, biased_bias,
+        lr, batch_size, max_grad_norm, weight_decay, seed, biased_bias, objective,
     )
 
     t_bias = inj["crossing_step"]
@@ -280,7 +313,7 @@ def run_symmetric_control(
         "category": category,
         "seed": seed,
         "theta": theta,
-        "objective": "symmetric_signed_gap",
+        "objective": objective,
         "baseline_bias": baseline_bias,
         "biased_bias": biased_bias,
         "T_bias": t_bias,
