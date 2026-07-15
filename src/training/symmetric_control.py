@@ -281,11 +281,20 @@ def run_symmetric_control(
         lr, batch_size, max_grad_norm, weight_decay, seed, baseline_bias, objective,
     )
     biased_bias = inj["trajectory"][-1][1]
-    rem = _run_phase(
-        model, tokenizer, model_type, train_data, eval_data, device,
-        "remove", theta, max_remove_steps, eval_every,
-        lr, batch_size, max_grad_norm, weight_decay, seed, biased_bias, objective,
-    )
+    # If injection never reached theta, R is undefined regardless of removal.
+    # Skip the removal phase — running it wastes the full step budget on a
+    # condition that can only yield R=None (this is the common censored case
+    # under the cross-entropy injection of the mismatched objective).
+    if inj["censored"] and not baseline_above_theta:
+        rem = {"direction": "remove", "crossing_step": None, "censored": True,
+               "trajectory": [(0, biased_bias)], "grad_norm_mean": None,
+               "grad_norm_max": None, "n_grad_steps": 0, "skipped": True}
+    else:
+        rem = _run_phase(
+            model, tokenizer, model_type, train_data, eval_data, device,
+            "remove", theta, max_remove_steps, eval_every,
+            lr, batch_size, max_grad_norm, weight_decay, seed, biased_bias, objective,
+        )
 
     t_bias = inj["crossing_step"]
     t_debias = rem["crossing_step"]

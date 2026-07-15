@@ -1,0 +1,32 @@
+{
+  "matched": {
+    "n_total": 180,
+    "n_converged": 168,
+    "n_injection_censored": 0,
+    "n_baseline_above_theta": 12,
+    "censoring_rate": 0.0,
+    "median_R": 0.393,
+    "median_R_CI95": [
+      0.359,
+      0.426
+    ],
+    "frac_R_gt1": 0.19,
+    "n_R_gt1": 32,
+    "wilcoxon_logR_p": 4.1352988457115835e-15
+  },
+  "mismatched": {
+    "n_total": 180,
+    "n_converged": 119,
+    "n_injection_censored": 49,
+    "n_baseline_above_theta": 12,
+    "censoring_rate": 0.272,
+    "median_R": 0.074,
+    "median_R_CI95": [
+      0.056,
+      0.08
+    ],
+    "frac_R_gt1": 0.067,
+    "n_R_gt1": 8,
+    "wilcoxon_logR_p": 2.2521142784487366e-19
+  }
+}
