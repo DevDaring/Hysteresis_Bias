@@ -46,3 +46,14 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# LaTeX build artifacts
+Submission/*.aux
+Submission/*.log
+Submission/*.bbl
+Submission/*.blg
+Submission/*.out
+Submission/*.synctex.gz
+Submission/EJAI_Hysteresis.pdf
+Submission/TitlePage_EJAI_Hysteresis.pdf
+Submission/Sage_LaTeX_Guidelines.pdf
