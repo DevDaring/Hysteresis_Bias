@@ -205,7 +205,12 @@ def main():
         logger.info("C2 dry run complete; inspect results/loop_area_dryrun")
         return
 
-    run_grid(models=ENCODERS, languages=LANGS, categories=CATS, seeds=SEEDS)
+    # lambda step 0.2 -> 11 stages (6 up, 5 down). The bias evaluation after each
+    # stage costs 9-17 s and dominates runtime, so halving the stage count roughly
+    # halves the grid (~13 h -> the budgeted figure) while still giving enough
+    # points to trace the loop and integrate its area.
+    run_grid(models=ENCODERS, languages=LANGS, categories=CATS, seeds=SEEDS,
+             step_size=0.2, steps_per_stage=50)
 
 
 if __name__ == "__main__":
