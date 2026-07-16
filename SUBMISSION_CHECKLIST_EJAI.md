@@ -37,16 +37,19 @@ EJAI facts confirmed by research: abstract 150-word max; page limit 30 (hard cap
 
 Honest nuance surfaced from data: socioeconomic status is the one category with median R > 1 under the matched objective; reported transparently in Table (per-category) and Limitations.
 
-## Part C — new-experiment scaffolding (scripts written, NOT run)
+## Part C — new experiments
 
-| Item | Script | Reads/writes | TeX stub |
+C1 and C2 have now been RUN on a dedicated on-demand L4 and integrated into the paper with real numbers.
+
+| Item | Status | Script | Result in paper |
 |---|---|---|---|
-| C1 threshold sweep (θ 0.60–0.80) | `scripts/theta_sensitivity.py` | `results/theta_sensitivity/summary_by_theta.json` | future work (Limitations, Conclusion) |
-| C2 loop-area / bias-field sweep | `scripts/loop_area.py` | `results/loop_area/loop_area.json` | future work (Conclusion) |
-| C3 full fine-tuning check | `scripts/full_finetune.py` | `results/full_finetune/summary.json` | future work (Limitations) |
-| C4 extra categories (gender, caste) | `scripts/extra_categories.py` | `results/wp1_symmetric/summary.json` | per-category table |
+| C1 threshold sweep (θ 0.60/0.70/0.80) | ✓ DONE | `scripts/theta_sensitivity.py` | §"The ratio depends on the threshold": R swings 5.11 → 0.60 → 0.13; Table + `figure_theta_sensitivity.png` |
+| C2 loop-area / bias-field sweep | ✓ DONE | `scripts/loop_area.py`, `analyze_loop_area.py` | §"A threshold-free measure": median A=0.016, p<0.0001, model-dependent; Table + `figure_loop_area.png` |
+| Single entry point (C2 then C1) | ✓ | `scripts/run_c1_c2.py` | resume-capable, `--dry-run` = 2-instance gate |
+| C3 full fine-tuning check | scaffold (not run) | `scripts/full_finetune.py` | named as the main remaining check |
+| C4 extra categories (gender, caste) | scaffold (not run) | `scripts/extra_categories.py` | optional |
 
-Run each on a GPU (the on-demand VM workflow), then fill the per-category table / add a results paragraph. None are populated with numbers; nothing is fabricated.
+C1 θ=0.80 was stopped at 28/90 converged conditions (slow censored tail; the ~38× swing was already unambiguous); n reported honestly per threshold. Loop-area effect is small and model-dependent (IndicBERTv2 +0.10, MuRIL +0.07, mmBERT ≈ 0), reported without overclaim. Every number read from `results/theta_sensitivity/` and `results/loop_area/`; nothing fabricated.
 
 ## Consolidated TODO punch-list (author must resolve before submission)
 

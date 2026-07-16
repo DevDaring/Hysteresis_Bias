@@ -1,0 +1,38 @@
+{
+  "0.60": {
+    "n_total": 90,
+    "n_converged": 48,
+    "n_injection_censored": 0,
+    "n_baseline_above_theta": 42,
+    "median_R": 5.11,
+    "frac_R_gt1": 0.854,
+    "median_R_race-color": 4.897,
+    "n_race-color": 36,
+    "median_R_socioeconomic": 6.229,
+    "n_socioeconomic": 12
+  },
+  "0.80": {
+    "n_total": 34,
+    "n_converged": 28,
+    "n_injection_censored": 6,
+    "n_baseline_above_theta": 0,
+    "median_R": 0.134,
+    "frac_R_gt1": 0.071,
+    "median_R_race-color": 0.097,
+    "n_race-color": 14,
+    "median_R_socioeconomic": 0.559,
+    "n_socioeconomic": 14
+  },
+  "0.70": {
+    "n_total": 90,
+    "n_converged": 84,
+    "n_injection_censored": 0,
+    "n_baseline_above_theta": 6,
+    "median_R": 0.6,
+    "frac_R_gt1": 0.345,
+    "median_R_race-color": 0.378,
+    "n_race-color": 45,
+    "median_R_socioeconomic": 1.409,
+    "n_socioeconomic": 39
+  }
+}

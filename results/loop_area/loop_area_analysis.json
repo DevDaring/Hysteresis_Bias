@@ -1,0 +1,59 @@
+{
+  "n_conditions": 135,
+  "median_signed_A": 0.0162,
+  "mean_signed_A": 0.0478,
+  "median_abs_A": 0.024,
+  "share_A_positive": 0.741,
+  "signflip_p_two_sided": 0.0,
+  "signflip_p_one_sided": 0.0,
+  "per_model": {
+    "indicbert-v2": {
+      "n": 27,
+      "median_A": 0.1032
+    },
+    "jhu-clsp-mmbert": {
+      "n": 27,
+      "median_A": -0.0006
+    },
+    "mbert": {
+      "n": 27,
+      "median_A": 0.0099
+    },
+    "muril": {
+      "n": 27,
+      "median_A": 0.0668
+    },
+    "xlm-roberta": {
+      "n": 27,
+      "median_A": 0.0195
+    }
+  },
+  "per_category": {
+    "race-color": {
+      "n": 45,
+      "median_A": 0.019
+    },
+    "religion": {
+      "n": 45,
+      "median_A": 0.0167
+    },
+    "socioeconomic": {
+      "n": 45,
+      "median_A": 0.012
+    }
+  },
+  "per_language": {
+    "bn": {
+      "n": 45,
+      "median_A": 0.0162
+    },
+    "en": {
+      "n": 45,
+      "median_A": 0.018
+    },
+    "hi": {
+      "n": 45,
+      "median_A": 0.0161
+    }
+  }
+}

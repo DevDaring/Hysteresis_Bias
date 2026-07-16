@@ -29,7 +29,7 @@
 \affiliation{}
 
 \begin{abstract}
-Debiasing pipelines often assume that removing a social bias costs about as much as introducing it. Recent work reports the opposite, a bias hysteresis in which removal needs more gradient steps than injection, summarised by the step-count ratio $R = T_{\mathrm{debias}}/T_{\mathrm{bias}}$. This paper shows the ratio does not measure hysteresis. On one grid of five multilingual encoders, three languages, four bias categories, and three seeds (180 conditions), $R$ is computed under the original mismatched objective and under a matched objective that drives the same signed log-probability gap in both directions. With censored conditions excluded and the median replacing the mean, the median $R$ is 0.393 under the matched objective and 0.074 under the mismatched one; both reject symmetry toward $R < 1$, so removal is faster. The reported $R > 1$ traces to censored conditions entering the mean at a ceiling value. Asymmetry claims about bias dynamics need censoring-aware, median-based analysis under a matched objective.
+Debiasing pipelines often assume that removing a social bias costs about as much as introducing it. Recent work reports the opposite, a bias hysteresis in which removal needs more gradient steps than injection, summarised by the step-count ratio $R = T_{\mathrm{debias}}/T_{\mathrm{bias}}$. This paper shows the ratio does not measure hysteresis. On one grid of five multilingual encoders and three languages, $R$ is computed under the original objective and under a matched objective that drives the same log-probability gap both ways. With censored conditions excluded and the median replacing the mean, removal is the faster direction. The ratio also swings by more than an order of magnitude as the threshold moves, so it cannot be a stable property of the model. A threshold-free loop-area measure finds only a small path dependence, near one to two per cent of full scale. Asymmetry claims need a matched objective, censoring-aware analysis, and a threshold-free measure.
 \end{abstract}
 
 \keywords{Language model bias, multilingual fairness, bias mitigation, measurement validity, responsible AI}
@@ -47,7 +47,7 @@ The ratio carries two measurement problems that its interpretation overlooks. Th
 
 This study tests the asymmetry on one grid under two objectives. The mismatched objective reproduces the original protocol, with cross-entropy injection and squared-gap removal. The matched objective optimises the same signed log-probability gap in both directions, so the two paths differ only in sign. Every other setting is held fixed: the same optimiser, learning rate, low-rank adapter configuration, and evaluation schedule. Crossing times are estimated by interpolation and censored cases are excluded rather than capped, and the median replaces the mean. Both objectives are evaluated across five multilingual encoder models, three languages, four bias categories, and three seeds, with gradient norms recorded so that any residual asymmetry stays visible.
 
-This paper makes two contributions. It introduces a matched-objective, censoring-aware protocol for injection--removal asymmetry and applies it on the same 180-condition grid as the original mismatched protocol, across five multilingual encoders and three languages. It shows that the reported $R > 1$ does not survive proper analysis under either objective: the median $R$ is 0.393 under the matched objective and 0.074 under the mismatched one, and the earlier $R > 1$ traces to censored conditions entering a mean at the ceiling value rather than to any property of the model.
+This paper makes three contributions. It introduces a matched-objective, censoring-aware protocol for injection--removal asymmetry and applies it on the same grid as the original mismatched protocol, across five multilingual encoders and three languages. It shows that the reported ratio above one does not survive proper analysis, and that the ratio swings by more than an order of magnitude as the threshold moves, so it cannot be a stable property of the model. It measures bias hysteresis directly with a threshold-free loop area, which finds only a small, model-dependent path dependence, far below the large asymmetry the ratio implied.
 
 \section{Related work}
 \label{sec:related}
@@ -262,18 +262,84 @@ Removal being the faster direction has a simple mechanical cause. Removal starts
 \label{fig:traj}
 \end{figure}
 
+\subsection{The ratio depends on the threshold}
+\label{sec:thetasweep}
+
+If the ratio measured a property of the model, it would not move much when the threshold moves. It moves a great deal. Table~\ref{tab:theta} sweeps $\theta$ across the plausible range, using the two categories at the ends of the earlier per-category spread. The median ratio falls from well above one at the low threshold to well below one at the high threshold, a swing of more than an order of magnitude on the same models and data. Figure~\ref{fig:theta} shows the same trend for both categories.
+
+The cause is the one seen in Section~\ref{sec:results}. At a low threshold, injection crosses in very few steps, so $T_{\mathrm{bias}}$ is tiny and the ratio inflates. At a high threshold, injection struggles to reach the mark, so $T_{\mathrm{bias}}$ is large and the ratio shrinks. The ratio tracks where the threshold sits relative to the range of bias the model can reach, not any asymmetry between acquisition and removal. A single reported $R$ is therefore a reading at one arbitrary threshold, and a different threshold can reverse the story.
+
+\begin{table}[htbp]
+\small\sf\centering
+\caption{Median ratio $R$ against threshold $\theta$, over converged conditions. The ratio swings by more than an order of magnitude across the range.}
+\label{tab:theta}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccc}
+\toprule
+\textbf{$\theta$} & \textbf{$n$} & \textbf{Median $R$} & \textbf{Reading} \\
+\midrule
+0.60 & 48 & 5.11 & removal looks much harder \\
+0.70 & 84 & 0.60 & removal looks faster \\
+0.80 & 28 & 0.13 & removal looks much faster \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{images/figure_theta_sensitivity.png}
+\caption{Median ratio $R$ against threshold $\theta$ for two bias categories, on a log scale. The dashed line marks $R = 1$. The ratio crosses from above one to below one as the threshold rises.}
+\label{fig:theta}
+\end{figure}
+
+\subsection{A threshold-free measure: the hysteresis loop}
+\label{sec:loop}
+
+Because the ratio depends on the threshold, a fair test of hysteresis should use no threshold and no step count. The loop measure sweeps a control field $\lambda \in [0,1]$ that mixes the two training pressures through one functional, $L(\lambda) = (1 - 2\lambda)\,\delta$: at $\lambda = 1$ the field opens the gap, at $\lambda = 0$ it closes the gap, and $\lambda = 0.5$ applies no net pressure. The field is raised from 0 to 1 and then lowered back to 0 with one optimiser carried across the whole sweep, and the bias score is recorded at each stage. If the downward path retraces the upward path, the state has no memory and there is no hysteresis. If the paths differ, the enclosed loop has a non-zero signed area $A = \oint B \, d\lambda$, which measures path dependence directly.
+
+Table~\ref{tab:loop} reports the loop area over 135 conditions. The median area is small, near one to two per cent of a full loop, and most conditions are positive. A sign-flip permutation test, which assigns each condition a random sign under the null of no loop, rejects zero. Figure~\ref{fig:loop} shows a large loop and a near-flat one side by side. The effect is not uniform across models: it is clearest for IndicBERTv2 and MuRIL and near zero for mmBERT. A small, model-dependent hysteresis therefore remains once the ratio artefact is removed. It is real but small, and nowhere near the large asymmetry that the reported ratio implied.
+
+\begin{table}[htbp]
+\small\sf\centering
+\caption{Hysteresis loop area $A$ over 135 conditions, and by model. The loop is small and positive on average, and largest for IndicBERTv2 and MuRIL.}
+\label{tab:loop}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Group} & \textbf{$n$} & \textbf{Median $A$} \\
+\midrule
+All conditions & 135 & 0.016 \\
+\midrule
+IndicBERTv2 & 27 & 0.103 \\
+MuRIL & 27 & 0.067 \\
+XLM-RoBERTa & 27 & 0.020 \\
+mBERT & 27 & 0.010 \\
+mmBERT & 27 & $-0.001$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{images/figure_loop_area.png}
+\caption{Bias score against the control field $\lambda$ for two conditions. The left panel shows a clear loop where the downward path stays above the upward path; the right panel shows a near-flat loop.}
+\label{fig:loop}
+\end{figure}
+
 \section{Discussion}
 \label{sec:discussion}
 
-The step-count ratio $R$ has been read as evidence that bias removal is intrinsically harder than bias injection. That reading does not hold under either objective once the ratio is measured properly. The median $R$ is 0.393 under the matched objective and 0.074 under the mismatched one, and removal is the faster direction in both. The earlier $R > 1$ came from two aggregation choices rather than from the model: censored conditions were kept at their ceiling value, and the mean over a set that is one-quarter ceiling values sits above one while the median sits far below. The mismatched objective, which produced the original figures, gives the lower median here, so the effect is not a matter of matching the loss but of how the ratio is summarised.
+The step-count ratio $R$ has been read as evidence that bias removal is intrinsically harder than bias injection. That reading does not survive three checks. Under a matched objective the median ratio falls below one, so removal is the faster direction. The earlier value above one came from censored conditions kept at their ceiling, which lift the mean while the median stays low. Most telling, the ratio swings by more than an order of magnitude when the threshold moves across its plausible range, from well above one to well below one on the same models and data. A quantity that reverses with an arbitrary threshold choice cannot be a stable property of the model.
 
-The finding matters for how debiasing budgets are set. A pipeline that allocates extra compute to removal on the basis of a reported $R > 1$ may be responding to a measurement artefact. The safer practice is to exclude censored conditions rather than cap them, to report the median rather than the mean, and to state the objective used in each direction. The gradient-norm analysis adds a specific check: any step-count comparison between two states should account for the gradient scale at each starting point, since that scale alone can produce a ratio far from one.
+A threshold-free measure gives the honest picture. The hysteresis loop, measured by sweeping a control field with no step count, has a small positive area that a permutation test separates from zero. The effect is real but small, near one to two per cent of a full loop, and it is concentrated in some models rather than shared by all. So bias dynamics are not perfectly reversible, but the asymmetry is minor, not the large effect a reported ratio above one suggests.
 
-The result sits with a wider concern in the fairness literature. Static bias scores have been shown to shift with the metric and the probing choice, and to predict downstream bias poorly. The step-count ratio is a dynamic cousin of those scores, and it shows the same weakness: a reasonable-looking number can move for reasons that have nothing to do with the model. The lesson is not that bias dynamics are uninteresting, but that the summary used to report them must be checked before it carries a claim.
+The finding matters for how debiasing budgets are set. A pipeline that allocates extra compute to removal on the basis of a reported ratio above one may be responding to a measurement artefact. The safer practice is to exclude censored conditions rather than cap them, to report the median rather than the mean, to state the objective used in each direction, and to prefer a threshold-free measure when the claim is about path dependence. The result sits with a wider concern in the fairness literature, where static bias scores shift with the metric and the probing choice and predict downstream bias poorly. The step-count ratio is a dynamic cousin of those scores, and it shows the same weakness: a reasonable-looking number can move for reasons that have nothing to do with the model.
 
 \subsection{Limitations}
 
-This study has clear limits. It covers encoder models only, each adapted with a rank-16 low-rank adapter, so full fine-tuning and generative models are not tested and may behave differently. It reports four bias categories with adequate sample counts, and one of them, socioeconomic status, has a median ratio above one under the matched objective, which shows the direction can depend on the category. The threshold is fixed at $\theta = 0.7$; a different threshold changes which conditions censor and could shift the numbers. The bias score itself is one choice among several, and a different score could change the crossing pattern. These limits point to the checks scaffolded for future runs: a threshold sweep, a full fine-tuning comparison, and a threshold-free loop-area measure.
+This study has clear limits. It covers encoder models only, each adapted with a rank-16 low-rank adapter, so full fine-tuning and generative models are not tested and may behave differently. It reports four bias categories with adequate sample counts, and one of them, socioeconomic status, has a median ratio above one under the matched objective, which shows the direction can depend on the category. The bias score is one choice among several, and a different score could change the crossing pattern. The threshold sweep and the loop-area measure both point past these limits, but the loop-area sweep is trained to a fixed budget per field step, so a longer budget could sharpen the small effect it detects. Full fine-tuning is the main remaining check, and the code for it accompanies the paper.
 
 \subsection{Reproducibility}
 
@@ -282,7 +348,7 @@ The five encoder models are mBERT, XLM-RoBERTa, MuRIL, IndicBERTv2, and mmBERT, 
 \section{Conclusion}
 \label{sec:conclusion}
 
-This work tested a reported asymmetry between bias injection and bias removal on one grid under two objectives. Across 180 conditions spanning five multilingual encoders and three languages, the median $R$ is 0.393 under the matched objective and 0.074 under the mismatched one, and removal reaches the threshold faster than injection in both. The earlier $R > 1$ is an aggregation artefact: the mismatched objective leaves 27\% of conditions censored, and averaging those ceiling values pulls the mean above one while the median stays well below. A step-count ratio, summarised this way, does not measure bias hysteresis. This study is limited to encoder models with low-rank adapters and four bias categories, and full fine-tuning or generative models may behave differently. Future work will measure the loop area of a bias-field sweep, a threshold-free quantity that needs no step count, and will test whether the result holds under full fine-tuning. An asymmetry claim about bias dynamics needs censoring-aware, median-based analysis under a matched objective before it can stand.
+This work tested a reported asymmetry between bias injection and bias removal on one grid of five multilingual encoders and three languages. Three checks show that the step-count ratio does not measure bias hysteresis. Under a matched objective the median ratio falls below one, so removal is the faster direction. The earlier value above one traces to censored conditions kept at a ceiling, which lift the mean while the median stays low. The ratio also swings by more than an order of magnitude when the threshold moves across its range, so it cannot be a stable property of the model. A threshold-free loop-area measure gives the honest picture: a small positive loop, near one to two per cent of full scale, concentrated in some models. Bias dynamics carry a minor path dependence, not the large asymmetry the ratio implied. The main remaining check is full fine-tuning, whose code accompanies the paper. An asymmetry claim about bias dynamics needs a matched objective, censoring-aware and median-based analysis, and a threshold-free measure before it can stand.
 
 \begin{acks}
 The author used a generative-AI coding assistant to help implement the experiment scripts and to draft and edit parts of the manuscript text. All code was reviewed and tested by the author, and all reported numbers were read from the experiment output files. The author takes full responsibility for the content.

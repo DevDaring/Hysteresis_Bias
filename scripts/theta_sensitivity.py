@@ -89,13 +89,24 @@ def load_existing_theta070():
 
 
 def analyze():
+    import glob
     by_theta = {}
     for theta in THETAS_NEW:
-        p = get_results_dir(theta_root(theta)) / "summary.json"
-        if p.exists():
-            by_theta[f"{theta:.2f}"] = stats(json.load(open(p, encoding="utf-8")))
+        # read per-condition files directly, so a sweep stopped early (no
+        # summary.json yet) still contributes every finished condition.
+        files = glob.glob(str(get_results_dir(theta_root(theta)) / "*" / "*" / "*" / "*.json"))
+        rows = []
+        for f in files:
+            try:
+                d = json.load(open(f, encoding="utf-8"))
+                if isinstance(d, dict) and ("R_undefined_reason" in d or d.get("R") is not None):
+                    rows.append(d)
+            except Exception:
+                pass
+        if rows:
+            by_theta[f"{theta:.2f}"] = stats(rows)
         else:
-            logger.warning(f"no summary for theta={theta}; run the sweep first")
+            logger.warning(f"no conditions for theta={theta}; run the sweep first")
     by_theta[f"{THETA_EXISTING:.2f}"] = stats(load_existing_theta070())
 
     out = get_results_dir("theta_sensitivity") / "summary_by_theta.json"
