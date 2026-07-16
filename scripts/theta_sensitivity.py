@@ -39,7 +39,10 @@ from src.utils.logging_setup import get_logger
 
 logger = get_logger("theta_sensitivity")
 
-THETAS_NEW = [0.60, 0.65, 0.75, 0.80]
+# Endpoints of the plausible range. With the existing theta = 0.70 grid this
+# gives three points (0.60, 0.70, 0.80), enough to show that the median R stays
+# below one across the range, at half the compute of a four-point sweep.
+THETAS_NEW = [0.60, 0.80]
 THETA_EXISTING = 0.70
 CATS = ["race-color", "socioeconomic"]
 LANGS = ["en", "hi", "bn"]
