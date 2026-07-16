@@ -51,17 +51,20 @@ def results_root(objective):
     return "wp1_symmetric" if objective == "matched" else "wp1_mismatched"
 
 
-def condition_path(model, language, category, seed, objective="matched"):
-    d = get_results_dir(results_root(objective)) / model / language / category
+def condition_path(model, language, category, seed, objective="matched", root=None):
+    d = get_results_dir(root or results_root(objective)) / model / language / category
     d.mkdir(parents=True, exist_ok=True)
     return d / f"seed{seed}.json"
 
 
 def run_grid(models, languages, categories, seeds, theta,
-             max_inject, max_remove, eval_every, objective="matched"):
+             max_inject, max_remove, eval_every, objective="matched", root=None):
+    """Run the grid. `root` overrides the results directory (used by the
+    theta-sensitivity sweep so different thresholds never share files)."""
     tcfg = load_training_config()
     all_cfg = get_all_model_configs()
     summary = []
+    base_root = root or results_root(objective)
 
     for model_name in models:
         cfg = all_cfg[model_name]
@@ -77,9 +80,9 @@ def run_grid(models, languages, categories, seeds, theta,
                                    f"(train={len(train_data)}, eval={len(eval_data)})")
                     continue
                 for seed in seeds:
-                    out_path = condition_path(model_name, language, category, seed, objective)
+                    out_path = condition_path(model_name, language, category, seed, objective, base_root)
                     if out_path.exists():
-                        logger.info(f"  ✓ resume-skip {out_path.relative_to(get_results_dir(results_root(objective)))}")
+                        logger.info(f"  ✓ resume-skip {out_path.relative_to(get_results_dir(base_root))}")
                         with open(out_path) as f:
                             summary.append(json.load(f))
                         continue
@@ -115,7 +118,7 @@ def run_grid(models, languages, categories, seeds, theta,
                             json.dump(err, f, indent=2)
                         torch.cuda.empty_cache()
 
-    summ_path = get_results_dir(results_root(objective)) / "summary.json"
+    summ_path = get_results_dir(base_root) / "summary.json"
     with open(summ_path, "w") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
     logger.info(f"\nWP1 [{objective}] summary ({len(summary)} conditions) saved to {summ_path}")
