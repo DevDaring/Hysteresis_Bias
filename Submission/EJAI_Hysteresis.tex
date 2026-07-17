@@ -80,6 +80,22 @@ The idea that removal costs more than injection grows out of two recent lines of
 
 Concern about how bias is measured is not new for static scores. \citet{goldfarbtarrant2021intrinsic} showed that intrinsic bias scores do not predict downstream bias, so a clean-looking number need not track the effect it is meant to capture. \citet{gonen2019lipstick} showed that a debiasing step can hide bias rather than remove it, so a lower score need not mean less bias. \citet{delobelle2022measuring} found that fairness numbers move with the probing choice, and \citet{meade2022empirical} found that the measured success of a debiasing method depends heavily on the evaluation setup. \citet{blodgett2021stereotyping} showed that widely used pair benchmarks contain confounds. Together these results argue that a derived bias number should be read with care about how it was produced. This paper carries that argument from a static score to a dynamic quantity, the step-count ratio, and asks whether the ratio measures what its name claims.
 
+\section{Datasets}
+\label{sec:datasets}
+
+The bias items come from two published benchmarks, used here as released. Neither dataset is a contribution of this paper. Multi-CrowS-Pairs extends CrowS-Pairs \citep{nangia2020crowspairs}, a collection of masked sentence pairs that each contrast a stereotypical target with an anti-stereotypical one across nine social categories. The Indian-context set derives from Indian-BhED \citep{khandelwal2023indianbhed} and covers caste, gender, religion, and race in an Indian frame. Both benchmarks are extended to Hindi and Bengali by translation with back-translation checks, so every English item has a parallel item in each language.
+
+Each item is one masked sentence with two candidate fillers, a stereotypical target and an anti-stereotypical target. The model reads the sentence with the target position masked, scores the two fillers, and the bias score in Section~\ref{sec:methodology} compares them. Table~\ref{tab:dataset} shows one item per category. The caste item is given in all three languages, to show the parallel Hindi and Bengali translations.
+
+The English CrowS-Pairs portion holds 1{,}422 sentence pairs across nine categories. This study reports on the four categories with adequate counts in all three languages: race-colour, religion, nationality, and socioeconomic status. Their sizes range from about one hundred items for religion to about five hundred for race-colour. The Indian-context set adds caste, gender, religion, and race, each with roughly one hundred items. The extended multilingual data is available in the anonymised repository named in the data availability statement.
+
+\begin{table*}[t]
+\centering
+\caption{Example items from the two benchmarks. Each is a masked sentence with a stereotypical and an anti-stereotypical target; the caste item appears in all three languages.}
+\label{tab:dataset}
+\includegraphics[width=\textwidth]{images/figure_dataset_examples.pdf}
+\end{table*}
+
 \section{Method}
 \label{sec:methodology}
 
@@ -121,11 +137,9 @@ Measuring an asymmetry between two training directions requires that the two dir
 \label{fig:flow}
 \end{figure*}
 
-\subsection{Models, data, and bias score}
+\subsection{Models and bias score}
 
-The study evaluates five multilingual encoder models: mBERT \citep{devlin2019bert}, XLM-RoBERTa \citep{conneau2020unsupervised}, MuRIL \citep{khanuja2021muril}, IndicBERTv2 \citep{doddapaneni2023indicbert}, and mmBERT \citep{mmbert2025}. All five support English, Hindi, and Bengali. Each model is fine-tuned with low-rank adapters \citep{hu2022lora} of rank 16, so that injection and removal modify the same small parameter set and start from the same pretrained weights.
-
-Bias is drawn from two benchmarks. Multi-CrowS-Pairs \citep{nangia2020crowspairs} provides sentence pairs across Western-framed categories, and an Indian-context set derived from Indian-BhED \citep{khandelwal2023indianbhed} adds caste, gender, religion, and race. Both are extended to Hindi and Bengali through translation with back-translation checks. The study reports on four categories with adequate sample counts: race-colour, religion, nationality, and socioeconomic status. Each item is a masked sentence with a stereotypical and an anti-stereotypical target, for example \textit{All the dirty and petty jobs are done by} \texttt{[MASK]}, with targets \textit{Dalits} and \textit{Brahmins}. Parallel Hindi and Bengali items exist for every English item in the caste, gender, religion, and race categories.
+The study evaluates five multilingual encoder models: mBERT \citep{devlin2019bert}, XLM-RoBERTa \citep{conneau2020unsupervised}, MuRIL \citep{khanuja2021muril}, IndicBERTv2 \citep{doddapaneni2023indicbert}, and mmBERT \citep{mmbert2025}. All five support English, Hindi, and Bengali. Each model is fine-tuned with low-rank adapters \citep{hu2022lora} of rank 16, so that injection and removal modify the same small parameter set and start from the same pretrained weights. The bias items are the four categories described in Section~\ref{sec:datasets}: race-colour, religion, nationality, and socioeconomic status.
 
 The bias score uses the Average Unmasked Likelihood \citep{kaneko2022unmasking}. For one item, the model reads the sentence with the target position masked and returns a log-probability for the stereotypical target and one for the anti-stereotypical target. The item score is
 \begin{equation}
@@ -429,7 +443,7 @@ This research received no specific grant from any funding agency in the public, 
 The author declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article.
 
 \section*{Data availability statement}
-The code, per-condition results, and the multilingual bias benchmarks that support the findings of this study are available in a public repository. To preserve anonymity during review, the repository and dataset identifiers are given on the separate title page and will be made openly available on acceptance.
+The code, per-condition results, and the multilingual bias benchmarks that support the findings of this study are available in an anonymised repository at \url{https://anonymous.4open.science/status/Hysteresis_Bias} for review. The de-anonymised repository and dataset identifiers are given on the separate title page and will be made openly available on acceptance.
 
 \bibliographystyle{SageH}
 \bibliography{sample}
