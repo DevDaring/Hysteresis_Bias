@@ -12,6 +12,8 @@
 \usepackage{url}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
 
 \setcounter{secnumdepth}{3}
 
@@ -72,7 +74,43 @@ Concern about how bias is measured is not new for static scores. \citet{goldfarb
 \section{Method}
 \label{sec:methodology}
 
-Measuring an asymmetry between two training directions requires that the two directions be comparable. This section first defines the bias score and the ratio, then describes the matched objective that makes the comparison fair.
+Measuring an asymmetry between two training directions requires that the two directions be comparable. Figure~\ref{fig:flow} sets out the design. Each run takes a pretrained encoder, injects a bias until the score crosses the threshold, then removes the bias until the score crosses back, and records the ratio of the two step counts. This runs over the full grid under two objectives. Three measurements are then read from the same runs: the ratio at a fixed threshold, the ratio across a range of thresholds, and a threshold-free loop area. This section defines the bias score and the ratio, then the matched objective that makes the two directions comparable.
+
+\begin{figure*}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  proc/.style={rectangle, rounded corners, draw=black!75, fill=blue!6, align=center, text width=2.7cm, minimum height=1.15cm, inner sep=3pt},
+  wide/.style={rectangle, rounded corners, draw=black!75, fill=black!4, align=center, text width=11.5cm, minimum height=0.7cm, inner sep=4pt},
+  meas/.style={rectangle, rounded corners, draw=black!75, fill=green!8, align=center, text width=3.4cm, minimum height=1.5cm, inner sep=3pt},
+  concl/.style={rectangle, rounded corners, draw=black!75, fill=orange!10, align=center, text width=12cm, minimum height=0.7cm, inner sep=4pt},
+  arr/.style={-{Stealth[length=2mm]}, thick, black!70}
+]
+% top: per-condition process, left to right
+\node[proc] (a) at (0,0)   {Pretrained encoder, fresh LoRA adapter, baseline $B_0$};
+\node[proc] (b) at (3.4,0) {Injection: raise $B$ above $\theta$ $\Rightarrow T_{\mathrm{bias}}$};
+\node[proc] (c) at (6.8,0) {Removal: lower $B$ below $\theta$ $\Rightarrow T_{\mathrm{debias}}$};
+\node[proc] (d) at (10.2,0){Ratio $R = T_{\mathrm{debias}}/T_{\mathrm{bias}}$ (censored excluded)};
+\draw[arr] (a)--(b); \draw[arr] (b)--(c); \draw[arr] (c)--(d);
+% repeat-over-grid band
+\node[wide] (rep) at (5.1,-1.9) {Repeat for 180 conditions (5 encoders $\times$ 3 languages $\times$ 4 categories $\times$ 3 seeds) under two objectives: matched ($L=-\delta$ inject, $L=+\delta$ remove) and mismatched (cross-entropy inject, squared-gap remove)};
+\draw[arr] (d.south) |- (rep.east);
+% three measurements
+\node[meas] (m1) at (0,-4.0)   {Ratio at $\theta = 0.7$: matched vs.\ mismatched, censoring-aware};
+\node[meas] (m2) at (5.1,-4.0) {Sweep the threshold: ratio against $\theta$};
+\node[meas] (m3) at (10.2,-4.0){Threshold-free loop area $A$ (control-field sweep)};
+\draw[arr] (rep.south) -- (m1.north);
+\draw[arr] (rep.south) -- (m2.north);
+\draw[arr] (rep.south) -- (m3.north);
+% conclusion
+\node[concl] (cc) at (5.1,-6.0) {Step-count ratio does not measure bias hysteresis; a small, model-dependent loop remains};
+\draw[arr] (m1.south) -- (cc.north);
+\draw[arr] (m2.south) -- (cc.north);
+\draw[arr] (m3.south) -- (cc.north);
+\end{tikzpicture}
+\caption{Process flow of the study. Top row: for one condition, a pretrained encoder is given a fresh adapter, bias is injected until the score crosses the threshold, then removed until it crosses back, and the step-count ratio is recorded. Middle band: this repeats over the full grid under two objectives. Bottom: three measurements are read from the same runs, and together they show that the ratio does not measure hysteresis while a small loop remains.}
+\label{fig:flow}
+\end{figure*}
 
 \subsection{Models, data, and bias score}
 
