@@ -43,6 +43,15 @@ Social biases in language models raise concern as these models enter hiring tool
 
 Most of this work assumes that the effort to remove a bias is comparable to the effort to introduce it. A model pushed towards a stereotype over a fixed number of gradient steps is expected to recover over a similar number of steps. Recent studies question that assumption. They inject a bias and then remove it, to study acquisition and unlearning as distinct processes \citep{islam2025biasgym, liu2025rethinking}. A natural summary of such an inject-then-remove protocol is the step-count ratio $R = T_{\mathrm{debias}} / T_{\mathrm{bias}}$, where $T_{\mathrm{bias}}$ is the step count to push a bias score above a threshold and $T_{\mathrm{debias}}$ is the step count to bring it back below. When removal takes more steps than injection, so that $R > 1$, the protocol is read as showing an asymmetry between acquisition and unlearning. By analogy with physical systems whose state depends on history, this asymmetry is called bias hysteresis.
 
+Figure~\ref{fig:curves} shows what such a run looks like for the five encoder models studied here. In each panel the red line is injection: as training adds stereotypical examples, the bias score climbs above the dashed threshold. The blue line is removal: from the biased model, debiasing pulls the score back down below the threshold. The score rises and then falls, which is the shape a hysteresis claim rests on. Removal reaches the threshold in fewer steps than injection took, so removal is already the faster direction here. The rest of the paper asks whether the step-count ratio built from these two curves means what it appears to mean.
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/figure_hysteresis_curves.png}
+\caption{Injection (red) and removal (blue) bias-score curves for the five encoder models, under the matched objective, for one representative condition each. The dashed line marks the threshold; the dotted line marks the switch from injection to removal. The score rises during injection and falls during removal, and removal reaches the threshold in fewer steps than injection took.}
+\label{fig:curves}
+\end{figure*}
+
 The ratio carries two measurement problems that its interpretation overlooks. The first is censoring. When injection does not reach the threshold within its step budget, $T_{\mathrm{bias}}$ is capped; when removal does not return below the threshold, $T_{\mathrm{debias}}$ is capped. A capped ratio is a right-censored lower bound, not a measurement, yet a mean taken over such values treats the cap as a real number and pulls the average up. The second is the objective. Injection and removal are often optimised with different loss functions, one using masked-language-model cross-entropy on stereotypical targets and the other a squared difference between stereotypical and anti-stereotypical log-probabilities. These losses differ in gradient scale, so a step under one is not comparable to a step under the other.
 
 This study tests the asymmetry on one grid under two objectives. The mismatched objective reproduces the original protocol, with cross-entropy injection and squared-gap removal. The matched objective optimises the same signed log-probability gap in both directions, so the two paths differ only in sign. Every other setting is held fixed: the same optimiser, learning rate, low-rank adapter configuration, and evaluation schedule. Crossing times are estimated by interpolation and censored cases are excluded rather than capped, and the median replaces the mean. Both objectives are evaluated across five multilingual encoder models, three languages, four bias categories, and three seeds, with gradient norms recorded so that any residual asymmetry stays visible.
@@ -253,14 +262,7 @@ The result is stable across the three random seeds. Table~\ref{tab:perseed} repo
 
 \subsection{Gradient norms set the direction}
 
-Removal being the faster direction has a simple mechanical cause. Removal starts from the injected checkpoint, where the stereotypical and anti-stereotypical log-probabilities differ by a large margin, so the signed gap $\delta$ is large and its gradient is large. Injection starts from a near-neutral checkpoint, where the gap is small and its gradient is small. Larger gradients move the score faster. Figure~\ref{fig:traj} shows this for two conditions: the injection curve climbs slowly over many steps, while the removal curve falls back below the threshold in a few steps. The gradient $L_2$ norm during removal exceeds that during injection by a median factor of 1.115, and a Wilcoxon signed-rank test on the paired norms confirms the difference. The step count therefore encodes the gradient scale of each starting state. The ratio compares a fast reverse path against a slow forward path, and that comparison is set by where each path begins, not by any resistance in the loss landscape.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{images/figure_trajectory.png}
-\caption{Bias score against gradient step for two conditions. Injection climbs slowly from a near-neutral start; removal falls quickly from the injected checkpoint. The dashed line marks the threshold.}
-\label{fig:traj}
-\end{figure}
+Removal being the faster direction has a simple mechanical cause. Removal starts from the injected checkpoint, where the stereotypical and anti-stereotypical log-probabilities differ by a large margin, so the signed gap $\delta$ is large and its gradient is large. Injection starts from a near-neutral checkpoint, where the gap is small and its gradient is small. Larger gradients move the score faster. The curves in Figure~\ref{fig:curves} already showed this: the injection line climbs slowly, while the removal line falls back below the threshold in fewer steps. The gradient $L_2$ norm during removal exceeds that during injection by a median factor of 1.115, and a Wilcoxon signed-rank test on the paired norms confirms the difference. The step count therefore encodes the gradient scale of each starting state. The ratio compares a fast reverse path against a slow forward path, and that comparison is set by where each path begins, not by any resistance in the loss landscape.
 
 \subsection{The ratio depends on the threshold}
 \label{sec:thetasweep}
