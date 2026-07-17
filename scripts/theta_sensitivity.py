@@ -121,6 +121,7 @@ def analyze():
     thetas = sorted(by_theta.keys())
     fig, ax = plt.subplots(figsize=(6.5, 3.2))
     colors = {"race-color": "#4C72B0", "socioeconomic": "#C44E52"}
+    catname = {"race-color": "race-colour", "socioeconomic": "socioeconomic"}
     for cat in CATS:
         xs, ys = [], []
         for t in thetas:
@@ -128,7 +129,7 @@ def analyze():
             if v is not None:
                 xs.append(float(t)); ys.append(v)
         if xs:
-            ax.plot(xs, ys, "-o", ms=4, color=colors[cat], label=cat)
+            ax.plot(xs, ys, "-o", ms=4, color=colors[cat], label=catname.get(cat, cat))
     ax.axhline(1.0, color="grey", ls="--", lw=1, label="$R = 1$")
     ax.set_yscale("log")
     ax.set_xlabel(r"threshold $\theta$")

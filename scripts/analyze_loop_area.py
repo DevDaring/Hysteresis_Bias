@@ -86,6 +86,8 @@ def main():
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+    catname = {"race-color": "race-colour", "socioeconomic": "socioeconomic",
+               "religion": "religion", "nationality": "nationality"}
     by_abs = sorted(rows, key=lambda r: abs(r["signed_area"]))
     picks = [by_abs[-1], by_abs[0]]
     titles = ["largest $|A|$", "smallest $|A|$"]
@@ -96,7 +98,8 @@ def main():
                 color="#C44E52", label="up-sweep")
         ax.plot([q[0] for q in down], [q[1] for q in down], "-o", ms=3,
                 color="#4C72B0", label="down-sweep")
-        ax.set_title(f"{r['model']} / {r['language']} / {r['category']} "
+        cat = catname.get(r["category"], r["category"])
+        ax.set_title(f"{r['model']} / {r['language']} / {cat} "
                      f"($A={r['signed_area']:+.3f}$, {tt})", fontsize=8)
         ax.set_xlabel(r"field $\lambda$")
         ax.grid(alpha=0.25)

@@ -58,7 +58,7 @@ def main():
     ax.set_xticklabels([f"$10^{{{t}}}$" for t in ticks])
     med = np.median(matched)
     ax.set_title(f"Matched-objective median $R = {med:.3f}$ ($n={len(matched)}$); "
-                 f"{100*np.mean(np.array(matched) > 1):.0f}\\% of conditions $R>1$", fontsize=10)
+                 f"{100*np.mean(np.array(matched) > 1):.0f}% of conditions $R>1$", fontsize=10)
     ax.legend(loc="lower right", fontsize=8, frameon=False)
     ax.grid(axis="x", alpha=0.25)
     fig.tight_layout()
