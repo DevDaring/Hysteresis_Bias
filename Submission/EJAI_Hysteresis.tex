@@ -57,7 +57,7 @@ Figure~\ref{fig:curves} shows what such a run looks like for the five encoder mo
 \begin{figure*}[htbp]
 \centering
 \includegraphics[width=\textwidth]{images/figure_hysteresis_curves.png}
-\caption{Injection (red) and removal (blue) bias-score curves for the five encoder models, under the matched objective, for one representative condition each. The dashed line marks the threshold; the dotted line marks the switch from injection to removal. The score rises during injection and falls during removal, and removal reaches the threshold in fewer steps than injection took.}
+\caption{Injection (red) and removal (blue) bias-score curves for the five encoders under the matched objective, one condition each. Dashed line: threshold; dotted line: switch to removal.}
 \label{fig:curves}
 \end{figure*}
 
@@ -101,7 +101,7 @@ Measuring an asymmetry between two training directions requires that the two dir
 \draw[arr] (a)--(b); \draw[arr] (b)--(c); \draw[arr] (c)--(d);
 % repeat-over-grid band
 \node[wide] (rep) at (5.1,-1.9) {Repeat for 180 conditions (5 encoders $\times$ 3 languages $\times$ 4 categories $\times$ 3 seeds) under two objectives: matched ($L=-\delta$ inject, $L=+\delta$ remove) and mismatched (cross-entropy inject, squared-gap remove)};
-\draw[arr] (d.south) |- (rep.east);
+\draw[arr] (d.south) -- (d.south |- rep.north);
 % three measurements
 \node[meas] (m1) at (0,-4.0)   {Ratio at $\theta = 0.7$: matched vs.\ mismatched, censoring-aware};
 \node[meas] (m2) at (5.1,-4.0) {Sweep the threshold: ratio against $\theta$};
@@ -115,7 +115,7 @@ Measuring an asymmetry between two training directions requires that the two dir
 \draw[arr] (m2.south) -- (cc.north);
 \draw[arr] (m3.south) -- (cc.north);
 \end{tikzpicture}
-\caption{Process flow of the study. Top row: for one condition, a pretrained encoder is given a fresh adapter, bias is injected until the score crosses the threshold, then removed until it crosses back, and the step-count ratio is recorded. Middle band: this repeats over the full grid under two objectives. Bottom: three measurements are read from the same runs, and together they show that the ratio does not measure hysteresis while a small loop remains.}
+\caption{Process flow of the study, from a single condition through the full grid to the three measurements and the conclusion.}
 \label{fig:flow}
 \end{figure*}
 
@@ -186,7 +186,7 @@ Table~\ref{tab:ab} compares the two objectives on the same 180 conditions. Under
 
 \begin{table}[htbp]
 \small\sf\centering
-\caption{Asymmetry ratio $R$ under the two objectives on the same 180-condition grid ($\theta = 0.7$). Both medians lie below one.}
+\caption{Asymmetry ratio $R$ under the two objectives on the same 180-condition grid ($\theta = 0.7$).}
 \label{tab:ab}
 \begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lcc}
@@ -207,7 +207,7 @@ Wilcoxon $\log R$ ($p$) & $4\times10^{-15}$ & $2\times10^{-19}$ \\
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{images/figure_R_distribution.png}
-\caption{Distribution of the asymmetry ratio $R$ under the matched and mismatched objectives, on a $\log_{10}$ scale. The dashed line marks $R = 1$. Both distributions concentrate below one.}
+\caption{Distribution of the asymmetry ratio $R$ under the two objectives, on a $\log_{10}$ scale. Dashed line: $R = 1$.}
 \label{fig:rdist}
 \end{figure}
 
@@ -220,7 +220,7 @@ Figure~\ref{fig:censoring} shows the effect. The defined ratios all sit below on
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{images/figure_censoring.png}
-\caption{Under the mismatched objective, defined ratios sit below one, but censored conditions form a ceiling mass that lifts the mean above one while the median stays low.}
+\caption{Defined ratios and the censored ceiling mass under the mismatched objective.}
 \label{fig:censoring}
 \end{figure}
 
@@ -230,7 +230,7 @@ Table~\ref{tab:permodel} reports $R$ by model under the matched objective. No mo
 
 \begin{table}[htbp]
 \small\sf\centering
-\caption{Matched-objective ratio $R$ by model, over converged conditions ($\theta = 0.7$). No model shows a median above one.}
+\caption{Matched-objective ratio $R$ by model, over converged conditions ($\theta = 0.7$).}
 \label{tab:permodel}
 \begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lcccc}
@@ -270,7 +270,7 @@ Table~\ref{tab:percat} reports $R$ by bias category. Three of the four categorie
 
 \begin{table}[htbp]
 \small\sf\centering
-\caption{Matched-objective ratio $R$ by bias category. Only socioeconomic status has a median above one.}
+\caption{Matched-objective ratio $R$ by bias category.}
 \label{tab:percat}
 \begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lcccc}
@@ -291,7 +291,7 @@ Figure~\ref{fig:heatmap} shows the joint pattern that the per-model and per-cate
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{images/figure_heatmap.png}
-\caption{Matched-objective median $R$ for each model and category, on a log colour scale centred at $R = 1$. Blue cells fall below one, where removal is faster; red cells rise above one. Values above one appear only in the socioeconomic column and only for some models.}
+\caption{Matched-objective median $R$ by model and category, on a log colour scale centred at $R = 1$ (blue below one, red above).}
 \label{fig:heatmap}
 \end{figure}
 
@@ -327,7 +327,7 @@ The cause is the one seen in Section~\ref{sec:results}. At a low threshold, inje
 
 \begin{table}[htbp]
 \small\sf\centering
-\caption{Median ratio $R$ against threshold $\theta$, over converged conditions. The ratio swings by more than an order of magnitude across the range.}
+\caption{Median ratio $R$ against threshold $\theta$, over converged conditions.}
 \label{tab:theta}
 \begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lccc}
@@ -345,7 +345,7 @@ The cause is the one seen in Section~\ref{sec:results}. At a low threshold, inje
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{images/figure_theta_sensitivity.png}
-\caption{Median ratio $R$ against threshold $\theta$ for two bias categories, on a log scale. The dashed line marks $R = 1$. The ratio crosses from above one to below one as the threshold rises.}
+\caption{Median ratio $R$ against threshold $\theta$ for two bias categories, on a log scale. Dashed line: $R = 1$.}
 \label{fig:theta}
 \end{figure}
 
@@ -354,11 +354,11 @@ The cause is the one seen in Section~\ref{sec:results}. At a low threshold, inje
 
 Because the ratio depends on the threshold, a fair test of hysteresis should use no threshold and no step count. The loop measure sweeps a control field $\lambda \in [0,1]$ that mixes the two training pressures through one functional, $L(\lambda) = (1 - 2\lambda)\,\delta$: at $\lambda = 1$ the field opens the gap, at $\lambda = 0$ it closes the gap, and $\lambda = 0.5$ applies no net pressure. The field is raised from 0 to 1 and then lowered back to 0 with one optimiser carried across the whole sweep, and the bias score is recorded at each stage. If the downward path retraces the upward path, the state has no memory and there is no hysteresis. If the paths differ, the enclosed loop has a non-zero signed area $A = \oint B \, d\lambda$, which measures path dependence directly.
 
-Table~\ref{tab:loop} reports the loop area over 135 conditions. The median area is small, near one to two per cent of a full loop, and most conditions are positive. A sign-flip permutation test, which assigns each condition a random sign under the null of no loop, rejects zero. Figure~\ref{fig:loop} shows a large loop and a near-flat one side by side. The effect is not uniform across models: it is clearest for IndicBERTv2 and MuRIL and near zero for mmBERT. A small, model-dependent hysteresis therefore remains once the ratio artefact is removed. It is real but small, and nowhere near the large asymmetry that the reported ratio implied.
+Table~\ref{tab:loop} reports the loop area over 135 conditions. The median area is small, near one to two per cent of a full loop, and most conditions are positive. A sign-flip permutation test, which assigns each condition a random sign under the null of no loop, rejects zero. Figure~\ref{fig:loop} shows a large loop and a near-flat one side by side; in the large loop the downward path stays above the upward path, which is the signature of path dependence. The effect is not uniform across models: it is clearest for IndicBERTv2 and MuRIL and near zero for mmBERT. A small, model-dependent hysteresis therefore remains once the ratio artefact is removed. It is real but small, and nowhere near the large asymmetry that the reported ratio implied.
 
 \begin{table}[htbp]
 \small\sf\centering
-\caption{Hysteresis loop area $A$ over 135 conditions, and by model. The loop is small and positive on average, and largest for IndicBERTv2 and MuRIL.}
+\caption{Hysteresis loop area $A$ over 135 conditions, overall and by model.}
 \label{tab:loop}
 \begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{lcc}
@@ -380,7 +380,7 @@ mmBERT & 27 & $-0.001$ \\
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{images/figure_loop_area.png}
-\caption{Bias score against the control field $\lambda$ for two conditions. The left panel shows a clear loop where the downward path stays above the upward path; the right panel shows a near-flat loop.}
+\caption{Bias score against the control field $\lambda$: a clear loop (left) and a near-flat loop (right).}
 \label{fig:loop}
 \end{figure}
 
