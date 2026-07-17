@@ -279,6 +279,15 @@ Socioeconomic & 39 & 1.409 & 25 & 0.641 \\
 \end{adjustbox}
 \end{table}
 
+Figure~\ref{fig:heatmap} shows the joint pattern that the per-model and per-category tables give only as margins. Every cell in the nationality, race-colour, and religion columns sits below one. The values above one appear only in the socioeconomic column, and only for some models: the effect is strongest for XLM-RoBERTa and absent for MuRIL and IndicBERTv2. The exception is therefore local to one category and a few models, not a property of the grid.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{images/figure_heatmap.png}
+\caption{Matched-objective median $R$ for each model and category, on a log colour scale centred at $R = 1$. Blue cells fall below one, where removal is faster; red cells rise above one. Values above one appear only in the socioeconomic column and only for some models.}
+\label{fig:heatmap}
+\end{figure}
+
 The result is stable across the three random seeds. Table~\ref{tab:perseed} reports the matched-objective median $R$ for each seed. The three medians fall in a narrow band, so the finding does not depend on a single initialisation.
 
 \begin{table}[htbp]
